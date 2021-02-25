@@ -1,0 +1,2506 @@
+Test (2C): Figure 8 ...
+2021/02/24 16:54:28 client send a random command
+2021/02/24 16:54:28 [server 0, role 1, term 2], send request vote to [4]
+2021/02/24 16:54:28 [server 0, role 1, term 2], send request vote to [3]
+2021/02/24 16:54:28 [server 0, role 1, term 2], send request vote to [1]
+2021/02/24 16:54:28 [server 0, role 1, term 2], send request vote to [2]
+2021/02/24 16:54:28 [server 2, role 2, term 2], vote for [0]
+2021/02/24 16:54:28 [server 3, role 2, term 2], vote for [0]
+2021/02/24 16:54:28 [server 1, role 2, term 2], vote for [0]
+2021/02/24 16:54:28 [server 4, role 2, term 2], vote for [0]
+2021/02/24 16:54:28 [server 0, role 1, term 2], receive votes from [1]
+2021/02/24 16:54:28 [server 0, role 1, term 2], get majority votes
+2021/02/24 16:54:28 [server 0, role 1, term 2], receive votes from [2]
+2021/02/24 16:54:28 [server 0, role 0, term 2], term has changed to (2), obsolete response
+2021/02/24 16:54:28 [server 0, role 0, term 2] send heartbeat to [4]
+2021/02/24 16:54:28 [server 0, role 0, term 2] send heartbeat to [1]
+2021/02/24 16:54:28 [server 0, role 0, term 2], term has changed to (2), obsolete response
+2021/02/24 16:54:28 [server 0, role 0, term 2] send heartbeat to [3]
+2021/02/24 16:54:28 [server 0, role 0, term 2] send heartbeat to [2]
+2021/02/24 16:54:28 [server 4, role 2, term 2] receive successful heartbeat from [0]
+2021/02/24 16:54:28 [server 3, role 2, term 2] receive successful heartbeat from [0]
+2021/02/24 16:54:28 [server 1, role 2, term 2] receive successful heartbeat from [0]
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [3]
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [4]
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [1]
+2021/02/24 16:54:28 [server 2, role 2, term 2] receive successful heartbeat from [0]
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [2]
+2021/02/24 16:54:28 [server 0, role 0, term 2] send heartbeat to [1]
+2021/02/24 16:54:28 [server 0, role 0, term 2] send heartbeat to [4]
+2021/02/24 16:54:28 [server 0, role 0, term 2] send heartbeat to [2]
+2021/02/24 16:54:28 [server 0, role 0, term 2] send heartbeat to [3]
+2021/02/24 16:54:28 [server 1, role 2, term 2] receive successful heartbeat from [0]
+2021/02/24 16:54:28 [server 3, role 2, term 2] receive successful heartbeat from [0]
+2021/02/24 16:54:28 [server 2, role 2, term 2] receive successful heartbeat from [0]
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [1]
+2021/02/24 16:54:28 [server 4, role 2, term 2] receive successful heartbeat from [0]
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [3]
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [2]
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [4]
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive command(4303898634866292212) from client
+2021/02/24 16:54:28 [server 0, role 0, term 2] Append entry to [4] from 1 to 1
+2021/02/24 16:54:28 [server 0, role 0, term 2] Append entry to [1] from 1 to 1
+2021/02/24 16:54:28 [server 0, role 0, term 2] Append entry to [3] from 1 to 1
+2021/02/24 16:54:28 [server 4, role 2, term 2] Append Entry successfully from [0], (1)-(1)
+2021/02/24 16:54:28 [server 1, role 2, term 2] Append Entry successfully from [0], (1)-(1)
+2021/02/24 16:54:28 [server 3, role 2, term 2] Append Entry successfully from [0], (1)-(1)
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [4]
+2021/02/24 16:54:28 [server 0, role 0, term 2] Append entry to [2] from 1 to 1
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [1]
+2021/02/24 16:54:28 [server 0, role 0, term 2], apply log from 1 to 1
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [3]
+2021/02/24 16:54:28 [server 2, role 2, term 2] Append Entry successfully from [0], (1)-(1)
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive successful append entry response from [2]
+2021/02/24 16:54:28 1000 loops
+2021/02/24 16:54:28 [server 0, role 0, term 2] receive command(7284514711060463850) from client
+2021/02/24 16:54:28 leader is [0]
+2021/02/24 16:54:28 leader [0] crash, get out
+2021/02/24 16:54:29 [server 3, role 1, term 3], send request vote to [4]
+2021/02/24 16:54:29 [server 1, role 1, term 3], send request vote to [4]
+2021/02/24 16:54:29 [server 4, role 2, term 3], vote for [3]
+2021/02/24 16:54:29 [server 1, role 1, term 3], send request vote to [2]
+2021/02/24 16:54:29 [server 4, role 2, term 3] reject vote for [1], already voted for [3]
+2021/02/24 16:54:29 [server 3, role 1, term 3], receive votes from [4]
+2021/02/24 16:54:29 [server 1, role 1, term 3], send request vote to [3]
+2021/02/24 16:54:29 [server 2, role 2, term 3], vote for [1]
+2021/02/24 16:54:29 [server 3, role 1, term 3], send request vote to [1]
+2021/02/24 16:54:29 [server 3, role 1, term 3] reject vote for [1], already voted for [3]
+2021/02/24 16:54:29 [server 1, role 1, term 3], receive votes from [2]
+2021/02/24 16:54:29 [server 1, role 1, term 3], send request vote to [0]
+2021/02/24 16:54:29 [server 3, role 1, term 3], send request vote to [0]
+2021/02/24 16:54:29 [server 3, role 1, term 3], send request vote to [2]
+2021/02/24 16:54:29 [server 1, role 1, term 3] reject vote for [3], already voted for [1]
+2021/02/24 16:54:29 [server 2, role 2, term 3] reject vote for [3], already voted for [1]
+2021/02/24 16:54:29 [server 2, role 1, term 4], send request vote to [3]
+2021/02/24 16:54:29 [server 2, role 1, term 4], send request vote to [1]
+2021/02/24 16:54:29 [server 2, role 1, term 4], send request vote to [4]
+2021/02/24 16:54:29 [server 3, role 2, term 4], vote for [2]
+2021/02/24 16:54:29 [server 1, role 2, term 4], vote for [2]
+2021/02/24 16:54:29 [server 4, role 2, term 4], vote for [2]
+2021/02/24 16:54:29 [server 2, role 1, term 4], receive votes from [3]
+2021/02/24 16:54:29 [server 2, role 1, term 4], send request vote to [0]
+2021/02/24 16:54:29 [server 2, role 1, term 4], get majority votes
+2021/02/24 16:54:29 [server 2, role 1, term 4], receive votes from [4]
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [4]
+2021/02/24 16:54:29 [server 2, role 0, term 4], term has changed to (4), obsolete response
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [1]
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [0]
+2021/02/24 16:54:29 [server 4, role 2, term 4] receive successful heartbeat from [2]
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [3]
+2021/02/24 16:54:29 [server 1, role 2, term 4] receive successful heartbeat from [2]
+2021/02/24 16:54:29 [server 2, role 0, term 4] receive successful append entry response from [4]
+2021/02/24 16:54:29 [server 3, role 2, term 4] receive successful heartbeat from [2]
+2021/02/24 16:54:29 [server 2, role 0, term 4] receive successful append entry response from [1]
+2021/02/24 16:54:29 [server 2, role 0, term 4] receive successful append entry response from [3]
+2021/02/24 16:54:29 [server 2, role 0, term 4], apply log from 1 to 1
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [0]
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [4]
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [1]
+2021/02/24 16:54:29 [server 4, role 2, term 4] receive successful heartbeat from [2]
+2021/02/24 16:54:29 [server 4, role 2, term 4], apply log from 1 to 1
+2021/02/24 16:54:29 [server 1, role 2, term 4] receive successful heartbeat from [2]
+2021/02/24 16:54:29 [server 1, role 2, term 4], apply log from 1 to 1
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [3]
+2021/02/24 16:54:29 [server 2, role 0, term 4] receive successful append entry response from [4]
+2021/02/24 16:54:29 [server 2, role 0, term 4] receive successful append entry response from [1]
+2021/02/24 16:54:29 [server 3, role 2, term 4] receive successful heartbeat from [2]
+2021/02/24 16:54:29 [server 3, role 2, term 4], apply log from 1 to 1
+2021/02/24 16:54:29 [server 2, role 0, term 4] receive successful append entry response from [3]
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [4]
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [1]
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [3]
+2021/02/24 16:54:29 [server 4, role 2, term 4] receive successful heartbeat from [2]
+2021/02/24 16:54:29 [server 1, role 2, term 4] receive successful heartbeat from [2]
+2021/02/24 16:54:29 [server 3, role 2, term 4] receive successful heartbeat from [2]
+2021/02/24 16:54:29 [server 2, role 0, term 4] receive successful append entry response from [1]
+2021/02/24 16:54:29 [server 2, role 0, term 4] receive successful append entry response from [4]
+2021/02/24 16:54:29 [server 2, role 0, term 4] send heartbeat to [0]
+2021/02/24 16:54:29 [server 2, role 0, term 4] receive successful append entry response from [3]
+2021/02/24 16:54:29 [server 2, role 0, term 4] receive command(8693560381216541693) from client
+2021/02/24 16:54:29 leader is [2]
+2021/02/24 16:54:29 leader [2] crash, get out
+2021/02/24 16:54:30 [server 1, role 1, term 5], send request vote to [4]
+2021/02/24 16:54:30 [server 1, role 1, term 5], send request vote to [2]
+2021/02/24 16:54:30 [server 1, role 1, term 5], send request vote to [0]
+2021/02/24 16:54:30 [server 1, role 1, term 5], send request vote to [3]
+2021/02/24 16:54:30 [server 4, role 2, term 5], vote for [1]
+2021/02/24 16:54:30 [server 3, role 2, term 5], vote for [1]
+2021/02/24 16:54:30 [server 1, role 1, term 5], receive votes from [4]
+2021/02/24 16:54:30 [server 1, role 1, term 5], get majority votes
+2021/02/24 16:54:30 [server 1, role 1, term 5], receive votes from [3]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [3]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [4]
+2021/02/24 16:54:30 [server 4, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [2]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [0]
+2021/02/24 16:54:30 [server 3, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [4]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [3]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [4]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [2]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [3]
+2021/02/24 16:54:30 [server 4, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [0]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [4]
+2021/02/24 16:54:30 [server 3, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [3]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [4]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [2]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [0]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [3]
+2021/02/24 16:54:30 [server 4, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 3, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [4]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [3]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [4]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [2]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [0]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [3]
+2021/02/24 16:54:30 [server 4, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [4]
+2021/02/24 16:54:30 [server 3, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [3]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive command(5474119460715559711) from client
+2021/02/24 16:54:30 leader is [1]
+2021/02/24 16:54:30 [server 1, role 0, term 5] Append entry to [4] from 2 to 2
+2021/02/24 16:54:30 [server 1, role 0, term 5] Append entry to [3] from 2 to 2
+2021/02/24 16:54:30 [server 1, role 0, term 5] Append entry to [2] from 2 to 2
+2021/02/24 16:54:30 [server 1, role 0, term 5] Append entry to [0] from 2 to 2
+2021/02/24 16:54:30 [server 3, role 2, term 5] Append Entry successfully from [1], (2)-(2)
+2021/02/24 16:54:30 [server 4, role 2, term 5] Append Entry successfully from [1], (2)-(2)
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [3]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [4]
+2021/02/24 16:54:30 [server 1, role 0, term 5], apply log from 2 to 2
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [4]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [3]
+2021/02/24 16:54:30 [server 1, role 0, term 5] Append entry to [2] from 2 to 2
+2021/02/24 16:54:30 [server 1, role 0, term 5] Append entry to [0] from 2 to 2
+2021/02/24 16:54:30 [server 4, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 4, role 2, term 5], apply log from 2 to 2
+2021/02/24 16:54:30 [server 3, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 3, role 2, term 5], apply log from 2 to 2
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [4]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [3]
+2021/02/24 16:54:30 [server 1, role 0, term 5] Append entry to [0] from 2 to 2
+2021/02/24 16:54:30 [server 1, role 0, term 5] Append entry to [2] from 2 to 2
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [4]
+2021/02/24 16:54:30 [server 1, role 0, term 5] send heartbeat to [3]
+2021/02/24 16:54:30 [server 4, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 3, role 2, term 5] receive successful heartbeat from [1]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [4]
+2021/02/24 16:54:30 [server 1, role 0, term 5] receive successful append entry response from [3]
+2021/02/24 16:54:30 leader [1] crash, get out
+2021/02/24 16:54:30 [server 0, role 1, term 3], send request vote to [1]
+2021/02/24 16:54:30 [server 0, role 1, term 3], send request vote to [3]
+2021/02/24 16:54:30 [server 0, role 1, term 3], send request vote to [4]
+2021/02/24 16:54:30 [server 3, role 2, term 5] reject vote for [0], candidate term is small
+2021/02/24 16:54:30 [server 4, role 2, term 5] reject vote for [0], candidate term is small
+2021/02/24 16:54:30 [server 0, role 1, term 3], send request vote to [2]
+2021/02/24 16:54:30 [server 0, role 2, term 3], term has changed to (5), obsolete response
+2021/02/24 16:54:30 [server 4, role 1, term 6], send request vote to [3]
+2021/02/24 16:54:30 [server 4, role 1, term 6], send request vote to [1]
+2021/02/24 16:54:30 [server 4, role 1, term 6], send request vote to [0]
+2021/02/24 16:54:30 [server 3, role 2, term 6], vote for [4]
+2021/02/24 16:54:30 [server 4, role 1, term 6], send request vote to [2]
+2021/02/24 16:54:30 [server 0, role 2, term 6], vote for [4]
+2021/02/24 16:54:30 [server 4, role 1, term 6], receive votes from [3]
+2021/02/24 16:54:30 [server 4, role 1, term 6], get majority votes
+2021/02/24 16:54:30 [server 4, role 1, term 6], receive votes from [0]
+2021/02/24 16:54:30 [server 4, role 0, term 6] send heartbeat to [3]
+2021/02/24 16:54:30 [server 4, role 0, term 6] send heartbeat to [1]
+2021/02/24 16:54:30 [server 4, role 0, term 6] send heartbeat to [0]
+2021/02/24 16:54:30 [server 4, role 0, term 6] send heartbeat to [2]
+2021/02/24 16:54:30 [server 3, role 2, term 6] receive successful heartbeat from [4]
+2021/02/24 16:54:30 [server 0, role 2, term 6] inconsistent entry in preLogIndex(2), need to decrease
+2021/02/24 16:54:30 [server 4, role 0, term 6] receive successful append entry response from [3]
+2021/02/24 16:54:30 [server 4, role 0, term 6] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:30 [server 4, role 0, term 6] send heartbeat to [3]
+2021/02/24 16:54:30 [server 4, role 0, term 6] send heartbeat to [1]
+2021/02/24 16:54:30 [server 4, role 0, term 6] Append entry to [0] from 2 to 2
+2021/02/24 16:54:30 [server 4, role 0, term 6] send heartbeat to [2]
+2021/02/24 16:54:30 [server 3, role 2, term 6] receive successful heartbeat from [4]
+2021/02/24 16:54:30 [server 0, role 2, term 6] Append Entry successfully from [4], (2)-(2)
+2021/02/24 16:54:30 [server 0, role 2, term 6], apply log from 1 to 2
+2021/02/24 16:54:30 [server 4, role 0, term 6] receive successful append entry response from [3]
+2021/02/24 16:54:30 [server 4, role 0, term 6] receive successful append entry response from [0]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [3]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [2]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [1]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [0]
+2021/02/24 16:54:31 [server 3, role 2, term 6] receive successful heartbeat from [4]
+2021/02/24 16:54:31 [server 4, role 0, term 6] receive successful append entry response from [3]
+2021/02/24 16:54:31 [server 0, role 2, term 6] receive successful heartbeat from [4]
+2021/02/24 16:54:31 [server 4, role 0, term 6] receive successful append entry response from [0]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [3]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [0]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [1]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [2]
+2021/02/24 16:54:31 [server 3, role 2, term 6] receive successful heartbeat from [4]
+2021/02/24 16:54:31 [server 0, role 2, term 6] receive successful heartbeat from [4]
+2021/02/24 16:54:31 [server 4, role 0, term 6] receive successful append entry response from [3]
+2021/02/24 16:54:31 [server 4, role 0, term 6] receive successful append entry response from [0]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [3]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [0]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [1]
+2021/02/24 16:54:31 [server 4, role 0, term 6] send heartbeat to [2]
+2021/02/24 16:54:31 [server 3, role 2, term 6] receive successful heartbeat from [4]
+2021/02/24 16:54:31 [server 0, role 2, term 6] receive successful heartbeat from [4]
+2021/02/24 16:54:31 [server 4, role 0, term 6] receive successful append entry response from [0]
+2021/02/24 16:54:31 [server 4, role 0, term 6] receive successful append entry response from [3]
+2021/02/24 16:54:31 [server 4, role 0, term 6] receive command(8301127838811878102) from client
+2021/02/24 16:54:31 leader is [4]
+2021/02/24 16:54:31 leader [4] crash, get out
+2021/02/24 16:54:31 [server 3, role 1, term 7], send request vote to [0]
+2021/02/24 16:54:31 [server 3, role 1, term 7], send request vote to [2]
+2021/02/24 16:54:31 [server 3, role 1, term 7], send request vote to [1]
+2021/02/24 16:54:31 [server 0, role 2, term 7], vote for [3]
+2021/02/24 16:54:31 [server 2, role 2, term 7], vote for [3]
+2021/02/24 16:54:31 [server 3, role 1, term 7], send request vote to [4]
+2021/02/24 16:54:31 [server 3, role 1, term 7], receive votes from [0]
+2021/02/24 16:54:31 [server 3, role 1, term 7], get majority votes
+2021/02/24 16:54:31 [server 3, role 1, term 7], receive votes from [2]
+2021/02/24 16:54:31 [server 3, role 0, term 7] send heartbeat to [4]
+2021/02/24 16:54:31 [server 3, role 0, term 7] send heartbeat to [1]
+2021/02/24 16:54:31 [server 3, role 0, term 7] send heartbeat to [2]
+2021/02/24 16:54:31 [server 3, role 0, term 7] send heartbeat to [0]
+2021/02/24 16:54:31 [server 2, role 2, term 7] inconsistent entry in preLogIndex(2), need to decrease
+2021/02/24 16:54:31 [server 0, role 2, term 7] receive successful heartbeat from [3]
+2021/02/24 16:54:31 [server 3, role 0, term 7] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:31 [server 3, role 0, term 7] receive successful append entry response from [0]
+2021/02/24 16:54:31 [server 3, role 0, term 7] send heartbeat to [4]
+2021/02/24 16:54:31 [server 3, role 0, term 7] Append entry to [2] from 2 to 2
+2021/02/24 16:54:31 [server 3, role 0, term 7] send heartbeat to [0]
+2021/02/24 16:54:31 [server 3, role 0, term 7] send heartbeat to [1]
+2021/02/24 16:54:31 [server 0, role 2, term 7] receive successful heartbeat from [3]
+2021/02/24 16:54:31 [server 2, role 2, term 7] Append Entry successfully from [3], (2)-(2)
+2021/02/24 16:54:31 [server 2, role 2, term 7], apply log from 1 to 2
+2021/02/24 16:54:31 [server 3, role 0, term 7] receive successful append entry response from [0]
+2021/02/24 16:54:31 [server 3, role 0, term 7] receive successful append entry response from [2]
+2021/02/24 16:54:31 [server 3, role 0, term 7] send heartbeat to [4]
+2021/02/24 16:54:31 [server 3, role 0, term 7] send heartbeat to [1]
+2021/02/24 16:54:31 [server 3, role 0, term 7] send heartbeat to [0]
+2021/02/24 16:54:31 [server 3, role 0, term 7] send heartbeat to [2]
+2021/02/24 16:54:31 [server 0, role 2, term 7] receive successful heartbeat from [3]
+2021/02/24 16:54:31 [server 2, role 2, term 7] receive successful heartbeat from [3]
+2021/02/24 16:54:31 [server 3, role 0, term 7] receive successful append entry response from [0]
+2021/02/24 16:54:31 [server 3, role 0, term 7] receive successful append entry response from [2]
+2021/02/24 16:54:31 [server 3, role 0, term 7] receive command(7713403450865615990) from client
+2021/02/24 16:54:31 leader is [3]
+2021/02/24 16:54:31 leader [3] crash, get out
+2021/02/24 16:54:32 [server 0, role 1, term 8], send request vote to [1]
+2021/02/24 16:54:32 [server 0, role 1, term 8], send request vote to [3]
+2021/02/24 16:54:32 [server 0, role 1, term 8], send request vote to [4]
+2021/02/24 16:54:32 [server 0, role 1, term 8], send request vote to [2]
+2021/02/24 16:54:32 [server 3, role 2, term 8] reject vote for [0], not up to date
+2021/02/24 16:54:32 [server 2, role 2, term 8], vote for [0]
+2021/02/24 16:54:32 [server 0, role 1, term 8], receive votes from [2]
+2021/02/24 16:54:32 [server 3, role 1, term 9], send request vote to [2]
+2021/02/24 16:54:32 [server 3, role 1, term 9], send request vote to [1]
+2021/02/24 16:54:32 [server 3, role 1, term 9], send request vote to [0]
+2021/02/24 16:54:32 [server 2, role 2, term 9], vote for [3]
+2021/02/24 16:54:32 [server 3, role 1, term 9], send request vote to [4]
+2021/02/24 16:54:32 [server 0, role 2, term 9], vote for [3]
+2021/02/24 16:54:32 [server 3, role 1, term 9], receive votes from [2]
+2021/02/24 16:54:32 [server 3, role 1, term 9], get majority votes
+2021/02/24 16:54:32 [server 3, role 1, term 9], receive votes from [0]
+2021/02/24 16:54:32 [server 3, role 0, term 9] send heartbeat to [4]
+2021/02/24 16:54:32 [server 3, role 0, term 9] send heartbeat to [1]
+2021/02/24 16:54:32 [server 3, role 0, term 9] send heartbeat to [0]
+2021/02/24 16:54:32 [server 3, role 0, term 9] send heartbeat to [2]
+2021/02/24 16:54:32 [server 3, role 0, term 9] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:32 [server 3, role 0, term 9] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:32 [server 3, role 0, term 9] send heartbeat to [4]
+2021/02/24 16:54:32 [server 3, role 0, term 9] Append entry to [0] from 3 to 3
+2021/02/24 16:54:32 [server 3, role 0, term 9] Append entry to [2] from 3 to 3
+2021/02/24 16:54:32 [server 3, role 0, term 9] send heartbeat to [1]
+2021/02/24 16:54:32 [server 0, role 2, term 9] Append Entry successfully from [3], (3)-(3)
+2021/02/24 16:54:32 [server 2, role 2, term 9] Append Entry successfully from [3], (3)-(3)
+2021/02/24 16:54:32 [server 3, role 0, term 9] receive successful append entry response from [2]
+2021/02/24 16:54:32 [server 3, role 0, term 9] receive successful append entry response from [0]
+2021/02/24 16:54:32 [server 3, role 0, term 9] receive command(7497064097456525263) from client
+2021/02/24 16:54:32 leader is [3]
+2021/02/24 16:54:32 leader [3] crash, get out
+2021/02/24 16:54:32 [server 0, role 1, term 10], send request vote to [4]
+2021/02/24 16:54:32 [server 0, role 1, term 10], send request vote to [2]
+2021/02/24 16:54:32 [server 0, role 1, term 10], send request vote to [1]
+2021/02/24 16:54:32 [server 4, role 2, term 10], vote for [0]
+2021/02/24 16:54:32 [server 2, role 2, term 10], vote for [0]
+2021/02/24 16:54:32 [server 0, role 1, term 10], receive votes from [2]
+2021/02/24 16:54:32 [server 0, role 1, term 10], get majority votes
+2021/02/24 16:54:32 [server 0, role 1, term 10], receive votes from [4]
+2021/02/24 16:54:32 [server 0, role 1, term 10], send request vote to [3]
+2021/02/24 16:54:32 [server 0, role 0, term 10] send heartbeat to [3]
+2021/02/24 16:54:32 [server 0, role 0, term 10] send heartbeat to [1]
+2021/02/24 16:54:32 [server 0, role 0, term 10] send heartbeat to [2]
+2021/02/24 16:54:32 [server 0, role 0, term 10] send heartbeat to [4]
+2021/02/24 16:54:32 [server 2, role 2, term 10] receive successful heartbeat from [0]
+2021/02/24 16:54:32 [server 4, role 2, term 10] inconsistent entry in preLogIndex(3), need to decrease
+2021/02/24 16:54:32 [server 0, role 0, term 10] receive successful append entry response from [2]
+2021/02/24 16:54:32 [server 0, role 0, term 10] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:32 [server 0, role 0, term 10] send heartbeat to [1]
+2021/02/24 16:54:32 [server 0, role 0, term 10] Append entry to [4] from 3 to 3
+2021/02/24 16:54:32 [server 0, role 0, term 10] send heartbeat to [3]
+2021/02/24 16:54:32 [server 0, role 0, term 10] send heartbeat to [2]
+2021/02/24 16:54:32 [server 4, role 2, term 10] Append Entry successfully from [0], (3)-(3)
+2021/02/24 16:54:32 [server 4, role 2, term 10], apply log from 1 to 2
+2021/02/24 16:54:32 [server 2, role 2, term 10] receive successful heartbeat from [0]
+2021/02/24 16:54:32 [server 0, role 0, term 10] receive successful append entry response from [4]
+2021/02/24 16:54:32 [server 0, role 0, term 10] receive successful append entry response from [2]
+2021/02/24 16:54:32 [server 0, role 0, term 10] receive command(8155298240552079020) from client
+2021/02/24 16:54:32 leader is [0]
+2021/02/24 16:54:32 [server 0, role 0, term 10] Append entry to [4] from 4 to 4
+2021/02/24 16:54:32 [server 0, role 0, term 10] Append entry to [1] from 4 to 4
+2021/02/24 16:54:32 [server 0, role 0, term 10] Append entry to [3] from 4 to 4
+2021/02/24 16:54:32 [server 0, role 0, term 10] Append entry to [2] from 4 to 4
+2021/02/24 16:54:32 [server 4, role 2, term 10] Append Entry successfully from [0], (4)-(4)
+2021/02/24 16:54:32 [server 2, role 2, term 10] Append Entry successfully from [0], (4)-(4)
+2021/02/24 16:54:32 [server 0, role 0, term 10] receive successful append entry response from [4]
+2021/02/24 16:54:32 [server 0, role 0, term 10], apply log from 3 to 3
+2021/02/24 16:54:32 [server 0, role 0, term 10] receive successful append entry response from [2]
+2021/02/24 16:54:32 [server 0, role 0, term 10], apply log from 4 to 4
+2021/02/24 16:54:32 leader [0] crash, get out
+2021/02/24 16:54:32 [server 3, role 1, term 10], send request vote to [2]
+2021/02/24 16:54:32 [server 3, role 1, term 10], send request vote to [1]
+2021/02/24 16:54:32 [server 3, role 1, term 10], send request vote to [0]
+2021/02/24 16:54:32 [server 3, role 1, term 10], send request vote to [4]
+2021/02/24 16:54:32 [server 2, role 2, term 10] reject vote for [3], already voted for [0]
+2021/02/24 16:54:32 [server 4, role 2, term 10] reject vote for [3], already voted for [0]
+2021/02/24 16:54:32 [server 4, role 1, term 11], send request vote to [3]
+2021/02/24 16:54:32 [server 4, role 1, term 11], send request vote to [1]
+2021/02/24 16:54:32 [server 4, role 1, term 11], send request vote to [0]
+2021/02/24 16:54:32 [server 3, role 2, term 11], vote for [4]
+2021/02/24 16:54:32 [server 4, role 1, term 11], send request vote to [2]
+2021/02/24 16:54:32 [server 4, role 1, term 11], receive votes from [3]
+2021/02/24 16:54:32 [server 2, role 2, term 11], vote for [4]
+2021/02/24 16:54:32 [server 4, role 1, term 11], get majority votes
+2021/02/24 16:54:32 [server 4, role 1, term 11], receive votes from [2]
+2021/02/24 16:54:32 [server 4, role 0, term 11] send heartbeat to [2]
+2021/02/24 16:54:32 [server 4, role 0, term 11] send heartbeat to [0]
+2021/02/24 16:54:32 [server 4, role 0, term 11] send heartbeat to [1]
+2021/02/24 16:54:32 [server 4, role 0, term 11] send heartbeat to [3]
+2021/02/24 16:54:32 [server 2, role 2, term 11] receive successful heartbeat from [4]
+2021/02/24 16:54:32 [server 3, role 2, term 11] inconsistent entry in preLogIndex(4), need to decrease
+2021/02/24 16:54:32 [server 4, role 0, term 11] receive successful append entry response from [2]
+2021/02/24 16:54:32 [server 4, role 0, term 11] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:32 [server 4, role 0, term 11] send heartbeat to [1]
+2021/02/24 16:54:32 [server 4, role 0, term 11] Append entry to [3] from 4 to 4
+2021/02/24 16:54:32 [server 4, role 0, term 11] send heartbeat to [2]
+2021/02/24 16:54:32 [server 4, role 0, term 11] send heartbeat to [0]
+2021/02/24 16:54:32 [server 3, role 2, term 11] Append Entry successfully from [4], (4)-(4)
+2021/02/24 16:54:32 [server 3, role 2, term 11], apply log from 1 to 2
+2021/02/24 16:54:32 [server 2, role 2, term 11] receive successful heartbeat from [4]
+2021/02/24 16:54:32 [server 4, role 0, term 11] receive successful append entry response from [3]
+2021/02/24 16:54:32 [server 4, role 0, term 11] receive successful append entry response from [2]
+2021/02/24 16:54:33 [server 4, role 0, term 11] send heartbeat to [3]
+2021/02/24 16:54:33 [server 4, role 0, term 11] send heartbeat to [0]
+2021/02/24 16:54:33 [server 4, role 0, term 11] send heartbeat to [1]
+2021/02/24 16:54:33 [server 4, role 0, term 11] send heartbeat to [2]
+2021/02/24 16:54:33 [server 3, role 2, term 11] receive successful heartbeat from [4]
+2021/02/24 16:54:33 [server 2, role 2, term 11] receive successful heartbeat from [4]
+2021/02/24 16:54:33 [server 4, role 0, term 11] receive successful append entry response from [3]
+2021/02/24 16:54:33 [server 4, role 0, term 11] receive successful append entry response from [2]
+2021/02/24 16:54:33 [server 4, role 0, term 11] receive command(5079174677275479274) from client
+2021/02/24 16:54:33 leader is [4]
+2021/02/24 16:54:33 leader [4] crash, get out
+2021/02/24 16:54:33 [server 2, role 1, term 12], send request vote to [3]
+2021/02/24 16:54:33 [server 2, role 1, term 12], send request vote to [1]
+2021/02/24 16:54:33 [server 2, role 1, term 12], send request vote to [0]
+2021/02/24 16:54:33 [server 2, role 1, term 12], send request vote to [4]
+2021/02/24 16:54:33 [server 3, role 2, term 12], vote for [2]
+2021/02/24 16:54:33 [server 4, role 2, term 12] reject vote for [2], not up to date
+2021/02/24 16:54:33 [server 2, role 1, term 12], receive votes from [3]
+2021/02/24 16:54:33 [server 4, role 1, term 13], send request vote to [0]
+2021/02/24 16:54:33 [server 4, role 1, term 13], send request vote to [2]
+2021/02/24 16:54:33 [server 4, role 1, term 13], send request vote to [3]
+2021/02/24 16:54:33 [server 2, role 2, term 13], vote for [4]
+2021/02/24 16:54:33 [server 3, role 2, term 13], vote for [4]
+2021/02/24 16:54:33 [server 4, role 1, term 13], send request vote to [1]
+2021/02/24 16:54:33 [server 4, role 1, term 13], receive votes from [2]
+2021/02/24 16:54:33 [server 4, role 1, term 13], get majority votes
+2021/02/24 16:54:33 [server 4, role 1, term 13], receive votes from [3]
+2021/02/24 16:54:33 [server 4, role 0, term 13] send heartbeat to [3]
+2021/02/24 16:54:33 [server 4, role 0, term 13] send heartbeat to [1]
+2021/02/24 16:54:33 [server 4, role 0, term 13] send heartbeat to [2]
+2021/02/24 16:54:33 [server 4, role 0, term 13] send heartbeat to [0]
+2021/02/24 16:54:33 [server 4, role 0, term 13] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:33 [server 4, role 0, term 13] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:33 [server 4, role 0, term 13] send heartbeat to [1]
+2021/02/24 16:54:33 [server 4, role 0, term 13] send heartbeat to [0]
+2021/02/24 16:54:33 [server 4, role 0, term 13] Append entry to [3] from 5 to 5
+2021/02/24 16:54:33 [server 4, role 0, term 13] Append entry to [2] from 5 to 5
+2021/02/24 16:54:33 [server 3, role 2, term 13] Append Entry successfully from [4], (5)-(5)
+2021/02/24 16:54:33 [server 2, role 2, term 13] Append Entry successfully from [4], (5)-(5)
+2021/02/24 16:54:33 [server 4, role 0, term 13] receive successful append entry response from [3]
+2021/02/24 16:54:33 [server 4, role 0, term 13] receive successful append entry response from [2]
+2021/02/24 16:54:33 [server 4, role 0, term 13] send heartbeat to [0]
+2021/02/24 16:54:33 [server 4, role 0, term 13] send heartbeat to [3]
+2021/02/24 16:54:33 [server 3, role 2, term 13] receive successful heartbeat from [4]
+2021/02/24 16:54:33 [server 4, role 0, term 13] send heartbeat to [2]
+2021/02/24 16:54:33 [server 4, role 0, term 13] send heartbeat to [1]
+2021/02/24 16:54:33 [server 4, role 0, term 13] receive successful append entry response from [3]
+2021/02/24 16:54:33 [server 2, role 2, term 13] receive successful heartbeat from [4]
+2021/02/24 16:54:33 [server 4, role 0, term 13] receive successful append entry response from [2]
+2021/02/24 16:54:33 [server 4, role 0, term 13] receive command(5177111443132711429) from client
+2021/02/24 16:54:33 leader is [4]
+2021/02/24 16:54:33 leader [4] crash, get out
+2021/02/24 16:54:33 [server 2, role 1, term 14], send request vote to [4]
+2021/02/24 16:54:33 [server 2, role 1, term 14], send request vote to [0]
+2021/02/24 16:54:33 [server 2, role 1, term 14], send request vote to [3]
+2021/02/24 16:54:33 [server 2, role 1, term 14], send request vote to [1]
+2021/02/24 16:54:33 [server 3, role 2, term 14], vote for [2]
+2021/02/24 16:54:33 [server 0, role 2, term 14], vote for [2]
+2021/02/24 16:54:33 [server 2, role 1, term 14], receive votes from [3]
+2021/02/24 16:54:33 [server 2, role 1, term 14], get majority votes
+2021/02/24 16:54:33 [server 2, role 1, term 14], receive votes from [0]
+2021/02/24 16:54:33 [server 2, role 0, term 14] send heartbeat to [4]
+2021/02/24 16:54:33 [server 2, role 0, term 14] send heartbeat to [1]
+2021/02/24 16:54:33 [server 2, role 0, term 14] send heartbeat to [3]
+2021/02/24 16:54:33 [server 2, role 0, term 14] send heartbeat to [0]
+2021/02/24 16:54:33 [server 3, role 2, term 14] receive successful heartbeat from [2]
+2021/02/24 16:54:33 [server 2, role 0, term 14] receive successful append entry response from [3]
+2021/02/24 16:54:33 [server 2, role 0, term 14] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:33 [server 2, role 0, term 14] send heartbeat to [3]
+2021/02/24 16:54:33 [server 2, role 0, term 14] Append entry to [0] from 5 to 5
+2021/02/24 16:54:33 [server 2, role 0, term 14] send heartbeat to [1]
+2021/02/24 16:54:33 [server 3, role 2, term 14] receive successful heartbeat from [2]
+2021/02/24 16:54:33 [server 2, role 0, term 14] send heartbeat to [4]
+2021/02/24 16:54:33 [server 0, role 2, term 14] Append Entry successfully from [2], (5)-(5)
+2021/02/24 16:54:33 [server 0, role 2, term 14], apply log from 1 to 2
+2021/02/24 16:54:33 [server 2, role 0, term 14] receive successful append entry response from [3]
+2021/02/24 16:54:33 [server 2, role 0, term 14] receive successful append entry response from [0]
+2021/02/24 16:54:33 [server 2, role 0, term 14] send heartbeat to [4]
+2021/02/24 16:54:33 [server 2, role 0, term 14] send heartbeat to [1]
+2021/02/24 16:54:33 [server 2, role 0, term 14] send heartbeat to [0]
+2021/02/24 16:54:33 [server 2, role 0, term 14] send heartbeat to [3]
+2021/02/24 16:54:33 [server 0, role 2, term 14] receive successful heartbeat from [2]
+2021/02/24 16:54:33 [server 3, role 2, term 14] receive successful heartbeat from [2]
+2021/02/24 16:54:33 [server 2, role 0, term 14] receive successful append entry response from [0]
+2021/02/24 16:54:33 [server 2, role 0, term 14] receive successful append entry response from [3]
+2021/02/24 16:54:33 [server 2, role 0, term 14] receive command(1441676762727967495) from client
+2021/02/24 16:54:33 leader is [2]
+2021/02/24 16:54:33 leader [2] crash, get out
+2021/02/24 16:54:34 [server 3, role 1, term 15], send request vote to [2]
+2021/02/24 16:54:34 [server 3, role 1, term 15], send request vote to [1]
+2021/02/24 16:54:34 [server 3, role 1, term 15], send request vote to [0]
+2021/02/24 16:54:34 [server 3, role 1, term 15], send request vote to [4]
+2021/02/24 16:54:34 [server 0, role 2, term 15], vote for [3]
+2021/02/24 16:54:34 [server 4, role 2, term 15] reject vote for [3], not up to date
+2021/02/24 16:54:34 [server 3, role 1, term 15], receive votes from [0]
+2021/02/24 16:54:34 [server 4, role 1, term 16], send request vote to [3]
+2021/02/24 16:54:34 [server 4, role 1, term 16], send request vote to [0]
+2021/02/24 16:54:34 [server 4, role 1, term 16], send request vote to [1]
+2021/02/24 16:54:34 [server 3, role 2, term 16], vote for [4]
+2021/02/24 16:54:34 [server 4, role 1, term 16], send request vote to [2]
+2021/02/24 16:54:34 [server 0, role 2, term 16], vote for [4]
+2021/02/24 16:54:34 [server 4, role 1, term 16], receive votes from [3]
+2021/02/24 16:54:34 [server 4, role 1, term 16], get majority votes
+2021/02/24 16:54:34 [server 4, role 1, term 16], receive votes from [0]
+2021/02/24 16:54:34 [server 4, role 0, term 16] send heartbeat to [3]
+2021/02/24 16:54:34 [server 4, role 0, term 16] send heartbeat to [1]
+2021/02/24 16:54:34 [server 4, role 0, term 16] send heartbeat to [0]
+2021/02/24 16:54:34 [server 4, role 0, term 16] send heartbeat to [2]
+2021/02/24 16:54:34 [server 4, role 0, term 16] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:34 [server 4, role 0, term 16] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:34 [server 4, role 0, term 16] send heartbeat to [1]
+2021/02/24 16:54:34 [server 4, role 0, term 16] Append entry to [0] from 6 to 6
+2021/02/24 16:54:34 [server 4, role 0, term 16] Append entry to [3] from 6 to 6
+2021/02/24 16:54:34 [server 4, role 0, term 16] send heartbeat to [2]
+2021/02/24 16:54:34 [server 0, role 2, term 16] Append Entry successfully from [4], (6)-(6)
+2021/02/24 16:54:34 [server 3, role 2, term 16] Append Entry successfully from [4], (6)-(6)
+2021/02/24 16:54:34 [server 4, role 0, term 16] receive successful append entry response from [0]
+2021/02/24 16:54:34 [server 4, role 0, term 16] receive successful append entry response from [3]
+2021/02/24 16:54:34 [server 4, role 0, term 16] receive command(8712391874060076459) from client
+2021/02/24 16:54:34 leader is [4]
+2021/02/24 16:54:34 leader [4] crash, get out
+2021/02/24 16:54:34 [server 0, role 1, term 17], send request vote to [3]
+2021/02/24 16:54:34 [server 0, role 1, term 17], send request vote to [2]
+2021/02/24 16:54:34 [server 0, role 1, term 17], send request vote to [4]
+2021/02/24 16:54:34 [server 3, role 2, term 17], vote for [0]
+2021/02/24 16:54:34 [server 0, role 1, term 17], send request vote to [1]
+2021/02/24 16:54:34 [server 4, role 2, term 17] reject vote for [0], not up to date
+2021/02/24 16:54:34 [server 0, role 1, term 17], receive votes from [3]
+2021/02/24 16:54:34 [server 4, role 1, term 18], send request vote to [2]
+2021/02/24 16:54:34 [server 4, role 1, term 18], send request vote to [1]
+2021/02/24 16:54:34 [server 4, role 1, term 18], send request vote to [0]
+2021/02/24 16:54:34 [server 4, role 1, term 18], send request vote to [3]
+2021/02/24 16:54:34 [server 0, role 2, term 18], vote for [4]
+2021/02/24 16:54:34 [server 3, role 2, term 18], vote for [4]
+2021/02/24 16:54:34 [server 4, role 1, term 18], receive votes from [0]
+2021/02/24 16:54:34 [server 4, role 1, term 18], get majority votes
+2021/02/24 16:54:34 [server 4, role 1, term 18], receive votes from [3]
+2021/02/24 16:54:34 [server 4, role 0, term 18] send heartbeat to [3]
+2021/02/24 16:54:34 [server 4, role 0, term 18] send heartbeat to [0]
+2021/02/24 16:54:34 [server 4, role 0, term 18] send heartbeat to [1]
+2021/02/24 16:54:34 [server 4, role 0, term 18] send heartbeat to [2]
+2021/02/24 16:54:34 [server 4, role 0, term 18] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:34 [server 4, role 0, term 18] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:34 [server 4, role 0, term 18] Append entry to [3] from 7 to 7
+2021/02/24 16:54:34 [server 4, role 0, term 18] send heartbeat to [1]
+2021/02/24 16:54:34 [server 4, role 0, term 18] Append entry to [0] from 7 to 7
+2021/02/24 16:54:34 [server 4, role 0, term 18] send heartbeat to [2]
+2021/02/24 16:54:34 [server 3, role 2, term 18] Append Entry successfully from [4], (7)-(7)
+2021/02/24 16:54:34 [server 0, role 2, term 18] Append Entry successfully from [4], (7)-(7)
+2021/02/24 16:54:34 [server 4, role 0, term 18] receive successful append entry response from [3]
+2021/02/24 16:54:34 [server 4, role 0, term 18] receive successful append entry response from [0]
+2021/02/24 16:54:34 [server 4, role 0, term 18] send heartbeat to [1]
+2021/02/24 16:54:34 [server 4, role 0, term 18] send heartbeat to [3]
+2021/02/24 16:54:34 [server 4, role 0, term 18] send heartbeat to [2]
+2021/02/24 16:54:34 [server 4, role 0, term 18] send heartbeat to [0]
+2021/02/24 16:54:34 [server 3, role 2, term 18] receive successful heartbeat from [4]
+2021/02/24 16:54:34 [server 0, role 2, term 18] receive successful heartbeat from [4]
+2021/02/24 16:54:34 [server 4, role 0, term 18] receive successful append entry response from [3]
+2021/02/24 16:54:34 [server 4, role 0, term 18] receive successful append entry response from [0]
+2021/02/24 16:54:35 [server 4, role 0, term 18] receive command(659725549899513295) from client
+2021/02/24 16:54:35 leader is [4]
+2021/02/24 16:54:35 leader [4] crash, get out
+2021/02/24 16:54:35 [server 0, role 1, term 19], send request vote to [4]
+2021/02/24 16:54:35 [server 0, role 1, term 19], send request vote to [2]
+2021/02/24 16:54:35 [server 0, role 1, term 19], send request vote to [1]
+2021/02/24 16:54:35 [server 0, role 1, term 19], send request vote to [3]
+2021/02/24 16:54:35 [server 2, role 2, term 19], vote for [0]
+2021/02/24 16:54:35 [server 3, role 2, term 19], vote for [0]
+2021/02/24 16:54:35 [server 0, role 1, term 19], receive votes from [2]
+2021/02/24 16:54:35 [server 0, role 1, term 19], get majority votes
+2021/02/24 16:54:35 [server 0, role 1, term 19], receive votes from [3]
+2021/02/24 16:54:35 [server 0, role 0, term 19] send heartbeat to [4]
+2021/02/24 16:54:35 [server 0, role 0, term 19] send heartbeat to [1]
+2021/02/24 16:54:35 [server 0, role 0, term 19] send heartbeat to [2]
+2021/02/24 16:54:35 [server 0, role 0, term 19] send heartbeat to [3]
+2021/02/24 16:54:35 [server 3, role 2, term 19] receive successful heartbeat from [0]
+2021/02/24 16:54:35 [server 0, role 0, term 19] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:35 [server 0, role 0, term 19] receive successful append entry response from [3]
+2021/02/24 16:54:35 [server 0, role 0, term 19] send heartbeat to [4]
+2021/02/24 16:54:35 [server 0, role 0, term 19] send heartbeat to [3]
+2021/02/24 16:54:35 [server 0, role 0, term 19] Append entry to [2] from 7 to 7
+2021/02/24 16:54:35 [server 0, role 0, term 19] send heartbeat to [1]
+2021/02/24 16:54:35 [server 3, role 2, term 19] receive successful heartbeat from [0]
+2021/02/24 16:54:35 [server 2, role 2, term 19] inconsistent entry in preLogIndex(6), need to decrease
+2021/02/24 16:54:35 [server 0, role 0, term 19] receive successful append entry response from [3]
+2021/02/24 16:54:35 [server 0, role 0, term 19] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:35 [server 0, role 0, term 19] send heartbeat to [4]
+2021/02/24 16:54:35 [server 0, role 0, term 19] send heartbeat to [3]
+2021/02/24 16:54:35 [server 0, role 0, term 19] send heartbeat to [1]
+2021/02/24 16:54:35 [server 0, role 0, term 19] Append entry to [2] from 6 to 7
+2021/02/24 16:54:35 [server 3, role 2, term 19] receive successful heartbeat from [0]
+2021/02/24 16:54:35 [server 2, role 2, term 19] Append Entry successfully from [0], (6)-(7)
+2021/02/24 16:54:35 [server 2, role 2, term 19], apply log from 1 to 2
+2021/02/24 16:54:35 [server 0, role 0, term 19] receive successful append entry response from [3]
+2021/02/24 16:54:35 [server 0, role 0, term 19] receive successful append entry response from [2]
+2021/02/24 16:54:35 [server 0, role 0, term 19] receive command(4208660876588800613) from client
+2021/02/24 16:54:35 leader is [0]
+2021/02/24 16:54:35 leader [0] crash, get out
+2021/02/24 16:54:35 [server 2, role 1, term 20], send request vote to [0]
+2021/02/24 16:54:35 [server 2, role 1, term 20], send request vote to [1]
+2021/02/24 16:54:35 [server 2, role 1, term 20], send request vote to [3]
+2021/02/24 16:54:35 [server 1, role 2, term 20], vote for [2]
+2021/02/24 16:54:35 [server 2, role 1, term 20], send request vote to [4]
+2021/02/24 16:54:35 [server 3, role 2, term 20], vote for [2]
+2021/02/24 16:54:35 [server 2, role 1, term 20], receive votes from [1]
+2021/02/24 16:54:35 [server 2, role 1, term 20], get majority votes
+2021/02/24 16:54:35 [server 2, role 1, term 20], receive votes from [3]
+2021/02/24 16:54:35 [server 2, role 0, term 20] send heartbeat to [4]
+2021/02/24 16:54:35 [server 2, role 0, term 20] send heartbeat to [3]
+2021/02/24 16:54:35 [server 2, role 0, term 20] send heartbeat to [1]
+2021/02/24 16:54:35 [server 2, role 0, term 20] send heartbeat to [0]
+2021/02/24 16:54:35 [server 3, role 2, term 20] receive successful heartbeat from [2]
+2021/02/24 16:54:35 [server 2, role 0, term 20] receive successful append entry response from [3]
+2021/02/24 16:54:35 [server 2, role 0, term 20] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:35 [server 2, role 0, term 20] send heartbeat to [0]
+2021/02/24 16:54:35 [server 2, role 0, term 20] send heartbeat to [4]
+2021/02/24 16:54:35 [server 2, role 0, term 20] send heartbeat to [3]
+2021/02/24 16:54:35 [server 2, role 0, term 20] Append entry to [1] from 3 to 7
+2021/02/24 16:54:35 [server 3, role 2, term 20] receive successful heartbeat from [2]
+2021/02/24 16:54:35 [server 1, role 2, term 20] Append Entry successfully from [2], (3)-(7)
+2021/02/24 16:54:35 [server 1, role 2, term 20], apply log from 1 to 2
+2021/02/24 16:54:35 [server 2, role 0, term 20] receive successful append entry response from [3]
+2021/02/24 16:54:35 [server 2, role 0, term 20] receive successful append entry response from [1]
+2021/02/24 16:54:35 [server 2, role 0, term 20] receive command(6240693525058041777) from client
+2021/02/24 16:54:35 leader is [2]
+2021/02/24 16:54:35 leader [2] crash, get out
+2021/02/24 16:54:36 [server 3, role 1, term 21], send request vote to [2]
+2021/02/24 16:54:36 [server 2, role 2, term 21] reject vote for [3], not up to date
+2021/02/24 16:54:36 [server 3, role 1, term 21], send request vote to [1]
+2021/02/24 16:54:36 [server 3, role 1, term 21], send request vote to [4]
+2021/02/24 16:54:36 [server 3, role 1, term 21], send request vote to [0]
+2021/02/24 16:54:36 [server 1, role 2, term 21], vote for [3]
+2021/02/24 16:54:36 [server 3, role 1, term 21], receive votes from [1]
+2021/02/24 16:54:36 [server 2, role 1, term 22], send request vote to [4]
+2021/02/24 16:54:36 [server 2, role 1, term 22], send request vote to [1]
+2021/02/24 16:54:36 [server 2, role 1, term 22], send request vote to [3]
+2021/02/24 16:54:36 [server 1, role 2, term 22], vote for [2]
+2021/02/24 16:54:36 [server 3, role 2, term 22], vote for [2]
+2021/02/24 16:54:36 [server 2, role 1, term 22], send request vote to [0]
+2021/02/24 16:54:36 [server 2, role 1, term 22], receive votes from [1]
+2021/02/24 16:54:36 [server 2, role 1, term 22], get majority votes
+2021/02/24 16:54:36 [server 2, role 1, term 22], receive votes from [3]
+2021/02/24 16:54:36 [server 2, role 0, term 22] send heartbeat to [4]
+2021/02/24 16:54:36 [server 2, role 0, term 22] send heartbeat to [1]
+2021/02/24 16:54:36 [server 2, role 0, term 22] send heartbeat to [0]
+2021/02/24 16:54:36 [server 2, role 0, term 22] send heartbeat to [3]
+2021/02/24 16:54:36 [server 2, role 0, term 22] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:36 [server 2, role 0, term 22] receive command(8181676005130108777) from client
+2021/02/24 16:54:36 leader is [2]
+2021/02/24 16:54:36 [server 2, role 0, term 22] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:36 leader [2] crash, get out
+2021/02/24 16:54:36 [server 1, role 1, term 23], send request vote to [2]
+2021/02/24 16:54:36 [server 1, role 1, term 23], send request vote to [3]
+2021/02/24 16:54:36 [server 1, role 1, term 23], send request vote to [4]
+2021/02/24 16:54:36 [server 1, role 1, term 23], send request vote to [0]
+2021/02/24 16:54:36 [server 4, role 2, term 23] reject vote for [1], not up to date
+2021/02/24 16:54:36 [server 3, role 2, term 23], vote for [1]
+2021/02/24 16:54:36 [server 1, role 1, term 23], receive votes from [3]
+2021/02/24 16:54:36 [server 4, role 1, term 24], send request vote to [3]
+2021/02/24 16:54:36 [server 4, role 1, term 24], send request vote to [1]
+2021/02/24 16:54:36 [server 3, role 2, term 24], vote for [4]
+2021/02/24 16:54:36 [server 4, role 1, term 24], send request vote to [0]
+2021/02/24 16:54:36 [server 4, role 1, term 24], send request vote to [2]
+2021/02/24 16:54:36 [server 1, role 2, term 24], vote for [4]
+2021/02/24 16:54:36 [server 4, role 1, term 24], receive votes from [3]
+2021/02/24 16:54:36 [server 4, role 1, term 24], get majority votes
+2021/02/24 16:54:36 [server 4, role 1, term 24], receive votes from [1]
+2021/02/24 16:54:36 [server 4, role 0, term 24] send heartbeat to [1]
+2021/02/24 16:54:36 [server 4, role 0, term 24] send heartbeat to [3]
+2021/02/24 16:54:36 [server 4, role 0, term 24] send heartbeat to [0]
+2021/02/24 16:54:36 [server 4, role 0, term 24] send heartbeat to [3]
+2021/02/24 16:54:36 [server 4, role 0, term 24] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:36 [server 4, role 0, term 24] send heartbeat to [2]
+2021/02/24 16:54:36 [server 4, role 0, term 24] Append entry to [1] from 8 to 8
+2021/02/24 16:54:36 [server 4, role 0, term 24] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:36 [server 4, role 0, term 24] send heartbeat to [2]
+2021/02/24 16:54:36 [server 1, role 2, term 24] Append Entry successfully from [4], (8)-(8)
+2021/02/24 16:54:36 [server 4, role 0, term 24] send heartbeat to [0]
+2021/02/24 16:54:36 [server 4, role 0, term 24] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:36 [server 4, role 0, term 24] receive successful append entry response from [1]
+2021/02/24 16:54:36 [server 4, role 0, term 24] receive command(343082456715686070) from client
+2021/02/24 16:54:36 leader is [4]
+2021/02/24 16:54:36 leader [4] crash, get out
+2021/02/24 16:54:37 [server 2, role 1, term 23], send request vote to [3]
+2021/02/24 16:54:37 [server 2, role 1, term 23], send request vote to [1]
+2021/02/24 16:54:37 [server 2, role 1, term 23], send request vote to [4]
+2021/02/24 16:54:37 [server 2, role 1, term 23], send request vote to [0]
+2021/02/24 16:54:37 [server 3, role 2, term 24] reject vote for [2], candidate term is small
+2021/02/24 16:54:37 [server 1, role 2, term 24] reject vote for [2], candidate term is small
+2021/02/24 16:54:37 [server 2, role 2, term 23], term has changed to (24), obsolete response
+2021/02/24 16:54:37 [server 1, role 1, term 25], send request vote to [4]
+2021/02/24 16:54:37 [server 1, role 1, term 25], send request vote to [2]
+2021/02/24 16:54:37 [server 1, role 1, term 25], send request vote to [0]
+2021/02/24 16:54:37 [server 1, role 1, term 25], send request vote to [3]
+2021/02/24 16:54:37 [server 2, role 2, term 25] reject vote for [1], not up to date
+2021/02/24 16:54:37 [server 3, role 2, term 25], vote for [1]
+2021/02/24 16:54:37 [server 1, role 1, term 25], receive votes from [3]
+2021/02/24 16:54:37 [server 2, role 1, term 26], send request vote to [3]
+2021/02/24 16:54:37 [server 2, role 1, term 26], send request vote to [1]
+2021/02/24 16:54:37 [server 2, role 1, term 26], send request vote to [0]
+2021/02/24 16:54:37 [server 3, role 2, term 26], vote for [2]
+2021/02/24 16:54:37 [server 2, role 1, term 26], send request vote to [4]
+2021/02/24 16:54:37 [server 1, role 2, term 26], vote for [2]
+2021/02/24 16:54:37 [server 2, role 1, term 26], receive votes from [3]
+2021/02/24 16:54:37 [server 2, role 1, term 26], get majority votes
+2021/02/24 16:54:37 [server 2, role 1, term 26], receive votes from [1]
+2021/02/24 16:54:37 [server 2, role 0, term 26] send heartbeat to [4]
+2021/02/24 16:54:37 [server 2, role 0, term 26] send heartbeat to [1]
+2021/02/24 16:54:37 [server 2, role 0, term 26] send heartbeat to [3]
+2021/02/24 16:54:37 [server 2, role 0, term 26] send heartbeat to [0]
+2021/02/24 16:54:37 [server 2, role 0, term 26] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:37 [server 2, role 0, term 26] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:37 [server 2, role 0, term 26] send heartbeat to [4]
+2021/02/24 16:54:37 [server 2, role 0, term 26] send heartbeat to [0]
+2021/02/24 16:54:37 [server 2, role 0, term 26] Append entry to [1] from 9 to 9
+2021/02/24 16:54:37 [server 2, role 0, term 26] Append entry to [3] from 8 to 9
+2021/02/24 16:54:37 [server 1, role 2, term 26] inconsistent entry in preLogIndex(8), need to decrease
+2021/02/24 16:54:37 [server 3, role 2, term 26] Append Entry successfully from [2], (8)-(9)
+2021/02/24 16:54:37 [server 2, role 0, term 26] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:37 [server 2, role 0, term 26] receive successful append entry response from [3]
+2021/02/24 16:54:37 [server 2, role 0, term 26] receive command(4443567019489444319) from client
+2021/02/24 16:54:37 leader is [2]
+2021/02/24 16:54:37 [server 2, role 0, term 26] Append entry to [4] from 10 to 10
+2021/02/24 16:54:37 [server 2, role 0, term 26] Append entry to [3] from 10 to 10
+2021/02/24 16:54:37 [server 2, role 0, term 26] Append entry to [1] from 8 to 10
+2021/02/24 16:54:37 [server 2, role 0, term 26] Append entry to [0] from 10 to 10
+2021/02/24 16:54:37 [server 1, role 2, term 26] Append Entry successfully from [2], (8)-(10)
+2021/02/24 16:54:37 [server 3, role 2, term 26] Append Entry successfully from [2], (10)-(10)
+2021/02/24 16:54:37 [server 2, role 0, term 26] receive successful append entry response from [1]
+2021/02/24 16:54:37 [server 2, role 0, term 26], apply log from 1 to 9
+2021/02/24 16:54:37 [server 2, role 0, term 26] receive successful append entry response from [3]
+2021/02/24 16:54:37 [server 2, role 0, term 26], apply log from 10 to 10
+2021/02/24 16:54:37 leader [2] crash, get out
+2021/02/24 16:54:37 [server 1, role 1, term 27], send request vote to [4]
+2021/02/24 16:54:37 [server 1, role 1, term 27], send request vote to [2]
+2021/02/24 16:54:37 [server 1, role 1, term 27], send request vote to [0]
+2021/02/24 16:54:37 [server 1, role 1, term 27], send request vote to [3]
+2021/02/24 16:54:37 [server 4, role 2, term 27], vote for [1]
+2021/02/24 16:54:37 [server 3, role 2, term 27], vote for [1]
+2021/02/24 16:54:37 [server 1, role 1, term 27], receive votes from [4]
+2021/02/24 16:54:37 [server 1, role 1, term 27], get majority votes
+2021/02/24 16:54:37 [server 1, role 1, term 27], receive votes from [3]
+2021/02/24 16:54:37 [server 1, role 0, term 27] send heartbeat to [4]
+2021/02/24 16:54:37 [server 1, role 0, term 27] send heartbeat to [0]
+2021/02/24 16:54:37 [server 1, role 0, term 27] send heartbeat to [3]
+2021/02/24 16:54:37 [server 1, role 0, term 27] send heartbeat to [2]
+2021/02/24 16:54:37 [server 3, role 2, term 27] receive successful heartbeat from [1]
+2021/02/24 16:54:37 [server 1, role 0, term 27] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:37 [server 1, role 0, term 27] receive successful append entry response from [3]
+2021/02/24 16:54:37 [server 1, role 0, term 27] Append entry to [4] from 10 to 10
+2021/02/24 16:54:37 [server 1, role 0, term 27] send heartbeat to [2]
+2021/02/24 16:54:37 [server 1, role 0, term 27] send heartbeat to [0]
+2021/02/24 16:54:37 [server 1, role 0, term 27] send heartbeat to [3]
+2021/02/24 16:54:37 [server 3, role 2, term 27] receive successful heartbeat from [1]
+2021/02/24 16:54:37 [server 1, role 0, term 27] receive successful append entry response from [3]
+2021/02/24 16:54:37 [server 4, role 2, term 27] inconsistent entry in preLogIndex(9), need to decrease
+2021/02/24 16:54:37 [server 1, role 0, term 27] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:37 [server 1, role 0, term 27] receive command(9211765585636028395) from client
+2021/02/24 16:54:37 leader is [1]
+2021/02/24 16:54:37 leader [1] crash, get out
+2021/02/24 16:54:38 [server 1, role 1, term 28], send request vote to [3]
+2021/02/24 16:54:38 [server 3, role 2, term 28], vote for [1]
+2021/02/24 16:54:38 [server 1, role 1, term 28], send request vote to [2]
+2021/02/24 16:54:38 [server 1, role 1, term 28], receive votes from [3]
+2021/02/24 16:54:38 [server 1, role 1, term 28], send request vote to [0]
+2021/02/24 16:54:38 [server 1, role 1, term 28], send request vote to [4]
+2021/02/24 16:54:38 [server 4, role 2, term 28], vote for [1]
+2021/02/24 16:54:38 [server 1, role 1, term 28], get majority votes
+2021/02/24 16:54:38 [server 1, role 1, term 28], receive votes from [4]
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [4]
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [2]
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [0]
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [3]
+2021/02/24 16:54:38 [server 1, role 0, term 28] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:38 [server 1, role 0, term 28] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [2]
+2021/02/24 16:54:38 [server 1, role 0, term 28] Append entry to [4] from 10 to 11
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [0]
+2021/02/24 16:54:38 [server 1, role 0, term 28] Append entry to [3] from 11 to 11
+2021/02/24 16:54:38 [server 4, role 2, term 28] inconsistent entry in preLogIndex(9), need to decrease
+2021/02/24 16:54:38 [server 3, role 2, term 28] Append Entry successfully from [1], (11)-(11)
+2021/02/24 16:54:38 [server 1, role 0, term 28] receive successful append entry response from [3]
+2021/02/24 16:54:38 [server 1, role 0, term 28] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [0]
+2021/02/24 16:54:38 [server 1, role 0, term 28] Append entry to [4] from 9 to 11
+2021/02/24 16:54:38 [server 4, role 2, term 28] inconsistent entry in preLogIndex(8), need to decrease
+2021/02/24 16:54:38 [server 1, role 0, term 28] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [2]
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [3]
+2021/02/24 16:54:38 [server 3, role 2, term 28] receive successful heartbeat from [1]
+2021/02/24 16:54:38 [server 1, role 0, term 28] receive successful append entry response from [3]
+2021/02/24 16:54:38 [server 1, role 0, term 28] Append entry to [4] from 8 to 11
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [2]
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [0]
+2021/02/24 16:54:38 [server 1, role 0, term 28] send heartbeat to [3]
+2021/02/24 16:54:38 [server 4, role 2, term 28] Append Entry successfully from [1], (8)-(11)
+2021/02/24 16:54:38 [server 3, role 2, term 28] receive successful heartbeat from [1]
+2021/02/24 16:54:38 [server 1, role 0, term 28] receive successful append entry response from [4]
+2021/02/24 16:54:38 [server 1, role 0, term 28] receive successful append entry response from [3]
+2021/02/24 16:54:38 [server 1, role 0, term 28] receive command(9010401224892383709) from client
+2021/02/24 16:54:38 leader is [1]
+2021/02/24 16:54:38 leader [1] crash, get out
+2021/02/24 16:54:38 [server 2, role 1, term 27], send request vote to [4]
+2021/02/24 16:54:38 [server 2, role 1, term 27], send request vote to [1]
+2021/02/24 16:54:38 [server 2, role 1, term 27], send request vote to [0]
+2021/02/24 16:54:38 [server 2, role 1, term 27], send request vote to [3]
+2021/02/24 16:54:38 [server 4, role 2, term 28] reject vote for [2], candidate term is small
+2021/02/24 16:54:38 [server 3, role 2, term 28] reject vote for [2], candidate term is small
+2021/02/24 16:54:38 [server 2, role 2, term 27], term has changed to (28), obsolete response
+2021/02/24 16:54:38 [server 3, role 1, term 29], send request vote to [4]
+2021/02/24 16:54:38 [server 3, role 1, term 29], send request vote to [1]
+2021/02/24 16:54:38 [server 3, role 1, term 29], send request vote to [0]
+2021/02/24 16:54:38 [server 3, role 1, term 29], send request vote to [2]
+2021/02/24 16:54:38 [server 4, role 2, term 29], vote for [3]
+2021/02/24 16:54:38 [server 2, role 2, term 29], vote for [3]
+2021/02/24 16:54:38 [server 3, role 1, term 29], receive votes from [4]
+2021/02/24 16:54:38 [server 3, role 1, term 29], get majority votes
+2021/02/24 16:54:38 [server 3, role 1, term 29], receive votes from [2]
+2021/02/24 16:54:38 [server 3, role 0, term 29] send heartbeat to [4]
+2021/02/24 16:54:38 [server 4, role 2, term 29] receive successful heartbeat from [3]
+2021/02/24 16:54:38 [server 4, role 2, term 29], apply log from 1 to 2
+2021/02/24 16:54:38 [server 3, role 0, term 29] receive successful append entry response from [4]
+2021/02/24 16:54:38 [server 3, role 0, term 29] send heartbeat to [0]
+2021/02/24 16:54:38 [server 3, role 0, term 29] send heartbeat to [1]
+2021/02/24 16:54:38 [server 3, role 0, term 29] send heartbeat to [2]
+2021/02/24 16:54:38 [server 3, role 0, term 29] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:39 [server 3, role 0, term 29] send heartbeat to [4]
+2021/02/24 16:54:39 [server 3, role 0, term 29] Append entry to [2] from 11 to 11
+2021/02/24 16:54:39 [server 3, role 0, term 29] send heartbeat to [1]
+2021/02/24 16:54:39 [server 3, role 0, term 29] send heartbeat to [0]
+2021/02/24 16:54:39 [server 4, role 2, term 29] receive successful heartbeat from [3]
+2021/02/24 16:54:39 [server 2, role 2, term 29] Append Entry successfully from [3], (11)-(11)
+2021/02/24 16:54:39 [server 2, role 2, term 29], apply log from 1 to 2
+2021/02/24 16:54:39 [server 3, role 0, term 29] receive successful append entry response from [4]
+2021/02/24 16:54:39 [server 3, role 0, term 29] receive successful append entry response from [2]
+2021/02/24 16:54:39 [server 3, role 0, term 29] receive command(3415082261764582856) from client
+2021/02/24 16:54:39 leader is [3]
+2021/02/24 16:54:39 leader [3] crash, get out
+2021/02/24 16:54:39 [server 2, role 1, term 30], send request vote to [3]
+2021/02/24 16:54:39 [server 4, role 1, term 30], send request vote to [3]
+2021/02/24 16:54:39 [server 4, role 1, term 30], send request vote to [1]
+2021/02/24 16:54:39 [server 2, role 1, term 30], send request vote to [1]
+2021/02/24 16:54:39 [server 2, role 1, term 30], send request vote to [0]
+2021/02/24 16:54:39 [server 2, role 1, term 30], send request vote to [4]
+2021/02/24 16:54:39 [server 1, role 2, term 30] reject vote for [2], not up to date
+2021/02/24 16:54:39 [server 4, role 1, term 30], send request vote to [2]
+2021/02/24 16:54:39 [server 4, role 1, term 30] reject vote for [2], already voted for [4]
+2021/02/24 16:54:39 [server 4, role 1, term 30], send request vote to [0]
+2021/02/24 16:54:39 [server 1, role 2, term 30] reject vote for [4], not up to date
+2021/02/24 16:54:39 [server 2, role 1, term 30] reject vote for [4], already voted for [2]
+2021/02/24 16:54:39 [server 1, role 1, term 31], send request vote to [4]
+2021/02/24 16:54:39 [server 1, role 1, term 31], send request vote to [2]
+2021/02/24 16:54:39 [server 4, role 2, term 31], vote for [1]
+2021/02/24 16:54:39 [server 2, role 2, term 31], vote for [1]
+2021/02/24 16:54:39 [server 1, role 1, term 31], receive votes from [4]
+2021/02/24 16:54:39 [server 1, role 1, term 31], send request vote to [0]
+2021/02/24 16:54:39 [server 1, role 1, term 31], send request vote to [3]
+2021/02/24 16:54:39 [server 1, role 1, term 31], get majority votes
+2021/02/24 16:54:39 [server 1, role 1, term 31], receive votes from [2]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [2]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [0]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [3]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [4]
+2021/02/24 16:54:39 [server 1, role 0, term 31] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:39 [server 1, role 0, term 31] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:39 [server 1, role 0, term 31] Append entry to [4] from 12 to 12
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [3]
+2021/02/24 16:54:39 [server 1, role 0, term 31] Append entry to [2] from 12 to 12
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [0]
+2021/02/24 16:54:39 [server 4, role 2, term 31] Append Entry successfully from [1], (12)-(12)
+2021/02/24 16:54:39 [server 2, role 2, term 31] Append Entry successfully from [1], (12)-(12)
+2021/02/24 16:54:39 [server 1, role 0, term 31] receive successful append entry response from [4]
+2021/02/24 16:54:39 [server 1, role 0, term 31] receive successful append entry response from [2]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [4]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [0]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [3]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [2]
+2021/02/24 16:54:39 [server 4, role 2, term 31] receive successful heartbeat from [1]
+2021/02/24 16:54:39 [server 2, role 2, term 31] receive successful heartbeat from [1]
+2021/02/24 16:54:39 [server 1, role 0, term 31] receive successful append entry response from [4]
+2021/02/24 16:54:39 [server 1, role 0, term 31] receive successful append entry response from [2]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [4]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [2]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [3]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [0]
+2021/02/24 16:54:39 [server 4, role 2, term 31] receive successful heartbeat from [1]
+2021/02/24 16:54:39 [server 2, role 2, term 31] receive successful heartbeat from [1]
+2021/02/24 16:54:39 [server 1, role 0, term 31] receive successful append entry response from [4]
+2021/02/24 16:54:39 [server 1, role 0, term 31] receive successful append entry response from [2]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [4]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [2]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [0]
+2021/02/24 16:54:39 [server 1, role 0, term 31] send heartbeat to [3]
+2021/02/24 16:54:39 [server 4, role 2, term 31] receive successful heartbeat from [1]
+2021/02/24 16:54:39 [server 2, role 2, term 31] receive successful heartbeat from [1]
+2021/02/24 16:54:39 [server 1, role 0, term 31] receive successful append entry response from [4]
+2021/02/24 16:54:39 [server 1, role 0, term 31] receive successful append entry response from [2]
+2021/02/24 16:54:39 [server 1, role 0, term 31] receive command(6025692342066896531) from client
+2021/02/24 16:54:39 leader is [1]
+2021/02/24 16:54:39 leader [1] crash, get out
+2021/02/24 16:54:40 [server 4, role 1, term 32], send request vote to [3]
+2021/02/24 16:54:40 [server 4, role 1, term 32], send request vote to [1]
+2021/02/24 16:54:40 [server 4, role 1, term 32], send request vote to [2]
+2021/02/24 16:54:40 [server 4, role 1, term 32], send request vote to [0]
+2021/02/24 16:54:40 [server 2, role 2, term 32], vote for [4]
+2021/02/24 16:54:40 [server 0, role 2, term 32], vote for [4]
+2021/02/24 16:54:40 [server 4, role 1, term 32], receive votes from [0]
+2021/02/24 16:54:40 [server 4, role 1, term 32], get majority votes
+2021/02/24 16:54:40 [server 4, role 1, term 32], receive votes from [2]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [1]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [0]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [3]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [2]
+2021/02/24 16:54:40 [server 2, role 2, term 32] receive successful heartbeat from [4]
+2021/02/24 16:54:40 [server 4, role 0, term 32] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:40 [server 4, role 0, term 32] receive successful append entry response from [2]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [3]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [1]
+2021/02/24 16:54:40 [server 4, role 0, term 32] Append entry to [0] from 9 to 12
+2021/02/24 16:54:40 [server 0, role 2, term 32] inconsistent entry in preLogIndex(8), need to decrease
+2021/02/24 16:54:40 [server 4, role 0, term 32] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [2]
+2021/02/24 16:54:40 [server 2, role 2, term 32] receive successful heartbeat from [4]
+2021/02/24 16:54:40 [server 4, role 0, term 32] receive successful append entry response from [2]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [3]
+2021/02/24 16:54:40 [server 4, role 0, term 32] Append entry to [0] from 8 to 12
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [1]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [2]
+2021/02/24 16:54:40 [server 0, role 2, term 32] Append Entry successfully from [4], (8)-(12)
+2021/02/24 16:54:40 [server 0, role 2, term 32], apply log from 1 to 2
+2021/02/24 16:54:40 [server 2, role 2, term 32] receive successful heartbeat from [4]
+2021/02/24 16:54:40 [server 4, role 0, term 32] receive successful append entry response from [0]
+2021/02/24 16:54:40 [server 4, role 0, term 32] receive successful append entry response from [2]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [3]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [0]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [2]
+2021/02/24 16:54:40 [server 4, role 0, term 32] send heartbeat to [1]
+2021/02/24 16:54:40 [server 0, role 2, term 32] receive successful heartbeat from [4]
+2021/02/24 16:54:40 [server 2, role 2, term 32] receive successful heartbeat from [4]
+2021/02/24 16:54:40 [server 4, role 0, term 32] receive successful append entry response from [0]
+2021/02/24 16:54:40 [server 4, role 0, term 32] receive successful append entry response from [2]
+2021/02/24 16:54:40 [server 4, role 0, term 32] receive command(5608018441181309008) from client
+2021/02/24 16:54:40 leader is [4]
+2021/02/24 16:54:40 leader [4] crash, get out
+2021/02/24 16:54:40 [server 4, role 1, term 33], send request vote to [3]
+2021/02/24 16:54:40 [server 4, role 1, term 33], send request vote to [1]
+2021/02/24 16:54:40 [server 4, role 1, term 33], send request vote to [0]
+2021/02/24 16:54:40 [server 4, role 1, term 33], send request vote to [2]
+2021/02/24 16:54:40 [server 0, role 2, term 33], vote for [4]
+2021/02/24 16:54:40 [server 2, role 2, term 33], vote for [4]
+2021/02/24 16:54:40 [server 4, role 1, term 33], receive votes from [0]
+2021/02/24 16:54:40 [server 4, role 1, term 33], get majority votes
+2021/02/24 16:54:40 [server 4, role 1, term 33], receive votes from [2]
+2021/02/24 16:54:40 [server 4, role 0, term 33] send heartbeat to [3]
+2021/02/24 16:54:40 [server 4, role 0, term 33] send heartbeat to [2]
+2021/02/24 16:54:40 [server 4, role 0, term 33] send heartbeat to [1]
+2021/02/24 16:54:40 [server 4, role 0, term 33] send heartbeat to [0]
+2021/02/24 16:54:40 [server 4, role 0, term 33] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:40 [server 4, role 0, term 33] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:40 [server 4, role 0, term 33] Append entry to [0] from 13 to 13
+2021/02/24 16:54:40 [server 4, role 0, term 33] send heartbeat to [3]
+2021/02/24 16:54:40 [server 4, role 0, term 33] Append entry to [2] from 13 to 13
+2021/02/24 16:54:40 [server 0, role 2, term 33] Append Entry successfully from [4], (13)-(13)
+2021/02/24 16:54:40 [server 4, role 0, term 33] send heartbeat to [1]
+2021/02/24 16:54:40 [server 2, role 2, term 33] Append Entry successfully from [4], (13)-(13)
+2021/02/24 16:54:40 [server 4, role 0, term 33] receive successful append entry response from [0]
+2021/02/24 16:54:40 [server 4, role 0, term 33] receive successful append entry response from [2]
+2021/02/24 16:54:40 [server 4, role 0, term 33] send heartbeat to [1]
+2021/02/24 16:54:40 [server 4, role 0, term 33] send heartbeat to [0]
+2021/02/24 16:54:40 [server 4, role 0, term 33] send heartbeat to [3]
+2021/02/24 16:54:40 [server 4, role 0, term 33] send heartbeat to [2]
+2021/02/24 16:54:40 [server 0, role 2, term 33] receive successful heartbeat from [4]
+2021/02/24 16:54:40 [server 2, role 2, term 33] receive successful heartbeat from [4]
+2021/02/24 16:54:40 [server 4, role 0, term 33] receive successful append entry response from [0]
+2021/02/24 16:54:40 [server 4, role 0, term 33] receive successful append entry response from [2]
+2021/02/24 16:54:40 [server 4, role 0, term 33] receive command(6224347996992411867) from client
+2021/02/24 16:54:40 leader is [4]
+2021/02/24 16:54:40 leader [4] crash, get out
+2021/02/24 16:54:41 [server 2, role 1, term 34], send request vote to [1]
+2021/02/24 16:54:41 [server 2, role 1, term 34], send request vote to [4]
+2021/02/24 16:54:41 [server 2, role 1, term 34], send request vote to [3]
+2021/02/24 16:54:41 [server 2, role 1, term 34], send request vote to [0]
+2021/02/24 16:54:41 [server 3, role 2, term 34], vote for [2]
+2021/02/24 16:54:41 [server 0, role 2, term 34], vote for [2]
+2021/02/24 16:54:41 [server 2, role 1, term 34], receive votes from [3]
+2021/02/24 16:54:41 [server 2, role 1, term 34], get majority votes
+2021/02/24 16:54:41 [server 2, role 1, term 34], receive votes from [0]
+2021/02/24 16:54:41 [server 2, role 0, term 34] send heartbeat to [4]
+2021/02/24 16:54:41 [server 2, role 0, term 34] send heartbeat to [3]
+2021/02/24 16:54:41 [server 2, role 0, term 34] send heartbeat to [1]
+2021/02/24 16:54:41 [server 2, role 0, term 34] send heartbeat to [0]
+2021/02/24 16:54:41 [server 0, role 2, term 34] receive successful heartbeat from [2]
+2021/02/24 16:54:41 [server 2, role 0, term 34] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:41 [server 2, role 0, term 34] receive successful append entry response from [0]
+2021/02/24 16:54:41 [server 2, role 0, term 34] receive command(6702426432081825885) from client
+2021/02/24 16:54:41 leader is [2]
+2021/02/24 16:54:41 [server 2, role 0, term 34] Append entry to [4] from 14 to 14
+2021/02/24 16:54:41 [server 2, role 0, term 34] Append entry to [1] from 14 to 14
+2021/02/24 16:54:41 [server 2, role 0, term 34] Append entry to [3] from 13 to 14
+2021/02/24 16:54:41 [server 2, role 0, term 34] Append entry to [0] from 14 to 14
+2021/02/24 16:54:41 [server 3, role 2, term 34] inconsistent entry in preLogIndex(12), need to decrease
+2021/02/24 16:54:41 [server 0, role 2, term 34] Append Entry successfully from [2], (14)-(14)
+2021/02/24 16:54:41 [server 2, role 0, term 34] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:41 [server 2, role 0, term 34] receive successful append entry response from [0]
+2021/02/24 16:54:41 leader [2] crash, get out
+2021/02/24 16:54:41 [server 0, role 1, term 35], send request vote to [1]
+2021/02/24 16:54:41 [server 0, role 1, term 35], send request vote to [3]
+2021/02/24 16:54:41 [server 0, role 1, term 35], send request vote to [4]
+2021/02/24 16:54:41 [server 3, role 2, term 35], vote for [0]
+2021/02/24 16:54:41 [server 4, role 2, term 35], vote for [0]
+2021/02/24 16:54:41 [server 0, role 1, term 35], send request vote to [2]
+2021/02/24 16:54:41 [server 0, role 1, term 35], receive votes from [3]
+2021/02/24 16:54:41 [server 0, role 1, term 35], get majority votes
+2021/02/24 16:54:41 [server 0, role 1, term 35], receive votes from [4]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [3]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [1]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [4]
+2021/02/24 16:54:41 [server 4, role 2, term 35] inconsistent entry in preLogIndex(14), need to decrease
+2021/02/24 16:54:41 [server 0, role 0, term 35] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [2]
+2021/02/24 16:54:41 [server 0, role 0, term 35] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [2]
+2021/02/24 16:54:41 [server 0, role 0, term 35] Append entry to [4] from 14 to 14
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [1]
+2021/02/24 16:54:41 [server 0, role 0, term 35] Append entry to [3] from 13 to 14
+2021/02/24 16:54:41 [server 4, role 2, term 35] Append Entry successfully from [0], (14)-(14)
+2021/02/24 16:54:41 [server 4, role 2, term 35], apply log from 1 to 2
+2021/02/24 16:54:41 [server 0, role 0, term 35] receive successful append entry response from [4]
+2021/02/24 16:54:41 [server 3, role 2, term 35] inconsistent entry in preLogIndex(12), need to decrease
+2021/02/24 16:54:41 [server 0, role 0, term 35] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [2]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [4]
+2021/02/24 16:54:41 [server 0, role 0, term 35] Append entry to [3] from 12 to 14
+2021/02/24 16:54:41 [server 4, role 2, term 35] receive successful heartbeat from [0]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [1]
+2021/02/24 16:54:41 [server 3, role 2, term 35] Append Entry successfully from [0], (12)-(14)
+2021/02/24 16:54:41 [server 3, role 2, term 35], apply log from 1 to 2
+2021/02/24 16:54:41 [server 0, role 0, term 35] receive successful append entry response from [4]
+2021/02/24 16:54:41 [server 0, role 0, term 35] receive successful append entry response from [3]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [2]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [4]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [3]
+2021/02/24 16:54:41 [server 4, role 2, term 35] receive successful heartbeat from [0]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [1]
+2021/02/24 16:54:41 [server 3, role 2, term 35] receive successful heartbeat from [0]
+2021/02/24 16:54:41 [server 0, role 0, term 35] receive successful append entry response from [4]
+2021/02/24 16:54:41 [server 0, role 0, term 35] receive successful append entry response from [3]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [4]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [2]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [1]
+2021/02/24 16:54:41 [server 0, role 0, term 35] send heartbeat to [3]
+2021/02/24 16:54:41 [server 4, role 2, term 35] receive successful heartbeat from [0]
+2021/02/24 16:54:41 [server 3, role 2, term 35] receive successful heartbeat from [0]
+2021/02/24 16:54:41 [server 0, role 0, term 35] receive successful append entry response from [4]
+2021/02/24 16:54:41 [server 0, role 0, term 35] receive successful append entry response from [3]
+2021/02/24 16:54:41 [server 0, role 0, term 35] receive command(4771725452492555310) from client
+2021/02/24 16:54:41 leader is [0]
+2021/02/24 16:54:41 leader [0] crash, get out
+2021/02/24 16:54:42 [server 3, role 1, term 36], send request vote to [2]
+2021/02/24 16:54:42 [server 3, role 1, term 36], send request vote to [1]
+2021/02/24 16:54:42 [server 3, role 1, term 36], send request vote to [0]
+2021/02/24 16:54:42 [server 3, role 1, term 36], send request vote to [4]
+2021/02/24 16:54:42 [server 1, role 2, term 36], vote for [3]
+2021/02/24 16:54:42 [server 4, role 2, term 36], vote for [3]
+2021/02/24 16:54:42 [server 3, role 1, term 36], receive votes from [1]
+2021/02/24 16:54:42 [server 3, role 1, term 36], get majority votes
+2021/02/24 16:54:42 [server 3, role 1, term 36], receive votes from [4]
+2021/02/24 16:54:42 [server 3, role 0, term 36] send heartbeat to [4]
+2021/02/24 16:54:42 [server 3, role 0, term 36] send heartbeat to [0]
+2021/02/24 16:54:42 [server 3, role 0, term 36] send heartbeat to [1]
+2021/02/24 16:54:42 [server 3, role 0, term 36] send heartbeat to [2]
+2021/02/24 16:54:42 [server 4, role 2, term 36] receive successful heartbeat from [3]
+2021/02/24 16:54:42 [server 3, role 0, term 36] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:42 [server 3, role 0, term 36] receive successful append entry response from [4]
+2021/02/24 16:54:42 [server 3, role 0, term 36] receive command(3507987564582217526) from client
+2021/02/24 16:54:42 leader is [3]
+2021/02/24 16:54:42 [server 3, role 0, term 36] Append entry to [4] from 15 to 15
+2021/02/24 16:54:42 [server 3, role 0, term 36] Append entry to [1] from 14 to 15
+2021/02/24 16:54:42 [server 3, role 0, term 36] Append entry to [0] from 15 to 15
+2021/02/24 16:54:42 [server 3, role 0, term 36] Append entry to [2] from 15 to 15
+2021/02/24 16:54:42 [server 1, role 2, term 36] inconsistent entry in preLogIndex(13), need to decrease
+2021/02/24 16:54:42 [server 4, role 2, term 36] Append Entry successfully from [3], (15)-(15)
+2021/02/24 16:54:42 [server 3, role 0, term 36] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:42 [server 3, role 0, term 36] receive successful append entry response from [4]
+2021/02/24 16:54:42 leader [3] crash, get out
+2021/02/24 16:54:42 [server 4, role 1, term 37], send request vote to [0]
+2021/02/24 16:54:42 [server 4, role 1, term 37], send request vote to [2]
+2021/02/24 16:54:42 [server 4, role 1, term 37], send request vote to [1]
+2021/02/24 16:54:42 [server 2, role 2, term 37], vote for [4]
+2021/02/24 16:54:42 [server 1, role 2, term 37], vote for [4]
+2021/02/24 16:54:42 [server 4, role 1, term 37], send request vote to [3]
+2021/02/24 16:54:42 [server 4, role 1, term 37], receive votes from [2]
+2021/02/24 16:54:42 [server 4, role 1, term 37], get majority votes
+2021/02/24 16:54:42 [server 4, role 1, term 37], receive votes from [1]
+2021/02/24 16:54:42 [server 4, role 0, term 37] send heartbeat to [3]
+2021/02/24 16:54:42 [server 4, role 0, term 37] send heartbeat to [1]
+2021/02/24 16:54:42 [server 4, role 0, term 37] send heartbeat to [2]
+2021/02/24 16:54:42 [server 4, role 0, term 37] send heartbeat to [0]
+2021/02/24 16:54:42 [server 4, role 0, term 37] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:42 [server 4, role 0, term 37] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:42 [server 4, role 0, term 37] send heartbeat to [0]
+2021/02/24 16:54:42 [server 4, role 0, term 37] send heartbeat to [3]
+2021/02/24 16:54:42 [server 4, role 0, term 37] Append entry to [1] from 14 to 15
+2021/02/24 16:54:42 [server 4, role 0, term 37] Append entry to [2] from 15 to 15
+2021/02/24 16:54:42 [server 1, role 2, term 37] inconsistent entry in preLogIndex(13), need to decrease
+2021/02/24 16:54:42 [server 2, role 2, term 37] Append Entry successfully from [4], (15)-(15)
+2021/02/24 16:54:42 [server 2, role 2, term 37], apply log from 1 to 2
+2021/02/24 16:54:42 [server 4, role 0, term 37] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:42 [server 4, role 0, term 37] receive successful append entry response from [2]
+2021/02/24 16:54:42 [server 4, role 0, term 37] receive command(7898786979871436035) from client
+2021/02/24 16:54:42 leader is [4]
+2021/02/24 16:54:42 leader [4] crash, get out
+2021/02/24 16:54:42 [server 1, role 1, term 38], send request vote to [0]
+2021/02/24 16:54:42 [server 1, role 1, term 38], send request vote to [3]
+2021/02/24 16:54:42 [server 3, role 2, term 38] reject vote for [1], not up to date
+2021/02/24 16:54:42 [server 1, role 1, term 38], send request vote to [2]
+2021/02/24 16:54:42 [server 1, role 1, term 38], send request vote to [4]
+2021/02/24 16:54:42 [server 2, role 2, term 38] reject vote for [1], not up to date
+2021/02/24 16:54:42 [server 3, role 1, term 39], send request vote to [1]
+2021/02/24 16:54:42 [server 3, role 1, term 39], send request vote to [2]
+2021/02/24 16:54:42 [server 1, role 2, term 39], vote for [3]
+2021/02/24 16:54:42 [server 3, role 1, term 39], send request vote to [4]
+2021/02/24 16:54:42 [server 2, role 2, term 39], vote for [3]
+2021/02/24 16:54:42 [server 3, role 1, term 39], send request vote to [0]
+2021/02/24 16:54:42 [server 3, role 1, term 39], receive votes from [1]
+2021/02/24 16:54:42 [server 3, role 1, term 39], get majority votes
+2021/02/24 16:54:42 [server 3, role 1, term 39], receive votes from [2]
+2021/02/24 16:54:42 [server 3, role 0, term 39] send heartbeat to [2]
+2021/02/24 16:54:42 [server 3, role 0, term 39] send heartbeat to [1]
+2021/02/24 16:54:42 [server 3, role 0, term 39] send heartbeat to [0]
+2021/02/24 16:54:42 [server 3, role 0, term 39] send heartbeat to [4]
+2021/02/24 16:54:42 [server 2, role 2, term 39] receive successful heartbeat from [3]
+2021/02/24 16:54:42 [server 3, role 0, term 39] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:42 [server 3, role 0, term 39] receive successful append entry response from [2]
+2021/02/24 16:54:42 [server 3, role 0, term 39] send heartbeat to [4]
+2021/02/24 16:54:42 [server 3, role 0, term 39] send heartbeat to [0]
+2021/02/24 16:54:42 [server 3, role 0, term 39] send heartbeat to [2]
+2021/02/24 16:54:42 [server 3, role 0, term 39] Append entry to [1] from 14 to 15
+2021/02/24 16:54:42 [server 2, role 2, term 39] receive successful heartbeat from [3]
+2021/02/24 16:54:42 [server 1, role 2, term 39] inconsistent entry in preLogIndex(13), need to decrease
+2021/02/24 16:54:42 [server 3, role 0, term 39] receive successful append entry response from [2]
+2021/02/24 16:54:42 [server 3, role 0, term 39] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:42 [server 3, role 0, term 39] receive command(5850629532139078290) from client
+2021/02/24 16:54:42 leader is [3]
+2021/02/24 16:54:42 leader [3] crash, get out
+2021/02/24 16:54:43 [server 1, role 1, term 40], send request vote to [3]
+2021/02/24 16:54:43 [server 1, role 1, term 40], send request vote to [2]
+2021/02/24 16:54:43 [server 3, role 2, term 40] reject vote for [1], not up to date
+2021/02/24 16:54:43 [server 1, role 1, term 40], send request vote to [0]
+2021/02/24 16:54:43 [server 2, role 2, term 40] reject vote for [1], not up to date
+2021/02/24 16:54:43 [server 1, role 1, term 40], send request vote to [4]
+2021/02/24 16:54:43 [server 2, role 1, term 41], send request vote to [1]
+2021/02/24 16:54:43 [server 2, role 1, term 41], send request vote to [3]
+2021/02/24 16:54:43 [server 2, role 1, term 41], send request vote to [4]
+2021/02/24 16:54:43 [server 3, role 2, term 41] reject vote for [2], not up to date
+2021/02/24 16:54:43 [server 2, role 1, term 41], send request vote to [0]
+2021/02/24 16:54:43 [server 1, role 2, term 41], vote for [2]
+2021/02/24 16:54:43 [server 2, role 1, term 41], receive votes from [1]
+2021/02/24 16:54:43 [server 3, role 1, term 42], send request vote to [0]
+2021/02/24 16:54:43 [server 3, role 1, term 42], send request vote to [1]
+2021/02/24 16:54:43 [server 3, role 1, term 42], send request vote to [4]
+2021/02/24 16:54:43 [server 3, role 1, term 42], send request vote to [2]
+2021/02/24 16:54:43 [server 1, role 2, term 42], vote for [3]
+2021/02/24 16:54:43 [server 2, role 2, term 42], vote for [3]
+2021/02/24 16:54:43 [server 3, role 1, term 42], receive votes from [1]
+2021/02/24 16:54:43 [server 3, role 1, term 42], get majority votes
+2021/02/24 16:54:43 [server 3, role 1, term 42], receive votes from [2]
+2021/02/24 16:54:43 [server 3, role 0, term 42] send heartbeat to [4]
+2021/02/24 16:54:43 [server 3, role 0, term 42] send heartbeat to [0]
+2021/02/24 16:54:43 [server 3, role 0, term 42] send heartbeat to [1]
+2021/02/24 16:54:43 [server 3, role 0, term 42] send heartbeat to [2]
+2021/02/24 16:54:43 [server 3, role 0, term 42] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:43 [server 3, role 0, term 42] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:43 [server 3, role 0, term 42] receive command(6145212919947701897) from client
+2021/02/24 16:54:43 leader is [3]
+2021/02/24 16:54:43 leader [3] crash, get out
+2021/02/24 16:54:43 [server 0, role 1, term 36], send request vote to [4]
+2021/02/24 16:54:43 [server 0, role 1, term 36], send request vote to [2]
+2021/02/24 16:54:43 [server 0, role 1, term 36], send request vote to [1]
+2021/02/24 16:54:43 [server 0, role 1, term 36], send request vote to [3]
+2021/02/24 16:54:43 [server 2, role 2, term 42] reject vote for [0], candidate term is small
+2021/02/24 16:54:43 [server 1, role 2, term 42] reject vote for [0], candidate term is small
+2021/02/24 16:54:43 [server 0, role 2, term 36], term has changed to (42), obsolete response
+2021/02/24 16:54:43 [server 1, role 1, term 43], send request vote to [0]
+2021/02/24 16:54:43 [server 1, role 1, term 43], send request vote to [3]
+2021/02/24 16:54:43 [server 0, role 2, term 43] reject vote for [1], not up to date
+2021/02/24 16:54:43 [server 1, role 1, term 43], send request vote to [2]
+2021/02/24 16:54:43 [server 1, role 1, term 43], send request vote to [4]
+2021/02/24 16:54:43 [server 2, role 2, term 43] reject vote for [1], not up to date
+2021/02/24 16:54:43 [server 2, role 1, term 44], send request vote to [3]
+2021/02/24 16:54:43 [server 2, role 1, term 44], send request vote to [1]
+2021/02/24 16:54:43 [server 2, role 1, term 44], send request vote to [0]
+2021/02/24 16:54:43 [server 1, role 2, term 44], vote for [2]
+2021/02/24 16:54:43 [server 2, role 1, term 44], send request vote to [4]
+2021/02/24 16:54:43 [server 0, role 2, term 44], vote for [2]
+2021/02/24 16:54:43 [server 2, role 1, term 44], receive votes from [1]
+2021/02/24 16:54:43 [server 2, role 1, term 44], get majority votes
+2021/02/24 16:54:43 [server 2, role 1, term 44], receive votes from [0]
+2021/02/24 16:54:43 [server 2, role 0, term 44] send heartbeat to [4]
+2021/02/24 16:54:43 [server 2, role 0, term 44] send heartbeat to [0]
+2021/02/24 16:54:43 [server 2, role 0, term 44] send heartbeat to [3]
+2021/02/24 16:54:43 [server 2, role 0, term 44] send heartbeat to [1]
+2021/02/24 16:54:43 [server 0, role 2, term 44] inconsistent entry in preLogIndex(15), need to decrease
+2021/02/24 16:54:43 [server 2, role 0, term 44] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:43 [server 2, role 0, term 44] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:43 [server 2, role 0, term 44] send heartbeat to [4]
+2021/02/24 16:54:43 [server 2, role 0, term 44] Append entry to [0] from 15 to 15
+2021/02/24 16:54:43 [server 2, role 0, term 44] Append entry to [1] from 14 to 15
+2021/02/24 16:54:43 [server 0, role 2, term 44] Append Entry successfully from [2], (15)-(15)
+2021/02/24 16:54:43 [server 0, role 2, term 44], apply log from 1 to 2
+2021/02/24 16:54:43 [server 1, role 2, term 44] inconsistent entry in preLogIndex(13), need to decrease
+2021/02/24 16:54:43 [server 2, role 0, term 44] receive successful append entry response from [0]
+2021/02/24 16:54:43 [server 2, role 0, term 44] send heartbeat to [3]
+2021/02/24 16:54:43 [server 2, role 0, term 44] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:43 [server 2, role 0, term 44] receive command(8763287311370901711) from client
+2021/02/24 16:54:43 leader is [2]
+2021/02/24 16:54:43 leader [2] crash, get out
+2021/02/24 16:54:44 [server 0, role 1, term 45], send request vote to [4]
+2021/02/24 16:54:44 [server 0, role 1, term 45], send request vote to [2]
+2021/02/24 16:54:44 [server 2, role 2, term 45] reject vote for [0], not up to date
+2021/02/24 16:54:44 [server 0, role 1, term 45], send request vote to [1]
+2021/02/24 16:54:44 [server 0, role 1, term 45], send request vote to [3]
+2021/02/24 16:54:44 [server 1, role 2, term 45], vote for [0]
+2021/02/24 16:54:44 [server 0, role 1, term 45], receive votes from [1]
+2021/02/24 16:54:44 [server 2, role 1, term 46], send request vote to [3]
+2021/02/24 16:54:44 [server 2, role 1, term 46], send request vote to [1]
+2021/02/24 16:54:44 [server 1, role 2, term 46], vote for [2]
+2021/02/24 16:54:44 [server 2, role 1, term 46], send request vote to [4]
+2021/02/24 16:54:44 [server 2, role 1, term 46], send request vote to [0]
+2021/02/24 16:54:44 [server 2, role 1, term 46], receive votes from [1]
+2021/02/24 16:54:44 [server 0, role 2, term 46], vote for [2]
+2021/02/24 16:54:44 [server 2, role 1, term 46], get majority votes
+2021/02/24 16:54:44 [server 2, role 1, term 46], receive votes from [0]
+2021/02/24 16:54:44 [server 2, role 0, term 46] send heartbeat to [4]
+2021/02/24 16:54:44 [server 2, role 0, term 46] send heartbeat to [1]
+2021/02/24 16:54:44 [server 2, role 0, term 46] send heartbeat to [3]
+2021/02/24 16:54:44 [server 2, role 0, term 46] send heartbeat to [0]
+2021/02/24 16:54:44 [server 2, role 0, term 46] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:44 [server 2, role 0, term 46] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:44 [server 2, role 0, term 46] send heartbeat to [4]
+2021/02/24 16:54:44 [server 2, role 0, term 46] Append entry to [1] from 14 to 16
+2021/02/24 16:54:44 [server 2, role 0, term 46] send heartbeat to [3]
+2021/02/24 16:54:44 [server 1, role 2, term 46] inconsistent entry in preLogIndex(13), need to decrease
+2021/02/24 16:54:44 [server 2, role 0, term 46] Append entry to [0] from 16 to 16
+2021/02/24 16:54:44 [server 2, role 0, term 46] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:44 [server 0, role 2, term 46] Append Entry successfully from [2], (16)-(16)
+2021/02/24 16:54:44 [server 2, role 0, term 46] receive successful append entry response from [0]
+2021/02/24 16:54:44 [server 2, role 0, term 46] receive command(1097174882869014621) from client
+2021/02/24 16:54:44 leader is [2]
+2021/02/24 16:54:44 leader [2] crash, get out
+2021/02/24 16:54:44 [server 1, role 1, term 47], send request vote to [3]
+2021/02/24 16:54:44 [server 1, role 1, term 47], send request vote to [2]
+2021/02/24 16:54:44 [server 1, role 1, term 47], send request vote to [0]
+2021/02/24 16:54:44 [server 1, role 1, term 47], send request vote to [4]
+2021/02/24 16:54:44 [server 0, role 2, term 47] reject vote for [1], not up to date
+2021/02/24 16:54:44 [server 4, role 2, term 47] reject vote for [1], not up to date
+2021/02/24 16:54:44 [server 0, role 1, term 48], send request vote to [4]
+2021/02/24 16:54:44 [server 0, role 1, term 48], send request vote to [2]
+2021/02/24 16:54:44 [server 0, role 1, term 48], send request vote to [1]
+2021/02/24 16:54:44 [server 4, role 2, term 48], vote for [0]
+2021/02/24 16:54:44 [server 0, role 1, term 48], receive votes from [4]
+2021/02/24 16:54:44 [server 1, role 2, term 48], vote for [0]
+2021/02/24 16:54:44 [server 0, role 1, term 48], send request vote to [3]
+2021/02/24 16:54:44 [server 0, role 1, term 48], get majority votes
+2021/02/24 16:54:44 [server 0, role 1, term 48], receive votes from [1]
+2021/02/24 16:54:44 [server 0, role 0, term 48] send heartbeat to [4]
+2021/02/24 16:54:44 [server 0, role 0, term 48] send heartbeat to [2]
+2021/02/24 16:54:44 [server 0, role 0, term 48] send heartbeat to [1]
+2021/02/24 16:54:44 [server 4, role 2, term 48] inconsistent entry in preLogIndex(16), need to decrease
+2021/02/24 16:54:44 [server 0, role 0, term 48] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:44 [server 0, role 0, term 48] send heartbeat to [3]
+2021/02/24 16:54:44 [server 0, role 0, term 48] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:44 [server 0, role 0, term 48] Append entry to [1] from 14 to 16
+2021/02/24 16:54:44 [server 0, role 0, term 48] Append entry to [4] from 16 to 16
+2021/02/24 16:54:44 [server 1, role 2, term 48] inconsistent entry in preLogIndex(13), need to decrease
+2021/02/24 16:54:44 [server 4, role 2, term 48] Append Entry successfully from [0], (16)-(16)
+2021/02/24 16:54:44 [server 4, role 2, term 48], apply log from 1 to 2
+2021/02/24 16:54:44 [server 0, role 0, term 48] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:44 [server 0, role 0, term 48] send heartbeat to [2]
+2021/02/24 16:54:44 [server 0, role 0, term 48] receive successful append entry response from [4]
+2021/02/24 16:54:44 [server 0, role 0, term 48] send heartbeat to [3]
+2021/02/24 16:54:44 [server 0, role 0, term 48] receive command(3921137956651924611) from client
+2021/02/24 16:54:44 leader is [0]
+2021/02/24 16:54:44 leader [0] crash, get out
+2021/02/24 16:54:45 [server 4, role 1, term 49], send request vote to [2]
+2021/02/24 16:54:45 [server 4, role 1, term 49], send request vote to [1]
+2021/02/24 16:54:45 [server 1, role 2, term 49], vote for [4]
+2021/02/24 16:54:45 [server 4, role 1, term 49], receive votes from [1]
+2021/02/24 16:54:45 [server 4, role 1, term 49], send request vote to [0]
+2021/02/24 16:54:45 [server 4, role 1, term 49], send request vote to [3]
+2021/02/24 16:54:45 [server 3, role 2, term 49], vote for [4]
+2021/02/24 16:54:45 [server 4, role 1, term 49], get majority votes
+2021/02/24 16:54:45 [server 4, role 1, term 49], receive votes from [3]
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [2]
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [3]
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [1]
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [0]
+2021/02/24 16:54:45 [server 3, role 2, term 49] inconsistent entry in preLogIndex(16), need to decrease
+2021/02/24 16:54:45 [server 4, role 0, term 49] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:45 [server 4, role 0, term 49] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [3] from 16 to 16
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [1] from 14 to 16
+2021/02/24 16:54:45 [server 3, role 2, term 49] Append Entry successfully from [4], (16)-(16)
+2021/02/24 16:54:45 [server 3, role 2, term 49], apply log from 1 to 2
+2021/02/24 16:54:45 [server 1, role 2, term 49] inconsistent entry in preLogIndex(13), need to decrease
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [0]
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive successful append entry response from [3]
+2021/02/24 16:54:45 [server 4, role 0, term 49] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [2]
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [3]
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [0]
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [2]
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [1] from 13 to 16
+2021/02/24 16:54:45 [server 3, role 2, term 49] receive successful heartbeat from [4]
+2021/02/24 16:54:45 [server 1, role 2, term 49] Append Entry successfully from [4], (13)-(16)
+2021/02/24 16:54:45 [server 1, role 2, term 49], apply log from 1 to 2
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive successful append entry response from [3]
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive successful append entry response from [1]
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive command(8597353816686485645) from client
+2021/02/24 16:54:45 leader is [4]
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [3] from 17 to 17
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [1] from 17 to 17
+2021/02/24 16:54:45 [server 3, role 2, term 49] Append Entry successfully from [4], (17)-(17)
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [0] from 17 to 17
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [2] from 17 to 17
+2021/02/24 16:54:45 [server 1, role 2, term 49] Append Entry successfully from [4], (17)-(17)
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive successful append entry response from [3]
+2021/02/24 16:54:45 [server 4, role 0, term 49], apply log from 3 to 16
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive successful append entry response from [1]
+2021/02/24 16:54:45 [server 4, role 0, term 49], apply log from 17 to 17
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [3]
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [1]
+2021/02/24 16:54:45 [server 3, role 2, term 49] receive successful heartbeat from [4]
+2021/02/24 16:54:45 [server 3, role 2, term 49], apply log from 3 to 17
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [0] from 17 to 17
+2021/02/24 16:54:45 [server 1, role 2, term 49] receive successful heartbeat from [4]
+2021/02/24 16:54:45 [server 1, role 2, term 49], apply log from 3 to 17
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [2] from 17 to 17
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive successful append entry response from [3]
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive successful append entry response from [1]
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [3]
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [2] from 17 to 17
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [0] from 17 to 17
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [1]
+2021/02/24 16:54:45 [server 3, role 2, term 49] receive successful heartbeat from [4]
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive successful append entry response from [3]
+2021/02/24 16:54:45 [server 1, role 2, term 49] receive successful heartbeat from [4]
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive successful append entry response from [1]
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [3]
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [0] from 17 to 17
+2021/02/24 16:54:45 [server 4, role 0, term 49] send heartbeat to [1]
+2021/02/24 16:54:45 [server 3, role 2, term 49] receive successful heartbeat from [4]
+2021/02/24 16:54:45 [server 4, role 0, term 49] Append entry to [2] from 17 to 17
+2021/02/24 16:54:45 [server 1, role 2, term 49] receive successful heartbeat from [4]
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive successful append entry response from [3]
+2021/02/24 16:54:45 [server 4, role 0, term 49] receive successful append entry response from [1]
+2021/02/24 16:54:45 leader [4] crash, get out
+2021/02/24 16:54:45 [server 3, role 1, term 50], send request vote to [4]
+2021/02/24 16:54:45 [server 3, role 1, term 50], send request vote to [1]
+2021/02/24 16:54:45 [server 4, role 2, term 50], vote for [3]
+2021/02/24 16:54:45 [server 1, role 2, term 50], vote for [3]
+2021/02/24 16:54:45 [server 3, role 1, term 50], send request vote to [0]
+2021/02/24 16:54:45 [server 3, role 1, term 50], receive votes from [4]
+2021/02/24 16:54:45 [server 3, role 1, term 50], send request vote to [2]
+2021/02/24 16:54:45 [server 3, role 1, term 50], get majority votes
+2021/02/24 16:54:45 [server 3, role 1, term 50], receive votes from [1]
+2021/02/24 16:54:45 [server 3, role 0, term 50] send heartbeat to [4]
+2021/02/24 16:54:45 [server 3, role 0, term 50] send heartbeat to [0]
+2021/02/24 16:54:45 [server 3, role 0, term 50] send heartbeat to [1]
+2021/02/24 16:54:45 [server 4, role 2, term 50] receive successful heartbeat from [3]
+2021/02/24 16:54:45 [server 4, role 2, term 50], apply log from 1 to 17
+2021/02/24 16:54:45 [server 1, role 2, term 50] receive successful heartbeat from [3]
+2021/02/24 16:54:45 [server 3, role 0, term 50] send heartbeat to [2]
+2021/02/24 16:54:45 [server 3, role 0, term 50] receive successful append entry response from [4]
+2021/02/24 16:54:45 [server 3, role 0, term 50] receive successful append entry response from [1]
+2021/02/24 16:54:45 [server 3, role 0, term 50] send heartbeat to [4]
+2021/02/24 16:54:45 [server 3, role 0, term 50] send heartbeat to [1]
+2021/02/24 16:54:45 [server 3, role 0, term 50] send heartbeat to [0]
+2021/02/24 16:54:45 [server 3, role 0, term 50] send heartbeat to [2]
+2021/02/24 16:54:45 [server 1, role 2, term 50] receive successful heartbeat from [3]
+2021/02/24 16:54:45 [server 4, role 2, term 50] receive successful heartbeat from [3]
+2021/02/24 16:54:45 [server 3, role 0, term 50] receive successful append entry response from [1]
+2021/02/24 16:54:45 [server 3, role 0, term 50] receive successful append entry response from [4]
+2021/02/24 16:54:46 [server 3, role 0, term 50] send heartbeat to [4]
+2021/02/24 16:54:46 [server 3, role 0, term 50] send heartbeat to [1]
+2021/02/24 16:54:46 [server 4, role 2, term 50] receive successful heartbeat from [3]
+2021/02/24 16:54:46 [server 3, role 0, term 50] send heartbeat to [0]
+2021/02/24 16:54:46 [server 1, role 2, term 50] receive successful heartbeat from [3]
+2021/02/24 16:54:46 [server 3, role 0, term 50] send heartbeat to [2]
+2021/02/24 16:54:46 [server 3, role 0, term 50] receive successful append entry response from [4]
+2021/02/24 16:54:46 [server 3, role 0, term 50] receive successful append entry response from [1]
+2021/02/24 16:54:46 [server 3, role 0, term 50] send heartbeat to [1]
+2021/02/24 16:54:46 [server 3, role 0, term 50] send heartbeat to [4]
+2021/02/24 16:54:46 [server 3, role 0, term 50] send heartbeat to [0]
+2021/02/24 16:54:46 [server 1, role 2, term 50] receive successful heartbeat from [3]
+2021/02/24 16:54:46 [server 3, role 0, term 50] send heartbeat to [2]
+2021/02/24 16:54:46 [server 4, role 2, term 50] receive successful heartbeat from [3]
+2021/02/24 16:54:46 [server 3, role 0, term 50] receive successful append entry response from [1]
+2021/02/24 16:54:46 [server 3, role 0, term 50] receive successful append entry response from [4]
+2021/02/24 16:54:46 [server 3, role 0, term 50] receive command(3368734307294541889) from client
+2021/02/24 16:54:46 leader is [3]
+2021/02/24 16:54:46 [server 3, role 0, term 50] Append entry to [4] from 18 to 18
+2021/02/24 16:54:46 [server 3, role 0, term 50] Append entry to [1] from 18 to 18
+2021/02/24 16:54:46 [server 4, role 2, term 50] Append Entry successfully from [3], (18)-(18)
+2021/02/24 16:54:46 [server 3, role 0, term 50] Append entry to [2] from 18 to 18
+2021/02/24 16:54:46 [server 3, role 0, term 50] Append entry to [0] from 18 to 18
+2021/02/24 16:54:46 [server 1, role 2, term 50] Append Entry successfully from [3], (18)-(18)
+2021/02/24 16:54:46 [server 3, role 0, term 50] receive successful append entry response from [4]
+2021/02/24 16:54:46 [server 3, role 0, term 50] receive successful append entry response from [1]
+2021/02/24 16:54:46 [server 3, role 0, term 50], apply log from 18 to 18
+2021/02/24 16:54:46 leader [3] crash, get out
+2021/02/24 16:54:46 [server 1, role 1, term 51], send request vote to [2]
+2021/02/24 16:54:46 [server 1, role 1, term 51], send request vote to [3]
+2021/02/24 16:54:46 [server 1, role 1, term 51], send request vote to [0]
+2021/02/24 16:54:46 [server 1, role 1, term 51], send request vote to [4]
+2021/02/24 16:54:46 [server 0, role 2, term 51], vote for [1]
+2021/02/24 16:54:46 [server 4, role 2, term 51], vote for [1]
+2021/02/24 16:54:46 [server 1, role 1, term 51], receive votes from [0]
+2021/02/24 16:54:46 [server 1, role 1, term 51], get majority votes
+2021/02/24 16:54:46 [server 1, role 1, term 51], receive votes from [4]
+2021/02/24 16:54:46 [server 1, role 0, term 51] send heartbeat to [4]
+2021/02/24 16:54:46 [server 1, role 0, term 51] send heartbeat to [3]
+2021/02/24 16:54:46 [server 1, role 0, term 51] send heartbeat to [0]
+2021/02/24 16:54:46 [server 1, role 0, term 51] send heartbeat to [2]
+2021/02/24 16:54:46 [server 4, role 2, term 51] receive successful heartbeat from [1]
+2021/02/24 16:54:46 [server 1, role 0, term 51] receive successful append entry response from [4]
+2021/02/24 16:54:46 [server 1, role 0, term 51] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:46 [server 1, role 0, term 51] send heartbeat to [4]
+2021/02/24 16:54:46 [server 1, role 0, term 51] Append entry to [0] from 18 to 18
+2021/02/24 16:54:46 [server 1, role 0, term 51] send heartbeat to [2]
+2021/02/24 16:54:46 [server 4, role 2, term 51] receive successful heartbeat from [1]
+2021/02/24 16:54:46 [server 0, role 2, term 51] inconsistent entry in preLogIndex(17), need to decrease
+2021/02/24 16:54:46 [server 1, role 0, term 51] receive successful append entry response from [4]
+2021/02/24 16:54:46 [server 1, role 0, term 51] send heartbeat to [3]
+2021/02/24 16:54:46 [server 1, role 0, term 51] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:46 [server 1, role 0, term 51] receive command(7713239979177186627) from client
+2021/02/24 16:54:46 leader is [1]
+2021/02/24 16:54:46 [server 1, role 0, term 51] Append entry to [4] from 19 to 19
+2021/02/24 16:54:46 [server 1, role 0, term 51] Append entry to [3] from 19 to 19
+2021/02/24 16:54:46 [server 1, role 0, term 51] Append entry to [2] from 19 to 19
+2021/02/24 16:54:46 [server 1, role 0, term 51] Append entry to [0] from 17 to 19
+2021/02/24 16:54:46 [server 0, role 2, term 51] Append Entry successfully from [1], (17)-(19)
+2021/02/24 16:54:46 [server 0, role 2, term 51], apply log from 1 to 17
+2021/02/24 16:54:46 [server 1, role 0, term 51] receive successful append entry response from [0]
+2021/02/24 16:54:46 [server 1, role 0, term 51], apply log from 18 to 18
+2021/02/24 16:54:46 [server 4, role 2, term 51] Append Entry successfully from [1], (19)-(19)
+2021/02/24 16:54:46 [server 1, role 0, term 51] receive successful append entry response from [4]
+2021/02/24 16:54:46 [server 1, role 0, term 51], apply log from 19 to 19
+2021/02/24 16:54:46 [server 1, role 0, term 51] send heartbeat to [4]
+2021/02/24 16:54:46 [server 1, role 0, term 51] send heartbeat to [0]
+2021/02/24 16:54:46 [server 1, role 0, term 51] Append entry to [2] from 19 to 19
+2021/02/24 16:54:46 [server 1, role 0, term 51] Append entry to [3] from 19 to 19
+2021/02/24 16:54:46 [server 4, role 2, term 51] receive successful heartbeat from [1]
+2021/02/24 16:54:46 [server 4, role 2, term 51], apply log from 18 to 19
+2021/02/24 16:54:46 [server 1, role 0, term 51] receive successful append entry response from [4]
+2021/02/24 16:54:46 [server 0, role 2, term 51] receive successful heartbeat from [1]
+2021/02/24 16:54:46 [server 0, role 2, term 51], apply log from 18 to 19
+2021/02/24 16:54:46 [server 1, role 0, term 51] receive successful append entry response from [0]
+2021/02/24 16:54:46 [server 1, role 0, term 51] send heartbeat to [4]
+2021/02/24 16:54:46 [server 4, role 2, term 51] receive successful heartbeat from [1]
+2021/02/24 16:54:46 [server 1, role 0, term 51] receive successful append entry response from [4]
+2021/02/24 16:54:46 [server 1, role 0, term 51] send heartbeat to [0]
+2021/02/24 16:54:46 [server 0, role 2, term 51] receive successful heartbeat from [1]
+2021/02/24 16:54:46 [server 1, role 0, term 51] receive successful append entry response from [0]
+2021/02/24 16:54:46 [server 1, role 0, term 51] Append entry to [2] from 19 to 19
+2021/02/24 16:54:46 [server 1, role 0, term 51] Append entry to [3] from 19 to 19
+2021/02/24 16:54:46 leader [1] crash, get out
+2021/02/24 16:54:47 [server 3, role 1, term 51], send request vote to [1]
+2021/02/24 16:54:47 [server 3, role 1, term 51], send request vote to [2]
+2021/02/24 16:54:47 [server 3, role 1, term 51], send request vote to [4]
+2021/02/24 16:54:47 [server 3, role 1, term 51], send request vote to [0]
+2021/02/24 16:54:47 [server 4, role 2, term 51] reject vote for [3], already voted for [1]
+2021/02/24 16:54:47 [server 0, role 2, term 51] reject vote for [3], already voted for [1]
+2021/02/24 16:54:47 [server 4, role 1, term 52], send request vote to [0]
+2021/02/24 16:54:47 [server 4, role 1, term 52], send request vote to [3]
+2021/02/24 16:54:47 [server 0, role 2, term 52], vote for [4]
+2021/02/24 16:54:47 [server 3, role 2, term 52], vote for [4]
+2021/02/24 16:54:47 [server 4, role 1, term 52], receive votes from [0]
+2021/02/24 16:54:47 [server 4, role 1, term 52], send request vote to [1]
+2021/02/24 16:54:47 [server 4, role 1, term 52], send request vote to [2]
+2021/02/24 16:54:47 [server 4, role 1, term 52], get majority votes
+2021/02/24 16:54:47 [server 4, role 1, term 52], receive votes from [3]
+2021/02/24 16:54:47 [server 4, role 0, term 52] send heartbeat to [0]
+2021/02/24 16:54:47 [server 4, role 0, term 52] send heartbeat to [1]
+2021/02/24 16:54:47 [server 4, role 0, term 52] send heartbeat to [2]
+2021/02/24 16:54:47 [server 4, role 0, term 52] send heartbeat to [3]
+2021/02/24 16:54:47 [server 0, role 2, term 52] receive successful heartbeat from [4]
+2021/02/24 16:54:47 [server 4, role 0, term 52] receive successful append entry response from [0]
+2021/02/24 16:54:47 [server 4, role 0, term 52] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:47 [server 4, role 0, term 52] Append entry to [3] from 19 to 19
+2021/02/24 16:54:47 [server 4, role 0, term 52] send heartbeat to [0]
+2021/02/24 16:54:47 [server 3, role 2, term 52] Append Entry successfully from [4], (19)-(19)
+2021/02/24 16:54:47 [server 3, role 2, term 52], apply log from 1 to 19
+2021/02/24 16:54:47 [server 0, role 2, term 52] receive successful heartbeat from [4]
+2021/02/24 16:54:47 [server 4, role 0, term 52] receive successful append entry response from [3]
+2021/02/24 16:54:47 [server 4, role 0, term 52] send heartbeat to [1]
+2021/02/24 16:54:47 [server 4, role 0, term 52] receive successful append entry response from [0]
+2021/02/24 16:54:47 [server 4, role 0, term 52] send heartbeat to [2]
+2021/02/24 16:54:47 [server 4, role 0, term 52] receive command(6633368346351734938) from client
+2021/02/24 16:54:47 leader is [4]
+2021/02/24 16:54:47 leader [4] crash, get out
+2021/02/24 16:54:47 [server 3, role 1, term 53], send request vote to [4]
+2021/02/24 16:54:47 [server 3, role 1, term 53], send request vote to [1]
+2021/02/24 16:54:47 [server 3, role 1, term 53], send request vote to [0]
+2021/02/24 16:54:47 [server 1, role 2, term 53], vote for [3]
+2021/02/24 16:54:47 [server 3, role 1, term 53], send request vote to [2]
+2021/02/24 16:54:47 [server 0, role 2, term 53], vote for [3]
+2021/02/24 16:54:47 [server 3, role 1, term 53], receive votes from [1]
+2021/02/24 16:54:47 [server 3, role 1, term 53], get majority votes
+2021/02/24 16:54:47 [server 3, role 1, term 53], receive votes from [0]
+2021/02/24 16:54:47 [server 3, role 0, term 53] send heartbeat to [4]
+2021/02/24 16:54:47 [server 3, role 0, term 53] send heartbeat to [0]
+2021/02/24 16:54:47 [server 0, role 2, term 53] receive successful heartbeat from [3]
+2021/02/24 16:54:47 [server 3, role 0, term 53] receive successful append entry response from [0]
+2021/02/24 16:54:47 [server 3, role 0, term 53] send heartbeat to [1]
+2021/02/24 16:54:47 [server 1, role 2, term 53] receive successful heartbeat from [3]
+2021/02/24 16:54:47 [server 1, role 2, term 53], apply log from 1 to 19
+2021/02/24 16:54:47 [server 3, role 0, term 53] receive successful append entry response from [1]
+2021/02/24 16:54:47 [server 3, role 0, term 53] send heartbeat to [2]
+2021/02/24 16:54:47 [server 3, role 0, term 53] receive command(3657520215180309252) from client
+2021/02/24 16:54:47 leader is [3]
+2021/02/24 16:54:47 [server 3, role 0, term 53] Append entry to [4] from 20 to 20
+2021/02/24 16:54:47 [server 3, role 0, term 53] Append entry to [1] from 20 to 20
+2021/02/24 16:54:47 [server 3, role 0, term 53] Append entry to [0] from 20 to 20
+2021/02/24 16:54:47 [server 3, role 0, term 53] Append entry to [2] from 20 to 20
+2021/02/24 16:54:47 [server 1, role 2, term 53] Append Entry successfully from [3], (20)-(20)
+2021/02/24 16:54:47 [server 0, role 2, term 53] Append Entry successfully from [3], (20)-(20)
+2021/02/24 16:54:47 [server 3, role 0, term 53] receive successful append entry response from [0]
+2021/02/24 16:54:47 [server 3, role 0, term 53] receive successful append entry response from [1]
+2021/02/24 16:54:47 [server 3, role 0, term 53], apply log from 20 to 20
+2021/02/24 16:54:47 leader [3] crash, get out
+2021/02/24 16:54:47 [server 2, role 1, term 47], send request vote to [4]
+2021/02/24 16:54:47 [server 2, role 1, term 47], send request vote to [1]
+2021/02/24 16:54:47 [server 2, role 1, term 47], send request vote to [0]
+2021/02/24 16:54:47 [server 2, role 1, term 47], send request vote to [3]
+2021/02/24 16:54:47 [server 1, role 2, term 53] reject vote for [2], candidate term is small
+2021/02/24 16:54:47 [server 0, role 2, term 53] reject vote for [2], candidate term is small
+2021/02/24 16:54:47 [server 2, role 2, term 47], term has changed to (53), obsolete response
+2021/02/24 16:54:47 [server 1, role 1, term 54], send request vote to [4]
+2021/02/24 16:54:47 [server 1, role 1, term 54], send request vote to [2]
+2021/02/24 16:54:47 [server 1, role 1, term 54], send request vote to [0]
+2021/02/24 16:54:47 [server 2, role 2, term 54], vote for [1]
+2021/02/24 16:54:47 [server 1, role 1, term 54], send request vote to [3]
+2021/02/24 16:54:47 [server 0, role 2, term 54], vote for [1]
+2021/02/24 16:54:47 [server 1, role 1, term 54], receive votes from [2]
+2021/02/24 16:54:47 [server 1, role 1, term 54], get majority votes
+2021/02/24 16:54:47 [server 1, role 1, term 54], receive votes from [0]
+2021/02/24 16:54:47 [server 1, role 0, term 54] send heartbeat to [4]
+2021/02/24 16:54:47 [server 1, role 0, term 54] send heartbeat to [0]
+2021/02/24 16:54:47 [server 1, role 0, term 54] send heartbeat to [2]
+2021/02/24 16:54:47 [server 1, role 0, term 54] send heartbeat to [3]
+2021/02/24 16:54:47 [server 0, role 2, term 54] receive successful heartbeat from [1]
+2021/02/24 16:54:47 [server 1, role 0, term 54] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:47 [server 1, role 0, term 54] receive successful append entry response from [0]
+2021/02/24 16:54:47 [server 1, role 0, term 54] send heartbeat to [4]
+2021/02/24 16:54:47 [server 1, role 0, term 54] send heartbeat to [0]
+2021/02/24 16:54:47 [server 1, role 0, term 54] Append entry to [2] from 18 to 20
+2021/02/24 16:54:47 [server 0, role 2, term 54] receive successful heartbeat from [1]
+2021/02/24 16:54:47 [server 1, role 0, term 54] send heartbeat to [3]
+2021/02/24 16:54:47 [server 1, role 0, term 54] receive successful append entry response from [0]
+2021/02/24 16:54:47 [server 2, role 2, term 54] inconsistent entry in preLogIndex(17), need to decrease
+2021/02/24 16:54:47 [server 1, role 0, term 54] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:47 [server 1, role 0, term 54] receive command(6603580229844335926) from client
+2021/02/24 16:54:47 leader is [1]
+2021/02/24 16:54:47 leader [1] crash, get out
+2021/02/24 16:54:48 [server 2, role 1, term 55], send request vote to [4]
+2021/02/24 16:54:48 [server 2, role 1, term 55], send request vote to [1]
+2021/02/24 16:54:48 [server 2, role 1, term 55], send request vote to [0]
+2021/02/24 16:54:48 [server 2, role 1, term 55], send request vote to [3]
+2021/02/24 16:54:48 [server 1, role 2, term 55] reject vote for [2], not up to date
+2021/02/24 16:54:48 [server 0, role 2, term 55] reject vote for [2], not up to date
+2021/02/24 16:54:48 [server 0, role 1, term 56], send request vote to [3]
+2021/02/24 16:54:48 [server 0, role 1, term 56], send request vote to [2]
+2021/02/24 16:54:48 [server 0, role 1, term 56], send request vote to [4]
+2021/02/24 16:54:48 [server 0, role 1, term 56], send request vote to [1]
+2021/02/24 16:54:48 [server 2, role 2, term 56], vote for [0]
+2021/02/24 16:54:48 [server 1, role 2, term 56] reject vote for [0], not up to date
+2021/02/24 16:54:48 [server 0, role 1, term 56], receive votes from [2]
+2021/02/24 16:54:48 [server 1, role 1, term 57], send request vote to [3]
+2021/02/24 16:54:48 [server 1, role 1, term 57], send request vote to [2]
+2021/02/24 16:54:48 [server 1, role 1, term 57], send request vote to [0]
+2021/02/24 16:54:48 [server 2, role 2, term 57], vote for [1]
+2021/02/24 16:54:48 [server 0, role 2, term 57], vote for [1]
+2021/02/24 16:54:48 [server 1, role 1, term 57], receive votes from [2]
+2021/02/24 16:54:48 [server 1, role 1, term 57], send request vote to [4]
+2021/02/24 16:54:48 [server 1, role 1, term 57], get majority votes
+2021/02/24 16:54:48 [server 1, role 1, term 57], receive votes from [0]
+2021/02/24 16:54:48 [server 1, role 0, term 57] send heartbeat to [4]
+2021/02/24 16:54:48 [server 1, role 0, term 57] send heartbeat to [0]
+2021/02/24 16:54:48 [server 1, role 0, term 57] send heartbeat to [3]
+2021/02/24 16:54:48 [server 1, role 0, term 57] send heartbeat to [2]
+2021/02/24 16:54:48 [server 1, role 0, term 57] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:48 [server 1, role 0, term 57] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:48 [server 1, role 0, term 57] send heartbeat to [3]
+2021/02/24 16:54:48 [server 1, role 0, term 57] send heartbeat to [4]
+2021/02/24 16:54:48 [server 1, role 0, term 57] Append entry to [2] from 18 to 21
+2021/02/24 16:54:48 [server 1, role 0, term 57] Append entry to [0] from 21 to 21
+2021/02/24 16:54:48 [server 2, role 2, term 57] inconsistent entry in preLogIndex(17), need to decrease
+2021/02/24 16:54:48 [server 0, role 2, term 57] Append Entry successfully from [1], (21)-(21)
+2021/02/24 16:54:48 [server 1, role 0, term 57] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:48 [server 1, role 0, term 57] receive successful append entry response from [0]
+2021/02/24 16:54:48 [server 1, role 0, term 57] receive command(7485039344459478417) from client
+2021/02/24 16:54:48 leader is [1]
+2021/02/24 16:54:48 leader [1] crash, get out
+2021/02/24 16:54:48 [server 2, role 1, term 58], send request vote to [3]
+2021/02/24 16:54:48 [server 2, role 1, term 58], send request vote to [1]
+2021/02/24 16:54:48 [server 2, role 1, term 58], send request vote to [4]
+2021/02/24 16:54:48 [server 2, role 1, term 58], send request vote to [0]
+2021/02/24 16:54:48 [server 1, role 2, term 58] reject vote for [2], not up to date
+2021/02/24 16:54:48 [server 0, role 2, term 58] reject vote for [2], not up to date
+2021/02/24 16:54:48 [server 0, role 1, term 59], send request vote to [3]
+2021/02/24 16:54:48 [server 0, role 1, term 59], send request vote to [2]
+2021/02/24 16:54:48 [server 0, role 1, term 59], send request vote to [1]
+2021/02/24 16:54:48 [server 2, role 2, term 59], vote for [0]
+2021/02/24 16:54:48 [server 1, role 2, term 59] reject vote for [0], not up to date
+2021/02/24 16:54:48 [server 0, role 1, term 59], receive votes from [2]
+2021/02/24 16:54:48 [server 0, role 1, term 59], send request vote to [4]
+2021/02/24 16:54:48 [server 1, role 1, term 60], send request vote to [3]
+2021/02/24 16:54:48 [server 1, role 1, term 60], send request vote to [2]
+2021/02/24 16:54:48 [server 1, role 1, term 60], send request vote to [4]
+2021/02/24 16:54:48 [server 1, role 1, term 60], send request vote to [0]
+2021/02/24 16:54:48 [server 2, role 2, term 60], vote for [1]
+2021/02/24 16:54:48 [server 1, role 1, term 60], receive votes from [2]
+2021/02/24 16:54:48 [server 0, role 2, term 60], vote for [1]
+2021/02/24 16:54:48 [server 1, role 1, term 60], get majority votes
+2021/02/24 16:54:48 [server 1, role 1, term 60], receive votes from [0]
+2021/02/24 16:54:48 [server 1, role 0, term 60] send heartbeat to [4]
+2021/02/24 16:54:48 [server 1, role 0, term 60] send heartbeat to [0]
+2021/02/24 16:54:48 [server 1, role 0, term 60] send heartbeat to [3]
+2021/02/24 16:54:48 [server 1, role 0, term 60] send heartbeat to [2]
+2021/02/24 16:54:48 [server 1, role 0, term 60] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:48 [server 1, role 0, term 60] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:48 [server 1, role 0, term 60] receive command(277976221326270548) from client
+2021/02/24 16:54:48 leader is [1]
+2021/02/24 16:54:48 [server 1, role 0, term 60] Append entry to [4] from 23 to 23
+2021/02/24 16:54:48 [server 1, role 0, term 60] Append entry to [2] from 18 to 23
+2021/02/24 16:54:48 [server 1, role 0, term 60] Append entry to [3] from 23 to 23
+2021/02/24 16:54:48 [server 1, role 0, term 60] Append entry to [0] from 22 to 23
+2021/02/24 16:54:48 [server 2, role 2, term 60] inconsistent entry in preLogIndex(17), need to decrease
+2021/02/24 16:54:48 [server 0, role 2, term 60] Append Entry successfully from [1], (22)-(23)
+2021/02/24 16:54:48 [server 1, role 0, term 60] receive successful append entry response from [0]
+2021/02/24 16:54:48 [server 1, role 0, term 60] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:48 [server 1, role 0, term 60] Append entry to [4] from 23 to 23
+2021/02/24 16:54:48 [server 1, role 0, term 60] Append entry to [2] from 17 to 23
+2021/02/24 16:54:48 [server 2, role 2, term 60] Append Entry successfully from [1], (17)-(23)
+2021/02/24 16:54:48 [server 1, role 0, term 60] Append entry to [3] from 23 to 23
+2021/02/24 16:54:48 [server 1, role 0, term 60] send heartbeat to [0]
+2021/02/24 16:54:48 [server 1, role 0, term 60] receive successful append entry response from [2]
+2021/02/24 16:54:48 [server 1, role 0, term 60], apply log from 1 to 23
+2021/02/24 16:54:48 [server 0, role 2, term 60] receive successful heartbeat from [1]
+2021/02/24 16:54:48 [server 1, role 0, term 60] receive successful append entry response from [0]
+2021/02/24 16:54:49 [server 1, role 0, term 60] Append entry to [4] from 23 to 23
+2021/02/24 16:54:49 [server 1, role 0, term 60] send heartbeat to [2]
+2021/02/24 16:54:49 [server 1, role 0, term 60] send heartbeat to [0]
+2021/02/24 16:54:49 [server 2, role 2, term 60] receive successful heartbeat from [1]
+2021/02/24 16:54:49 [server 2, role 2, term 60], apply log from 1 to 23
+2021/02/24 16:54:49 [server 1, role 0, term 60] receive successful append entry response from [2]
+2021/02/24 16:54:49 [server 0, role 2, term 60] receive successful heartbeat from [1]
+2021/02/24 16:54:49 [server 0, role 2, term 60], apply log from 20 to 23
+2021/02/24 16:54:49 [server 1, role 0, term 60] Append entry to [3] from 23 to 23
+2021/02/24 16:54:49 [server 1, role 0, term 60] receive successful append entry response from [0]
+2021/02/24 16:54:49 [server 1, role 0, term 60] Append entry to [3] from 23 to 23
+2021/02/24 16:54:49 [server 1, role 0, term 60] send heartbeat to [2]
+2021/02/24 16:54:49 [server 1, role 0, term 60] Append entry to [4] from 23 to 23
+2021/02/24 16:54:49 [server 1, role 0, term 60] send heartbeat to [0]
+2021/02/24 16:54:49 [server 2, role 2, term 60] receive successful heartbeat from [1]
+2021/02/24 16:54:49 [server 0, role 2, term 60] receive successful heartbeat from [1]
+2021/02/24 16:54:49 [server 1, role 0, term 60] receive successful append entry response from [2]
+2021/02/24 16:54:49 [server 1, role 0, term 60] receive successful append entry response from [0]
+2021/02/24 16:54:49 leader [1] crash, get out
+2021/02/24 16:54:49 [server 0, role 1, term 61], send request vote to [1]
+2021/02/24 16:54:49 [server 0, role 1, term 61], send request vote to [3]
+2021/02/24 16:54:49 [server 0, role 1, term 61], send request vote to [2]
+2021/02/24 16:54:49 [server 3, role 2, term 61], vote for [0]
+2021/02/24 16:54:49 [server 2, role 2, term 61], vote for [0]
+2021/02/24 16:54:49 [server 0, role 1, term 61], receive votes from [3]
+2021/02/24 16:54:49 [server 0, role 1, term 61], send request vote to [4]
+2021/02/24 16:54:49 [server 0, role 1, term 61], get majority votes
+2021/02/24 16:54:49 [server 0, role 1, term 61], receive votes from [2]
+2021/02/24 16:54:49 [server 0, role 0, term 61] send heartbeat to [4]
+2021/02/24 16:54:49 [server 0, role 0, term 61] send heartbeat to [1]
+2021/02/24 16:54:49 [server 0, role 0, term 61] send heartbeat to [2]
+2021/02/24 16:54:49 [server 2, role 2, term 61] receive successful heartbeat from [0]
+2021/02/24 16:54:49 [server 0, role 0, term 61] receive successful append entry response from [2]
+2021/02/24 16:54:49 [server 0, role 0, term 61] send heartbeat to [3]
+2021/02/24 16:54:49 [server 0, role 0, term 61] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:49 [server 0, role 0, term 61] receive command(5184706152123099991) from client
+2021/02/24 16:54:49 leader is [0]
+2021/02/24 16:54:49 leader [0] crash, get out
+2021/02/24 16:54:49 [server 2, role 1, term 62], send request vote to [4]
+2021/02/24 16:54:49 [server 2, role 1, term 62], send request vote to [0]
+2021/02/24 16:54:49 [server 2, role 1, term 62], send request vote to [1]
+2021/02/24 16:54:49 [server 1, role 2, term 62], vote for [2]
+2021/02/24 16:54:49 [server 2, role 1, term 62], receive votes from [1]
+2021/02/24 16:54:49 [server 2, role 1, term 62], send request vote to [3]
+2021/02/24 16:54:49 [server 3, role 2, term 62], vote for [2]
+2021/02/24 16:54:49 [server 2, role 1, term 62], get majority votes
+2021/02/24 16:54:49 [server 2, role 1, term 62], receive votes from [3]
+2021/02/24 16:54:49 [server 2, role 0, term 62] send heartbeat to [4]
+2021/02/24 16:54:49 [server 2, role 0, term 62] send heartbeat to [0]
+2021/02/24 16:54:49 [server 2, role 0, term 62] send heartbeat to [1]
+2021/02/24 16:54:49 [server 1, role 2, term 62] receive successful heartbeat from [2]
+2021/02/24 16:54:49 [server 1, role 2, term 62], apply log from 1 to 23
+2021/02/24 16:54:49 [server 2, role 0, term 62] receive successful append entry response from [1]
+2021/02/24 16:54:49 [server 2, role 0, term 62] send heartbeat to [3]
+2021/02/24 16:54:49 [server 2, role 0, term 62] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:49 [server 2, role 0, term 62] send heartbeat to [4]
+2021/02/24 16:54:49 [server 2, role 0, term 62] send heartbeat to [1]
+2021/02/24 16:54:49 [server 1, role 2, term 62] receive successful heartbeat from [2]
+2021/02/24 16:54:49 [server 2, role 0, term 62] receive successful append entry response from [1]
+2021/02/24 16:54:49 [server 2, role 0, term 62] send heartbeat to [0]
+2021/02/24 16:54:49 [server 2, role 0, term 62] Append entry to [3] from 21 to 23
+2021/02/24 16:54:49 [server 3, role 2, term 62] Append Entry successfully from [2], (21)-(23)
+2021/02/24 16:54:49 [server 3, role 2, term 62], apply log from 1 to 23
+2021/02/24 16:54:49 [server 2, role 0, term 62] receive successful append entry response from [3]
+2021/02/24 16:54:49 [server 2, role 0, term 62] receive command(8205074197331675266) from client
+2021/02/24 16:54:49 leader is [2]
+2021/02/24 16:54:49 leader [2] crash, get out
+2021/02/24 16:54:50 [server 3, role 1, term 63], send request vote to [4]
+2021/02/24 16:54:50 [server 3, role 1, term 63], send request vote to [1]
+2021/02/24 16:54:50 [server 3, role 1, term 63], send request vote to [0]
+2021/02/24 16:54:50 [server 3, role 1, term 63], send request vote to [2]
+2021/02/24 16:54:50 [server 0, role 2, term 63] reject vote for [3], not up to date
+2021/02/24 16:54:50 [server 1, role 2, term 63], vote for [3]
+2021/02/24 16:54:50 [server 3, role 1, term 63], receive votes from [1]
+2021/02/24 16:54:50 [server 0, role 1, term 64], send request vote to [2]
+2021/02/24 16:54:50 [server 0, role 1, term 64], send request vote to [3]
+2021/02/24 16:54:50 [server 0, role 1, term 64], send request vote to [4]
+2021/02/24 16:54:50 [server 0, role 1, term 64], send request vote to [1]
+2021/02/24 16:54:50 [server 3, role 2, term 64], vote for [0]
+2021/02/24 16:54:50 [server 1, role 2, term 64], vote for [0]
+2021/02/24 16:54:50 [server 0, role 1, term 64], receive votes from [3]
+2021/02/24 16:54:50 [server 0, role 1, term 64], get majority votes
+2021/02/24 16:54:50 [server 0, role 1, term 64], receive votes from [1]
+2021/02/24 16:54:50 [server 0, role 0, term 64] send heartbeat to [4]
+2021/02/24 16:54:50 [server 0, role 0, term 64] send heartbeat to [1]
+2021/02/24 16:54:50 [server 0, role 0, term 64] send heartbeat to [2]
+2021/02/24 16:54:50 [server 0, role 0, term 64] send heartbeat to [3]
+2021/02/24 16:54:50 [server 0, role 0, term 64] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:50 [server 0, role 0, term 64] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:50 [server 0, role 0, term 64] send heartbeat to [2]
+2021/02/24 16:54:50 [server 0, role 0, term 64] send heartbeat to [4]
+2021/02/24 16:54:50 [server 0, role 0, term 64] Append entry to [3] from 24 to 24
+2021/02/24 16:54:50 [server 0, role 0, term 64] Append entry to [1] from 24 to 24
+2021/02/24 16:54:50 [server 3, role 2, term 64] Append Entry successfully from [0], (24)-(24)
+2021/02/24 16:54:50 [server 1, role 2, term 64] Append Entry successfully from [0], (24)-(24)
+2021/02/24 16:54:50 [server 0, role 0, term 64] receive successful append entry response from [3]
+2021/02/24 16:54:50 [server 0, role 0, term 64] receive successful append entry response from [1]
+2021/02/24 16:54:50 [server 0, role 0, term 64] receive command(6376075978713000223) from client
+2021/02/24 16:54:50 leader is [0]
+2021/02/24 16:54:50 leader [0] crash, get out
+2021/02/24 16:54:50 [server 1, role 1, term 65], send request vote to [3]
+2021/02/24 16:54:50 [server 1, role 1, term 65], send request vote to [2]
+2021/02/24 16:54:50 [server 1, role 1, term 65], send request vote to [0]
+2021/02/24 16:54:50 [server 1, role 1, term 65], send request vote to [4]
+2021/02/24 16:54:50 [server 3, role 2, term 65], vote for [1]
+2021/02/24 16:54:50 [server 1, role 1, term 65], receive votes from [3]
+2021/02/24 16:54:50 [server 4, role 2, term 65], vote for [1]
+2021/02/24 16:54:50 [server 1, role 1, term 65], get majority votes
+2021/02/24 16:54:50 [server 1, role 1, term 65], receive votes from [4]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [4]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [0]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [3]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [2]
+2021/02/24 16:54:50 [server 3, role 2, term 65] receive successful heartbeat from [1]
+2021/02/24 16:54:50 [server 1, role 0, term 65] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:50 [server 1, role 0, term 65] receive successful append entry response from [3]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [0]
+2021/02/24 16:54:50 [server 1, role 0, term 65] Append entry to [4] from 21 to 24
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [3]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [2]
+2021/02/24 16:54:50 [server 4, role 2, term 65] inconsistent entry in preLogIndex(20), need to decrease
+2021/02/24 16:54:50 [server 3, role 2, term 65] receive successful heartbeat from [1]
+2021/02/24 16:54:50 [server 1, role 0, term 65] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:50 [server 1, role 0, term 65] receive successful append entry response from [3]
+2021/02/24 16:54:50 [server 1, role 0, term 65] Append entry to [4] from 20 to 24
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [2]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [0]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [3]
+2021/02/24 16:54:50 [server 4, role 2, term 65] Append Entry successfully from [1], (20)-(24)
+2021/02/24 16:54:50 [server 4, role 2, term 65], apply log from 1 to 23
+2021/02/24 16:54:50 [server 3, role 2, term 65] receive successful heartbeat from [1]
+2021/02/24 16:54:50 [server 1, role 0, term 65] receive successful append entry response from [4]
+2021/02/24 16:54:50 [server 1, role 0, term 65] receive successful append entry response from [3]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [2]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [4]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [0]
+2021/02/24 16:54:50 [server 1, role 0, term 65] send heartbeat to [3]
+2021/02/24 16:54:50 [server 4, role 2, term 65] receive successful heartbeat from [1]
+2021/02/24 16:54:50 [server 3, role 2, term 65] receive successful heartbeat from [1]
+2021/02/24 16:54:50 [server 1, role 0, term 65] receive successful append entry response from [4]
+2021/02/24 16:54:50 [server 1, role 0, term 65] receive successful append entry response from [3]
+2021/02/24 16:54:50 [server 1, role 0, term 65] receive command(283565325823190658) from client
+2021/02/24 16:54:50 leader is [1]
+2021/02/24 16:54:50 leader [1] crash, get out
+2021/02/24 16:54:51 [server 4, role 1, term 66], send request vote to [0]
+2021/02/24 16:54:51 [server 4, role 1, term 66], send request vote to [2]
+2021/02/24 16:54:51 [server 4, role 1, term 66], send request vote to [1]
+2021/02/24 16:54:51 [server 4, role 1, term 66], send request vote to [3]
+2021/02/24 16:54:51 [server 2, role 2, term 66] reject vote for [4], not up to date
+2021/02/24 16:54:51 [server 3, role 2, term 66], vote for [4]
+2021/02/24 16:54:51 [server 4, role 1, term 66], receive votes from [3]
+2021/02/24 16:54:51 [server 2, role 1, term 67], send request vote to [4]
+2021/02/24 16:54:51 [server 4, role 2, term 67], vote for [2]
+2021/02/24 16:54:51 [server 2, role 1, term 67], receive votes from [4]
+2021/02/24 16:54:51 [server 2, role 1, term 67], send request vote to [0]
+2021/02/24 16:54:51 [server 2, role 1, term 67], send request vote to [1]
+2021/02/24 16:54:51 [server 2, role 1, term 67], send request vote to [3]
+2021/02/24 16:54:51 [server 3, role 2, term 67], vote for [2]
+2021/02/24 16:54:51 [server 2, role 1, term 67], get majority votes
+2021/02/24 16:54:51 [server 2, role 1, term 67], receive votes from [3]
+2021/02/24 16:54:51 [server 2, role 0, term 67] send heartbeat to [4]
+2021/02/24 16:54:51 [server 4, role 2, term 67] inconsistent entry in preLogIndex(24), need to decrease
+2021/02/24 16:54:51 [server 2, role 0, term 67] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:51 [server 2, role 0, term 67] send heartbeat to [0]
+2021/02/24 16:54:51 [server 2, role 0, term 67] send heartbeat to [1]
+2021/02/24 16:54:51 [server 2, role 0, term 67] send heartbeat to [3]
+2021/02/24 16:54:51 [server 3, role 2, term 67] inconsistent entry in preLogIndex(24), need to decrease
+2021/02/24 16:54:51 [server 2, role 0, term 67] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:51 [server 2, role 0, term 67] receive command(5515634209452083347) from client
+2021/02/24 16:54:51 leader is [2]
+2021/02/24 16:54:51 [server 2, role 0, term 67] Append entry to [4] from 24 to 25
+2021/02/24 16:54:51 [server 2, role 0, term 67] Append entry to [1] from 25 to 25
+2021/02/24 16:54:51 [server 2, role 0, term 67] Append entry to [0] from 25 to 25
+2021/02/24 16:54:51 [server 2, role 0, term 67] Append entry to [3] from 24 to 25
+2021/02/24 16:54:51 [server 4, role 2, term 67] Append Entry successfully from [2], (24)-(25)
+2021/02/24 16:54:51 [server 3, role 2, term 67] Append Entry successfully from [2], (24)-(25)
+2021/02/24 16:54:51 [server 2, role 0, term 67] receive successful append entry response from [4]
+2021/02/24 16:54:51 [server 2, role 0, term 67] receive successful append entry response from [3]
+2021/02/24 16:54:51 [server 2, role 0, term 67], apply log from 1 to 25
+2021/02/24 16:54:51 leader [2] crash, get out
+2021/02/24 16:54:51 [server 2, role 1, term 68], send request vote to [3]
+2021/02/24 16:54:51 [server 2, role 1, term 68], send request vote to [1]
+2021/02/24 16:54:51 [server 2, role 1, term 68], send request vote to [0]
+2021/02/24 16:54:51 [server 2, role 1, term 68], send request vote to [4]
+2021/02/24 16:54:51 [server 3, role 2, term 68], vote for [2]
+2021/02/24 16:54:51 [server 4, role 2, term 68], vote for [2]
+2021/02/24 16:54:51 [server 2, role 1, term 68], receive votes from [3]
+2021/02/24 16:54:51 [server 2, role 1, term 68], get majority votes
+2021/02/24 16:54:51 [server 2, role 1, term 68], receive votes from [4]
+2021/02/24 16:54:51 [server 2, role 0, term 68] send heartbeat to [4]
+2021/02/24 16:54:51 [server 4, role 2, term 68] receive successful heartbeat from [2]
+2021/02/24 16:54:51 [server 2, role 0, term 68] receive successful append entry response from [4]
+2021/02/24 16:54:51 [server 2, role 0, term 68] send heartbeat to [0]
+2021/02/24 16:54:51 [server 2, role 0, term 68] send heartbeat to [1]
+2021/02/24 16:54:51 [server 2, role 0, term 68] send heartbeat to [3]
+2021/02/24 16:54:51 [server 3, role 2, term 68] receive successful heartbeat from [2]
+2021/02/24 16:54:51 [server 2, role 0, term 68] receive successful append entry response from [3]
+2021/02/24 16:54:51 [server 2, role 0, term 68] receive command(2692971680274851996) from client
+2021/02/24 16:54:51 leader is [2]
+2021/02/24 16:54:51 [server 2, role 0, term 68] Append entry to [1] from 26 to 26
+2021/02/24 16:54:51 [server 2, role 0, term 68] Append entry to [0] from 26 to 26
+2021/02/24 16:54:51 [server 2, role 0, term 68] Append entry to [4] from 26 to 26
+2021/02/24 16:54:51 [server 2, role 0, term 68] Append entry to [3] from 26 to 26
+2021/02/24 16:54:51 [server 4, role 2, term 68] Append Entry successfully from [2], (26)-(26)
+2021/02/24 16:54:51 [server 3, role 2, term 68] Append Entry successfully from [2], (26)-(26)
+2021/02/24 16:54:51 [server 2, role 0, term 68] receive successful append entry response from [3]
+2021/02/24 16:54:51 [server 2, role 0, term 68], apply log from 1 to 25
+2021/02/24 16:54:51 [server 2, role 0, term 68] receive successful append entry response from [4]
+2021/02/24 16:54:51 [server 2, role 0, term 68], apply log from 1 to 26
+2021/02/24 16:54:51 leader [2] crash, get out
+2021/02/24 16:54:52 [server 4, role 1, term 69], send request vote to [3]
+2021/02/24 16:54:52 [server 3, role 2, term 69], vote for [4]
+2021/02/24 16:54:52 [server 4, role 1, term 69], receive votes from [3]
+2021/02/24 16:54:52 [server 4, role 1, term 69], send request vote to [1]
+2021/02/24 16:54:52 [server 4, role 1, term 69], send request vote to [0]
+2021/02/24 16:54:52 [server 4, role 1, term 69], send request vote to [2]
+2021/02/24 16:54:52 [server 2, role 2, term 69], vote for [4]
+2021/02/24 16:54:52 [server 4, role 1, term 69], get majority votes
+2021/02/24 16:54:52 [server 4, role 1, term 69], receive votes from [2]
+2021/02/24 16:54:52 [server 4, role 0, term 69] send heartbeat to [3]
+2021/02/24 16:54:52 [server 3, role 2, term 69] receive successful heartbeat from [4]
+2021/02/24 16:54:52 [server 4, role 0, term 69] receive successful append entry response from [3]
+2021/02/24 16:54:52 [server 4, role 0, term 69] send heartbeat to [0]
+2021/02/24 16:54:52 [server 4, role 0, term 69] send heartbeat to [1]
+2021/02/24 16:54:52 [server 4, role 0, term 69] send heartbeat to [2]
+2021/02/24 16:54:52 [server 2, role 2, term 69] receive successful heartbeat from [4]
+2021/02/24 16:54:52 [server 2, role 2, term 69], apply log from 1 to 23
+2021/02/24 16:54:52 [server 4, role 0, term 69] receive successful append entry response from [2]
+2021/02/24 16:54:52 [server 4, role 0, term 69] send heartbeat to [3]
+2021/02/24 16:54:52 [server 4, role 0, term 69] send heartbeat to [1]
+2021/02/24 16:54:52 [server 4, role 0, term 69] send heartbeat to [0]
+2021/02/24 16:54:52 [server 4, role 0, term 69] send heartbeat to [2]
+2021/02/24 16:54:52 [server 3, role 2, term 69] receive successful heartbeat from [4]
+2021/02/24 16:54:52 [server 2, role 2, term 69] receive successful heartbeat from [4]
+2021/02/24 16:54:52 [server 4, role 0, term 69] receive successful append entry response from [3]
+2021/02/24 16:54:52 [server 4, role 0, term 69] receive successful append entry response from [2]
+2021/02/24 16:54:52 [server 4, role 0, term 69] receive command(4715694174825992931) from client
+2021/02/24 16:54:52 leader is [4]
+2021/02/24 16:54:52 leader [4] crash, get out
+2021/02/24 16:54:52 [server 2, role 1, term 70], send request vote to [4]
+2021/02/24 16:54:52 [server 2, role 1, term 70], send request vote to [0]
+2021/02/24 16:54:52 [server 2, role 1, term 70], send request vote to [1]
+2021/02/24 16:54:52 [server 1, role 2, term 70], vote for [2]
+2021/02/24 16:54:52 [server 2, role 1, term 70], receive votes from [1]
+2021/02/24 16:54:52 [server 2, role 1, term 70], send request vote to [3]
+2021/02/24 16:54:52 [server 3, role 2, term 70], vote for [2]
+2021/02/24 16:54:52 [server 2, role 1, term 70], get majority votes
+2021/02/24 16:54:52 [server 2, role 1, term 70], receive votes from [3]
+2021/02/24 16:54:52 [server 2, role 0, term 70] send heartbeat to [4]
+2021/02/24 16:54:52 [server 2, role 0, term 70] send heartbeat to [0]
+2021/02/24 16:54:52 [server 2, role 0, term 70] send heartbeat to [1]
+2021/02/24 16:54:52 [server 2, role 0, term 70] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:52 [server 2, role 0, term 70] send heartbeat to [3]
+2021/02/24 16:54:52 [server 3, role 2, term 70] receive successful heartbeat from [2]
+2021/02/24 16:54:52 [server 2, role 0, term 70] receive successful append entry response from [3]
+2021/02/24 16:54:52 [server 2, role 0, term 70] send heartbeat to [4]
+2021/02/24 16:54:52 [server 2, role 0, term 70] send heartbeat to [0]
+2021/02/24 16:54:52 [server 2, role 0, term 70] Append entry to [1] from 26 to 26
+2021/02/24 16:54:52 [server 2, role 0, term 70] send heartbeat to [3]
+2021/02/24 16:54:52 [server 3, role 2, term 70] receive successful heartbeat from [2]
+2021/02/24 16:54:52 [server 2, role 0, term 70] receive successful append entry response from [3]
+2021/02/24 16:54:52 [server 1, role 2, term 70] inconsistent entry in preLogIndex(25), need to decrease
+2021/02/24 16:54:52 [server 2, role 0, term 70] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:52 [server 2, role 0, term 70] receive command(9038278411857260918) from client
+2021/02/24 16:54:52 leader is [2]
+2021/02/24 16:54:52 leader [2] crash, get out
+2021/02/24 16:54:52 [server 3, role 1, term 71], send request vote to [4]
+2021/02/24 16:54:52 [server 3, role 1, term 71], send request vote to [0]
+2021/02/24 16:54:52 [server 3, role 1, term 71], send request vote to [1]
+2021/02/24 16:54:52 [server 1, role 2, term 71], vote for [3]
+2021/02/24 16:54:52 [server 3, role 1, term 71], receive votes from [1]
+2021/02/24 16:54:52 [server 3, role 1, term 71], send request vote to [2]
+2021/02/24 16:54:52 [server 2, role 2, term 71] reject vote for [3], not up to date
+2021/02/24 16:54:52 [server 2, role 1, term 72], send request vote to [4]
+2021/02/24 16:54:52 [server 2, role 1, term 72], send request vote to [0]
+2021/02/24 16:54:52 [server 2, role 1, term 72], send request vote to [3]
+2021/02/24 16:54:52 [server 2, role 1, term 72], send request vote to [1]
+2021/02/24 16:54:52 [server 3, role 2, term 72], vote for [2]
+2021/02/24 16:54:52 [server 1, role 2, term 72], vote for [2]
+2021/02/24 16:54:52 [server 2, role 1, term 72], receive votes from [3]
+2021/02/24 16:54:52 [server 2, role 1, term 72], get majority votes
+2021/02/24 16:54:52 [server 2, role 1, term 72], receive votes from [1]
+2021/02/24 16:54:52 [server 2, role 0, term 72] send heartbeat to [4]
+2021/02/24 16:54:52 [server 2, role 0, term 72] send heartbeat to [0]
+2021/02/24 16:54:52 [server 2, role 0, term 72] send heartbeat to [1]
+2021/02/24 16:54:52 [server 2, role 0, term 72] send heartbeat to [3]
+2021/02/24 16:54:52 [server 2, role 0, term 72] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:52 [server 2, role 0, term 72] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:52 [server 2, role 0, term 72] receive command(4826822203359011107) from client
+2021/02/24 16:54:52 leader is [2]
+2021/02/24 16:54:52 [server 2, role 0, term 72] Append entry to [0] from 28 to 28
+2021/02/24 16:54:52 [server 2, role 0, term 72] Append entry to [4] from 28 to 28
+2021/02/24 16:54:52 [server 2, role 0, term 72] Append entry to [1] from 26 to 28
+2021/02/24 16:54:52 [server 2, role 0, term 72] Append entry to [3] from 27 to 28
+2021/02/24 16:54:52 [server 1, role 2, term 72] inconsistent entry in preLogIndex(25), need to decrease
+2021/02/24 16:54:52 [server 3, role 2, term 72] Append Entry successfully from [2], (27)-(28)
+2021/02/24 16:54:52 [server 2, role 0, term 72] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:52 [server 2, role 0, term 72] receive successful append entry response from [3]
+2021/02/24 16:54:52 leader [2] crash, get out
+2021/02/24 16:54:53 [server 1, role 1, term 73], send request vote to [4]
+2021/02/24 16:54:53 [server 1, role 1, term 73], send request vote to [0]
+2021/02/24 16:54:53 [server 1, role 1, term 73], send request vote to [2]
+2021/02/24 16:54:53 [server 1, role 1, term 73], send request vote to [3]
+2021/02/24 16:54:53 [server 2, role 2, term 73] reject vote for [1], not up to date
+2021/02/24 16:54:53 [server 3, role 2, term 73] reject vote for [1], not up to date
+2021/02/24 16:54:53 [server 2, role 1, term 74], send request vote to [4]
+2021/02/24 16:54:53 [server 2, role 1, term 74], send request vote to [0]
+2021/02/24 16:54:53 [server 2, role 1, term 74], send request vote to [1]
+2021/02/24 16:54:53 [server 1, role 2, term 74], vote for [2]
+2021/02/24 16:54:53 [server 2, role 1, term 74], receive votes from [1]
+2021/02/24 16:54:53 [server 2, role 1, term 74], send request vote to [3]
+2021/02/24 16:54:53 [server 3, role 2, term 74], vote for [2]
+2021/02/24 16:54:53 [server 2, role 1, term 74], get majority votes
+2021/02/24 16:54:53 [server 2, role 1, term 74], receive votes from [3]
+2021/02/24 16:54:53 [server 2, role 0, term 74] send heartbeat to [4]
+2021/02/24 16:54:53 [server 2, role 0, term 74] send heartbeat to [0]
+2021/02/24 16:54:53 [server 2, role 0, term 74] send heartbeat to [1]
+2021/02/24 16:54:53 [server 2, role 0, term 74] send heartbeat to [3]
+2021/02/24 16:54:53 [server 2, role 0, term 74] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:53 [server 3, role 2, term 74] receive successful heartbeat from [2]
+2021/02/24 16:54:53 [server 2, role 0, term 74] receive successful append entry response from [3]
+2021/02/24 16:54:53 [server 2, role 0, term 74] send heartbeat to [4]
+2021/02/24 16:54:53 [server 2, role 0, term 74] send heartbeat to [0]
+2021/02/24 16:54:53 [server 2, role 0, term 74] Append entry to [1] from 26 to 28
+2021/02/24 16:54:53 [server 2, role 0, term 74] send heartbeat to [3]
+2021/02/24 16:54:53 [server 1, role 2, term 74] inconsistent entry in preLogIndex(25), need to decrease
+2021/02/24 16:54:53 [server 3, role 2, term 74] receive successful heartbeat from [2]
+2021/02/24 16:54:53 [server 2, role 0, term 74] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:53 [server 2, role 0, term 74] receive successful append entry response from [3]
+2021/02/24 16:54:53 [server 2, role 0, term 74] receive command(9014399902244284642) from client
+2021/02/24 16:54:53 leader is [2]
+2021/02/24 16:54:53 leader [2] crash, get out
+2021/02/24 16:54:53 [server 3, role 1, term 75], send request vote to [4]
+2021/02/24 16:54:53 [server 4, role 2, term 75], vote for [3]
+2021/02/24 16:54:53 [server 3, role 1, term 75], receive votes from [4]
+2021/02/24 16:54:53 [server 3, role 1, term 75], send request vote to [0]
+2021/02/24 16:54:53 [server 3, role 1, term 75], send request vote to [1]
+2021/02/24 16:54:53 [server 1, role 2, term 75], vote for [3]
+2021/02/24 16:54:53 [server 3, role 1, term 75], get majority votes
+2021/02/24 16:54:53 [server 3, role 1, term 75], receive votes from [1]
+2021/02/24 16:54:53 [server 3, role 0, term 75] send heartbeat to [4]
+2021/02/24 16:54:53 [server 3, role 0, term 75] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:53 [server 3, role 0, term 75], send request vote to [2]
+2021/02/24 16:54:53 [server 3, role 0, term 75] send heartbeat to [0]
+2021/02/24 16:54:53 [server 3, role 0, term 75] send heartbeat to [1]
+2021/02/24 16:54:53 [server 3, role 0, term 75] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:53 [server 3, role 0, term 75] send heartbeat to [2]
+2021/02/24 16:54:53 [server 3, role 0, term 75] Append entry to [4] from 28 to 28
+2021/02/24 16:54:53 [server 3, role 0, term 75] send heartbeat to [0]
+2021/02/24 16:54:53 [server 3, role 0, term 75] send heartbeat to [2]
+2021/02/24 16:54:53 [server 3, role 0, term 75] Append entry to [1] from 26 to 28
+2021/02/24 16:54:53 [server 4, role 2, term 75] inconsistent entry in preLogIndex(27), need to decrease
+2021/02/24 16:54:53 [server 1, role 2, term 75] inconsistent entry in preLogIndex(25), need to decrease
+2021/02/24 16:54:53 [server 3, role 0, term 75] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:53 [server 3, role 0, term 75] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:53 [server 3, role 0, term 75] Append entry to [4] from 27 to 28
+2021/02/24 16:54:53 [server 3, role 0, term 75] Append entry to [1] from 25 to 28
+2021/02/24 16:54:53 [server 3, role 0, term 75] send heartbeat to [2]
+2021/02/24 16:54:53 [server 3, role 0, term 75] send heartbeat to [0]
+2021/02/24 16:54:53 [server 4, role 2, term 75] Append Entry successfully from [3], (27)-(28)
+2021/02/24 16:54:53 [server 4, role 2, term 75], apply log from 1 to 23
+2021/02/24 16:54:53 [server 1, role 2, term 75] inconsistent entry in preLogIndex(24), need to decrease
+2021/02/24 16:54:53 [server 3, role 0, term 75] receive successful append entry response from [4]
+2021/02/24 16:54:53 [server 3, role 0, term 75] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:53 [server 3, role 0, term 75] receive command(3936776288206131890) from client
+2021/02/24 16:54:53 leader is [3]
+2021/02/24 16:54:53 leader [3] crash, get out
+2021/02/24 16:54:53 [server 1, role 1, term 76], send request vote to [4]
+2021/02/24 16:54:53 [server 1, role 1, term 76], send request vote to [0]
+2021/02/24 16:54:53 [server 1, role 1, term 76], send request vote to [2]
+2021/02/24 16:54:53 [server 4, role 2, term 76] reject vote for [1], not up to date
+2021/02/24 16:54:53 [server 2, role 2, term 76] reject vote for [1], not up to date
+2021/02/24 16:54:53 [server 1, role 1, term 76], send request vote to [3]
+2021/02/24 16:54:54 [server 4, role 1, term 77], send request vote to [3]
+2021/02/24 16:54:54 [server 4, role 1, term 77], send request vote to [1]
+2021/02/24 16:54:54 [server 4, role 1, term 77], send request vote to [2]
+2021/02/24 16:54:54 [server 1, role 2, term 77], vote for [4]
+2021/02/24 16:54:54 [server 2, role 2, term 77] reject vote for [4], not up to date
+2021/02/24 16:54:54 [server 4, role 1, term 77], receive votes from [1]
+2021/02/24 16:54:54 [server 4, role 1, term 77], send request vote to [0]
+2021/02/24 16:54:54 [server 2, role 1, term 78], send request vote to [4]
+2021/02/24 16:54:54 [server 2, role 1, term 78], send request vote to [1]
+2021/02/24 16:54:54 [server 2, role 1, term 78], send request vote to [0]
+2021/02/24 16:54:54 [server 4, role 2, term 78], vote for [2]
+2021/02/24 16:54:54 [server 1, role 2, term 78], vote for [2]
+2021/02/24 16:54:54 [server 2, role 1, term 78], send request vote to [3]
+2021/02/24 16:54:54 [server 2, role 1, term 78], receive votes from [4]
+2021/02/24 16:54:54 [server 2, role 1, term 78], get majority votes
+2021/02/24 16:54:54 [server 2, role 1, term 78], receive votes from [1]
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [4]
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [1]
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [3]
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [0]
+2021/02/24 16:54:54 [server 2, role 0, term 78] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:54 [server 2, role 0, term 78] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [4] from 29 to 29
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [0]
+2021/02/24 16:54:54 [server 4, role 2, term 78] Append Entry successfully from [2], (29)-(29)
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [1] from 26 to 29
+2021/02/24 16:54:54 [server 2, role 0, term 78] receive successful append entry response from [4]
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [3]
+2021/02/24 16:54:54 [server 1, role 2, term 78] inconsistent entry in preLogIndex(25), need to decrease
+2021/02/24 16:54:54 [server 2, role 0, term 78] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:54 [server 2, role 0, term 78] receive command(1926783702483251526) from client
+2021/02/24 16:54:54 leader is [2]
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [4] from 30 to 30
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [1] from 25 to 30
+2021/02/24 16:54:54 [server 4, role 2, term 78] Append Entry successfully from [2], (30)-(30)
+2021/02/24 16:54:54 [server 1, role 2, term 78] inconsistent entry in preLogIndex(24), need to decrease
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [0] from 30 to 30
+2021/02/24 16:54:54 [server 2, role 0, term 78] receive successful append entry response from [4]
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [3] from 30 to 30
+2021/02/24 16:54:54 [server 2, role 0, term 78] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [4]
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [1] from 24 to 30
+2021/02/24 16:54:54 [server 4, role 2, term 78] receive successful heartbeat from [2]
+2021/02/24 16:54:54 [server 1, role 2, term 78] Append Entry successfully from [2], (24)-(30)
+2021/02/24 16:54:54 [server 2, role 0, term 78] receive successful append entry response from [4]
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [3] from 30 to 30
+2021/02/24 16:54:54 [server 2, role 0, term 78] receive successful append entry response from [1]
+2021/02/24 16:54:54 [server 2, role 0, term 78], apply log from 1 to 30
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [0] from 30 to 30
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [4]
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [0] from 30 to 30
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [1]
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [3] from 30 to 30
+2021/02/24 16:54:54 [server 1, role 2, term 78] receive successful heartbeat from [2]
+2021/02/24 16:54:54 [server 1, role 2, term 78], apply log from 1 to 30
+2021/02/24 16:54:54 [server 4, role 2, term 78] receive successful heartbeat from [2]
+2021/02/24 16:54:54 [server 4, role 2, term 78], apply log from 24 to 30
+2021/02/24 16:54:54 [server 2, role 0, term 78] receive successful append entry response from [1]
+2021/02/24 16:54:54 [server 2, role 0, term 78] receive successful append entry response from [4]
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [1]
+2021/02/24 16:54:54 [server 1, role 2, term 78] receive successful heartbeat from [2]
+2021/02/24 16:54:54 [server 2, role 0, term 78] receive successful append entry response from [1]
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [4]
+2021/02/24 16:54:54 [server 4, role 2, term 78] receive successful heartbeat from [2]
+2021/02/24 16:54:54 [server 2, role 0, term 78] receive successful append entry response from [4]
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [3] from 30 to 30
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [0] from 30 to 30
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [4]
+2021/02/24 16:54:54 [server 4, role 2, term 78] receive successful heartbeat from [2]
+2021/02/24 16:54:54 [server 2, role 0, term 78] send heartbeat to [1]
+2021/02/24 16:54:54 [server 2, role 0, term 78] receive successful append entry response from [4]
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [3] from 30 to 30
+2021/02/24 16:54:54 [server 2, role 0, term 78] Append entry to [0] from 30 to 30
+2021/02/24 16:54:54 [server 1, role 2, term 78] receive successful heartbeat from [2]
+2021/02/24 16:54:54 [server 2, role 0, term 78] receive successful append entry response from [1]
+2021/02/24 16:54:54 leader [2] crash, get out
+2021/02/24 16:54:54 [server 1, role 1, term 79], send request vote to [4]
+2021/02/24 16:54:54 [server 4, role 2, term 79], vote for [1]
+2021/02/24 16:54:54 [server 1, role 1, term 79], receive votes from [4]
+2021/02/24 16:54:54 [server 1, role 1, term 79], send request vote to [0]
+2021/02/24 16:54:54 [server 1, role 1, term 79], send request vote to [2]
+2021/02/24 16:54:54 [server 1, role 1, term 79], send request vote to [3]
+2021/02/24 16:54:55 [server 0, role 2, term 79], vote for [1]
+2021/02/24 16:54:55 [server 1, role 1, term 79], get majority votes
+2021/02/24 16:54:55 [server 1, role 1, term 79], receive votes from [0]
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [4]
+2021/02/24 16:54:55 [server 4, role 2, term 79] receive successful heartbeat from [1]
+2021/02/24 16:54:55 [server 1, role 0, term 79] receive successful append entry response from [4]
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [0]
+2021/02/24 16:54:55 [server 1, role 0, term 79] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [2]
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [3]
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [4]
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [3]
+2021/02/24 16:54:55 [server 1, role 0, term 79] Append entry to [0] from 26 to 30
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [2]
+2021/02/24 16:54:55 [server 0, role 2, term 79] inconsistent entry in preLogIndex(25), need to decrease
+2021/02/24 16:54:55 [server 4, role 2, term 79] receive successful heartbeat from [1]
+2021/02/24 16:54:55 [server 1, role 0, term 79] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:55 [server 1, role 0, term 79] receive successful append entry response from [4]
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [4]
+2021/02/24 16:54:55 [server 4, role 2, term 79] receive successful heartbeat from [1]
+2021/02/24 16:54:55 [server 1, role 0, term 79] receive successful append entry response from [4]
+2021/02/24 16:54:55 [server 1, role 0, term 79] Append entry to [0] from 25 to 30
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [2]
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [3]
+2021/02/24 16:54:55 [server 0, role 2, term 79] inconsistent entry in preLogIndex(24), need to decrease
+2021/02/24 16:54:55 [server 1, role 0, term 79] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [4]
+2021/02/24 16:54:55 [server 1, role 0, term 79] Append entry to [0] from 24 to 30
+2021/02/24 16:54:55 [server 4, role 2, term 79] receive successful heartbeat from [1]
+2021/02/24 16:54:55 [server 1, role 0, term 79] receive successful append entry response from [4]
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [2]
+2021/02/24 16:54:55 [server 0, role 2, term 79] Append Entry successfully from [1], (24)-(30)
+2021/02/24 16:54:55 [server 0, role 2, term 79], apply log from 1 to 30
+2021/02/24 16:54:55 [server 1, role 0, term 79] send heartbeat to [3]
+2021/02/24 16:54:55 [server 1, role 0, term 79] receive successful append entry response from [0]
+2021/02/24 16:54:55 [server 1, role 0, term 79] receive command(1363492506701524184) from client
+2021/02/24 16:54:55 leader is [1]
+2021/02/24 16:54:55 leader [1] crash, get out
+2021/02/24 16:54:55 [server 0, role 1, term 80], send request vote to [3]
+2021/02/24 16:54:55 [server 0, role 1, term 80], send request vote to [2]
+2021/02/24 16:54:55 [server 0, role 1, term 80], send request vote to [1]
+2021/02/24 16:54:55 [server 0, role 1, term 80], send request vote to [4]
+2021/02/24 16:54:55 [server 4, role 2, term 80], vote for [0]
+2021/02/24 16:54:55 [server 0, role 1, term 80], receive votes from [4]
+2021/02/24 16:54:56 [server 4, role 1, term 81], send request vote to [3]
+2021/02/24 16:54:56 [server 4, role 1, term 81], send request vote to [1]
+2021/02/24 16:54:56 [server 4, role 1, term 81], send request vote to [0]
+2021/02/24 16:54:56 [server 3, role 2, term 81], vote for [4]
+2021/02/24 16:54:56 [server 0, role 2, term 81], vote for [4]
+2021/02/24 16:54:56 [server 4, role 1, term 81], receive votes from [3]
+2021/02/24 16:54:56 [server 4, role 1, term 81], send request vote to [2]
+2021/02/24 16:54:56 [server 4, role 1, term 81], get majority votes
+2021/02/24 16:54:56 [server 4, role 1, term 81], receive votes from [0]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [3]
+2021/02/24 16:54:56 [server 4, role 0, term 81] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [0]
+2021/02/24 16:54:56 [server 0, role 2, term 81] receive successful heartbeat from [4]
+2021/02/24 16:54:56 [server 4, role 0, term 81] receive successful append entry response from [0]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [1]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [2]
+2021/02/24 16:54:56 [server 4, role 0, term 81] Append entry to [3] from 30 to 30
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [2]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [1]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [0]
+2021/02/24 16:54:56 [server 3, role 2, term 81] inconsistent entry in preLogIndex(29), need to decrease
+2021/02/24 16:54:56 [server 0, role 2, term 81] receive successful heartbeat from [4]
+2021/02/24 16:54:56 [server 4, role 0, term 81] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:56 [server 4, role 0, term 81] receive successful append entry response from [0]
+2021/02/24 16:54:56 [server 4, role 0, term 81] Append entry to [3] from 29 to 30
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [1]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [0]
+2021/02/24 16:54:56 [server 3, role 2, term 81] Append Entry successfully from [4], (29)-(30)
+2021/02/24 16:54:56 [server 3, role 2, term 81], apply log from 1 to 30
+2021/02/24 16:54:56 [server 0, role 2, term 81] receive successful heartbeat from [4]
+2021/02/24 16:54:56 [server 4, role 0, term 81] receive successful append entry response from [3]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [2]
+2021/02/24 16:54:56 [server 4, role 0, term 81] receive successful append entry response from [0]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [3]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [1]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [0]
+2021/02/24 16:54:56 [server 3, role 2, term 81] receive successful heartbeat from [4]
+2021/02/24 16:54:56 [server 0, role 2, term 81] receive successful heartbeat from [4]
+2021/02/24 16:54:56 [server 4, role 0, term 81] receive successful append entry response from [3]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [2]
+2021/02/24 16:54:56 [server 4, role 0, term 81] receive successful append entry response from [0]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [3]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [0]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [1]
+2021/02/24 16:54:56 [server 3, role 2, term 81] receive successful heartbeat from [4]
+2021/02/24 16:54:56 [server 4, role 0, term 81] send heartbeat to [2]
+2021/02/24 16:54:56 [server 0, role 2, term 81] receive successful heartbeat from [4]
+2021/02/24 16:54:56 [server 4, role 0, term 81] receive successful append entry response from [3]
+2021/02/24 16:54:56 [server 4, role 0, term 81] receive successful append entry response from [0]
+2021/02/24 16:54:56 [server 4, role 0, term 81] receive command(863679132163556171) from client
+2021/02/24 16:54:56 leader is [4]
+2021/02/24 16:54:56 leader [4] crash, get out
+2021/02/24 16:54:56 [server 2, role 1, term 79], send request vote to [4]
+2021/02/24 16:54:56 [server 2, role 1, term 79], send request vote to [0]
+2021/02/24 16:54:56 [server 2, role 1, term 79], send request vote to [3]
+2021/02/24 16:54:56 [server 0, role 2, term 81] reject vote for [2], candidate term is small
+2021/02/24 16:54:56 [server 3, role 2, term 81] reject vote for [2], candidate term is small
+2021/02/24 16:54:56 [server 2, role 1, term 79], send request vote to [1]
+2021/02/24 16:54:56 [server 2, role 2, term 79], term has changed to (81), obsolete response
+2021/02/24 16:54:56 [server 0, role 1, term 82], send request vote to [4]
+2021/02/24 16:54:56 [server 0, role 1, term 82], send request vote to [2]
+2021/02/24 16:54:56 [server 0, role 1, term 82], send request vote to [1]
+2021/02/24 16:54:56 [server 0, role 1, term 82], send request vote to [3]
+2021/02/24 16:54:56 [server 2, role 2, term 82], vote for [0]
+2021/02/24 16:54:56 [server 3, role 2, term 82], vote for [0]
+2021/02/24 16:54:56 [server 0, role 1, term 82], receive votes from [2]
+2021/02/24 16:54:56 [server 0, role 1, term 82], get majority votes
+2021/02/24 16:54:56 [server 0, role 1, term 82], receive votes from [3]
+2021/02/24 16:54:56 [server 0, role 0, term 82] send heartbeat to [1]
+2021/02/24 16:54:56 [server 0, role 0, term 82] send heartbeat to [2]
+2021/02/24 16:54:56 [server 0, role 0, term 82] send heartbeat to [4]
+2021/02/24 16:54:56 [server 0, role 0, term 82] send heartbeat to [3]
+2021/02/24 16:54:56 [server 2, role 2, term 82] receive successful heartbeat from [0]
+2021/02/24 16:54:56 [server 2, role 2, term 82], apply log from 1 to 30
+2021/02/24 16:54:56 [server 3, role 2, term 82] receive successful heartbeat from [0]
+2021/02/24 16:54:56 [server 0, role 0, term 82] receive successful append entry response from [2]
+2021/02/24 16:54:56 [server 0, role 0, term 82] receive successful append entry response from [3]
+2021/02/24 16:54:56 [server 0, role 0, term 82] send heartbeat to [4]
+2021/02/24 16:54:56 [server 0, role 0, term 82] send heartbeat to [2]
+2021/02/24 16:54:56 [server 2, role 2, term 82] receive successful heartbeat from [0]
+2021/02/24 16:54:56 [server 0, role 0, term 82] receive successful append entry response from [2]
+2021/02/24 16:54:56 [server 0, role 0, term 82] send heartbeat to [1]
+2021/02/24 16:54:56 [server 0, role 0, term 82] send heartbeat to [3]
+2021/02/24 16:54:56 [server 3, role 2, term 82] receive successful heartbeat from [0]
+2021/02/24 16:54:56 [server 0, role 0, term 82] receive successful append entry response from [3]
+2021/02/24 16:54:56 [server 0, role 0, term 82] receive command(4842172166182565253) from client
+2021/02/24 16:54:56 leader is [0]
+2021/02/24 16:54:56 leader [0] crash, get out
+2021/02/24 16:54:57 [server 1, role 1, term 80], send request vote to [3]
+2021/02/24 16:54:57 [server 1, role 1, term 80], send request vote to [2]
+2021/02/24 16:54:57 [server 1, role 1, term 80], send request vote to [0]
+2021/02/24 16:54:57 [server 3, role 2, term 82] reject vote for [1], candidate term is small
+2021/02/24 16:54:57 [server 1, role 1, term 80], send request vote to [4]
+2021/02/24 16:54:57 [server 2, role 2, term 82] reject vote for [1], candidate term is small
+2021/02/24 16:54:57 [server 1, role 2, term 80], term has changed to (82), obsolete response
+2021/02/24 16:54:57 [server 3, role 1, term 83], send request vote to [4]
+2021/02/24 16:54:57 [server 3, role 1, term 83], send request vote to [1]
+2021/02/24 16:54:57 [server 3, role 1, term 83], send request vote to [0]
+2021/02/24 16:54:57 [server 3, role 1, term 83], send request vote to [2]
+2021/02/24 16:54:57 [server 1, role 2, term 83] reject vote for [3], not up to date
+2021/02/24 16:54:57 [server 2, role 2, term 83], vote for [3]
+2021/02/24 16:54:57 [server 3, role 1, term 83], receive votes from [2]
+2021/02/24 16:54:57 [server 2, role 1, term 84], send request vote to [4]
+2021/02/24 16:54:57 [server 2, role 1, term 84], send request vote to [1]
+2021/02/24 16:54:57 [server 2, role 1, term 84], send request vote to [3]
+2021/02/24 16:54:57 [server 2, role 1, term 84], send request vote to [0]
+2021/02/24 16:54:57 [server 3, role 2, term 84], vote for [2]
+2021/02/24 16:54:57 [server 1, role 2, term 84] reject vote for [2], not up to date
+2021/02/24 16:54:57 [server 2, role 1, term 84], receive votes from [3]
+2021/02/24 16:54:57 [server 1, role 1, term 85], send request vote to [3]
+2021/02/24 16:54:57 [server 1, role 1, term 85], send request vote to [2]
+2021/02/24 16:54:57 [server 1, role 1, term 85], send request vote to [0]
+2021/02/24 16:54:57 [server 3, role 2, term 85], vote for [1]
+2021/02/24 16:54:57 [server 1, role 1, term 85], send request vote to [4]
+2021/02/24 16:54:57 [server 2, role 2, term 85], vote for [1]
+2021/02/24 16:54:57 [server 1, role 1, term 85], receive votes from [3]
+2021/02/24 16:54:57 [server 1, role 1, term 85], get majority votes
+2021/02/24 16:54:57 [server 1, role 1, term 85], receive votes from [2]
+2021/02/24 16:54:57 [server 1, role 0, term 85] send heartbeat to [4]
+2021/02/24 16:54:57 [server 1, role 0, term 85] send heartbeat to [3]
+2021/02/24 16:54:57 [server 1, role 0, term 85] send heartbeat to [2]
+2021/02/24 16:54:57 [server 1, role 0, term 85] receive command(7846318317865324429) from client
+2021/02/24 16:54:57 leader is [1]
+2021/02/24 16:54:57 [server 1, role 0, term 85] send heartbeat to [0]
+2021/02/24 16:54:57 [server 1, role 0, term 85] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:57 [server 1, role 0, term 85] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:57 leader [1] crash, get out
+2021/02/24 16:54:57 [server 2, role 1, term 86], send request vote to [4]
+2021/02/24 16:54:57 [server 2, role 1, term 86], send request vote to [1]
+2021/02/24 16:54:57 [server 1, role 2, term 86] reject vote for [2], not up to date
+2021/02/24 16:54:57 [server 2, role 1, term 86], send request vote to [3]
+2021/02/24 16:54:57 [server 2, role 1, term 86], send request vote to [0]
+2021/02/24 16:54:57 [server 3, role 2, term 86], vote for [2]
+2021/02/24 16:54:57 [server 2, role 1, term 86], receive votes from [3]
+2021/02/24 16:54:57 [server 1, role 1, term 87], send request vote to [0]
+2021/02/24 16:54:57 [server 1, role 1, term 87], send request vote to [3]
+2021/02/24 16:54:57 [server 1, role 1, term 87], send request vote to [2]
+2021/02/24 16:54:57 [server 1, role 1, term 87], send request vote to [4]
+2021/02/24 16:54:57 [server 3, role 2, term 87], vote for [1]
+2021/02/24 16:54:57 [server 2, role 2, term 87], vote for [1]
+2021/02/24 16:54:57 [server 1, role 1, term 87], receive votes from [3]
+2021/02/24 16:54:57 [server 1, role 1, term 87], get majority votes
+2021/02/24 16:54:57 [server 1, role 1, term 87], receive votes from [2]
+2021/02/24 16:54:57 [server 1, role 0, term 87] send heartbeat to [4]
+2021/02/24 16:54:57 [server 1, role 0, term 87] send heartbeat to [3]
+2021/02/24 16:54:57 [server 1, role 0, term 87] send heartbeat to [2]
+2021/02/24 16:54:57 [server 1, role 0, term 87] send heartbeat to [0]
+2021/02/24 16:54:57 [server 1, role 0, term 87] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:57 [server 1, role 0, term 87] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:57 [server 1, role 0, term 87] send heartbeat to [4]
+2021/02/24 16:54:57 [server 1, role 0, term 87] send heartbeat to [0]
+2021/02/24 16:54:57 [server 1, role 0, term 87] Append entry to [2] from 31 to 32
+2021/02/24 16:54:57 [server 1, role 0, term 87] Append entry to [3] from 31 to 32
+2021/02/24 16:54:57 [server 2, role 2, term 87] Append Entry successfully from [1], (31)-(32)
+2021/02/24 16:54:57 [server 3, role 2, term 87] Append Entry successfully from [1], (31)-(32)
+2021/02/24 16:54:57 [server 1, role 0, term 87] receive successful append entry response from [2]
+2021/02/24 16:54:57 [server 1, role 0, term 87] receive successful append entry response from [3]
+2021/02/24 16:54:58 [server 1, role 0, term 87] send heartbeat to [4]
+2021/02/24 16:54:58 [server 1, role 0, term 87] send heartbeat to [2]
+2021/02/24 16:54:58 [server 1, role 0, term 87] send heartbeat to [3]
+2021/02/24 16:54:58 [server 1, role 0, term 87] send heartbeat to [0]
+2021/02/24 16:54:58 [server 2, role 2, term 87] receive successful heartbeat from [1]
+2021/02/24 16:54:58 [server 3, role 2, term 87] receive successful heartbeat from [1]
+2021/02/24 16:54:58 [server 1, role 0, term 87] receive successful append entry response from [2]
+2021/02/24 16:54:58 [server 1, role 0, term 87] receive successful append entry response from [3]
+2021/02/24 16:54:58 [server 1, role 0, term 87] receive command(8717925867965356707) from client
+2021/02/24 16:54:58 leader is [1]
+2021/02/24 16:54:58 leader [1] crash, get out
+2021/02/24 16:54:58 [server 3, role 1, term 88], send request vote to [4]
+2021/02/24 16:54:58 [server 3, role 1, term 88], send request vote to [1]
+2021/02/24 16:54:58 [server 3, role 1, term 88], send request vote to [0]
+2021/02/24 16:54:58 [server 3, role 1, term 88], send request vote to [2]
+2021/02/24 16:54:58 [server 0, role 2, term 88], vote for [3]
+2021/02/24 16:54:58 [server 2, role 2, term 88], vote for [3]
+2021/02/24 16:54:58 [server 3, role 1, term 88], receive votes from [0]
+2021/02/24 16:54:58 [server 3, role 1, term 88], get majority votes
+2021/02/24 16:54:58 [server 3, role 1, term 88], receive votes from [2]
+2021/02/24 16:54:58 [server 3, role 0, term 88] send heartbeat to [4]
+2021/02/24 16:54:58 [server 3, role 0, term 88] send heartbeat to [0]
+2021/02/24 16:54:58 [server 3, role 0, term 88] send heartbeat to [1]
+2021/02/24 16:54:58 [server 3, role 0, term 88] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:58 [server 3, role 0, term 88] send heartbeat to [2]
+2021/02/24 16:54:58 [server 2, role 2, term 88] receive successful heartbeat from [3]
+2021/02/24 16:54:58 [server 3, role 0, term 88] receive successful append entry response from [2]
+2021/02/24 16:54:58 [server 3, role 0, term 88] send heartbeat to [4]
+2021/02/24 16:54:58 [server 3, role 0, term 88] Append entry to [0] from 32 to 32
+2021/02/24 16:54:58 [server 3, role 0, term 88] send heartbeat to [1]
+2021/02/24 16:54:58 [server 3, role 0, term 88] send heartbeat to [2]
+2021/02/24 16:54:58 [server 0, role 2, term 88] inconsistent entry in preLogIndex(31), need to decrease
+2021/02/24 16:54:58 [server 2, role 2, term 88] receive successful heartbeat from [3]
+2021/02/24 16:54:58 [server 3, role 0, term 88] inconsistent entry send to [0], now to decrease preLogIndex
+2021/02/24 16:54:58 [server 3, role 0, term 88] receive successful append entry response from [2]
+2021/02/24 16:54:58 [server 3, role 0, term 88] send heartbeat to [4]
+2021/02/24 16:54:58 [server 3, role 0, term 88] Append entry to [0] from 31 to 32
+2021/02/24 16:54:58 [server 3, role 0, term 88] send heartbeat to [1]
+2021/02/24 16:54:58 [server 3, role 0, term 88] send heartbeat to [2]
+2021/02/24 16:54:58 [server 0, role 2, term 88] Append Entry successfully from [3], (31)-(32)
+2021/02/24 16:54:58 [server 0, role 2, term 88], apply log from 1 to 30
+2021/02/24 16:54:58 [server 2, role 2, term 88] receive successful heartbeat from [3]
+2021/02/24 16:54:58 [server 3, role 0, term 88] receive successful append entry response from [2]
+2021/02/24 16:54:58 [server 3, role 0, term 88] receive successful append entry response from [0]
+2021/02/24 16:54:58 [server 3, role 0, term 88] receive command(2266387162037560940) from client
+2021/02/24 16:54:58 leader is [3]
+2021/02/24 16:54:58 [server 3, role 0, term 88] Append entry to [4] from 33 to 33
+2021/02/24 16:54:58 [server 3, role 0, term 88] Append entry to [0] from 33 to 33
+2021/02/24 16:54:58 [server 3, role 0, term 88] Append entry to [1] from 33 to 33
+2021/02/24 16:54:58 [server 0, role 2, term 88] Append Entry successfully from [3], (33)-(33)
+2021/02/24 16:54:58 [server 3, role 0, term 88] Append entry to [2] from 33 to 33
+2021/02/24 16:54:58 [server 3, role 0, term 88] receive successful append entry response from [0]
+2021/02/24 16:54:58 [server 3, role 0, term 88], apply log from 31 to 32
+2021/02/24 16:54:58 [server 2, role 2, term 88] Append Entry successfully from [3], (33)-(33)
+2021/02/24 16:54:58 [server 3, role 0, term 88] receive successful append entry response from [2]
+2021/02/24 16:54:58 [server 3, role 0, term 88], apply log from 33 to 33
+2021/02/24 16:54:58 leader [3] crash, get out
+2021/02/24 16:54:58 [server 1, role 1, term 88], send request vote to [4]
+2021/02/24 16:54:58 [server 1, role 1, term 88], send request vote to [2]
+2021/02/24 16:54:58 [server 1, role 1, term 88], send request vote to [0]
+2021/02/24 16:54:58 [server 2, role 2, term 88] reject vote for [1], already voted for [3]
+2021/02/24 16:54:58 [server 0, role 2, term 88] reject vote for [1], already voted for [3]
+2021/02/24 16:54:58 [server 1, role 1, term 88], send request vote to [3]
+2021/02/24 16:54:58 [server 0, role 1, term 89], send request vote to [3]
+2021/02/24 16:54:58 [server 0, role 1, term 89], send request vote to [2]
+2021/02/24 16:54:58 [server 0, role 1, term 89], send request vote to [4]
+2021/02/24 16:54:58 [server 0, role 1, term 89], send request vote to [1]
+2021/02/24 16:54:58 [server 2, role 2, term 89], vote for [0]
+2021/02/24 16:54:58 [server 1, role 2, term 89], vote for [0]
+2021/02/24 16:54:58 [server 0, role 1, term 89], receive votes from [2]
+2021/02/24 16:54:58 [server 0, role 1, term 89], get majority votes
+2021/02/24 16:54:58 [server 0, role 1, term 89], receive votes from [1]
+2021/02/24 16:54:58 [server 0, role 0, term 89] send heartbeat to [4]
+2021/02/24 16:54:58 [server 0, role 0, term 89] send heartbeat to [2]
+2021/02/24 16:54:58 [server 0, role 0, term 89] send heartbeat to [1]
+2021/02/24 16:54:58 [server 0, role 0, term 89] send heartbeat to [3]
+2021/02/24 16:54:58 [server 2, role 2, term 89] receive successful heartbeat from [0]
+2021/02/24 16:54:58 [server 1, role 2, term 89] inconsistent entry in preLogIndex(33), need to decrease
+2021/02/24 16:54:58 [server 0, role 0, term 89] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:58 [server 0, role 0, term 89] receive successful append entry response from [2]
+2021/02/24 16:54:58 [server 0, role 0, term 89] send heartbeat to [4]
+2021/02/24 16:54:58 [server 0, role 0, term 89] send heartbeat to [3]
+2021/02/24 16:54:58 [server 0, role 0, term 89] Append entry to [1] from 33 to 33
+2021/02/24 16:54:58 [server 0, role 0, term 89] send heartbeat to [2]
+2021/02/24 16:54:58 [server 1, role 2, term 89] Append Entry successfully from [0], (33)-(33)
+2021/02/24 16:54:58 [server 1, role 2, term 89], apply log from 1 to 30
+2021/02/24 16:54:58 [server 2, role 2, term 89] receive successful heartbeat from [0]
+2021/02/24 16:54:58 [server 0, role 0, term 89] receive successful append entry response from [1]
+2021/02/24 16:54:58 [server 0, role 0, term 89] receive successful append entry response from [2]
+2021/02/24 16:54:59 [server 0, role 0, term 89] send heartbeat to [2]
+2021/02/24 16:54:59 [server 0, role 0, term 89] send heartbeat to [4]
+2021/02/24 16:54:59 [server 0, role 0, term 89] send heartbeat to [3]
+2021/02/24 16:54:59 [server 0, role 0, term 89] send heartbeat to [1]
+2021/02/24 16:54:59 [server 2, role 2, term 89] receive successful heartbeat from [0]
+2021/02/24 16:54:59 [server 1, role 2, term 89] receive successful heartbeat from [0]
+2021/02/24 16:54:59 [server 0, role 0, term 89] receive successful append entry response from [2]
+2021/02/24 16:54:59 [server 0, role 0, term 89] receive successful append entry response from [1]
+2021/02/24 16:54:59 [server 0, role 0, term 89] receive command(3289548144336242165) from client
+2021/02/24 16:54:59 leader is [0]
+2021/02/24 16:54:59 leader [0] crash, get out
+2021/02/24 16:54:59 [server 0, role 1, term 90], send request vote to [4]
+2021/02/24 16:54:59 [server 0, role 1, term 90], send request vote to [2]
+2021/02/24 16:54:59 [server 0, role 1, term 90], send request vote to [1]
+2021/02/24 16:54:59 [server 2, role 2, term 90], vote for [0]
+2021/02/24 16:54:59 [server 0, role 1, term 90], send request vote to [3]
+2021/02/24 16:54:59 [server 1, role 2, term 90], vote for [0]
+2021/02/24 16:54:59 [server 0, role 1, term 90], receive votes from [2]
+2021/02/24 16:54:59 [server 0, role 1, term 90], get majority votes
+2021/02/24 16:54:59 [server 0, role 1, term 90], receive votes from [1]
+2021/02/24 16:54:59 [server 0, role 0, term 90] send heartbeat to [2]
+2021/02/24 16:54:59 [server 0, role 0, term 90] send heartbeat to [1]
+2021/02/24 16:54:59 [server 0, role 0, term 90] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:59 [server 0, role 0, term 90] send heartbeat to [3]
+2021/02/24 16:54:59 [server 0, role 0, term 90] send heartbeat to [4]
+2021/02/24 16:54:59 [server 0, role 0, term 90] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:59 [server 0, role 0, term 90] Append entry to [1] from 34 to 34
+2021/02/24 16:54:59 [server 0, role 0, term 90] send heartbeat to [4]
+2021/02/24 16:54:59 [server 0, role 0, term 90] send heartbeat to [3]
+2021/02/24 16:54:59 [server 1, role 2, term 90] Append Entry successfully from [0], (34)-(34)
+2021/02/24 16:54:59 [server 0, role 0, term 90] Append entry to [2] from 34 to 34
+2021/02/24 16:54:59 [server 0, role 0, term 90] receive successful append entry response from [1]
+2021/02/24 16:54:59 [server 2, role 2, term 90] Append Entry successfully from [0], (34)-(34)
+2021/02/24 16:54:59 [server 0, role 0, term 90] receive successful append entry response from [2]
+2021/02/24 16:54:59 [server 0, role 0, term 90] receive command(1866395936954918460) from client
+2021/02/24 16:54:59 leader is [0]
+2021/02/24 16:54:59 leader [0] crash, get out
+2021/02/24 16:54:59 [server 2, role 1, term 91], send request vote to [4]
+2021/02/24 16:54:59 [server 2, role 1, term 91], send request vote to [1]
+2021/02/24 16:54:59 [server 2, role 1, term 91], send request vote to [0]
+2021/02/24 16:54:59 [server 2, role 1, term 91], send request vote to [3]
+2021/02/24 16:54:59 [server 1, role 2, term 91], vote for [2]
+2021/02/24 16:54:59 [server 0, role 2, term 91] reject vote for [2], not up to date
+2021/02/24 16:54:59 [server 2, role 1, term 91], receive votes from [1]
+2021/02/24 16:54:59 1000 loops end
+2021/02/24 16:54:59 client send last command
+2021/02/24 16:54:59 [server 0, role 1, term 92], send request vote to [1]
+2021/02/24 16:54:59 [server 0, role 1, term 92], send request vote to [3]
+2021/02/24 16:54:59 [server 0, role 1, term 92], send request vote to [2]
+2021/02/24 16:54:59 [server 0, role 1, term 92], send request vote to [4]
+2021/02/24 16:54:59 [server 2, role 2, term 92], vote for [0]
+2021/02/24 16:54:59 [server 3, role 2, term 92], vote for [0]
+2021/02/24 16:54:59 [server 4, role 2, term 92], vote for [0]
+2021/02/24 16:54:59 [server 0, role 1, term 92], receive votes from [2]
+2021/02/24 16:54:59 [server 1, role 2, term 92], vote for [0]
+2021/02/24 16:54:59 [server 0, role 1, term 92], get majority votes
+2021/02/24 16:54:59 [server 0, role 1, term 92], receive votes from [3]
+2021/02/24 16:54:59 [server 0, role 0, term 92] send heartbeat to [4]
+2021/02/24 16:54:59 [server 0, role 0, term 92], term has changed to (92), obsolete response
+2021/02/24 16:54:59 [server 0, role 0, term 92] send heartbeat to [2]
+2021/02/24 16:54:59 [server 0, role 0, term 92], term has changed to (92), obsolete response
+2021/02/24 16:54:59 [server 0, role 0, term 92] send heartbeat to [1]
+2021/02/24 16:54:59 [server 0, role 0, term 92] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:59 [server 0, role 0, term 92] send heartbeat to [3]
+2021/02/24 16:54:59 [server 0, role 0, term 92] inconsistent entry send to [1], now to decrease preLogIndex
+2021/02/24 16:54:59 [server 0, role 0, term 92] inconsistent entry send to [2], now to decrease preLogIndex
+2021/02/24 16:54:59 [server 0, role 0, term 92] inconsistent entry send to [3], now to decrease preLogIndex
+2021/02/24 16:54:59 [server 0, role 0, term 92] Append entry to [4] from 32 to 35
+2021/02/24 16:54:59 [server 0, role 0, term 92] Append entry to [1] from 35 to 35
+2021/02/24 16:54:59 [server 0, role 0, term 92] Append entry to [3] from 34 to 35
+2021/02/24 16:54:59 [server 0, role 0, term 92] Append entry to [2] from 35 to 35
+2021/02/24 16:54:59 [server 1, role 2, term 92] Append Entry successfully from [0], (35)-(35)
+2021/02/24 16:54:59 [server 4, role 2, term 92] inconsistent entry in preLogIndex(31), need to decrease
+2021/02/24 16:54:59 [server 3, role 2, term 92] Append Entry successfully from [0], (34)-(35)
+2021/02/24 16:54:59 [server 2, role 2, term 92] Append Entry successfully from [0], (35)-(35)
+2021/02/24 16:54:59 [server 0, role 0, term 92] receive successful append entry response from [1]
+2021/02/24 16:54:59 [server 0, role 0, term 92] inconsistent entry send to [4], now to decrease preLogIndex
+2021/02/24 16:54:59 [server 0, role 0, term 92] receive successful append entry response from [3]
+2021/02/24 16:54:59 [server 0, role 0, term 92] receive successful append entry response from [2]
+2021/02/24 16:54:59 [server 0, role 0, term 92], apply log from 1 to 35
+2021/02/24 16:54:59 [server 0, role 0, term 92] receive command(5892030764382998007) from client
+2021/02/24 16:54:59 [server 0, role 0, term 92] Append entry to [4] from 31 to 36
+2021/02/24 16:54:59 [server 0, role 0, term 92] Append entry to [1] from 36 to 36
+2021/02/24 16:54:59 [server 0, role 0, term 92] Append entry to [2] from 36 to 36
+2021/02/24 16:54:59 [server 1, role 2, term 92] Append Entry successfully from [0], (36)-(36)
+2021/02/24 16:54:59 [server 1, role 2, term 92], apply log from 31 to 35
+2021/02/24 16:54:59 [server 2, role 2, term 92] Append Entry successfully from [0], (36)-(36)
+2021/02/24 16:54:59 [server 2, role 2, term 92], apply log from 31 to 35
+2021/02/24 16:54:59 [server 0, role 0, term 92] receive successful append entry response from [1]
+2021/02/24 16:54:59 [server 0, role 0, term 92] receive successful append entry response from [2]
+2021/02/24 16:54:59 [server 0, role 0, term 92], apply log from 36 to 36
+2021/02/24 16:54:59 [server 4, role 2, term 92] Append Entry successfully from [0], (31)-(36)
+2021/02/24 16:54:59 [server 4, role 2, term 92], apply log from 1 to 35
+2021/02/24 16:54:59 [server 0, role 0, term 92] Append entry to [3] from 36 to 36
+2021/02/24 16:54:59 [server 0, role 0, term 92] receive successful append entry response from [4]
+2021/02/24 16:54:59 [server 3, role 2, term 92] Append Entry successfully from [0], (36)-(36)
+2021/02/24 16:54:59 [server 3, role 2, term 92], apply log from 1 to 35
+2021/02/24 16:54:59 [server 0, role 0, term 92] receive successful append entry response from [3]
+2021/02/24 16:55:00 [server 0, role 0, term 92] send heartbeat to [4]
+2021/02/24 16:55:00 [server 0, role 0, term 92] send heartbeat to [3]
+2021/02/24 16:55:00 [server 0, role 0, term 92] send heartbeat to [2]
+2021/02/24 16:55:00 [server 0, role 0, term 92] send heartbeat to [1]
+2021/02/24 16:55:00 [server 3, role 2, term 92] receive successful heartbeat from [0]
+2021/02/24 16:55:00 [server 3, role 2, term 92], apply log from 36 to 36
+2021/02/24 16:55:00 [server 2, role 2, term 92] receive successful heartbeat from [0]
+2021/02/24 16:55:00 [server 2, role 2, term 92], apply log from 36 to 36
+2021/02/24 16:55:00 [server 4, role 2, term 92] receive successful heartbeat from [0]
+2021/02/24 16:55:00 [server 4, role 2, term 92], apply log from 36 to 36
+2021/02/24 16:55:00 [server 1, role 2, term 92] receive successful heartbeat from [0]
+2021/02/24 16:55:00 [server 1, role 2, term 92], apply log from 36 to 36
+2021/02/24 16:55:00 [server 0, role 0, term 92] receive successful append entry response from [3]
+2021/02/24 16:55:00 [server 0, role 0, term 92] receive successful append entry response from [2]
+2021/02/24 16:55:00 [server 0, role 0, term 92] receive successful append entry response from [4]
+2021/02/24 16:55:00 [server 0, role 0, term 92] receive successful append entry response from [1]
+  ... Passed --  31.7  5 1132  232765   36
+PASS
+ok  	6.824/raft	31.672s

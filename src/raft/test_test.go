@@ -643,30 +643,39 @@ func TestPersist22C(t *testing.T) {
 
 		leader1 := cfg.checkOneLeader()
 
+		DPrintf("server [%v] disconnect\n", (leader1 + 1) % servers)
 		cfg.disconnect((leader1 + 1) % servers)
+		DPrintf("server [%v] disconnect\n", (leader1 + 2) % servers)
 		cfg.disconnect((leader1 + 2) % servers)
 
 		cfg.one(10+index, servers-2, true)
 		index++
 
+		DPrintf("leader [%v] disconnect\n", (leader1 + 0) % servers)
 		cfg.disconnect((leader1 + 0) % servers)
+		DPrintf("server [%v] disconnect\n", (leader1 + 3) % servers)
 		cfg.disconnect((leader1 + 3) % servers)
+		DPrintf("server [%v] disconnect\n", (leader1 + 4) % servers)
 		cfg.disconnect((leader1 + 4) % servers)
 
 		cfg.start1((leader1+1)%servers, cfg.applier)
 		cfg.start1((leader1+2)%servers, cfg.applier)
+		DPrintf("server [%v] reconnect\n", (leader1 + 1) % servers)
 		cfg.connect((leader1 + 1) % servers)
+		DPrintf("server [%v] reconnect\n", (leader1 + 2) % servers)
 		cfg.connect((leader1 + 2) % servers)
 
 		time.Sleep(RaftElectionTimeout)
 
 		cfg.start1((leader1+3)%servers, cfg.applier)
+		DPrintf("server [%v] reconnect\n", (leader1 + 3) % servers)
 		cfg.connect((leader1 + 3) % servers)
 
 		cfg.one(10+index, servers-2, true)
 		index++
-
+		DPrintf("server [%v] reconnect\n", (leader1 + 4) % servers)
 		cfg.connect((leader1 + 4) % servers)
+		DPrintf("old leader [%v] reconnect\n", (leader1 + 0) % servers)
 		cfg.connect((leader1 + 0) % servers)
 	}
 
@@ -722,9 +731,11 @@ func TestFigure82C(t *testing.T) {
 
 	cfg.begin("Test (2C): Figure 8")
 
+	DPrintf("client send a random command\n")
 	cfg.one(rand.Int(), 1, true)
 
 	nup := servers
+	DPrintf("1000 loops\n")
 	for iters := 0; iters < 1000; iters++ {
 		leader := -1
 		for i := 0; i < servers; i++ {
@@ -732,6 +743,7 @@ func TestFigure82C(t *testing.T) {
 				_, _, ok := cfg.rafts[i].Start(rand.Int())
 				if ok {
 					leader = i
+					DPrintf("leader is [%v]\n", leader)
 				}
 			}
 		}
@@ -745,6 +757,7 @@ func TestFigure82C(t *testing.T) {
 		}
 
 		if leader != -1 {
+			DPrintf("leader [%v] crash, get out\n", leader)
 			cfg.crash1(leader)
 			nup -= 1
 		}
@@ -758,14 +771,15 @@ func TestFigure82C(t *testing.T) {
 			}
 		}
 	}
-
+	DPrintf("1000 loops end\n")
 	for i := 0; i < servers; i++ {
 		if cfg.rafts[i] == nil {
 			cfg.start1(i, cfg.applier)
 			cfg.connect(i)
 		}
 	}
-
+	DPrintf("all clients come back\n")
+	DPrintf("client send last command\n")
 	cfg.one(rand.Int(), servers, true)
 
 	cfg.end()
@@ -807,14 +821,17 @@ func TestFigure8Unreliable2C(t *testing.T) {
 
 	cfg.begin("Test (2C): Figure 8 (unreliable)")
 
+	DPrintf("client send a command to server\n")
 	cfg.one(rand.Int()%10000, 1, true)
 
 	nup := servers
 	for iters := 0; iters < 1000; iters++ {
 		if iters == 200 {
+			DPrintf("iters == 200, now start to delay response\n")
 			cfg.setlongreordering(true)
 		}
 		leader := -1
+		DPrintf("client send a random command to server\n")
 		for i := 0; i < servers; i++ {
 			_, _, ok := cfg.rafts[i].Start(rand.Int() % 10000)
 			if ok && cfg.connected[i] {
