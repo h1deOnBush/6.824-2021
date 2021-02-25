@@ -4,10 +4,10 @@ rm res -rf
 mkdir res
 
 
-for i in `seq 1000`
+for i in `seq 100`
 do
     date +%F_%T
-    go test &> res/all.$i
+    go test -run TestFigure8Unreliable2C -race &> res/f8ur
     echo "$i result:$?"
     if [ $? -ne 0 ]
     then
