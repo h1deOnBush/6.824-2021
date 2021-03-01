@@ -92,7 +92,7 @@ func (rf *Raft) readPersist(data []byte) {
 	var currentTerm, voteFor, lastIncludedTerm, lastIncludedIndex int
 	var logs []Entry
 	if d.Decode(&currentTerm) != nil ||
-		d.Decode(&voteFor) != nil || d.Decode(&logs) != nil {
+		d.Decode(&voteFor) != nil || d.Decode(&logs) != nil || d.Decode(&lastIncludedIndex) != nil || d.Decode(&lastIncludedTerm) != nil {
 		fmt.Println("readPersist error")
 	} else {
 		rf.mu.Lock()
@@ -141,7 +141,7 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 	if rf.getRealIdx(args.PrevLogIndex) == 0  {
 		prevLogTerm = rf.lastIncludedTerm
 	} else {
-		DPrintf("[server %v], snapshotIdx(%v), snapshotTerm(%v)", rf.me, rf.lastIncludedIndex, rf.lastIncludedTerm)
+		//DPrintf("[server %v], snapshotIdx(%v), snapshotTerm(%v)", rf.me, rf.lastIncludedIndex, rf.lastIncludedTerm)
 		prevLogTerm = rf.logs[rf.getRealIdx(args.PrevLogIndex)].Term
 	}
 	if prevLogTerm != args.PrevLogTerm {
@@ -639,8 +639,15 @@ func (rf *Raft) setCommitIndexAndApply(commitIndex int)  {
 	rf.commitIndex = commitIndex
 	// apply to state machine, with a new goroutine
 	if rf.commitIndex > rf.lastApplied {
-		DPrintf("[server %v, role %v, term %v], apply log from %v to %v\n", rf.me, rf.state, rf.currentTerm, rf.lastApplied+1, rf.commitIndex)
-		entriesToApply := append([]Entry{}, rf.logs[(rf.getRealIdx(rf.lastApplied)+1):(rf.getRealIdx(rf.commitIndex)+1)]...)
+		var entriesToApply []Entry
+		if rf.lastIncludedIndex > rf.lastApplied {
+			DPrintf("[server %v, role %v, term %v], apply log from %v to %v\n", rf.me, rf.state, rf.currentTerm, rf.lastIncludedIndex+1, rf.commitIndex)
+			entriesToApply = append(entriesToApply, rf.logs[(rf.getRealIdx(rf.lastIncludedIndex)+1):(rf.getRealIdx(rf.commitIndex)+1)]...)
+		} else {
+			DPrintf("[server %v, role %v, term %v], apply log from %v to %v\n", rf.me, rf.state, rf.currentTerm, rf.lastApplied+1, rf.commitIndex)
+			entriesToApply = append(entriesToApply, rf.logs[(rf.getRealIdx(rf.lastApplied)+1):(rf.getRealIdx(rf.commitIndex)+1)]...)
+		}
+
 
 		go func(startIdx int, entries []Entry) {
 			for _, entry := range entries {

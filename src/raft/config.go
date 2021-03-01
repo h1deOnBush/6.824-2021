@@ -127,6 +127,7 @@ func (cfg *config) crash1(i int) {
 
 	if cfg.saved[i] != nil {
 		raftlog := cfg.saved[i].ReadRaftState()
+		//DPrintf("server [%v], raftState(%+v)", i, raftlog)
 		cfg.saved[i] = &Persister{}
 		cfg.saved[i].SaveRaftState(raftlog)
 	}
