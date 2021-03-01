@@ -38,6 +38,7 @@ type ApplyMsg struct {
 type Entry struct {
 	Command interface{}
 	Term int
+	Index int
 }
 
 
@@ -75,6 +76,10 @@ type Raft struct {
 	// volatile state on leaders
 	nextIndex []int
 	matchIndex []int
+
+	// snapshot
+	lastIncludedIndex int
+	lastIncludedTerm  int
 }
 
 
@@ -119,4 +124,16 @@ type AppendEntriesReply struct {
 	// for optimize
 	ConflictTerm int
 	ConflictIndex int
+}
+
+type InstallSnapshotArgs struct {
+	Term int
+	LeaderId int
+	LastIncludedIndex int
+	LastIncludedTerm int
+	Data []byte
+}
+
+type InstallSnapshotReply struct {
+	Term int
 }

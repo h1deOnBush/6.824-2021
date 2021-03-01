@@ -821,7 +821,7 @@ func TestFigure8Unreliable2C(t *testing.T) {
 
 	cfg.begin("Test (2C): Figure 8 (unreliable)")
 
-	DPrintf("client send a command to server\n")
+	DPrintf("client send a random command to server\n")
 	cfg.one(rand.Int()%10000, 1, true)
 
 	nup := servers
@@ -848,6 +848,7 @@ func TestFigure8Unreliable2C(t *testing.T) {
 		}
 
 		if leader != -1 && (rand.Int()%1000) < int(RaftElectionTimeout/time.Millisecond)/2 {
+			DPrintf("leader disconnect\n")
 			cfg.disconnect(leader)
 			nup -= 1
 		}
@@ -855,6 +856,7 @@ func TestFigure8Unreliable2C(t *testing.T) {
 		if nup < 3 {
 			s := rand.Int() % servers
 			if cfg.connected[s] == false {
+				DPrintf("server [%v] reconnect\n", s)
 				cfg.connect(s)
 				nup += 1
 			}
@@ -863,6 +865,7 @@ func TestFigure8Unreliable2C(t *testing.T) {
 
 	for i := 0; i < servers; i++ {
 		if cfg.connected[i] == false {
+			DPrintf("server [%v] reconnect\n", i)
 			cfg.connect(i)
 		}
 	}
@@ -1037,8 +1040,10 @@ func snapcommon(t *testing.T, name string, disconnect bool, reliable bool, crash
 
 	cfg.one(rand.Int(), servers, true)
 	leader1 := cfg.checkOneLeader()
+	DPrintf("find leader [%v]\n", leader1)
 
 	for i := 0; i < iters; i++ {
+		DPrintf("%v loops begin\n", i)
 		victim := (leader1 + 1) % servers
 		sender := leader1
 		if i%3 == 1 {
@@ -1048,10 +1053,12 @@ func snapcommon(t *testing.T, name string, disconnect bool, reliable bool, crash
 
 		if disconnect {
 			cfg.disconnect(victim)
+			DPrintf("server [%v] disconnect", victim)
 			cfg.one(rand.Int(), servers-1, true)
 		}
 		if crash {
 			cfg.crash1(victim)
+			DPrintf("server [%v] crash", victim)
 			cfg.one(rand.Int(), servers-1, true)
 		}
 		// send enough to get a snapshot
@@ -1068,12 +1075,14 @@ func snapcommon(t *testing.T, name string, disconnect bool, reliable bool, crash
 			// reconnect a follower, who maybe behind and
 			// needs to rceive a snapshot to catch up.
 			cfg.connect(victim)
+			DPrintf("server [%v] reconnect\n", victim)
 			cfg.one(rand.Int(), servers, true)
 			leader1 = cfg.checkOneLeader()
 		}
 		if crash {
 			cfg.start1(victim, cfg.applierSnap)
 			cfg.connect(victim)
+			DPrintf("server [%v] reconnect\n", victim)
 			cfg.one(rand.Int(), servers, true)
 			leader1 = cfg.checkOneLeader()
 		}

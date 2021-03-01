@@ -5,12 +5,11 @@ import (
 )
 
 // Debugging
-const Debug = true
+const flag = true
 
 func DPrintf(format string, a ...interface{}) (n int, err error) {
-	if Debug {
+	if flag {
 		log.Printf(format, a...)
 	}
-
 	return
 }
