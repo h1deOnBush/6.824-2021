@@ -1,13 +1,22 @@
 package kvraft
 
-import "6.824/labrpc"
+import (
+	"6.824/labrpc"
+)
 import "crypto/rand"
 import "math/big"
+
 
 
 type Clerk struct {
 	servers []*labrpc.ClientEnd
 	// You will have to modify this struct.
+	// to identify a client, generate by nrand
+	id int64
+	// global command seq, to identify a command, start from 1
+	seq int
+	// get leader id
+	leaderId int
 }
 
 func nrand() int64 {
@@ -21,6 +30,9 @@ func MakeClerk(servers []*labrpc.ClientEnd) *Clerk {
 	ck := new(Clerk)
 	ck.servers = servers
 	// You'll have to add code here.
+	ck.id = nrand()
+	ck.leaderId = 0
+	ck.seq = 0
 	return ck
 }
 
@@ -37,9 +49,31 @@ func MakeClerk(servers []*labrpc.ClientEnd) *Clerk {
 // arguments. and reply must be passed as a pointer.
 //
 func (ck *Clerk) Get(key string) string {
-
 	// You will have to modify this function.
-	return ""
+	ck.seq++
+	args := GetArgs {
+		Key: key,
+		Id:  ck.id,
+		Seq: ck.seq,
+	}
+	var reply GetReply
+	for {
+		if !ck.servers[ck.leaderId].Call("KVServer.Get", &args, &reply) {
+			DPrintf("connect to server [%v] failed", ck.leaderId)
+			reply.Err = ErrWrongLeader
+		}
+		if reply.Err == ErrWrongLeader {
+			DPrintf("[client %v, commandSeq %v] command(get) send to server(%v) no reply or server is not leader", ck.id, ck.seq, ck.leaderId)
+			ck.leaderId = ck.randomChooseLeader()
+			//time.Sleep(100 * time.Millisecond)
+			continue
+		}
+		if reply.Err == OK {
+			DPrintf("[client %v, commandSeq %v] execute get(key:%v, value:%v)", ck.id, ck.seq, key, reply.Value)
+			return reply.Value
+		}
+		return ""
+	}
 }
 
 //
@@ -54,11 +88,41 @@ func (ck *Clerk) Get(key string) string {
 //
 func (ck *Clerk) PutAppend(key string, value string, op string) {
 	// You will have to modify this function.
+	ck.seq++
+	args := PutAppendArgs{
+		Key:   key,
+		Value: value,
+		Op:    op,
+		Id:    ck.id,
+		Seq:   ck.seq,
+	}
+	var reply PutAppendReply
+	if op == "Put" || op == "Append" {
+		for {
+			if ck.servers[ck.leaderId].Call("KVServer.PutAppend", &args, &reply) && reply.Err==OK {
+				DPrintf("[client %v, commandSeq %v] command(%v) execute, (key:%v, value %v)",ck.id, ck.seq, op, key, value)
+				return
+			}
+
+			DPrintf("[client %v, commandSeq %v] command(%v) send to server(%v) no reply or server is not leader", ck.id, ck.seq, op, ck.leaderId)
+			ck.leaderId = ck.randomChooseLeader()
+			//time.Sleep(100 * time.Millisecond)
+		}
+	} else {
+		DPrintf("[client %v, commandSeq %v] command (%v) not support", ck.id, ck.seq, op)
+	}
 }
 
 func (ck *Clerk) Put(key string, value string) {
 	ck.PutAppend(key, value, "Put")
 }
+
 func (ck *Clerk) Append(key string, value string) {
 	ck.PutAppend(key, value, "Append")
+}
+
+// random choose a leader
+func (ck *Clerk) randomChooseLeader() int {
+	n := len(ck.servers)
+	return (ck.leaderId+1) %n
 }

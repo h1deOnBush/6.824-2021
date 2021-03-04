@@ -1,0 +1,5 @@
+Test: one client (3A) ...
+labgob warning: Decoding into a non-default variable/field Err may not work
+  ... Passed --  15.8  5   785  145
+PASS
+ok  	6.824/kvraft	15.796s
