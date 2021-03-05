@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	Debug = false
+	Debug = true
 	StartTimeout = 2000
 )
 
@@ -67,48 +67,52 @@ func (kv *KVServer) Get(args *GetArgs, reply *GetReply) {
 		Seq: args.Seq,
 	}
 	kv.mu.Lock()
-	index, term, isLeader := kv.rf.Start(command)
+	index, _, isLeader := kv.rf.Start(command)
 	if !isLeader {
 		reply.Err = ErrWrongLeader
 		kv.mu.Unlock()
 		return
 	}
-	notifyCh := make(chan Notification)
+	notifyCh := make(chan Notification, 1)
 	kv.notifyChMap[index] = notifyCh
 	kv.mu.Unlock()
-	for !kv.killed() {
-		select {
-		case notification := <- notifyCh:
-			// leader has changed, original command has been discard.
-			// in case the leader receive the command and then is replaced by new leader before replicate
-			// the command to other servers.
-			if notification.ClientId != args.Id || notification.Seq != args.Seq {
-				reply.Err = ErrWrongLeader
-				return
-			}
-			kv.mu.Lock()
-			curTerm, isLeader := kv.rf.GetState()
-			if !isLeader || curTerm != term {
-				// in case of network partition, a server come back and thus changed leader's term or even change leader
-				reply.Err = ErrWrongLeader
-			} else {
-				if value, ok := kv.db[args.Key]; ok {
-					reply.Value = value
-					reply.Err = OK
-				} else {
-					reply.Err = ErrNoKey
-				}
-			}
-			delete(kv.notifyChMap, index)
-			kv.mu.Unlock()
-			return
-		case <- time.After(StartTimeout * time.Millisecond):
-			kv.mu.Lock()
+	select {
+	case notification := <- notifyCh:
+		// leader has changed, original command has been discard.
+		// in case the leader receive the command and then is replaced by new leader before replicate
+		// the command to other servers.
+		if notification.ClientId != args.Id || notification.Seq != args.Seq {
 			reply.Err = ErrWrongLeader
+			kv.mu.Lock()
 			delete(kv.notifyChMap, index)
 			kv.mu.Unlock()
 			return
 		}
+		kv.mu.Lock()
+		if value, ok := kv.db[args.Key]; ok {
+			reply.Value = value
+			reply.Err = OK
+		} else {
+			reply.Err = ErrNoKey
+		}
+		delete(kv.notifyChMap, index)
+		kv.mu.Unlock()
+		return
+	case <- time.After(StartTimeout * time.Millisecond):
+		kv.mu.Lock()
+		if kv.getCache(args.Id, args.Seq) {
+			if value, ok := kv.db[args.Key]; ok {
+				reply.Err = OK
+				reply.Value = value
+			} else {
+				reply.Err = ErrNoKey
+			}
+		}else {
+			reply.Err = ErrWrongLeader
+		}
+		delete(kv.notifyChMap, index)
+		kv.mu.Unlock()
+		return
 	}
 }
 
@@ -122,45 +126,40 @@ func (kv *KVServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) {
 		Seq: args.Seq,
 	}
 	kv.mu.Lock()
-	// hit the cache
-	if kv.getCache(args.Id, args.Seq) {
-		reply.Err = OK
-		kv.mu.Unlock()
-		DPrintf("[client %v, seq %v] command(%v) hit the cache", args.Id, args.Seq, args.Seq)
-		return
-	}
-	index, term, isLeader := kv.rf.Start(command)
+	index, _, isLeader := kv.rf.Start(command)
 	if !isLeader {
 		reply.Err = ErrWrongLeader
+		DPrintf("server [%v] is not leader", kv.me)
 		kv.mu.Unlock()
 		return
 	}
-	notifyCh := make(chan Notification)
+	notifyCh := make(chan Notification, 1)
 	kv.notifyChMap[index] = notifyCh
 	kv.mu.Unlock()
-	for !kv.killed() {
-		select {
-		case notification := <-notifyCh:
-			if notification.ClientId != args.Id || notification.Seq != args.Seq {
-				reply.Err = ErrWrongLeader
-				return
-			}
-			kv.mu.Lock()
-			curTerm, isLeader := kv.rf.GetState()
-			if !isLeader || curTerm != term {
-				reply.Err = ErrWrongLeader
-			}
-			delete(kv.notifyChMap, index)
-			kv.mu.Unlock()
-			return
-		case <-time.After(StartTimeout * time.Millisecond):
-			kv.mu.Lock()
+	select {
+	case notification := <-notifyCh:
+		kv.mu.Lock()
+		if notification.ClientId != args.Id || notification.Seq != args.Seq {
 			reply.Err = ErrWrongLeader
 			delete(kv.notifyChMap, index)
 			kv.mu.Unlock()
-			DPrintf("wait for raft agreement timeout")
 			return
 		}
+		reply.Err = OK
+		delete(kv.notifyChMap, index)
+		kv.mu.Unlock()
+		return
+	case <-time.After(StartTimeout * time.Millisecond):
+		kv.mu.Lock()
+		if kv.getCache(args.Id, args.Seq) {
+			reply.Err = OK
+		} else {
+			reply.Err = ErrWrongLeader
+		}
+		delete(kv.notifyChMap, index)
+		kv.mu.Unlock()
+		DPrintf("wait for raft agreement timeout")
+		return
 	}
 }
 
@@ -199,7 +198,12 @@ func (kv *KVServer) run() {
 		select {
 		case msg := <-kv.applyCh:
 			op := msg.Command.(Op)
+			//DPrintf("command(%v) from [client:%v, seq:%v] committed at index(%v)", op.Name, op.ClientId, op.Seq, msg.CommandIndex)
 			kv.mu.Lock()
+			if kv.getCache(op.ClientId, op.Seq) {
+				kv.mu.Unlock()
+				continue
+			}
 			// update db
 			switch op.Name {
 			case "Put":

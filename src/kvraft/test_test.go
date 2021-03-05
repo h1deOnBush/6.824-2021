@@ -394,13 +394,13 @@ func GenericTestSpeed(t *testing.T, part string, maxraftstate int) {
 
 	// wait until first op completes, so we know a leader is elected
 	// and KV servers are ready to process client requests
-	ck.Get("x")
 
 	start := time.Now()
 	for i := 0; i < numOps; i++ {
 		ck.Append("x", "x 0 "+strconv.Itoa(i)+" y")
 	}
 	dur := time.Since(start)
+	DPrintf("client append end")
 
 	v := ck.Get("x")
 	checkClntAppends(t, 0, v, numOps)

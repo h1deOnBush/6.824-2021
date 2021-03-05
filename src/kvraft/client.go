@@ -2,6 +2,7 @@ package kvraft
 
 import (
 	"6.824/labrpc"
+	"time"
 )
 import "crypto/rand"
 import "math/big"
@@ -63,9 +64,9 @@ func (ck *Clerk) Get(key string) string {
 			reply.Err = ErrWrongLeader
 		}
 		if reply.Err == ErrWrongLeader {
-			DPrintf("[client %v, commandSeq %v] command(get) send to server(%v) no reply or server is not leader", ck.id, ck.seq, ck.leaderId)
+			DPrintf("[client %v, commandSeq %v] command(get) send to server(%v) is not leader", ck.id, ck.seq, ck.leaderId)
 			ck.leaderId = ck.randomChooseLeader()
-			//time.Sleep(100 * time.Millisecond)
+			time.Sleep(10 * time.Millisecond)
 			continue
 		}
 		if reply.Err == OK {
@@ -103,10 +104,13 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
 				DPrintf("[client %v, commandSeq %v] command(%v) execute, (key:%v, value %v)",ck.id, ck.seq, op, key, value)
 				return
 			}
-
-			DPrintf("[client %v, commandSeq %v] command(%v) send to server(%v) no reply or server is not leader", ck.id, ck.seq, op, ck.leaderId)
+			if reply.Err == ErrWrongLeader {
+				DPrintf("[client %v, commandSeq %v] command(%v) send to server(%v) no reply or server is not leader", ck.id, ck.seq, op, ck.leaderId)
+			} else {
+				DPrintf("cannot connect to server [%v], reply.Err(%v)", ck.leaderId, reply.Err)
+			}
 			ck.leaderId = ck.randomChooseLeader()
-			//time.Sleep(100 * time.Millisecond)
+			time.Sleep(10 * time.Millisecond)
 		}
 	} else {
 		DPrintf("[client %v, commandSeq %v] command (%v) not support", ck.id, ck.seq, op)
@@ -124,5 +128,5 @@ func (ck *Clerk) Append(key string, value string) {
 // random choose a leader
 func (ck *Clerk) randomChooseLeader() int {
 	n := len(ck.servers)
-	return (ck.leaderId+1) %n
+	return (ck.leaderId+1) % n
 }
