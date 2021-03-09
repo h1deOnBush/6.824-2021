@@ -105,12 +105,11 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
 				return
 			}
 			if reply.Err == ErrWrongLeader {
-				DPrintf("[client %v, commandSeq %v] command(%v) send to server(%v) no reply or server is not leader", ck.id, ck.seq, op, ck.leaderId)
+				DPrintf("[client %v, commandSeq %v] command(%v) send to server(%v) is not leader", ck.id, ck.seq, op, ck.leaderId)
 			} else {
 				DPrintf("cannot connect to server [%v], reply.Err(%v)", ck.leaderId, reply.Err)
 			}
 			ck.leaderId = ck.randomChooseLeader()
-			time.Sleep(10 * time.Millisecond)
 		}
 	} else {
 		DPrintf("[client %v, commandSeq %v] command (%v) not support", ck.id, ck.seq, op)

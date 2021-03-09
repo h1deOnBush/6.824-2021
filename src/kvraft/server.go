@@ -4,6 +4,7 @@ import (
 	"6.824/labgob"
 	"6.824/labrpc"
 	"6.824/raft"
+	"bytes"
 	"log"
 	"sync"
 	"sync/atomic"
@@ -12,7 +13,7 @@ import (
 
 const (
 	Debug = true
-	StartTimeout = 2000
+	StartTimeout = 500
 )
 
 func DPrintf(format string, a ...interface{}) (n int, err error) {
@@ -61,27 +62,23 @@ func (kv *KVServer) Get(args *GetArgs, reply *GetReply) {
 	// Your code here.
 	command := Op {
 		Key:   args.Key,
-		Value: "",
 		Name: "Get",
 		ClientId: args.Id,
 		Seq: args.Seq,
 	}
-	kv.mu.Lock()
 	index, _, isLeader := kv.rf.Start(command)
 	if !isLeader {
 		reply.Err = ErrWrongLeader
-		kv.mu.Unlock()
 		return
 	}
-	notifyCh := make(chan Notification, 1)
-	kv.notifyChMap[index] = notifyCh
-	kv.mu.Unlock()
+	notifyCh := kv.getNotifyCh(index)
 	select {
 	case notification := <- notifyCh:
 		// leader has changed, original command has been discard.
 		// in case the leader receive the command and then is replaced by new leader before replicate
 		// the command to other servers.
 		if notification.ClientId != args.Id || notification.Seq != args.Seq {
+			DPrintf("leader has changed, command has been replaced")
 			reply.Err = ErrWrongLeader
 			kv.mu.Lock()
 			delete(kv.notifyChMap, index)
@@ -100,16 +97,8 @@ func (kv *KVServer) Get(args *GetArgs, reply *GetReply) {
 		return
 	case <- time.After(StartTimeout * time.Millisecond):
 		kv.mu.Lock()
-		if kv.getCache(args.Id, args.Seq) {
-			if value, ok := kv.db[args.Key]; ok {
-				reply.Err = OK
-				reply.Value = value
-			} else {
-				reply.Err = ErrNoKey
-			}
-		}else {
-			reply.Err = ErrWrongLeader
-		}
+		DPrintf("wait for agreement timeout")
+		reply.Err = ErrWrongLeader
 		delete(kv.notifyChMap, index)
 		kv.mu.Unlock()
 		return
@@ -125,21 +114,18 @@ func (kv *KVServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) {
 		ClientId: args.Id,
 		Seq: args.Seq,
 	}
-	kv.mu.Lock()
 	index, _, isLeader := kv.rf.Start(command)
 	if !isLeader {
 		reply.Err = ErrWrongLeader
 		DPrintf("server [%v] is not leader", kv.me)
-		kv.mu.Unlock()
 		return
 	}
-	notifyCh := make(chan Notification, 1)
-	kv.notifyChMap[index] = notifyCh
-	kv.mu.Unlock()
+	notifyCh := kv.getNotifyCh(index)
 	select {
 	case notification := <-notifyCh:
 		kv.mu.Lock()
 		if notification.ClientId != args.Id || notification.Seq != args.Seq {
+			DPrintf("leader has changed, original command has been replaced")
 			reply.Err = ErrWrongLeader
 			delete(kv.notifyChMap, index)
 			kv.mu.Unlock()
@@ -172,6 +158,18 @@ func (kv *KVServer) getCache(clientId int64, seq int) bool {
 	return false
 }
 
+func (kv *KVServer) getNotifyCh(index int) chan Notification {
+	kv.mu.Lock()
+	if notifyCh, ok := kv.notifyChMap[index]; ok {
+		kv.mu.Unlock()
+		return notifyCh
+	}
+	notifyCh := make(chan Notification, 1)
+	kv.notifyChMap[index] = notifyCh
+	kv.mu.Unlock()
+	return notifyCh
+}
+
 //
 // the tester calls Kill() when a KVServer instance won't
 // be needed again. for your convenience, we supply
@@ -197,24 +195,40 @@ func (kv *KVServer) run() {
 	for !kv.killed() {
 		select {
 		case msg := <-kv.applyCh:
-			op := msg.Command.(Op)
-			//DPrintf("command(%v) from [client:%v, seq:%v] committed at index(%v)", op.Name, op.ClientId, op.Seq, msg.CommandIndex)
-			kv.mu.Lock()
-			if kv.getCache(op.ClientId, op.Seq) {
-				kv.mu.Unlock()
+			// follower receive installSnapshot RPC
+			//DPrintf("msg(%+v)", msg)
+			if msg.SnapshotValid {
+				kv.installSnapshot(msg.Snapshot)
 				continue
 			}
+			op := msg.Command.(Op)
+			//DPrintf("command(%v) from [client:%v, seq:%v] committed at index(%v)", op.Name, op.ClientId, op.Seq, msg.CommandIndex)
+
+
+			kv.mu.Lock()
 			// update db
+
 			switch op.Name {
 			case "Put":
+				if kv.getCache(op.ClientId, op.Seq) {
+					kv.mu.Unlock()
+					//fmt.Printf("command(%v) has been executed\n", op)
+					continue
+				}
 				kv.db[op.Key] = op.Value
+				// update cache
+				kv.cache[op.ClientId] = op.Seq
 			case "Append":
+				if kv.getCache(op.ClientId, op.Seq) {
+					//fmt.Printf("command(%v) has been executed\n", op)
+					kv.mu.Unlock()
+					continue
+				}
 				kv.db[op.Key] += op.Value
+				// update cache
+				kv.cache[op.ClientId] = op.Seq
 			}
-
-			// update cache
-			kv.cache[op.ClientId] = op.Seq
-
+			//fmt.Printf("[server:%v] , %v\n", kv.me, kv.db)
 			if notifyCh, ok := kv.notifyChMap[msg.CommandIndex]; ok {
 				notifyCh <- Notification {
 					ClientId: op.ClientId,
@@ -222,7 +236,26 @@ func (kv *KVServer) run() {
 				}
 			}
 			kv.mu.Unlock()
+			// after update database can do snapshot, or will lose update
+			kv.takeSnapshot(msg.CommandIndex)
 		}
+	}
+}
+
+func (kv *KVServer) takeSnapshot(index int) {
+	if kv.maxraftstate == -1 {
+		return
+	}
+	if kv.rf.GetRaftStateSize() >= kv.maxraftstate {
+		// take snapshot
+		kv.mu.Lock()
+		w := new(bytes.Buffer)
+		e := labgob.NewEncoder(w)
+		e.Encode(kv.db)
+		e.Encode(kv.cache)
+		data := w.Bytes()
+		kv.mu.Unlock()
+		kv.rf.Snapshot(index, data)
 	}
 }
 
@@ -244,10 +277,6 @@ func StartKVServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persiste
 	// call labgob.Register on structures you want
 	// Go's RPC library to marshall/unmarshall.
 	labgob.Register(Op{})
-	labgob.Register(GetArgs{})
-	labgob.Register(GetReply{})
-	labgob.Register(PutAppendArgs{})
-	labgob.Register(PutAppendReply{})
 
 	kv := new(KVServer)
 	kv.me = me
@@ -260,7 +289,19 @@ func StartKVServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persiste
 	kv.applyCh = make(chan raft.ApplyMsg)
 	kv.rf = raft.Make(servers, me, persister, kv.applyCh)
 
+	kv.installSnapshot(persister.ReadSnapshot())
 	// You may need initialization code here.
 	go kv.run()
 	return kv
+}
+
+func (kv *KVServer) installSnapshot(snapshot []byte) {
+	kv.mu.Lock()
+	r := bytes.NewBuffer(snapshot)
+	d := labgob.NewDecoder(r)
+	if d.Decode(&kv.db) != nil ||
+		d.Decode(&kv.cache) != nil {
+		DPrintf("kvserver %d fails to recover from snapshot", kv.me)
+	}
+	kv.mu.Unlock()
 }
