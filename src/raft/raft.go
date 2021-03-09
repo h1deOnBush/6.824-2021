@@ -127,6 +127,15 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 	}
 	// if leader term == currentTerm,then restart timer, for condition that leader need to sync nextIndex[] with follower
 	rf.restartTimer()
+
+	// in unreliable network condition
+	if args.PrevLogIndex < rf.lastIncludedIndex {
+		reply.Success = false
+		reply.ConflictIndex = rf.lastIncludedIndex+1
+		reply.ConflictTerm = -1
+		return
+	}
+
 	// leader's prevLogIndex too large, larger than the last index in follower, need to decrease
 	if args.PrevLogIndex>rf.getLastIdx() {
 		DPrintf("[server %v, role %v, term %v], prevLogIndex(%v) too large, larger than the last index in follower, need to decrease\n", rf.me, rf.state, rf.currentTerm, args.PrevLogIndex)
@@ -136,12 +145,13 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 		return
 	}
 
+
 	// entry's term in prevLogIndex is different from prevLogTerm
 	var prevLogTerm int
-	if rf.getRealIdx(args.PrevLogIndex) == 0  {
+	if rf.getRealIdx(args.PrevLogIndex) == 0 {
 		prevLogTerm = rf.lastIncludedTerm
 	} else {
-		//DPrintf("[server %v], snapshotIdx(%v), snapshotTerm(%v)", rf.me, rf.lastIncludedIndex, rf.lastIncludedTerm)
+		DPrintf("[server %v], snapshotIdx(%v), snapshotTerm(%v)", rf.me, rf.lastIncludedIndex, rf.lastIncludedTerm)
 		prevLogTerm = rf.logs[rf.getRealIdx(args.PrevLogIndex)].Term
 	}
 	if prevLogTerm != args.PrevLogTerm {
@@ -312,8 +322,9 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 	term = rf.currentTerm
 	isLeader = rf.state == 0
 	if isLeader {
-		DPrintf("[server %v, role %v, term %v] receive command(%v) from client", rf.me, rf.state, rf.currentTerm, command)
 		index = rf.getLastIdx()+1
+		DPrintf("[server %v, role %v, term %v] receive command(%v) from client, index:(%v)", rf.me, rf.state, rf.currentTerm, command, index)
+
 		rf.logs = append(rf.logs, Entry{Command: command, Term: term, Index: index})
 		rf.persist()
 		// why this step
@@ -525,10 +536,10 @@ func (rf *Raft) sendHeartbeat() {
 						rf.nextIndex[i] = args.PrevLogIndex+len(args.Entries)+1
 						rf.matchIndex[i] = rf.nextIndex[i]-1
 						// update committed
-						for N := rf.getLastIdx(); N > rf.commitIndex; N-- {
+						for N := rf.getLastIdx(); N > rf.max(rf.commitIndex, rf.lastIncludedIndex); N-- {
 							count := 0
 							for _, matchIndex := range rf.matchIndex {
-								if matchIndex >= N && rf.logs[rf.getRealIdx(N)].Term == rf.currentTerm {
+								if matchIndex >= N &&  rf.logs[rf.getRealIdx(N)].Term == rf.currentTerm {
 									count += 1
 								}
 							}
@@ -682,7 +693,7 @@ func (rf *Raft) CondInstallSnapshot(lastIncludedTerm int, lastIncludedIndex int,
 		//rf.trimLogFromIdx(lastIncludedIndex)
 		//rf.lastIncludedIndex = lastIncludedIndex
 		//rf.lastIncludedTerm = lastIncludedTerm
-		rf.persistStateAndSnapshot(snapshot)
+		//rf.persistStateAndSnapshot(snapshot)
 		return true
 	}
 	return false
@@ -710,6 +721,11 @@ func (rf *Raft) Snapshot(index int, snapshot []byte) {
 	DPrintf("[server %v, role %v, term %v] generate snapshot successfully, current snapshotIdx(%v), current first index(%v), snapshotTerm(%v)\n", rf.me, rf.state, rf.currentTerm, rf.lastIncludedIndex, rf.getFirstIdx(), rf.lastIncludedTerm)
 }
 
+func (rf *Raft) GetRaftStateSize() int {
+	rf.mu.Lock()
+	defer rf.mu.Unlock()
+	return rf.persister.RaftStateSize()
+}
 
 //
 //	follower receive snapshot from leader, use the applyCh to send the snapshot(included in ApplyMsg) to the service
