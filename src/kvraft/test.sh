@@ -4,9 +4,9 @@ rm log -rf
 mkdir log
 
 
-for i in `seq 10`
+for i in `seq 100`
 do
-    go test -run TestBasic3A -race &> log/log
+    go test -race &> log/log
     if [ $? -ne 0 ]
     then
         echo "$i  fail"

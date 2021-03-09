@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	Debug = true
+	Debug = false
 	StartTimeout = 500
 )
 

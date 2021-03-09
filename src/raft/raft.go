@@ -601,7 +601,7 @@ func (rf *Raft) syncSnapshot(server int, args *InstallSnapshotArgs, reply *Insta
 		rf.matchIndex[server] = args.LastIncludedIndex
 		rf.mu.Unlock()
 	} else {
-		DPrintf("[server %v, role %v, term %v], sendInstallSnapshot to [%v] not receive response\n", rf.me, rf.state, rf.currentTerm, server)
+		//DPrintf("[server %v, role %v, term %v], sendInstallSnapshot to [%v] not receive response\n", rf.me, rf.state, rf.currentTerm, server)
 	}
 }
 
