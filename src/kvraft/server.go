@@ -228,6 +228,7 @@ func (kv *KVServer) run() {
 				// update cache
 				kv.cache[op.ClientId] = op.Seq
 			}
+			kv.takeSnapshot(msg.CommandIndex)
 			//fmt.Printf("[server:%v] , %v\n", kv.me, kv.db)
 			if notifyCh, ok := kv.notifyChMap[msg.CommandIndex]; ok {
 				notifyCh <- Notification {
@@ -237,7 +238,7 @@ func (kv *KVServer) run() {
 			}
 			kv.mu.Unlock()
 			// after update database can do snapshot, or will lose update
-			kv.takeSnapshot(msg.CommandIndex)
+
 		}
 	}
 }
@@ -248,13 +249,11 @@ func (kv *KVServer) takeSnapshot(index int) {
 	}
 	if kv.rf.GetRaftStateSize() >= kv.maxraftstate {
 		// take snapshot
-		kv.mu.Lock()
 		w := new(bytes.Buffer)
 		e := labgob.NewEncoder(w)
 		e.Encode(kv.db)
 		e.Encode(kv.cache)
 		data := w.Bytes()
-		kv.mu.Unlock()
 		kv.rf.Snapshot(index, data)
 	}
 }

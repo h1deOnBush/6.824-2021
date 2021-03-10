@@ -151,7 +151,6 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 	if rf.getRealIdx(args.PrevLogIndex) == 0 {
 		prevLogTerm = rf.lastIncludedTerm
 	} else {
-		DPrintf("[server %v], snapshotIdx(%v), snapshotTerm(%v)", rf.me, rf.lastIncludedIndex, rf.lastIncludedTerm)
 		prevLogTerm = rf.logs[rf.getRealIdx(args.PrevLogIndex)].Term
 	}
 	if prevLogTerm != args.PrevLogTerm {
@@ -327,9 +326,11 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 
 		rf.logs = append(rf.logs, Entry{Command: command, Term: term, Index: index})
 		rf.persist()
-		// why this step
+		// while need to commit, leader can vote
 		rf.matchIndex[rf.me] = index
 		rf.nextIndex[rf.me] = index + 1
+		rf.sendHeartbeat()
+		rf.heartbeatTimer = time.Now()
 	}
 
 	return index, term, isLeader
@@ -384,6 +385,7 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	rf.logs = []Entry{{Term: 0, Index: 0}}
 	rand.Seed(time.Now().UnixNano())
 	rf.restartTimer()
+
 	rf.voteFor = -1
 	rf.nextIndex = make([]int, len(rf.peers))
 	rf.matchIndex = make([]int, len(rf.peers))
@@ -398,7 +400,7 @@ func Make(peers []*labrpc.ClientEnd, me int,
 func (rf *Raft) ticker()  {
 	for !rf.killed() {
 		rf.mu.Lock()
-		if time.Now().Sub(rf.tick) >  rf.electionTimeout {
+		if time.Now().Sub(rf.tick) >= rf.electionTimeout {
 			switch rf.state {
 			case 1:
 				rf.startElection()
@@ -452,6 +454,7 @@ func (rf *Raft) changeState(state uint32) {
 			rf.matchIndex[i] = 0
 		}
 		rf.sendHeartbeat()
+		rf.heartbeatTimer = time.Now()
 	case 1:
 		rf.startElection()
 	case 2:
@@ -464,13 +467,13 @@ func (rf *Raft) heartbeats() {
 	for !rf.killed() {
 		rf.mu.Lock()
 		if rf.state == 0 {
-			rf.sendHeartbeat()
-			rf.mu.Unlock()
-			time.Sleep(heartbeatTimeout * time.Millisecond)
-		} else {
-			rf.mu.Unlock()
-			time.Sleep(10 * time.Millisecond)
+			if time.Now().Sub(rf.heartbeatTimer) >= time.Duration(heartbeatTimeout)*time.Millisecond {
+				rf.sendHeartbeat()
+				rf.heartbeatTimer = time.Now()
+			}
 		}
+		rf.mu.Unlock()
+		time.Sleep(10 * time.Millisecond)
 	}
 }
 
@@ -493,6 +496,7 @@ func (rf *Raft) sendHeartbeat() {
 						Data:              rf.persister.ReadSnapshot(),
 					}
 					DPrintf("[server %v, role %v, term %v] ready to send installSnapshot to [%v]", rf.me, rf.state, rf.currentTerm, i)
+					//rf.heartbeatTimer = time.Now()
 					rf.mu.Unlock()
 					var reply InstallSnapshotReply
 					rf.syncSnapshot(i, &args, &reply)
@@ -756,7 +760,7 @@ func (rf *Raft) InstallSnapshot(args *InstallSnapshotArgs, reply *InstallSnapsho
 		rf.lastApplied = rf.max(rf.lastApplied, rf.lastIncludedIndex)
 		DPrintf("[server %v, role %v, term %v] install snapshot successfully, snapshotIdx(%v), snapshotTerm(%v)", rf.me, rf.state, rf.currentTerm, rf.lastIncludedIndex, rf.lastIncludedTerm)
 		// notify the upper service to switch to snapshot
-		rf.applyCh <- ApplyMsg{
+		rf.applyCh <- ApplyMsg {
 			SnapshotValid: true,
 			Snapshot:      args.Data,
 			SnapshotIndex: args.LastIncludedIndex,

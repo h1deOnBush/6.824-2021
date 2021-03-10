@@ -146,6 +146,7 @@ func (cfg *config) checkLogs(i int, m ApplyMsg) (string, bool) {
 	}
 	_, prevok := cfg.logs[i][m.CommandIndex-1]
 	cfg.logs[i][m.CommandIndex] = v
+	DPrintf("kvserver %v, index(%v):%v", i, m.CommandIndex, v)
 	if m.CommandIndex > cfg.maxIndex {
 		cfg.maxIndex = m.CommandIndex
 	}
@@ -193,6 +194,7 @@ func (cfg *config) applierSnap(i int, applyCh chan ApplyMsg) {
 				cfg.logs[i][m.SnapshotIndex] = v
 			}
 		} else if m.CommandValid {
+			DPrintf("server %v, apply command(%v)", i, m.CommandIndex)
 			cfg.mu.Lock()
 			err_msg, prevok := cfg.checkLogs(i, m)
 			cfg.mu.Unlock()
