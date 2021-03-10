@@ -389,13 +389,15 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	rf.voteFor = -1
 	rf.nextIndex = make([]int, len(rf.peers))
 	rf.matchIndex = make([]int, len(rf.peers))
-	// create a goroutine to start leader election
+	// create a goroutine to start leader election, for candidate and follower
 	go rf.ticker()
+	// for leader
 	go rf.heartbeats()
 	// initialize from state persisted before a crash
 	rf.readPersist(persister.ReadRaftState())
 	return rf
 }
+
 
 func (rf *Raft) ticker()  {
 	for !rf.killed() {
@@ -665,19 +667,26 @@ func (rf *Raft) setCommitIndexAndApply(commitIndex int)  {
 
 
 		go func(startIdx int, entries []Entry) {
+			var hasApplied bool
 			for _, entry := range entries {
 				msg := ApplyMsg{
 					CommandValid: true,
 					Command:      entry.Command,
 					CommandIndex: entry.Index,
 				}
-				rf.applyCh <- msg
-				// update lastApplied after send it to channel
+				hasApplied = true
+				// before send it to channel, first check whether the entry has been applied because of snapshot, if not check will raise apply error
 				rf.mu.Lock()
 				if rf.lastApplied < msg.CommandIndex {
 					rf.lastApplied = msg.CommandIndex
+					hasApplied = false
 				}
 				rf.mu.Unlock()
+
+				if !hasApplied {
+					rf.applyCh <- msg
+				}
+
 			}
 		}(rf.lastApplied+1, entriesToApply)
 	}
@@ -722,6 +731,9 @@ func (rf *Raft) Snapshot(index int, snapshot []byte) {
 	rf.trimLogFromIdx(index)
 	rf.lastIncludedIndex = index
 	rf.persistStateAndSnapshot(snapshot)
+
+	rf.commitIndex = rf.max(rf.commitIndex, rf.lastIncludedIndex)
+	rf.lastApplied = rf.max(rf.lastApplied, rf.lastIncludedIndex)
 	DPrintf("[server %v, role %v, term %v] generate snapshot successfully, current snapshotIdx(%v), current first index(%v), snapshotTerm(%v)\n", rf.me, rf.state, rf.currentTerm, rf.lastIncludedIndex, rf.getFirstIdx(), rf.lastIncludedTerm)
 }
 
@@ -756,6 +768,7 @@ func (rf *Raft) InstallSnapshot(args *InstallSnapshotArgs, reply *InstallSnapsho
 		rf.lastIncludedTerm = args.LastIncludedTerm
 		rf.persistStateAndSnapshot(args.Data)
 
+		// guaranty that commitIndex >= lastIncludedIndex, lastApplied>=lastIncludedIndex
 		rf.commitIndex = rf.max(rf.commitIndex, rf.lastIncludedIndex)
 		rf.lastApplied = rf.max(rf.lastApplied, rf.lastIncludedIndex)
 		DPrintf("[server %v, role %v, term %v] install snapshot successfully, snapshotIdx(%v), snapshotTerm(%v)", rf.me, rf.state, rf.currentTerm, rf.lastIncludedIndex, rf.lastIncludedTerm)

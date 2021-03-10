@@ -6,7 +6,7 @@ mkdir log
 
 for i in `seq 100`
 do
-    go test -race &> log/log
+    go test -run TestManyPartitionsOneClient3A &> log/log
     if [ $? -ne 0 ]
     then
         echo "$i  fail"

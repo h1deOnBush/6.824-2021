@@ -206,28 +206,27 @@ func (kv *KVServer) run() {
 
 
 			kv.mu.Lock()
-			// update db
-
 			switch op.Name {
 			case "Put":
 				if kv.getCache(op.ClientId, op.Seq) {
 					kv.mu.Unlock()
-					//fmt.Printf("command(%v) has been executed\n", op)
+					DPrintf("command(%v) has been executed\n", op)
 					continue
 				}
+				// update cache and db
 				kv.db[op.Key] = op.Value
-				// update cache
 				kv.cache[op.ClientId] = op.Seq
 			case "Append":
 				if kv.getCache(op.ClientId, op.Seq) {
-					//fmt.Printf("command(%v) has been executed\n", op)
+					DPrintf("command(%v) has been executed\n", op)
 					kv.mu.Unlock()
 					continue
 				}
+				// update cache and db
 				kv.db[op.Key] += op.Value
-				// update cache
 				kv.cache[op.ClientId] = op.Seq
 			}
+			// after update database can do snapshot, or will lose update
 			kv.takeSnapshot(msg.CommandIndex)
 			//fmt.Printf("[server:%v] , %v\n", kv.me, kv.db)
 			if notifyCh, ok := kv.notifyChMap[msg.CommandIndex]; ok {
@@ -237,8 +236,6 @@ func (kv *KVServer) run() {
 				}
 			}
 			kv.mu.Unlock()
-			// after update database can do snapshot, or will lose update
-
 		}
 	}
 }
