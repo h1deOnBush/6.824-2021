@@ -50,6 +50,7 @@ type KVServer struct {
 
 	maxraftstate int // snapshot if log grows this big
 
+
 	// Your definitions here.
 	//key: clientId ,value: latest commandSeq that has been execute successfully
 	db map[string]string
@@ -195,15 +196,17 @@ func (kv *KVServer) run() {
 	for !kv.killed() {
 		select {
 		case msg := <-kv.applyCh:
-			// follower receive installSnapshot RPC
-			//DPrintf("msg(%+v)", msg)
 			if msg.SnapshotValid {
 				kv.installSnapshot(msg.Snapshot)
 				continue
 			}
+			// receive an apply msg that before snapshot index
+			if msg.CommandIndex <= kv.rf.GetSnapshotIndex() {
+				raft.DPrintf("[server %v],command(%v) has already applied", kv.me, msg.CommandIndex)
+				continue
+			}
 			op := msg.Command.(Op)
 			//DPrintf("command(%v) from [client:%v, seq:%v] committed at index(%v)", op.Name, op.ClientId, op.Seq, msg.CommandIndex)
-
 
 			kv.mu.Lock()
 			switch op.Name {

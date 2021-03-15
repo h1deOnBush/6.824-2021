@@ -2,6 +2,7 @@ package kvraft
 
 import (
 	"6.824/porcupine"
+	"6.824/raft"
 )
 import "6.824/models"
 import "testing"
@@ -300,7 +301,7 @@ func GenericTest(t *testing.T, part string, nclients int, nservers int, unreliab
 			go partitioner(t, cfg, ch_partitioner, &done_partitioner)
 		}
 		time.Sleep(5 * time.Second)
-		//fmt.Println("sleep over")
+		// fmt.Println("sleep over")
 		atomic.StoreInt32(&done_clients, 1)     // tell clients to quit
 		atomic.StoreInt32(&done_partitioner, 1) // tell partitioner to quit
 
@@ -316,16 +317,15 @@ func GenericTest(t *testing.T, part string, nclients int, nservers int, unreliab
 			time.Sleep(electionTimeout)
 		}
 
-		//fmt.Printf("shutdown servers\n")
 		if crash {
-			// log.Printf("shutdown servers\n")
+			raft.DPrintf("shutdown servers\n")
 			for i := 0; i < nservers; i++ {
 				cfg.ShutdownServer(i)
 			}
 			// Wait for a while for servers to shutdown, since
 			// shutdown isn't a real crash and isn't instantaneous
 			time.Sleep(electionTimeout)
-			// log.Printf("restart servers\n")
+			raft.DPrintf("restart servers\n")
 			// crash and re-start all
 			for i := 0; i < nservers; i++ {
 				cfg.StartServer(i)
@@ -335,15 +335,16 @@ func GenericTest(t *testing.T, part string, nclients int, nservers int, unreliab
 		//fmt.Println("servers come back")
 		//log.Printf("wait for clients\n")
 		for i := 0; i < nclients; i++ {
-			//log.Printf("read from clients %d\n", i)
+			// log.Printf("read from clients %d\n", i)
 			j := <-clnts[i]
 			// if j < 10 {
 			// 	log.Printf("Warning: client %d managed to perform only %d put operations in 1 sec?\n", i, j)
 			// }
 			key := strconv.Itoa(i)
-			//log.Printf("Check %v for client %d\n", j, i)
+			// log.Printf("Check %v for client %d\n", j, i)
 			v := Get(cfg, ck, key, opLog, 0)
 			if !randomkeys {
+				// i:client, v:string, j:append num
 				checkClntAppends(t, i, v, j)
 			}
 		}
@@ -365,7 +366,7 @@ func GenericTest(t *testing.T, part string, nclients int, nservers int, unreliab
 		}
 	}
 
-	//fmt.Println("begin to check")
+	// fmt.Println("begin to check")
 	res, info := porcupine.CheckOperationsVerbose(models.KvModel, opLog.Read(), linearizabilityCheckTimeout)
 	if res == porcupine.Illegal {
 		file, err := ioutil.TempFile("", "*.html")

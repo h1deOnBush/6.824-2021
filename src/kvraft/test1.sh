@@ -1,9 +1,6 @@
-#!/bin/zsh
-
-
 for i in `seq 100`
 do
-    go test -run TestSnapshotUnreliableRecoverConcurrentPartitionLinearizable3B &> log/log1
+    go test -run 3B &> log/log
     if [ $? -ne 0 ]
     then
         echo "$i  fail"

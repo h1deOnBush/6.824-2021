@@ -101,6 +101,8 @@ func (rf *Raft) readPersist(data []byte) {
 		rf.voteFor = voteFor
 		rf.lastIncludedIndex = lastIncludedIndex
 		rf.lastIncludedTerm  = lastIncludedTerm
+		rf.lastApplied = lastIncludedIndex
+		rf.commitIndex = lastIncludedIndex
 		rf.mu.Unlock()
 	}
 }
@@ -190,10 +192,11 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 	}
 	if args.LeaderCommit > rf.commitIndex {
 		if args.LeaderCommit > rf.getLastIdx() {
-			rf.setCommitIndexAndApply(rf.getLastIdx())
+			rf.commitIndex = rf.getLastIdx()
 		} else {
-			rf.setCommitIndexAndApply(args.LeaderCommit)
+			rf.commitIndex = args.LeaderCommit
 		}
+		rf.notifyApply <- struct{}{}
 	}
 	rf.changeState(2)
 	reply.Success = true
@@ -378,6 +381,7 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	// initialization for leader election
 	rf.currentTerm = 1
 	rf.applyCh = applyCh
+	rf.notifyApply = make(chan struct{}, 100)
 	rf.state = 2
 	rf.commitIndex = 0
 	rf.lastApplied = 0
@@ -385,7 +389,7 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	rf.logs = []Entry{{Term: 0, Index: 0}}
 	rand.Seed(time.Now().UnixNano())
 	rf.restartTimer()
-
+	//rf.applyTimer = time.Now()
 	rf.voteFor = -1
 	rf.nextIndex = make([]int, len(rf.peers))
 	rf.matchIndex = make([]int, len(rf.peers))
@@ -393,6 +397,9 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	go rf.ticker()
 	// for leader
 	go rf.heartbeats()
+
+	go rf.applyLoop()
+
 	// initialize from state persisted before a crash
 	rf.readPersist(persister.ReadRaftState())
 	return rf
@@ -552,7 +559,8 @@ func (rf *Raft) sendHeartbeat() {
 
 							if count > len(rf.peers)/2 {
 								// most of nodes agreed on rf.log[i]
-								rf.setCommitIndexAndApply(N)
+								rf.commitIndex = N
+								rf.notifyApply <- struct{}{}
 								break
 							}
 						}
@@ -652,45 +660,44 @@ func (rf *Raft) collectVotes(args RequestVoteArgs) {
 	}
 }
 
-func (rf *Raft) setCommitIndexAndApply(commitIndex int)  {
-	rf.commitIndex = commitIndex
-	// apply to state machine, with a new goroutine
-	if rf.commitIndex > rf.lastApplied {
-		var entriesToApply []Entry
-		if rf.lastIncludedIndex > rf.lastApplied {
-			DPrintf("[server %v, role %v, term %v], apply log from %v to %v\n", rf.me, rf.state, rf.currentTerm, rf.lastIncludedIndex+1, rf.commitIndex)
-			entriesToApply = append(entriesToApply, rf.logs[(rf.getRealIdx(rf.lastIncludedIndex)+1):(rf.getRealIdx(rf.commitIndex)+1)]...)
-		} else {
-			DPrintf("[server %v, role %v, term %v], apply log from %v to %v\n", rf.me, rf.state, rf.currentTerm, rf.lastApplied+1, rf.commitIndex)
-			entriesToApply = append(entriesToApply, rf.logs[(rf.getRealIdx(rf.lastApplied)+1):(rf.getRealIdx(rf.commitIndex)+1)]...)
+
+func (rf *Raft) applyLoop() {
+	for !rf.killed() {
+		select {
+		case <-rf.notifyApply:
+			rf.applyEntries()
+		default:
+			time.Sleep(10 * time.Millisecond)
 		}
-
-
-		go func(startIdx int, entries []Entry) {
-			var hasApplied bool
-			for _, entry := range entries {
-				msg := ApplyMsg{
-					CommandValid: true,
-					Command:      entry.Command,
-					CommandIndex: entry.Index,
-				}
-				hasApplied = true
-				// before send it to channel, first check whether the entry has been applied because of snapshot, if not check will raise apply error
-				rf.mu.Lock()
-				if rf.lastApplied < msg.CommandIndex {
-					rf.lastApplied = msg.CommandIndex
-					hasApplied = false
-				}
-				rf.mu.Unlock()
-
-				if !hasApplied {
-					rf.applyCh <- msg
-				}
-
-			}
-		}(rf.lastApplied+1, entriesToApply)
 	}
 }
+
+
+func (rf *Raft) applyEntries() {
+	rf.mu.Lock()
+	var entriesToApply []Entry
+	if rf.commitIndex > rf.lastApplied {
+		// ready to apply
+		DPrintf("[server %v, role %v, term %v], apply log from %v to %v\n", rf.me, rf.state, rf.currentTerm, rf.lastApplied+1, rf.commitIndex)
+		entriesToApply = append(entriesToApply, rf.logs[(rf.getRealIdx(rf.lastApplied)+1):(rf.getRealIdx(rf.commitIndex)+1)]...)
+	}
+	rf.mu.Unlock()
+	for _, entry := range entriesToApply {
+		msg := ApplyMsg {
+			CommandValid: true,
+			Command:      entry.Command,
+			CommandIndex: entry.Index,
+		}
+		rf.applyCh <- msg
+		rf.mu.Lock()
+		// when apply entries to upper service, leader told follower to install snapshot, this situation may raise apply out of order
+		if rf.lastApplied < msg.CommandIndex {
+			rf.lastApplied = msg.CommandIndex
+		}
+		rf.mu.Unlock()
+	}
+}
+
 
 //
 // A service wants to switch to snapshot.  Only do so if Raft hasn't
@@ -712,6 +719,12 @@ func (rf *Raft) CondInstallSnapshot(lastIncludedTerm int, lastIncludedIndex int,
 	return false
 }
 
+func (rf *Raft) GetSnapshotIndex() int {
+	rf.mu.Lock()
+	defer rf.mu.Unlock()
+
+	return rf.lastIncludedIndex
+}
 
 // the service says it has created a snapshot that has
 // all info up to and including index. this means the
