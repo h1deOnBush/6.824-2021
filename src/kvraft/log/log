@@ -1,0 +1,1443 @@
+Test: unreliable net, snapshots, many clients (3B) ...
+labgob warning: Decoding into a non-default variable/field Err may not work
+2021/03/15 17:25:32 [server 2, role 1, term 2], send request vote to [0]
+2021/03/15 17:25:32 [server 2, role 1, term 2], send request vote to [3]
+2021/03/15 17:25:32 [server 2, role 1, term 2], send request vote to [1]
+2021/03/15 17:25:32 [server 2, role 1, term 2], send request vote to [4]
+2021/03/15 17:25:32 [server 1, role 2, term 2], vote for [2]
+2021/03/15 17:25:32 [server 0, role 2, term 2], vote for [2]
+2021/03/15 17:25:32 [server 2, role 1, term 2], receive votes from [0]
+2021/03/15 17:25:32 [server 2, role 1, term 2], get majority votes
+2021/03/15 17:25:32 [server 2, role 1, term 2], receive votes from [1]
+2021/03/15 17:25:32 [server 2, role 0, term 2] send heartbeat to [4]
+2021/03/15 17:25:32 [server 2, role 0, term 2] send heartbeat to [0]
+2021/03/15 17:25:32 [server 2, role 0, term 2] send heartbeat to [1]
+2021/03/15 17:25:32 [server 2, role 0, term 2] send heartbeat to [3]
+2021/03/15 17:25:32 [server 1, role 2, term 2] receive successful heartbeat from [2]
+2021/03/15 17:25:32 [server 3, role 2, term 2], vote for [2]
+2021/03/15 17:25:32 [server 2, role 0, term 2], term has changed to (2), or state has changed, obsolete response
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({2  Put 2365589223622558168 1}) from client, index:(1)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 1 to 1
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 1 to 1
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({4  Put 4441299637859090630 1}) from client, index:(2)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 1 to 1
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 1 to 1
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 1 to 2
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 1 to 2
+2021/03/15 17:25:32 [server 4, role 2, term 2], vote for [2]
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 1 to 2
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 1 to 2
+2021/03/15 17:25:32 [server 2, role 0, term 2], term has changed to (2), or state has changed, obsolete response
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (1)-(1)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 3, role 2, term 2] receive successful heartbeat from [2]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:32 [server 3, role 2, term 2] Append Entry successfully from [2], (1)-(1)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:32 [server 4, role 2, term 2] receive successful heartbeat from [2]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 0, role 2, term 2] receive successful heartbeat from [2]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({3  Put 245686384088071585 1}) from client, index:(3)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 1 to 3
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 1 to 3
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 1 to 3
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 2 to 3
+2021/03/15 17:25:32 [server 2, role 0, term 2], apply log from 1 to 1
+2021/03/15 17:25:32 [server 0, role 2, term 2] Append Entry successfully from [2], (1)-(1)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (2)-(2)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 2}) from client, index:(4)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 3 to 4
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 2 to 4
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 2 to 4
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 1 to 4
+2021/03/15 17:25:32 [server 0, role 2, term 2] Append Entry successfully from [2], (2)-(3)
+2021/03/15 17:25:32 [server 1, role 2, term 2] Append Entry successfully from [2], (1)-(1)
+2021/03/15 17:25:32 [server 0, role 2, term 2], apply log from 1 to 1
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:32 [server 0, role 2, term 2] Append Entry successfully from [2], already have (1)-(2)
+2021/03/15 17:25:32 [server 1, role 2, term 2] Append Entry successfully from [2], (2)-(2)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (3)-(3)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 4, role 2, term 2], apply log from 1 to 1
+2021/03/15 17:25:32 [server 3, role 2, term 2] Append Entry successfully from [2], (2)-(3)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:32 [server 3, role 2, term 2], apply log from 1 to 1
+2021/03/15 17:25:32 [server 2, role 0, term 2], apply log from 2 to 3
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (4)-(4)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({4  Get 4441299637859090630 2}) from client, index:(5)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 5 to 5
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 3 to 5
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 3 to 5
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 4 to 5
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({1  Put 4611209382755480816 1}) from client, index:(6)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 4 to 6
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 5 to 6
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 3 to 6
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 3 to 6
+2021/03/15 17:25:32 [server 0, role 2, term 2] Append Entry successfully from [2], (4)-(5)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:32 [server 1, role 2, term 2] Append Entry successfully from [2], (3)-(5)
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (5)-(5)
+2021/03/15 17:25:32 [server 1, role 2, term 2] Append Entry successfully from [2], (6)-(6)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:32 [server 0, role 2, term 2], apply log from 2 to 3
+2021/03/15 17:25:32 [server 1, role 2, term 2], apply log from 1 to 3
+2021/03/15 17:25:32 [server 2, role 0, term 2], apply log from 4 to 5
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({0  Put 3476614305934909453 1}) from client, index:(7)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 7 to 7
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 4 to 7
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 6 to 7
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 6 to 7
+2021/03/15 17:25:32 [server 3, role 2, term 2] Append Entry successfully from [2], (4)-(6)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:32 [server 4, role 2, term 2], apply log from 2 to 3
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 3}) from client, index:(8)
+2021/03/15 17:25:32 [server 1, role 2, term 2] Append Entry successfully from [2], (7)-(7)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 7 to 8
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 6 to 8
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 6 to 8
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 7 to 8
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:32 [server 2, role 0, term 2], apply log from 6 to 6
+2021/03/15 17:25:32 [server 1, role 2, term 2], apply log from 4 to 5
+2021/03/15 17:25:32 [server 3, role 2, term 2], apply log from 2 to 3
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (6)-(7)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 3, role 2, term 2] Append Entry successfully from [2], (7)-(8)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (8)-(8)
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], already have (5)-(6)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 4, role 2, term 2], apply log from 4 to 6
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 2}) from client, index:(9)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 9 to 9
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 6 to 9
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 7 to 9
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 8 to 9
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({4 x 4 0 y Append 4441299637859090630 3}) from client, index:(10)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 7 to 10
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 9 to 10
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 6 to 10
+2021/03/15 17:25:32 [server 3, role 2, term 2], apply log from 4 to 6
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 8 to 10
+2021/03/15 17:25:32 [server 2, role 0, term 2], apply log from 7 to 8
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 4}) from client, index:(11)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 7 to 11
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 9 to 11
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 6 to 11
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 8 to 11
+2021/03/15 17:25:32 [server 3, role 2, term 2] Append Entry successfully from [2], (9)-(10)
+2021/03/15 17:25:32 [server 3, role 2, term 2] Append Entry successfully from [2], already have (4)-(7)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:32 [server 0, role 2, term 2] Append Entry successfully from [2], (6)-(7)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:32 [server 0, role 2, term 2], apply log from 4 to 5
+2021/03/15 17:25:32 [server 3, role 2, term 2], apply log from 7 to 8
+2021/03/15 17:25:32 [server 0, role 2, term 2] Append Entry successfully from [2], (8)-(8)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:32 [server 1, role 2, term 2] Append Entry successfully from [2], (8)-(9)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:32 [server 1, role 2, term 2], apply log from 6 to 8
+2021/03/15 17:25:32 [server 0, role 2, term 2], apply log from 6 to 6
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (9)-(9)
+2021/03/15 17:25:32 [server 0, role 2, term 2] Append Entry successfully from [2], (9)-(11)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 3, role 2, term 2] Append Entry successfully from [2], already have (9)-(9)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({0  Get 3476614305934909453 2}) from client, index:(12)
+2021/03/15 17:25:32 [server 1, role 2, term 2] Append Entry successfully from [2], (10)-(10)
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (10)-(11)
+2021/03/15 17:25:32 [server 4, role 2, term 2], apply log from 7 to 8
+2021/03/15 17:25:32 [server 1, role 2, term 2] Append Entry successfully from [2], (11)-(11)
+2021/03/15 17:25:32 [server 0, role 2, term 2] Append Entry successfully from [2], already have (6)-(10)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 10 to 12
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({3  Put 245686384088071585 1}) from client, index:(13)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 8 to 13
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 12 to 13
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 10 to 13
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 11 to 13
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 11 to 13
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 12 to 13
+2021/03/15 17:25:32 [server 3, role 2, term 2] Append Entry successfully from [2], (11)-(11)
+2021/03/15 17:25:32 [server 0, role 2, term 2], apply log from 7 to 8
+2021/03/15 17:25:32 [server 2, role 0, term 2], apply log from 9 to 11
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 12 to 13
+2021/03/15 17:25:32 [server 3, role 2, term 2] Append Entry successfully from [2], (12)-(13)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:32 [server 3, role 2, term 2] Append Entry successfully from [2], already have (10)-(13)
+2021/03/15 17:25:32 [server 3, role 2, term 2], apply log from 9 to 11
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (12)-(12)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 4, role 2, term 2], apply log from 9 to 9
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({4  Get 4441299637859090630 4}) from client, index:(14)
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 13 to 14
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 14 to 14
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 11 to 14
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 12 to 14
+2021/03/15 17:25:32 [server 2, role 0, term 2], apply log from 12 to 12
+2021/03/15 17:25:32 [server 0, role 2, term 2] Append Entry successfully from [2], (12)-(13)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:32 [server 0, role 2, term 2] Append Entry successfully from [2], already have (12)-(13)
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (13)-(13)
+2021/03/15 17:25:32 [server 1, role 2, term 2] Append Entry successfully from [2], (12)-(13)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 4, role 2, term 2], apply log from 10 to 11
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:32 [server 1, role 2, term 2], apply log from 9 to 11
+2021/03/15 17:25:32 [server 0, role 2, term 2], apply log from 9 to 11
+2021/03/15 17:25:32 [server 2, role 0, term 2], apply log from 13 to 13
+2021/03/15 17:25:32 [server 4, role 2, term 2] Append Entry successfully from [2], (14)-(14)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:32 [server 4, role 2, term 2], apply log from 12 to 12
+2021/03/15 17:25:32 [server 1, role 2, term 2] Append Entry successfully from [2], (14)-(14)
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:32 [server 3, role 2, term 2] Append Entry successfully from [2], (14)-(14)
+2021/03/15 17:25:32 [server 2, role 0, term 2], apply log from 14 to 14
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive command({0 x 0 0 y Append 3476614305934909453 3}) from client, index:(15)
+2021/03/15 17:25:32 [server 0, role 2, term 2] Append Entry successfully from [2], (14)-(14)
+2021/03/15 17:25:32 [server 1, role 2, term 2], apply log from 12 to 12
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [1] from 15 to 15
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [3] from 14 to 15
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [4] from 15 to 15
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:32 [server 2, role 0, term 2] Append entry to [0] from 15 to 15
+2021/03/15 17:25:32 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:32 [server 3, role 2, term 2], apply log from 12 to 12
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 12 to 12
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (15)-(15)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (15)-(15)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (15)-(15)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 13 to 14
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 13 to 14
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 13 to 14
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 15 to 15
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({0  Get 3476614305934909453 4}) from client, index:(16)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 16 to 16
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 15 to 16
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 15 to 16
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 16 to 16
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (15)-(16)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2 x 2 0 y Append 2365589223622558168 5}) from client, index:(17)
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 13 to 15
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 16 to 17
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 17 to 17
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 15 to 17
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 16 to 17
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (16)-(17)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (16)-(16)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (16)-(17)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (17)-(17)
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 15 to 15
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 16 to 17
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (16)-(17)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 15 to 15
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], already have (16)-(16)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 15 to 15
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2 x 2 1 y Append 2365589223622558168 6}) from client, index:(18)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 17 to 18
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 18 to 18
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 17 to 18
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 18 to 18
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({0 x 0 1 y Append 3476614305934909453 5}) from client, index:(19)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 17 to 19
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 18 to 19
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 18 to 19
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 17 to 19
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (18)-(18)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (18)-(19)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (19)-(19)
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 16 to 17
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 service told service [3] to generate snapshot, snapshotIdx(16)
+2021/03/15 17:25:33 [server 3, role 2, term 2] truncate log from (16)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 3, role 2, term 2] generate snapshot successfully, current snapshotIdx(16), current first index(17), snapshotTerm(2)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({4 x 4 1 y Append 4441299637859090630 5}) from client, index:(20)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 20 to 20
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 20 to 20
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 18 to 20
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 17 to 20
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 18 to 19
+2021/03/15 17:25:33 service told service [2] to generate snapshot, snapshotIdx(18)
+2021/03/15 17:25:33 [server 2, role 0, term 2] truncate log from (18)
+2021/03/15 17:25:33 [server 2, role 0, term 2] generate snapshot successfully, current snapshotIdx(18), current first index(19), snapshotTerm(2)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 16 to 17
+2021/03/15 17:25:33 service told service [1] to generate snapshot, snapshotIdx(16)
+2021/03/15 17:25:33 [server 1, role 2, term 2] truncate log from (16)
+2021/03/15 17:25:33 [server 1, role 2, term 2] generate snapshot successfully, current snapshotIdx(16), current first index(17), snapshotTerm(2)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 3}) from client, index:(21)
+2021/03/15 17:25:33 [server 2, role 0, term 2] ready to send installSnapshot to [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 7}) from client, index:(22)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 20 to 22
+2021/03/15 17:25:33 [server 2, role 0, term 2] ready to send installSnapshot to [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 20 to 22
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (18)-(18)
+2021/03/15 17:25:33 [server 2, role 0, term 2] ready to send installSnapshot to [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 20 to 22
+2021/03/15 17:25:33 [server 2, role 0, term 2] ready to send installSnapshot to [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 20 to 22
+2021/03/15 17:25:33 [server 0, role 2, term 2] truncate log from (18)
+2021/03/15 17:25:33 [server 0, role 2, term 2] install snapshot successfully, snapshotIdx(18), snapshotTerm(2)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (17)-(18)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (20)-(22)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (18)-(19)
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 16 to 17
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 service told service [4] to generate snapshot, snapshotIdx(16)
+2021/03/15 17:25:33 [server 4, role 2, term 2] truncate log from (16)
+2021/03/15 17:25:33 [server 4, role 2, term 2] generate snapshot successfully, current snapshotIdx(16), current first index(17), snapshotTerm(2)
+2021/03/15 17:25:33 [server 2, role 0, term 2] inconsistent entry send to [0], now to decrease preLogIndex(17), conflict index: (19), conflictTerm (-1)
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 18 to 19
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (20)-(22)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (20)-(22)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 20 to 22
+2021/03/15 17:25:33 [server 2, role 0, term 2] inconsistent entry send to [0], now to decrease preLogIndex(17), conflict index: (19), conflictTerm (-1)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 18 to 19
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], already have (20)-(20)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({0 x 0 2 y Append 3476614305934909453 6}) from client, index:(23)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (20)-(20)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 20 to 23
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 19 to 23
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 23 to 23
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 23 to 23
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (20)-(20)
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 18 to 19
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (19)-(23)
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 19 to 22
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 4, role 2, term 2] truncate log from (18)
+2021/03/15 17:25:33 [server 4, role 2, term 2] install snapshot successfully, snapshotIdx(18), snapshotTerm(2)
+2021/03/15 17:25:33 [server 4, role 2, term 2], install snapshot failed, current snapshotIdx(18), args.snapshotIdx(18)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], already have (20)-(22)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (23)-(23)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({4  Get 4441299637859090630 6}) from client, index:(24)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 24 to 24
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 19 to 24
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 23 to 24
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 24 to 24
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 20 to 22
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 8}) from client, index:(25)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 24 to 25
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (24)-(24)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 19 to 25
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 4}) from client, index:(26)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 24 to 26
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 23 to 26
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 23 to 23
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 24 to 26
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (23)-(26)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 19 to 26
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 23 to 26
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 25 to 26
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (21)-(25)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], already have (23)-(24)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 23 to 23
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({0 x 0 3 y Append 3476614305934909453 7}) from client, index:(27)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 26 to 27
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 25 to 27
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 25 to 27
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 24 to 27
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (25)-(27)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 20 to 23
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], already have (23)-(26)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 24 to 25
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (27)-(27)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 20 to 23
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 9}) from client, index:(28)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 24 to 28
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 28 to 28
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 26 to 28
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 28 to 28
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (26)-(27)
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 24 to 25
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({4 x 4 2 y Append 4441299637859090630 7}) from client, index:(29)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (24)-(27)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 28 to 29
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 28 to 29
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 28 to 29
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (24)-(26)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (28)-(28)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (24)-(26)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 24 to 25
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 28 to 29
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], already have (24)-(25)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 26 to 27
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 24 to 27
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 23 to 25
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (28)-(28)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], already have (19)-(26)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (29)-(29)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], already have (25)-(26)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (29)-(29)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 26 to 27
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (28)-(28)
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 26 to 27
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (29)-(29)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (28)-(29)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({0  Get 3476614305934909453 8}) from client, index:(30)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 28 to 29
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 27 to 30
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 30 to 30
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 28 to 30
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 30 to 30
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 26 to 27
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({4 x 4 3 y Append 4441299637859090630 8}) from client, index:(31)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 27 to 31
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 30 to 31
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 30 to 31
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 28 to 31
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 5}) from client, index:(32)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 27 to 32
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 28 to 32
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 30 to 32
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 30 to 32
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (30)-(30)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (30)-(30)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (30)-(30)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (31)-(31)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 28 to 29
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 30 to 30
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 28 to 29
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (30)-(31)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (32)-(32)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (31)-(31)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 28 to 29
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (30)-(30)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 10}) from client, index:(33)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 31 to 33
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 33 to 33
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (32)-(32)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 32 to 33
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 31 to 33
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({0 x 0 4 y Append 3476614305934909453 9}) from client, index:(34)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (32)-(32)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 33 to 34
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 33 to 34
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 33 to 34
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 31 to 34
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (31)-(32)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (33)-(34)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 28 to 29
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 31 to 32
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 30 to 32
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (33)-(34)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (31)-(33)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (33)-(33)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1 x 1 0 y Append 4611209382755480816 6}) from client, index:(35)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 33 to 35
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 33 to 35
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 34 to 35
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 35 to 35
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (33)-(34)
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 30 to 32
+2021/03/15 17:25:33 service told service [3] to generate snapshot, snapshotIdx(30)
+2021/03/15 17:25:33 [server 3, role 2, term 2] truncate log from (30)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 3, role 2, term 2] generate snapshot successfully, current snapshotIdx(30), current first index(31), snapshotTerm(2)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 30 to 32
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 33 to 34
+2021/03/15 17:25:33 service told service [1] to generate snapshot, snapshotIdx(30)
+2021/03/15 17:25:33 [server 1, role 2, term 2] truncate log from (30)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], already have (31)-(33)
+2021/03/15 17:25:33 service told service [2] to generate snapshot, snapshotIdx(33)
+2021/03/15 17:25:33 [server 2, role 0, term 2] truncate log from (33)
+2021/03/15 17:25:33 [server 1, role 2, term 2] generate snapshot successfully, current snapshotIdx(30), current first index(31), snapshotTerm(2)
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 30 to 31
+2021/03/15 17:25:33 [server 2, role 0, term 2] generate snapshot successfully, current snapshotIdx(33), current first index(34), snapshotTerm(2)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (34)-(34)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (35)-(35)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({4 x 4 4 y Append 4441299637859090630 9}) from client, index:(36)
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 33 to 34
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (35)-(35)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 35 to 36
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 34 to 36
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 36 to 36
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], already have (32)-(33)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 35 to 36
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 32 to 32
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 33 to 34
+2021/03/15 17:25:33 service told service [0] to generate snapshot, snapshotIdx(33)
+2021/03/15 17:25:33 [server 0, role 2, term 2] truncate log from (33)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 0, role 2, term 2] generate snapshot successfully, current snapshotIdx(33), current first index(34), snapshotTerm(2)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 35 to 35
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (35)-(36)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (35)-(36)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({0 x 0 5 y Append 3476614305934909453 10}) from client, index:(37)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 36 to 37
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 36 to 37
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 37 to 37
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2 x 2 2 y Append 2365589223622558168 11}) from client, index:(38)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 36 to 38
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 36 to 38
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 37 to 38
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 37 to 38
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 37 to 38
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 33 to 34
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 33 to 34
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 36 to 36
+2021/03/15 17:25:33 service told service [4] to generate snapshot, snapshotIdx(33)
+2021/03/15 17:25:33 [server 4, role 2, term 2] truncate log from (33)
+2021/03/15 17:25:33 [server 4, role 2, term 2] generate snapshot successfully, current snapshotIdx(33), current first index(34), snapshotTerm(2)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (37)-(38)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (36)-(37)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 35 to 35
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (38)-(38)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 37 to 37
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 35 to 36
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (36)-(37)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 35 to 35
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 7}) from client, index:(39)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 38 to 39
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 39 to 39
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 37 to 39
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], already have (37)-(37)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 39 to 39
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (38)-(38)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (39)-(39)
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 36 to 36
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({4 x 4 5 y Append 4441299637859090630 10}) from client, index:(40)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 38 to 38
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 38 to 40
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 37 to 38
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 38 to 40
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 37 to 40
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 39 to 40
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 36 to 36
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (37)-(38)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (39)-(39)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 35 to 36
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 39 to 39
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 37 to 38
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (40)-(40)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (39)-(39)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 37 to 38
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (39)-(39)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 12}) from client, index:(41)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 41 to 41
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 40 to 41
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 40 to 41
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 40 to 41
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (40)-(40)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (40)-(40)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (41)-(41)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 37 to 38
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 8}) from client, index:(42)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 41 to 42
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 41 to 42
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 40 to 42
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 42 to 42
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 40 to 40
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (40)-(41)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (41)-(41)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 39 to 39
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (42)-(42)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (42)-(42)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 39 to 39
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 41 to 42
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (42)-(42)
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 39 to 40
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (41)-(41)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (42)-(42)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 40 to 40
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 39 to 40
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 40 to 40
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 9}) from client, index:(43)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 43 to 43
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 43 to 43
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 43 to 43
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 43 to 43
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({0 x 0 5 y Append 3476614305934909453 10}) from client, index:(44)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 43 to 44
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 43 to 44
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 43 to 44
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 43 to 44
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (43)-(43)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 13}) from client, index:(45)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 44 to 45
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 43 to 45
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 43 to 45
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 43 to 45
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 41 to 42
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (43)-(44)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (43)-(43)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 41 to 42
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (44)-(44)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (43)-(43)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 43 to 43
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (45)-(45)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (43)-(45)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 41 to 42
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], already have (43)-(44)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 44 to 45
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (44)-(44)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (45)-(45)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (45)-(45)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 41 to 42
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({4 x 4 5 y Append 4441299637859090630 10}) from client, index:(46)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 46 to 46
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 46 to 46
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 46 to 46
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 45 to 46
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1 x 1 1 y Append 4611209382755480816 10}) from client, index:(47)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2 x 2 3 y Append 2365589223622558168 14}) from client, index:(48)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 45 to 48
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 46 to 48
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 46 to 48
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 46 to 48
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 46 to 48
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 46 to 48
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 45 to 48
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 46 to 48
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (46)-(48)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], already have (45)-(46)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (46)-(46)
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 43 to 45
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 43 to 45
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (46)-(48)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (46)-(46)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], already have (46)-(46)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (47)-(48)
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 43 to 45
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 46 to 46
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (47)-(48)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 43 to 45
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 service told service [1] to generate snapshot, snapshotIdx(43)
+2021/03/15 17:25:33 [server 1, role 2, term 2] truncate log from (43)
+2021/03/15 17:25:33 [server 1, role 2, term 2] generate snapshot successfully, current snapshotIdx(43), current first index(44), snapshotTerm(2)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], already have (46)-(48)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], already have (46)-(48)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 47 to 48
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (46)-(48)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1 x 1 2 y Append 4611209382755480816 11}) from client, index:(49)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 49 to 49
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 49 to 49
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 49 to 49
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 47 to 49
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (49)-(49)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (49)-(49)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 46 to 48
+2021/03/15 17:25:33 service told service [0] to generate snapshot, snapshotIdx(47)
+2021/03/15 17:25:33 [server 0, role 2, term 2] truncate log from (47)
+2021/03/15 17:25:33 [server 0, role 2, term 2] generate snapshot successfully, current snapshotIdx(47), current first index(48), snapshotTerm(2)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 46 to 48
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 15}) from client, index:(50)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 50 to 50
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 50 to 50
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 49 to 50
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 49 to 50
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 49 to 49
+2021/03/15 17:25:33 service told service [2] to generate snapshot, snapshotIdx(49)
+2021/03/15 17:25:33 [server 2, role 0, term 2] truncate log from (49)
+2021/03/15 17:25:33 [server 2, role 0, term 2] generate snapshot successfully, current snapshotIdx(49), current first index(50), snapshotTerm(2)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (49)-(49)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (50)-(50)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (50)-(50)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 49 to 49
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 12}) from client, index:(51)
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 46 to 48
+2021/03/15 17:25:33 [server 2, role 0, term 2] ready to send installSnapshot to [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 50 to 51
+2021/03/15 17:25:33 service told service [4] to generate snapshot, snapshotIdx(47)
+2021/03/15 17:25:33 [server 4, role 2, term 2] truncate log from (47)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 51 to 51
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 51 to 51
+2021/03/15 17:25:33 [server 4, role 2, term 2] generate snapshot successfully, current snapshotIdx(47), current first index(48), snapshotTerm(2)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (49)-(50)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 50 to 50
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 16}) from client, index:(52)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 51 to 52
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 49 to 49
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 51 to 52
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 51 to 52
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 50 to 52
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (51)-(51)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (50)-(50)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 50 to 50
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 46 to 49
+2021/03/15 17:25:33 service told service [3] to generate snapshot, snapshotIdx(47)
+2021/03/15 17:25:33 [server 3, role 2, term 2] truncate log from (47)
+2021/03/15 17:25:33 [server 3, role 2, term 2] generate snapshot successfully, current snapshotIdx(47), current first index(48), snapshotTerm(2)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (51)-(52)
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 50 to 50
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 49 to 49
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 51 to 51
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({3  Get 245686384088071585 2}) from client, index:(53)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 51 to 53
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 52 to 53
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 51 to 53
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 53 to 53
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (52)-(52)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 52 to 52
+2021/03/15 17:25:33 [server 3, role 2, term 2] truncate log from (49)
+2021/03/15 17:25:33 [server 3, role 2, term 2] install snapshot successfully, snapshotIdx(49), snapshotTerm(2)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (51)-(51)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (52)-(52)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (53)-(53)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 13}) from client, index:(54)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 50 to 54
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 53 to 54
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 51 to 54
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 54 to 54
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 50 to 51
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (53)-(53)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 51 to 51
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (51)-(53)
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 50 to 51
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (53)-(53)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 53 to 53
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 51 to 51
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({3  Get 245686384088071585 3}) from client, index:(55)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (54)-(54)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 54 to 55
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 54 to 55
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 54 to 55
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (54)-(54)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 54 to 55
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (54)-(54)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 52 to 52
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 52 to 52
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (54)-(54)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 52 to 52
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 54 to 54
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 52 to 52
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (55)-(55)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 53 to 53
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (55)-(55)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (55)-(55)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 55 to 55
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 53 to 53
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({3 x 3 0 y Append 245686384088071585 4}) from client, index:(56)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 56 to 56
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 56 to 56
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 55 to 56
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 56 to 56
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1 x 1 3 y Append 4611209382755480816 14}) from client, index:(57)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (56)-(56)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 56 to 57
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 56 to 57
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 55 to 57
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 56 to 57
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 53 to 55
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (57)-(57)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (55)-(57)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 53 to 55
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (56)-(56)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (55)-(56)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (57)-(57)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (56)-(56)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 54 to 55
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 56 to 57
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 54 to 55
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1 x 1 4 y Append 4611209382755480816 15}) from client, index:(58)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 58 to 58
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 58 to 58
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 57 to 58
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 57 to 58
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (57)-(57)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (58)-(58)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({3 x 3 1 y Append 245686384088071585 5}) from client, index:(59)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 58 to 59
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 57 to 59
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 58 to 59
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 59 to 59
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 56 to 57
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (59)-(59)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (58)-(58)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 56 to 57
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (58)-(58)
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 56 to 57
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (59)-(59)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2  Get 2365589223622558168 17}) from client, index:(60)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (59)-(59)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (58)-(58)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 57 to 60
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 59 to 60
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 59 to 60
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 60 to 60
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 58 to 59
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (59)-(59)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 56 to 57
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (60)-(60)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({3  Get 245686384088071585 6}) from client, index:(61)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (60)-(60)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 60 to 61
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 60 to 61
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 60 to 61
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 58 to 58
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 60 to 61
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 58 to 59
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (60)-(60)
+2021/03/15 17:25:33 service told service [1] to generate snapshot, snapshotIdx(58)
+2021/03/15 17:25:33 [server 1, role 2, term 2] truncate log from (58)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 1, role 2, term 2] generate snapshot successfully, current snapshotIdx(58), current first index(59), snapshotTerm(2)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (60)-(60)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (61)-(61)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 16}) from client, index:(62)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 61 to 62
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 61 to 62
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 61 to 62
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (61)-(61)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 60 to 62
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 58 to 58
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 60 to 60
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 58 to 59
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (61)-(62)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (62)-(62)
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 59 to 60
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (61)-(61)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 60 to 60
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 61 to 61
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], already have (60)-(61)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (62)-(62)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 59 to 59
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (62)-(62)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 60 to 60
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 62 to 62
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({3 x 3 2 y Append 245686384088071585 7}) from client, index:(63)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 61 to 63
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 63 to 63
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 63 to 63
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 63 to 63
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (63)-(63)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 60 to 60
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 61 to 62
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (63)-(63)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 61 to 62
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 63 to 63
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (63)-(63)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (63)-(63)
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 61 to 62
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 61 to 62
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2 x 2 4 y Append 2365589223622558168 18}) from client, index:(64)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 64 to 64
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 64 to 64
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 64 to 64
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 64 to 64
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (64)-(64)
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 63 to 63
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (64)-(64)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (64)-(64)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 63 to 63
+2021/03/15 17:25:33 service told service [4] to generate snapshot, snapshotIdx(63)
+2021/03/15 17:25:33 [server 4, role 2, term 2] truncate log from (63)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 63 to 63
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 64 to 64
+2021/03/15 17:25:33 [server 4, role 2, term 2] generate snapshot successfully, current snapshotIdx(63), current first index(64), snapshotTerm(2)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (64)-(64)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({3 x 3 2 y Append 245686384088071585 7}) from client, index:(65)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 64 to 65
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 65 to 65
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 65 to 65
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 65 to 65
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 63 to 63
+2021/03/15 17:25:33 service told service [0] to generate snapshot, snapshotIdx(63)
+2021/03/15 17:25:33 [server 0, role 2, term 2] truncate log from (63)
+2021/03/15 17:25:33 [server 0, role 2, term 2] generate snapshot successfully, current snapshotIdx(63), current first index(64), snapshotTerm(2)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 16}) from client, index:(66)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 65 to 66
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 65 to 66
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 65 to 66
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 65 to 66
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (65)-(65)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (65)-(66)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (66)-(66)
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 64 to 64
+2021/03/15 17:25:33 service told service [3] to generate snapshot, snapshotIdx(64)
+2021/03/15 17:25:33 [server 3, role 2, term 2] truncate log from (64)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 3, role 2, term 2] generate snapshot successfully, current snapshotIdx(64), current first index(65), snapshotTerm(2)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 65 to 66
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 64 to 64
+2021/03/15 17:25:33 service told service [2] to generate snapshot, snapshotIdx(66)
+2021/03/15 17:25:33 [server 2, role 0, term 2] truncate log from (66)
+2021/03/15 17:25:33 [server 2, role 0, term 2] generate snapshot successfully, current snapshotIdx(66), current first index(66), snapshotTerm(2)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (65)-(65)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 64 to 64
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (66)-(66)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (65)-(65)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (66)-(66)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1 x 1 5 y Append 4611209382755480816 17}) from client, index:(67)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 67 to 67
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 67 to 67
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 67 to 67
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 64 to 64
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 67 to 67
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (67)-(67)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (67)-(67)
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 65 to 66
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (67)-(67)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 65 to 66
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 65 to 66
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 67 to 67
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1 x 1 6 y Append 4611209382755480816 18}) from client, index:(68)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 68 to 68
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 68 to 68
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 68 to 68
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 67 to 68
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (67)-(67)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (68)-(68)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (68)-(68)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 67 to 67
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 65 to 66
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 67 to 67
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (68)-(68)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 67 to 67
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (68)-(68)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 68 to 68
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 67 to 67
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 19}) from client, index:(69)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 68 to 69
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 69 to 69
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 69 to 69
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 69 to 69
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (69)-(69)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (69)-(69)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 68 to 68
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 68 to 68
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({0  Get 3476614305934909453 11}) from client, index:(70)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 70 to 70
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 69 to 70
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 68 to 70
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 69 to 70
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (69)-(70)
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 68 to 68
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (70)-(70)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (70)-(70)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 69 to 70
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({4 x 4 6 y Append 4441299637859090630 11}) from client, index:(71)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 71 to 71
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 71 to 71
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 69 to 71
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 69 to 71
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (71)-(71)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2 x 2 5 y Append 2365589223622558168 19}) from client, index:(72)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 72 to 72
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 71 to 72
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 69 to 72
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 69 to 72
+2021/03/15 17:25:33 [server 4, role 2, term 2], apply log from 69 to 70
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({1 x 1 7 y Append 4611209382755480816 20}) from client, index:(73)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 69 to 73
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 71 to 73
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 69 to 73
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 72 to 73
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({0  Get 3476614305934909453 12}) from client, index:(74)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 71 to 74
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 69 to 74
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 72 to 74
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (72)-(73)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 69 to 74
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (71)-(73)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (71)-(71)
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 71 to 73
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (74)-(74)
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 69 to 70
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 69 to 70
+2021/03/15 17:25:33 service told service [1] to generate snapshot, snapshotIdx(69)
+2021/03/15 17:25:33 [server 1, role 2, term 2] truncate log from (69)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 1, role 2, term 2] generate snapshot successfully, current snapshotIdx(69), current first index(70), snapshotTerm(2)
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (69)-(74)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (74)-(74)
+2021/03/15 17:25:33 [server 2, role 0, term 2] inconsistent entry send to [1], now to decrease preLogIndex(68), conflict index: (70), conflictTerm (-1)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (72)-(72)
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 68 to 70
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (69)-(73)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (73)-(74)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], already have (72)-(72)
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], already have (71)-(73)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], already have (69)-(72)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({4  Get 4441299637859090630 12}) from client, index:(75)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 73 to 75
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 70 to 75
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 74 to 75
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 73 to 75
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (75)-(75)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 1, role 2, term 2], apply log from 71 to 73
+2021/03/15 17:25:33 [server 0, role 2, term 2] Append Entry successfully from [2], (75)-(75)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:33 [server 3, role 2, term 2] Append Entry successfully from [2], (75)-(75)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:33 [server 3, role 2, term 2], apply log from 71 to 73
+2021/03/15 17:25:33 [server 2, role 0, term 2], apply log from 74 to 75
+2021/03/15 17:25:33 [server 0, role 2, term 2], apply log from 71 to 73
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({4  Get 4441299637859090630 13}) from client, index:(76)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 76 to 76
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 76 to 76
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 76 to 76
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 73 to 76
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({0  Get 3476614305934909453 13}) from client, index:(77)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 76 to 77
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 73 to 77
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 76 to 77
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 76 to 77
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive command({2 x 2 5 y Append 2365589223622558168 19}) from client, index:(78)
+2021/03/15 17:25:33 [server 4, role 2, term 2] Append Entry successfully from [2], (75)-(77)
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [4] from 73 to 78
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [0] from 76 to 78
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [1] from 76 to 78
+2021/03/15 17:25:33 [server 2, role 0, term 2] Append entry to [3] from 76 to 78
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (76)-(77)
+2021/03/15 17:25:33 [server 1, role 2, term 2] Append Entry successfully from [2], (78)-(78)
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:33 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (76)-(78)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 76 to 78
+2021/03/15 17:25:34 [server 4, role 2, term 2], apply log from 71 to 75
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({1 x 1 8 y Append 4611209382755480816 21}) from client, index:(79)
+2021/03/15 17:25:34 [server 0, role 2, term 2], apply log from 74 to 75
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 79 to 79
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 78 to 79
+2021/03/15 17:25:34 [server 1, role 2, term 2], apply log from 74 to 75
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 76 to 79
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 79 to 79
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], already have (76)-(76)
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], already have (73)-(76)
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (79)-(79)
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (78)-(78)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], already have (76)-(77)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 0, role 2, term 2], apply log from 76 to 78
+2021/03/15 17:25:34 service told service [0] to generate snapshot, snapshotIdx(76)
+2021/03/15 17:25:34 [server 0, role 2, term 2] truncate log from (76)
+2021/03/15 17:25:34 [server 0, role 2, term 2] generate snapshot successfully, current snapshotIdx(76), current first index(77), snapshotTerm(2)
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], (79)-(79)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 3, role 2, term 2] Append Entry successfully from [2], (76)-(79)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 3, role 2, term 2], apply log from 74 to 78
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 79 to 79
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({0 x 0 6 y Append 3476614305934909453 14}) from client, index:(80)
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 78 to 80
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 80 to 80
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 80 to 80
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 79 to 80
+2021/03/15 17:25:34 [server 1, role 2, term 2], apply log from 76 to 78
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({4  Get 4441299637859090630 14}) from client, index:(81)
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 80 to 81
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 78 to 81
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 79 to 81
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 80 to 81
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], (80)-(81)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (79)-(81)
+2021/03/15 17:25:34 [server 3, role 2, term 2] Append Entry successfully from [2], (80)-(80)
+2021/03/15 17:25:34 [server 4, role 2, term 2], apply log from 76 to 79
+2021/03/15 17:25:34 service told service [4] to generate snapshot, snapshotIdx(76)
+2021/03/15 17:25:34 [server 4, role 2, term 2] truncate log from (76)
+2021/03/15 17:25:34 [server 4, role 2, term 2] generate snapshot successfully, current snapshotIdx(76), current first index(77), snapshotTerm(2)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 1, role 2, term 2], apply log from 79 to 79
+2021/03/15 17:25:34 [server 3, role 2, term 2] Append Entry successfully from [2], (81)-(81)
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], already have (79)-(80)
+2021/03/15 17:25:34 [server 3, role 2, term 2], apply log from 79 to 79
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 80 to 81
+2021/03/15 17:25:34 service told service [3] to generate snapshot, snapshotIdx(79)
+2021/03/15 17:25:34 [server 3, role 2, term 2] truncate log from (79)
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (80)-(81)
+2021/03/15 17:25:34 [server 3, role 2, term 2] generate snapshot successfully, current snapshotIdx(79), current first index(80), snapshotTerm(2)
+2021/03/15 17:25:34 [server 0, role 2, term 2], apply log from 79 to 79
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({4  Get 4441299637859090630 15}) from client, index:(82)
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 81 to 82
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 82 to 82
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 82 to 82
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 82 to 82
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (82)-(82)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({1 x 1 8 y Append 4611209382755480816 21}) from client, index:(83)
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (82)-(82)
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 81 to 83
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 82 to 83
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 83 to 83
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 82 to 83
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 0, role 2, term 2], apply log from 80 to 81
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], (82)-(82)
+2021/03/15 17:25:34 [server 3, role 2, term 2] Append Entry successfully from [2], (82)-(83)
+2021/03/15 17:25:34 [server 3, role 2, term 2] Append Entry successfully from [2], already have (82)-(82)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (83)-(83)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 3, role 2, term 2], apply log from 80 to 81
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 82 to 82
+2021/03/15 17:25:34 service told service [2] to generate snapshot, snapshotIdx(82)
+2021/03/15 17:25:34 [server 2, role 0, term 2] truncate log from (82)
+2021/03/15 17:25:34 [server 2, role 0, term 2] generate snapshot successfully, current snapshotIdx(82), current first index(83), snapshotTerm(2)
+2021/03/15 17:25:34 [server 4, role 2, term 2], apply log from 80 to 81
+2021/03/15 17:25:34 [server 1, role 2, term 2], apply log from 80 to 81
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], (83)-(83)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({4  Get 4441299637859090630 16}) from client, index:(84)
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 83 to 84
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 84 to 84
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 84 to 84
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 83 to 84
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (83)-(83)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 83 to 83
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (84)-(84)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 3, role 2, term 2] Append Entry successfully from [2], (84)-(84)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (84)-(84)
+2021/03/15 17:25:34 [server 3, role 2, term 2], apply log from 82 to 83
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 84 to 84
+2021/03/15 17:25:34 [server 4, role 2, term 2], apply log from 82 to 83
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], (84)-(84)
+2021/03/15 17:25:34 [server 0, role 2, term 2], apply log from 82 to 83
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 1, role 2, term 2], apply log from 82 to 83
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({0 x 0 6 y Append 3476614305934909453 14}) from client, index:(85)
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 85 to 85
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 85 to 85
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 85 to 85
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 85 to 85
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (85)-(85)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], (85)-(85)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (85)-(85)
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 85 to 85
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({4 x 4 7 y Append 4441299637859090630 17}) from client, index:(86)
+2021/03/15 17:25:34 [server 4, role 2, term 2], apply log from 84 to 84
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 86 to 86
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 86 to 86
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 86 to 86
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 85 to 86
+2021/03/15 17:25:34 [server 1, role 2, term 2], apply log from 84 to 84
+2021/03/15 17:25:34 service told service [1] to generate snapshot, snapshotIdx(84)
+2021/03/15 17:25:34 [server 1, role 2, term 2] truncate log from (84)
+2021/03/15 17:25:34 [server 1, role 2, term 2] generate snapshot successfully, current snapshotIdx(84), current first index(85), snapshotTerm(2)
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (86)-(86)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 0, role 2, term 2], apply log from 84 to 85
+2021/03/15 17:25:34 [server 3, role 2, term 2] Append Entry successfully from [2], (85)-(86)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 86 to 86
+2021/03/15 17:25:34 [server 3, role 2, term 2], apply log from 84 to 85
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (86)-(86)
+2021/03/15 17:25:34 [server 4, role 2, term 2], apply log from 85 to 85
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({4 x 4 8 y Append 4441299637859090630 18}) from client, index:(87)
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 86 to 87
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 87 to 87
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 87 to 87
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 86 to 87
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], (86)-(87)
+2021/03/15 17:25:34 [server 1, role 2, term 2], apply log from 85 to 86
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (87)-(87)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 3, role 2, term 2] Append Entry successfully from [2], (87)-(87)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (87)-(87)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 0, role 2, term 2], apply log from 86 to 86
+2021/03/15 17:25:34 [server 3, role 2, term 2], apply log from 86 to 86
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 87 to 87
+2021/03/15 17:25:34 [server 4, role 2, term 2], apply log from 86 to 86
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({4 x 4 8 y Append 4441299637859090630 18}) from client, index:(88)
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 88 to 88
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({3 x 3 2 y Append 245686384088071585 7}) from client, index:(89)
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 88 to 89
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 88 to 89
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 88 to 89
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 88 to 89
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 88 to 89
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 88 to 89
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 88 to 89
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (88)-(88)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 4, role 2, term 2], apply log from 87 to 87
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (88)-(89)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 0, role 2, term 2], apply log from 87 to 87
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], (88)-(89)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], already have (88)-(89)
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], already have (88)-(89)
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 88 to 89
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 1, role 2, term 2], apply log from 87 to 87
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (89)-(89)
+2021/03/15 17:25:34 [server 3, role 2, term 2] Append Entry successfully from [2], (88)-(89)
+2021/03/15 17:25:34 [server 3, role 2, term 2] Append Entry successfully from [2], already have (88)-(89)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 3, role 2, term 2], apply log from 87 to 87
+2021/03/15 17:25:34 [server 2, role 0, term 2] send heartbeat to [0]
+2021/03/15 17:25:34 [server 2, role 0, term 2] send heartbeat to [4]
+2021/03/15 17:25:34 [server 2, role 0, term 2] send heartbeat to [1]
+2021/03/15 17:25:34 [server 2, role 0, term 2] send heartbeat to [3]
+2021/03/15 17:25:34 [server 1, role 2, term 2] receive successful heartbeat from [2]
+2021/03/15 17:25:34 [server 1, role 2, term 2], apply log from 88 to 89
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 0, role 2, term 2] receive successful heartbeat from [2]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 0, role 2, term 2], apply log from 88 to 89
+2021/03/15 17:25:34 [server 3, role 2, term 2] receive successful heartbeat from [2]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 3, role 2, term 2], apply log from 88 to 89
+2021/03/15 17:25:34 [server 2, role 0, term 2] send heartbeat to [4]
+2021/03/15 17:25:34 [server 2, role 0, term 2] send heartbeat to [0]
+2021/03/15 17:25:34 [server 2, role 0, term 2] send heartbeat to [3]
+2021/03/15 17:25:34 [server 2, role 0, term 2] send heartbeat to [1]
+2021/03/15 17:25:34 [server 4, role 2, term 2] receive successful heartbeat from [2]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 4, role 2, term 2], apply log from 88 to 89
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({2 x 2 6 y Append 2365589223622558168 20}) from client, index:(90)
+2021/03/15 17:25:34 [server 3, role 2, term 2] receive successful heartbeat from [2]
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 90 to 90
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 90 to 90
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 90 to 90
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 90 to 90
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+2021/03/15 17:25:34 [server 1, role 2, term 2] receive successful heartbeat from [2]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (90)-(90)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 0, role 2, term 2] receive successful heartbeat from [2]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], (90)-(90)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 90 to 90
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (90)-(90)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({2 x 2 6 y Append 2365589223622558168 20}) from client, index:(91)
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 90 to 91
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 91 to 91
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 91 to 91
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 90 to 91
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (91)-(91)
+2021/03/15 17:25:34 [server 0, role 2, term 2] Append Entry successfully from [2], (91)-(91)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [0]
+2021/03/15 17:25:34 [server 0, role 2, term 2], apply log from 90 to 90
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 91 to 91
+2021/03/15 17:25:34 [server 4, role 2, term 2], apply log from 90 to 90
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], (91)-(91)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 1, role 2, term 2], apply log from 90 to 90
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive command({1  Get 4611209382755480816 22}) from client, index:(92)
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [4] from 92 to 92
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [0] from 92 to 92
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [3] from 90 to 92
+2021/03/15 17:25:34 [server 2, role 0, term 2] Append entry to [1] from 92 to 92
+2021/03/15 17:25:34 [server 4, role 2, term 2] Append Entry successfully from [2], (92)-(92)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [4]
+2021/03/15 17:25:34 [server 4, role 2, term 2], apply log from 91 to 91
+2021/03/15 17:25:34 [server 1, role 2, term 2] Append Entry successfully from [2], (92)-(92)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [1]
+2021/03/15 17:25:34 [server 1, role 2, term 2], apply log from 91 to 91
+2021/03/15 17:25:34 [server 2, role 0, term 2], apply log from 92 to 92
+2021/03/15 17:25:34 [server 3, role 2, term 2] Append Entry successfully from [2], (90)-(92)
+2021/03/15 17:25:34 [server 2, role 0, term 2] receive successful append entry response from [3]
+signal: interrupt
+FAIL	6.824/kvraft	2.182s

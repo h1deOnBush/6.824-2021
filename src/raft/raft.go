@@ -786,12 +786,14 @@ func (rf *Raft) InstallSnapshot(args *InstallSnapshotArgs, reply *InstallSnapsho
 		rf.lastApplied = rf.max(rf.lastApplied, rf.lastIncludedIndex)
 		DPrintf("[server %v, role %v, term %v] install snapshot successfully, snapshotIdx(%v), snapshotTerm(%v)", rf.me, rf.state, rf.currentTerm, rf.lastIncludedIndex, rf.lastIncludedTerm)
 		// notify the upper service to switch to snapshot
-		rf.applyCh <- ApplyMsg {
-			SnapshotValid: true,
-			Snapshot:      args.Data,
-			SnapshotIndex: args.LastIncludedIndex,
-			SnapshotTerm:  args.LastIncludedTerm,
-		}
+		go func() {
+			rf.applyCh <- ApplyMsg {
+				SnapshotValid: true,
+				Snapshot:      args.Data,
+				SnapshotIndex: args.LastIncludedIndex,
+				SnapshotTerm:  args.LastIncludedTerm,
+			}
+		} ()
 	} else {
 		// snapshot is obsolete
 		DPrintf("[server %v, role %v, term %v], install snapshot failed, current snapshotIdx(%v), args.snapshotIdx(%v)\n", rf.me, rf.state, rf.currentTerm, rf.lastIncludedIndex, args.LastIncludedIndex)
