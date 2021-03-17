@@ -1,9 +1,8 @@
 #!/bin/zsh
 
-
 for i in `seq 100`
 do
-    go test -run TestSnapshotUnreliable3B -race &> log/log
+    go test -run TestSnapshotRecoverManyClients3B &> log/log1
     if [ $? -ne 0 ]
     then
         echo "$i  fail"

@@ -142,10 +142,10 @@ func (kv *KVServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) {
 			reply.Err = OK
 		} else {
 			reply.Err = ErrWrongLeader
+			DPrintf("wait for raft agreement timeout")
 		}
 		delete(kv.notifyChMap, index)
 		kv.mu.Unlock()
-		DPrintf("wait for raft agreement timeout")
 		return
 	}
 }
@@ -218,6 +218,7 @@ func (kv *KVServer) run() {
 				}
 				// update cache and db
 				kv.db[op.Key] = op.Value
+				raft.DPrintf("server %v,kv.db:%v", kv.me, kv.db)
 				kv.cache[op.ClientId] = op.Seq
 			case "Append":
 				if kv.getCache(op.ClientId, op.Seq) {
@@ -227,11 +228,13 @@ func (kv *KVServer) run() {
 				}
 				// update cache and db
 				kv.db[op.Key] += op.Value
+				//raft.DPrintf("server %v, append key:%v, value:%v", kv.me, op.Key, op.Value)
+				//raft.DPrintf("server %v,kv.db:%v", kv.me, kv.db)
 				kv.cache[op.ClientId] = op.Seq
 			}
 			// after update database can do snapshot, or will lose update
 			kv.takeSnapshot(msg.CommandIndex)
-			//fmt.Printf("[server:%v] , %v\n", kv.me, kv.db)
+			// notify client the result of execution
 			if notifyCh, ok := kv.notifyChMap[msg.CommandIndex]; ok {
 				notifyCh <- Notification {
 					ClientId: op.ClientId,
@@ -247,14 +250,17 @@ func (kv *KVServer) takeSnapshot(index int) {
 	if kv.maxraftstate == -1 {
 		return
 	}
-	if kv.rf.GetRaftStateSize() >= kv.maxraftstate {
+	statesize := kv.rf.GetRaftStateSize()
+	if statesize >= kv.maxraftstate {
 		// take snapshot
+		//raft.DPrintf("[server %v], raftstatesize:%v", kv.me, statesize)
 		w := new(bytes.Buffer)
 		e := labgob.NewEncoder(w)
 		e.Encode(kv.db)
 		e.Encode(kv.cache)
 		data := w.Bytes()
 		kv.rf.Snapshot(index, data)
+		//raft.DPrintf("[server %v], finish snapshot raftstatesize:%v", kv.me, kv.rf.GetRaftStateSize())
 	}
 }
 
@@ -300,7 +306,7 @@ func (kv *KVServer) installSnapshot(snapshot []byte) {
 	d := labgob.NewDecoder(r)
 	if d.Decode(&kv.db) != nil ||
 		d.Decode(&kv.cache) != nil {
-		DPrintf("kvserver %d fails to recover from snapshot", kv.me)
+		DPrintf("kvserver [%v] fails to recover from snapshot", kv.me)
 	}
 	kv.mu.Unlock()
 }

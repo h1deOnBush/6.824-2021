@@ -72,6 +72,7 @@ func (cfg *config) cleanup() {
 	for i := 0; i < len(cfg.kvservers); i++ {
 		if cfg.kvservers[i] != nil {
 			cfg.kvservers[i].Kill()
+			raft.DPrintf("server %v shutdown", i)
 		}
 	}
 	cfg.net.Cleanup()
@@ -278,6 +279,7 @@ func (cfg *config) ShutdownServer(i int) {
 	if kv != nil {
 		cfg.mu.Unlock()
 		kv.Kill()
+		raft.DPrintf("server %v shutdown", i)
 		cfg.mu.Lock()
 		cfg.kvservers[i] = nil
 	}

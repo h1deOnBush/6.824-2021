@@ -187,3 +187,13 @@ Raft的follower节点在收到leader节点发来的snapshot后，通知上层ser
  
 
 ![](/home/zhouhao/桌面/未命名文件.png)
+
+
+
+## KV server
+
+1. 客户端通过clerk和服务端进行通信，一个客户端关联一个clerk。
+2. 一个kv server和一个raft peer相关联，kv server之间通过raft peer进行通信。
+3. clerk收到客户端发来的请求时，寻找与raft leader相关联的server请求执行命令，若找到的server不是leader，则随机请求下一个sever进行服务
+4. server收到clerk发来的请求，首先将该命令传给raft peer令其复制给其他raft节点，在该命令成功apply后，检查该命令是否执行过，接着根据命令修改数据库，返回客户端，告知其执行结果
+

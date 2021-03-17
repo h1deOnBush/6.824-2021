@@ -60,9 +60,7 @@ type Raft struct {
 	electionTimeout time.Duration
 	tick time.Time
 	heartbeatTimer time.Time
-	// applyTimer time.Time
 	notifyApply chan struct{}
-
 	// use for candidate to collect votes
 	voteCount int
 	// raft peer's state, 0 leader 1 candidate 2 follower

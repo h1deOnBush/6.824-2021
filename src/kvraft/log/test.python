@@ -1,0 +1,6 @@
+a = 1
+with open("log") as f:
+    with open("log2", "w") as f1:
+        for text in f.readlines():
+            if "[server 4, role 0, term 2], rf.lock" in text or "[server 4, role 0, term 2], rf.unlock" in text:
+                f1.write(text)

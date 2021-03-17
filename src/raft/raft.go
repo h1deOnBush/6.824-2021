@@ -37,8 +37,8 @@ func (rf *Raft) GetState() (int, bool) {
 	var term int
 	var isleader bool
 	// Your code here (2A).
-	rf.mu.Lock()
-	defer rf.mu.Unlock()
+	rf.lock("GetState()")
+	defer rf.unlock("GetState()")
 
 	term = rf.currentTerm
 	if rf.state == 0 {
@@ -95,7 +95,7 @@ func (rf *Raft) readPersist(data []byte) {
 		d.Decode(&voteFor) != nil || d.Decode(&logs) != nil || d.Decode(&lastIncludedIndex) != nil || d.Decode(&lastIncludedTerm) != nil {
 		fmt.Println("readPersist error")
 	} else {
-		rf.mu.Lock()
+		rf.lock("readPersist()")
 		rf.currentTerm = currentTerm
 		rf.logs = logs
 		rf.voteFor = voteFor
@@ -103,17 +103,17 @@ func (rf *Raft) readPersist(data []byte) {
 		rf.lastIncludedTerm  = lastIncludedTerm
 		rf.lastApplied = lastIncludedIndex
 		rf.commitIndex = lastIncludedIndex
-		rf.mu.Unlock()
+		rf.unlock("readPersist()")
 	}
 }
 
 
 
 func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply)  {
-	rf.mu.Lock()
+	rf.lock("AppendEntries()")
 	defer func() {
 		rf.persist()
-		rf.mu.Unlock()
+		rf.unlock("AppendEntries()")
 	}()
 
 	reply.Term = rf.currentTerm
@@ -139,7 +139,7 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 	}
 
 	// leader's prevLogIndex too large, larger than the last index in follower, need to decrease
-	if args.PrevLogIndex>rf.getLastIdx() {
+	if args.PrevLogIndex > rf.getLastIdx() {
 		DPrintf("[server %v, role %v, term %v], prevLogIndex(%v) too large, larger than the last index in follower, need to decrease\n", rf.me, rf.state, rf.currentTerm, args.PrevLogIndex)
 		reply.Success = false
 		reply.ConflictIndex = rf.getLastIdx()+1
@@ -214,10 +214,10 @@ func (rf *Raft) sendAppendEntries(server int, args *AppendEntriesArgs, reply *Ap
 //
 func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 	// Your code here (2A, 2B).
-	rf.mu.Lock()
+	rf.lock("RequestVote")
 	defer func() {
 		rf.persist()
-		rf.mu.Unlock()
+		rf.unlock("RequestVote")
 	}()
 
 	reply.Term = rf.currentTerm
@@ -318,8 +318,8 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 	isLeader := true
 
 	// Your code here (2B).
-	rf.mu.Lock()
-	defer rf.mu.Unlock()
+	rf.lock("start")
+	defer rf.unlock("start")
 
 	term = rf.currentTerm
 	isLeader = rf.state == 0
@@ -408,7 +408,7 @@ func Make(peers []*labrpc.ClientEnd, me int,
 
 func (rf *Raft) ticker()  {
 	for !rf.killed() {
-		rf.mu.Lock()
+		rf.lock("")
 		if time.Now().Sub(rf.tick) >= rf.electionTimeout {
 			switch rf.state {
 			case 1:
@@ -417,9 +417,10 @@ func (rf *Raft) ticker()  {
 				rf.changeState(1)
 			}
 		}
-		rf.mu.Unlock()
+		rf.unlock("")
 		time.Sleep(10 * time.Millisecond)
 	}
+	//DPrintf("server %v has been killed", rf.me)
 }
 
 
@@ -474,25 +475,26 @@ func (rf *Raft) changeState(state uint32) {
 
 func (rf *Raft) heartbeats() {
 	for !rf.killed() {
-		rf.mu.Lock()
+		rf.lock("")
 		if rf.state == 0 {
 			if time.Now().Sub(rf.heartbeatTimer) >= time.Duration(heartbeatTimeout)*time.Millisecond {
 				rf.sendHeartbeat()
 				rf.heartbeatTimer = time.Now()
 			}
 		}
-		rf.mu.Unlock()
+		rf.unlock("")
 		time.Sleep(10 * time.Millisecond)
 	}
+	//DPrintf("server %v has been killed", rf.me)
 }
 
 func (rf *Raft) sendHeartbeat() {
 	for i:=0; i<len(rf.peers); i++ {
 		if i != rf.me {
 			go func(i int) {
-				rf.mu.Lock()
+				rf.lock(fmt.Sprintf("sendheartbeat %v", i))
 				if rf.state != 0 {
-					rf.mu.Unlock()
+					rf.unlock(fmt.Sprintf("sendheartbeat %v", i))
 					return
 				}
 				currentTerm := rf.currentTerm
@@ -506,7 +508,7 @@ func (rf *Raft) sendHeartbeat() {
 					}
 					DPrintf("[server %v, role %v, term %v] ready to send installSnapshot to [%v]", rf.me, rf.state, rf.currentTerm, i)
 					//rf.heartbeatTimer = time.Now()
-					rf.mu.Unlock()
+					rf.unlock(fmt.Sprintf("sendheartbeat %v", i))
 					var reply InstallSnapshotReply
 					rf.syncSnapshot(i, &args, &reply)
 					return
@@ -530,7 +532,7 @@ func (rf *Raft) sendHeartbeat() {
 					Entries:      entries,
 					LeaderCommit: rf.commitIndex,
 				}
-				rf.mu.Unlock()
+				rf.unlock(fmt.Sprintf("sendheartbeat %v", i))
 				var reply AppendEntriesReply
 				if len(entries) == 0 {
 					DPrintf("[server %v, role %v, term %v] send heartbeat to [%v]\n", rf.me, state, currentTerm, i)
@@ -538,9 +540,10 @@ func (rf *Raft) sendHeartbeat() {
 					DPrintf("[server %v, role %v, term %v] Append entry to [%v] from %v to %v\n", rf.me, state, currentTerm, i, prevLogIndex+1, prevLogIndex+len(entries))
 				}
 				ok := rf.sendAppendEntries(i, &args, &reply)
-				rf.mu.Lock()
+				rf.lock(fmt.Sprintf("sendheartbeat %v end", i))
 				if rf.currentTerm != args.Term || rf.state!=0 {
-					rf.mu.Unlock()
+					DPrintf("[server %v, role %v, term %v] term or role has changed", rf.me, rf.state, rf.currentTerm)
+					rf.unlock(fmt.Sprintf("sendheartbeat %v end", i))
 					return
 				}
 				if ok {
@@ -560,7 +563,9 @@ func (rf *Raft) sendHeartbeat() {
 							if count > len(rf.peers)/2 {
 								// most of nodes agreed on rf.log[i]
 								rf.commitIndex = N
+								DPrintf("[server %v] try to notice apply", rf.me)
 								rf.notifyApply <- struct{}{}
+								DPrintf("[server %v] notice apply success", rf.me)
 								break
 							}
 						}
@@ -586,9 +591,9 @@ func (rf *Raft) sendHeartbeat() {
 						}
 					}
 				} else {
-					//DPrintf("[server %v, role %v, term %v] not receive response from [%v] for append entry, delay or drop may happen\n", rf.me, state, currentTerm, i)
+					DPrintf("[server %v, role %v, term %v] not receive response from [%v] for append entry, delay or drop may happen\n", rf.me, state, currentTerm, i)
 				}
-				rf.mu.Unlock()
+				rf.unlock(fmt.Sprintf("sendheartbeat %v end", i))
 			}(i)
 		}
 	}
@@ -598,27 +603,49 @@ func (rf *Raft) sendHeartbeat() {
 func (rf *Raft) syncSnapshot(server int, args *InstallSnapshotArgs, reply *InstallSnapshotReply) {
 	ok := rf.sendInstallSnapshot(server, args, reply)
 	if ok {
-		rf.mu.Lock()
+		rf.lock("syncSnapshot")
 		if rf.currentTerm != args.Term || rf.state != 0 {
 			DPrintf("[server %v, role %v, term %v] sync snapshot to [%v] failed, term or role has already changed", rf.me, rf.state, rf.currentTerm, server)
-			rf.mu.Unlock()
+			rf.unlock("syncSnapshot")
 			return
 		}
 		if reply.Term > rf.currentTerm {
 			rf.currentTerm = reply.Term
 			rf.persist()
 			rf.changeState(2)
-			rf.mu.Unlock()
+			rf.unlock("syncSnapshot")
 			return
 		}
-		rf.nextIndex[server] = args.LastIncludedIndex+1
-		rf.matchIndex[server] = args.LastIncludedIndex
-		rf.mu.Unlock()
+		// TODO: why this step
+		if rf.matchIndex[server] < args.LastIncludedIndex {
+			rf.matchIndex[server] = args.LastIncludedIndex
+		}
+		rf.nextIndex[server] = rf.matchIndex[server] + 1
+		rf.unlock("syncSnapshot")
 	} else {
 		//DPrintf("[server %v, role %v, term %v], sendInstallSnapshot to [%v] not receive response\n", rf.me, rf.state, rf.currentTerm, server)
 	}
 }
 
+func (rf *Raft) lock(s string) {
+	if s!="" {
+		DPrintf("[server %v], try rf.lock(%v)", rf.me, s)
+	}
+	rf.mu.Lock()
+	if s!= "" {
+		DPrintf("[server %v], rf.lock success(%v)", rf.me, s)
+	}
+}
+
+func (rf *Raft) unlock(s string)  {
+	if s!="" {
+		DPrintf("[server %v], try rf.unlock(%v)", rf.me, s)
+	}
+	rf.mu.Unlock()
+	if s!="" {
+		DPrintf("[server %v], rf.unlock success (%v)", rf.me, s)
+	}
+}
 
 func (rf *Raft) collectVotes(args RequestVoteArgs) {
 	for i:=0; i<len(rf.peers); i++ {
@@ -628,10 +655,10 @@ func (rf *Raft) collectVotes(args RequestVoteArgs) {
 				DPrintf("[server %v, role 1, term %v], send request vote to [%v]", rf.me, args.Term, i)
 				ok := rf.sendRequestVote(i, &args, &reply)
 				if ok {
-					rf.mu.Lock()
+					rf.lock("collectVotes")
 					if args.Term != rf.currentTerm || rf.state != 1{
 						DPrintf("[server %v, role %v, term %v], term has changed to (%v), or state has changed, obsolete response\n", rf.me, rf.state, args.Term, rf.currentTerm)
-						rf.mu.Unlock()
+						rf.unlock("collectVotes")
 						return
 					}
 					if reply.VoteGranted {
@@ -647,11 +674,11 @@ func (rf *Raft) collectVotes(args RequestVoteArgs) {
 							rf.currentTerm = reply.Term
 							rf.persist()
 							rf.changeState(2)
-							rf.mu.Unlock()
+							rf.unlock("collectVotes")
 							return
 						}
 					}
-					rf.mu.Unlock()
+					rf.unlock("collectVotes")
 				} else {
 					//DPrintf("[server %v, role %v, term %v] not receive vote response from [%v], drop or delay may happens", rf.me, state, currentTerm, i)
 				}
@@ -665,23 +692,25 @@ func (rf *Raft) applyLoop() {
 	for !rf.killed() {
 		select {
 		case <-rf.notifyApply:
+			DPrintf("server %v, receive from notifyApply", rf.me)
 			rf.applyEntries()
 		default:
 			time.Sleep(10 * time.Millisecond)
 		}
 	}
+	//DPrintf("server %v has been killed", rf.me)
 }
 
 
 func (rf *Raft) applyEntries() {
-	rf.mu.Lock()
+	rf.lock("applyEntries")
 	var entriesToApply []Entry
 	if rf.commitIndex > rf.lastApplied {
 		// ready to apply
 		DPrintf("[server %v, role %v, term %v], apply log from %v to %v\n", rf.me, rf.state, rf.currentTerm, rf.lastApplied+1, rf.commitIndex)
 		entriesToApply = append(entriesToApply, rf.logs[(rf.getRealIdx(rf.lastApplied)+1):(rf.getRealIdx(rf.commitIndex)+1)]...)
 	}
-	rf.mu.Unlock()
+	rf.unlock("applyEntries")
 	for _, entry := range entriesToApply {
 		msg := ApplyMsg {
 			CommandValid: true,
@@ -689,12 +718,12 @@ func (rf *Raft) applyEntries() {
 			CommandIndex: entry.Index,
 		}
 		rf.applyCh <- msg
-		rf.mu.Lock()
+		rf.lock("applyEntries")
 		// when apply entries to upper service, leader told follower to install snapshot, this situation may raise apply out of order
 		if rf.lastApplied < msg.CommandIndex {
 			rf.lastApplied = msg.CommandIndex
 		}
-		rf.mu.Unlock()
+		rf.unlock("applyEntries")
 	}
 }
 
@@ -705,8 +734,8 @@ func (rf *Raft) applyEntries() {
 //
 func (rf *Raft) CondInstallSnapshot(lastIncludedTerm int, lastIncludedIndex int, snapshot []byte) bool {
 
-	rf.mu.Lock()
-	defer rf.mu.Unlock()
+	rf.lock("")
+	defer rf.unlock("")
 	// Your code here (2D).service receives a snapshot from rafe peer,
 	// service receive snapshot from raft peer
 	if lastIncludedIndex == rf.lastIncludedIndex && lastIncludedTerm == rf.lastIncludedTerm {
@@ -720,8 +749,8 @@ func (rf *Raft) CondInstallSnapshot(lastIncludedTerm int, lastIncludedIndex int,
 }
 
 func (rf *Raft) GetSnapshotIndex() int {
-	rf.mu.Lock()
-	defer rf.mu.Unlock()
+	rf.lock("getsnapshotindex()")
+	defer rf.unlock("getsnapshotindex()")
 
 	return rf.lastIncludedIndex
 }
@@ -732,8 +761,8 @@ func (rf *Raft) GetSnapshotIndex() int {
 // that index. Raft should now trim its log as much as possible.
 func (rf *Raft) Snapshot(index int, snapshot []byte) {
 	// Your code here (2D).
-	rf.mu.Lock()
-	defer rf.mu.Unlock()
+	rf.lock("Snapshot")
+	defer rf.unlock("Snapshot")
 
 	DPrintf("service told service [%v] to generate snapshot, snapshotIdx(%v)\n", rf.me, index)
 	if index <= rf.lastIncludedIndex {
@@ -751,8 +780,9 @@ func (rf *Raft) Snapshot(index int, snapshot []byte) {
 }
 
 func (rf *Raft) GetRaftStateSize() int {
-	rf.mu.Lock()
-	defer rf.mu.Unlock()
+	rf.lock("getraftstatesize()")
+	defer rf.unlock("getraftstatesize()")
+
 	return rf.persister.RaftStateSize()
 }
 
@@ -760,8 +790,8 @@ func (rf *Raft) GetRaftStateSize() int {
 //	follower receive snapshot from leader, use the applyCh to send the snapshot(included in ApplyMsg) to the service
 //
 func (rf *Raft) InstallSnapshot(args *InstallSnapshotArgs, reply *InstallSnapshotReply) {
-	rf.mu.Lock()
-	defer rf.mu.Unlock()
+	rf.lock("installSnapshot")
+	defer rf.unlock("installSnapshot")
 
 	reply.Term = rf.currentTerm
 	if args.Term < rf.currentTerm {
@@ -785,7 +815,7 @@ func (rf *Raft) InstallSnapshot(args *InstallSnapshotArgs, reply *InstallSnapsho
 		rf.commitIndex = rf.max(rf.commitIndex, rf.lastIncludedIndex)
 		rf.lastApplied = rf.max(rf.lastApplied, rf.lastIncludedIndex)
 		DPrintf("[server %v, role %v, term %v] install snapshot successfully, snapshotIdx(%v), snapshotTerm(%v)", rf.me, rf.state, rf.currentTerm, rf.lastIncludedIndex, rf.lastIncludedTerm)
-		// notify the upper service to switch to snapshot
+		// notify the upper service to switch to snapshot, can't do this while hold the lock
 		go func() {
 			rf.applyCh <- ApplyMsg {
 				SnapshotValid: true,
