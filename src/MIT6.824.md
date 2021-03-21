@@ -197,3 +197,10 @@ Raft的follower节点在收到leader节点发来的snapshot后，通知上层ser
 3. clerk收到客户端发来的请求时，寻找与raft leader相关联的server请求执行命令，若找到的server不是leader，则随机请求下一个sever进行服务
 4. server收到clerk发来的请求，首先将该命令传给raft peer令其复制给其他raft节点，在该命令成功apply后，检查该命令是否执行过，接着根据命令修改数据库，返回客户端，告知其执行结果
 
+
+
+
+
+问题：
+
+leader向follower发送快照，follower的snapshotindex小于leader的snapshotindex，但是follower的lastappied比leader的snapshotindex大，因此在安装快照时follower通知上层服务安装快照，从而上层服务的db丢失数据

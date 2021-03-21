@@ -196,7 +196,6 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 		} else {
 			rf.commitIndex = args.LeaderCommit
 		}
-		rf.notifyApply <- struct{}{}
 	}
 	rf.changeState(2)
 	reply.Success = true
@@ -318,8 +317,8 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 	isLeader := true
 
 	// Your code here (2B).
-	rf.lock("start")
-	defer rf.unlock("start")
+	rf.lock("")
+	defer rf.unlock("")
 
 	term = rf.currentTerm
 	isLeader = rf.state == 0
@@ -381,7 +380,6 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	// initialization for leader election
 	rf.currentTerm = 1
 	rf.applyCh = applyCh
-	rf.notifyApply = make(chan struct{}, 100)
 	rf.state = 2
 	rf.commitIndex = 0
 	rf.lastApplied = 0
@@ -551,6 +549,7 @@ func (rf *Raft) sendHeartbeat() {
 						DPrintf("[server %v, role %v, term %v] receive successful append entry response from [%v]\n", rf.me, rf.state, rf.currentTerm, i)
 						rf.nextIndex[i] = args.PrevLogIndex+len(args.Entries)+1
 						rf.matchIndex[i] = rf.nextIndex[i]-1
+
 						// update committed
 						for N := rf.getLastIdx(); N > rf.max(rf.commitIndex, rf.lastIncludedIndex); N-- {
 							count := 0
@@ -563,9 +562,6 @@ func (rf *Raft) sendHeartbeat() {
 							if count > len(rf.peers)/2 {
 								// most of nodes agreed on rf.log[i]
 								rf.commitIndex = N
-								DPrintf("[server %v] try to notice apply", rf.me)
-								rf.notifyApply <- struct{}{}
-								DPrintf("[server %v] notice apply success", rf.me)
 								break
 							}
 						}
@@ -629,21 +625,21 @@ func (rf *Raft) syncSnapshot(server int, args *InstallSnapshotArgs, reply *Insta
 
 func (rf *Raft) lock(s string) {
 	if s!="" {
-		DPrintf("[server %v], try rf.lock(%v)", rf.me, s)
+		// DPrintf("[server %v], try rf.lock(%v)", rf.me, s)
 	}
 	rf.mu.Lock()
 	if s!= "" {
-		DPrintf("[server %v], rf.lock success(%v)", rf.me, s)
+		// DPrintf("[server %v], rf.lock success(%v)", rf.me, s)
 	}
 }
 
 func (rf *Raft) unlock(s string)  {
 	if s!="" {
-		DPrintf("[server %v], try rf.unlock(%v)", rf.me, s)
+		// DPrintf("[server %v], try rf.unlock(%v)", rf.me, s)
 	}
 	rf.mu.Unlock()
 	if s!="" {
-		DPrintf("[server %v], rf.unlock success (%v)", rf.me, s)
+		// DPrintf("[server %v], rf.unlock success (%v)", rf.me, s)
 	}
 }
 
@@ -690,13 +686,8 @@ func (rf *Raft) collectVotes(args RequestVoteArgs) {
 
 func (rf *Raft) applyLoop() {
 	for !rf.killed() {
-		select {
-		case <-rf.notifyApply:
-			DPrintf("server %v, receive from notifyApply", rf.me)
-			rf.applyEntries()
-		default:
-			time.Sleep(10 * time.Millisecond)
-		}
+		rf.applyEntries()
+		time.Sleep(10 * time.Millisecond)
 	}
 	//DPrintf("server %v has been killed", rf.me)
 }
@@ -811,19 +802,24 @@ func (rf *Raft) InstallSnapshot(args *InstallSnapshotArgs, reply *InstallSnapsho
 		rf.lastIncludedTerm = args.LastIncludedTerm
 		rf.persistStateAndSnapshot(args.Data)
 
+		// if lastApplied > lastIncludedIndex and we told the upper server to install snapshot, will cause db lost data
+		if rf.lastApplied < rf.lastIncludedIndex {
+			go func() {
+				rf.applyCh <- ApplyMsg {
+					SnapshotValid: true,
+					Snapshot:      args.Data,
+					SnapshotIndex: args.LastIncludedIndex,
+					SnapshotTerm:  args.LastIncludedTerm,
+				}
+			} ()
+		}
+
 		// guaranty that commitIndex >= lastIncludedIndex, lastApplied>=lastIncludedIndex
 		rf.commitIndex = rf.max(rf.commitIndex, rf.lastIncludedIndex)
 		rf.lastApplied = rf.max(rf.lastApplied, rf.lastIncludedIndex)
 		DPrintf("[server %v, role %v, term %v] install snapshot successfully, snapshotIdx(%v), snapshotTerm(%v)", rf.me, rf.state, rf.currentTerm, rf.lastIncludedIndex, rf.lastIncludedTerm)
 		// notify the upper service to switch to snapshot, can't do this while hold the lock
-		go func() {
-			rf.applyCh <- ApplyMsg {
-				SnapshotValid: true,
-				Snapshot:      args.Data,
-				SnapshotIndex: args.LastIncludedIndex,
-				SnapshotTerm:  args.LastIncludedTerm,
-			}
-		} ()
+
 	} else {
 		// snapshot is obsolete
 		DPrintf("[server %v, role %v, term %v], install snapshot failed, current snapshotIdx(%v), args.snapshotIdx(%v)\n", rf.me, rf.state, rf.currentTerm, rf.lastIncludedIndex, args.LastIncludedIndex)

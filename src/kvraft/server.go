@@ -218,7 +218,8 @@ func (kv *KVServer) run() {
 				}
 				// update cache and db
 				kv.db[op.Key] = op.Value
-				raft.DPrintf("server %v,kv.db:%v", kv.me, kv.db)
+				raft.DPrintf("apply (%v) put key:%v, value:%v", msg.CommandIndex, op.Key, op.Value)
+				raft.DPrintf("put server %v,kv.db:%v", kv.me, kv.db)
 				kv.cache[op.ClientId] = op.Seq
 			case "Append":
 				if kv.getCache(op.ClientId, op.Seq) {
@@ -228,8 +229,8 @@ func (kv *KVServer) run() {
 				}
 				// update cache and db
 				kv.db[op.Key] += op.Value
-				//raft.DPrintf("server %v, append key:%v, value:%v", kv.me, op.Key, op.Value)
-				//raft.DPrintf("server %v,kv.db:%v", kv.me, kv.db)
+				raft.DPrintf("apply (%v) append key:%v, value:%v", msg.CommandIndex, op.Key, op.Value)
+				raft.DPrintf("append server %v,kv.db:%v", kv.me, kv.db)
 				kv.cache[op.ClientId] = op.Seq
 			}
 			// after update database can do snapshot, or will lose update
