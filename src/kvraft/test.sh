@@ -2,7 +2,7 @@
 
 for i in `seq 1000`
 do
-    go test  &> log/log1
+    go test -race &> log/log
     if [ $? -ne 0 ]
     then
         echo "$i  fail"

@@ -57,8 +57,8 @@ func (ck *Clerk) Get(key string) string {
 		Id:  ck.id,
 		Seq: ck.seq,
 	}
-	var reply GetReply
 	for {
+		var reply GetReply
 		if !ck.servers[ck.leaderId].Call("KVServer.Get", &args, &reply) {
 			DPrintf("connect to server [%v] failed", ck.leaderId)
 			reply.Err = ErrWrongLeader
@@ -97,9 +97,10 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
 		Id:    ck.id,
 		Seq:   ck.seq,
 	}
-	var reply PutAppendReply
+
 	if op == "Put" || op == "Append" {
 		for {
+			var reply PutAppendReply
 			if ck.servers[ck.leaderId].Call("KVServer.PutAppend", &args, &reply) && reply.Err==OK {
 				DPrintf("[client %v, commandSeq %v] command(%v) execute, (key:%v, value %v)",ck.id, ck.seq, op, key, value)
 				return
