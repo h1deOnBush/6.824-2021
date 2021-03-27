@@ -1,0 +1,675 @@
+Test: Basic leave/join ...
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:0 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:0 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Join Args:{Servers:map[1:[x y z]] ClientId:4365120753513891995 Seq:1} ClientId:4365120753513891995 Seq:1}
+2021/03/27 08:50:18 join success, config: {Num:1 Shards:[1 1 1 1 1 1 1 1 1 1] Groups:map[1:[x y z]]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 join success, config: {Num:1 Shards:[1 1 1 1 1 1 1 1 1 1] Groups:map[1:[x y z]]}
+2021/03/27 08:50:18 query success, config: {Num:1 Shards:[1 1 1 1 1 1 1 1 1 1] Groups:map[1:[x y z]]}
+2021/03/27 08:50:18 join success, config: {Num:1 Shards:[1 1 1 1 1 1 1 1 1 1] Groups:map[1:[x y z]]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:1 Shards:[1 1 1 1 1 1 1 1 1 1] Groups:map[1:[x y z]]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Join Args:{Servers:map[2:[a b c]] ClientId:4365120753513891995 Seq:2} ClientId:4365120753513891995 Seq:2}
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 1 1 1 1 1 1 1 1 1], gidShards: map[1:[1 2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 1 1 1 1 1 1 1 1], gidShards: map[1:[2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 2 1 1 1 1 1 1 1], gidShards: map[1:[3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 2 2 1 1 1 1 1 1], gidShards: map[1:[4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 2 2 2 1 1 1 1 1], gidShards: map[1:[5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 join success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 1 1 1 1 1 1 1 1 1], gidShards: map[1:[1 2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 1 1 1 1 1 1 1 1], gidShards: map[1:[2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 2 1 1 1 1 1 1 1], gidShards: map[1:[3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 1 1 1 1 1 1 1 1 1], gidShards: map[1:[1 2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 1 1 1 1 1 1 1 1], gidShards: map[1:[2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 2 1 1 1 1 1 1 1], gidShards: map[1:[3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 2 2 1 1 1 1 1 1], gidShards: map[1:[4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 2 2 2 1 1 1 1 1], gidShards: map[1:[5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 join success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:18 query success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 2 2 1 1 1 1 1 1], gidShards: map[1:[4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 maxGid:1, cfg.Shards: [2 2 2 2 2 1 1 1 1 1], gidShards: map[1:[5 6 7 8 9] 2:[]]
+2021/03/27 08:50:18 join success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Leave Args:{GIDs:[1] ClientId:4365120753513891995 Seq:3} ClientId:4365120753513891995 Seq:3}
+2021/03/27 08:50:18 leave success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 leave success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:18 leave success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:18 query success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Leave Args:{GIDs:[2] ClientId:4365120753513891995 Seq:4} ClientId:4365120753513891995 Seq:4}
+2021/03/27 08:50:18 leave success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:18 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:18 leave success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:18 leave success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+  ... Passed
+Test: Historical queries ...
+2021/03/27 08:50:18 sc 1, receive client op: {Name:Query Args:{Num:0} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:0 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:18 sc 1, receive client op: {Name:Query Args:{Num:1} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:1 Shards:[1 1 1 1 1 1 1 1 1 1] Groups:map[1:[x y z]]}
+2021/03/27 08:50:18 sc 1, receive client op: {Name:Query Args:{Num:2} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:18 sc 1, receive client op: {Name:Query Args:{Num:0} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:0 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:18 sc 1, receive client op: {Name:Query Args:{Num:3} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:18 sc 1, receive client op: {Name:Query Args:{Num:4} ClientId:0 Seq:-1}
+2021/03/27 08:50:18 query success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:19 join success, config: {Num:1 Shards:[1 1 1 1 1 1 1 1 1 1] Groups:map[1:[x y z]]}
+2021/03/27 08:50:19 maxGid:1, cfg.Shards: [2 1 1 1 1 1 1 1 1 1], gidShards: map[1:[1 2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:19 maxGid:1, cfg.Shards: [2 2 1 1 1 1 1 1 1 1], gidShards: map[1:[2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:19 maxGid:1, cfg.Shards: [2 2 2 1 1 1 1 1 1 1], gidShards: map[1:[3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:19 maxGid:1, cfg.Shards: [2 2 2 2 1 1 1 1 1 1], gidShards: map[1:[4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:19 maxGid:1, cfg.Shards: [2 2 2 2 2 1 1 1 1 1], gidShards: map[1:[5 6 7 8 9] 2:[]]
+2021/03/27 08:50:19 join success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:19 leave success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:19 leave success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:19 sc 2, receive client op: {Name:Query Args:{Num:0} ClientId:0 Seq:-1}
+2021/03/27 08:50:19 query success, config: {Num:0 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:19 sc 2, receive client op: {Name:Query Args:{Num:1} ClientId:0 Seq:-1}
+2021/03/27 08:50:19 query success, config: {Num:1 Shards:[1 1 1 1 1 1 1 1 1 1] Groups:map[1:[x y z]]}
+2021/03/27 08:50:19 sc 2, receive client op: {Name:Query Args:{Num:2} ClientId:0 Seq:-1}
+2021/03/27 08:50:19 query success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:19 sc 2, receive client op: {Name:Query Args:{Num:0} ClientId:0 Seq:-1}
+2021/03/27 08:50:19 query success, config: {Num:0 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:19 sc 2, receive client op: {Name:Query Args:{Num:3} ClientId:0 Seq:-1}
+2021/03/27 08:50:19 query success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:19 sc 2, receive client op: {Name:Query Args:{Num:4} ClientId:0 Seq:-1}
+2021/03/27 08:50:19 query success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:20 join success, config: {Num:1 Shards:[1 1 1 1 1 1 1 1 1 1] Groups:map[1:[x y z]]}
+2021/03/27 08:50:20 maxGid:1, cfg.Shards: [2 1 1 1 1 1 1 1 1 1], gidShards: map[1:[1 2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:20 maxGid:1, cfg.Shards: [2 2 1 1 1 1 1 1 1 1], gidShards: map[1:[2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:20 maxGid:1, cfg.Shards: [2 2 2 1 1 1 1 1 1 1], gidShards: map[1:[3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:20 maxGid:1, cfg.Shards: [2 2 2 2 1 1 1 1 1 1], gidShards: map[1:[4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:20 maxGid:1, cfg.Shards: [2 2 2 2 2 1 1 1 1 1], gidShards: map[1:[5 6 7 8 9] 2:[]]
+2021/03/27 08:50:20 join success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:20 leave success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:20 leave success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:0} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:0 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:1 Shards:[1 1 1 1 1 1 1 1 1 1] Groups:map[1:[x y z]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:2} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:0} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:0 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:3} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:4} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+  ... Passed
+Test: Move ...
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[503:[3a 3b 3c]] ClientId:4365120753513891995 Seq:5} ClientId:4365120753513891995 Seq:5}
+2021/03/27 08:50:20 join success, config: {Num:5 Shards:[503 503 503 503 503 503 503 503 503 503] Groups:map[503:[3a 3b 3c]]}
+2021/03/27 08:50:20 join success, config: {Num:1 Shards:[1 1 1 1 1 1 1 1 1 1] Groups:map[1:[x y z]]}
+2021/03/27 08:50:20 maxGid:1, cfg.Shards: [2 1 1 1 1 1 1 1 1 1], gidShards: map[1:[1 2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:20 maxGid:1, cfg.Shards: [2 2 1 1 1 1 1 1 1 1], gidShards: map[1:[2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:20 maxGid:1, cfg.Shards: [2 2 2 1 1 1 1 1 1 1], gidShards: map[1:[3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:20 maxGid:1, cfg.Shards: [2 2 2 2 1 1 1 1 1 1], gidShards: map[1:[4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:20 maxGid:1, cfg.Shards: [2 2 2 2 2 1 1 1 1 1], gidShards: map[1:[5 6 7 8 9] 2:[]]
+2021/03/27 08:50:20 join success, config: {Num:2 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:20 leave success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:20 leave success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[504:[4a 4b 4c]] ClientId:4365120753513891995 Seq:6} ClientId:4365120753513891995 Seq:6}
+2021/03/27 08:50:20 join success, config: {Num:5 Shards:[503 503 503 503 503 503 503 503 503 503] Groups:map[503:[3a 3b 3c]]}
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 503 503 503 503 503 503 503 503 503], gidShards: map[503:[1 2 3 4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 503 503 503 503 503 503 503 503], gidShards: map[503:[2 3 4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 504 503 503 503 503 503 503 503], gidShards: map[503:[3 4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 504 504 503 503 503 503 503 503], gidShards: map[503:[4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 504 504 504 503 503 503 503 503], gidShards: map[503:[5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 join success, config: {Num:6 Shards:[504 504 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 join success, config: {Num:5 Shards:[503 503 503 503 503 503 503 503 503 503] Groups:map[503:[3a 3b 3c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 503 503 503 503 503 503 503 503 503], gidShards: map[503:[1 2 3 4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 503 503 503 503 503 503 503 503], gidShards: map[503:[2 3 4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 504 503 503 503 503 503 503 503], gidShards: map[503:[3 4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 504 504 503 503 503 503 503 503], gidShards: map[503:[4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 504 504 504 503 503 503 503 503], gidShards: map[503:[5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 join success, config: {Num:6 Shards:[504 504 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 503 503 503 503 503 503 503 503 503], gidShards: map[503:[1 2 3 4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 503 503 503 503 503 503 503 503], gidShards: map[503:[2 3 4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 504 503 503 503 503 503 503 503], gidShards: map[503:[3 4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 504 504 503 503 503 503 503 503], gidShards: map[503:[4 5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 maxGid:503, cfg.Shards: [504 504 504 504 504 503 503 503 503 503], gidShards: map[503:[5 6 7 8 9] 504:[]]
+2021/03/27 08:50:20 join success, config: {Num:6 Shards:[504 504 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 query success, config: {Num:6 Shards:[504 504 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Move Args:{Shard:0 GID:503 ClientId:4365120753513891995 Seq:7} ClientId:4365120753513891995 Seq:7}
+2021/03/27 08:50:20 move success, config: {Num:7 Shards:[503 504 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 move success, config: {Num:7 Shards:[503 504 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 query success, config: {Num:7 Shards:[503 504 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 move success, config: {Num:7 Shards:[503 504 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:7 Shards:[503 504 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Move Args:{Shard:1 GID:503 ClientId:4365120753513891995 Seq:8} ClientId:4365120753513891995 Seq:8}
+2021/03/27 08:50:20 move success, config: {Num:8 Shards:[503 503 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 move success, config: {Num:8 Shards:[503 503 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 query success, config: {Num:8 Shards:[503 503 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 move success, config: {Num:8 Shards:[503 503 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:8 Shards:[503 503 504 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Move Args:{Shard:2 GID:503 ClientId:4365120753513891995 Seq:9} ClientId:4365120753513891995 Seq:9}
+2021/03/27 08:50:20 move success, config: {Num:9 Shards:[503 503 503 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 move success, config: {Num:9 Shards:[503 503 503 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 query success, config: {Num:9 Shards:[503 503 503 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 move success, config: {Num:9 Shards:[503 503 503 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:9 Shards:[503 503 503 504 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Move Args:{Shard:3 GID:503 ClientId:4365120753513891995 Seq:10} ClientId:4365120753513891995 Seq:10}
+2021/03/27 08:50:20 move success, config: {Num:10 Shards:[503 503 503 503 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 move success, config: {Num:10 Shards:[503 503 503 503 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 move success, config: {Num:10 Shards:[503 503 503 503 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 query success, config: {Num:10 Shards:[503 503 503 503 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:10 Shards:[503 503 503 503 504 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Move Args:{Shard:4 GID:503 ClientId:4365120753513891995 Seq:11} ClientId:4365120753513891995 Seq:11}
+2021/03/27 08:50:20 move success, config: {Num:11 Shards:[503 503 503 503 503 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 move success, config: {Num:11 Shards:[503 503 503 503 503 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 query success, config: {Num:11 Shards:[503 503 503 503 503 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 move success, config: {Num:11 Shards:[503 503 503 503 503 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:11 Shards:[503 503 503 503 503 503 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Move Args:{Shard:5 GID:504 ClientId:4365120753513891995 Seq:12} ClientId:4365120753513891995 Seq:12}
+2021/03/27 08:50:20 move success, config: {Num:12 Shards:[503 503 503 503 503 504 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 move success, config: {Num:12 Shards:[503 503 503 503 503 504 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 move success, config: {Num:12 Shards:[503 503 503 503 503 504 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 query success, config: {Num:12 Shards:[503 503 503 503 503 504 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:12 Shards:[503 503 503 503 503 504 503 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Move Args:{Shard:6 GID:504 ClientId:4365120753513891995 Seq:13} ClientId:4365120753513891995 Seq:13}
+2021/03/27 08:50:20 move success, config: {Num:13 Shards:[503 503 503 503 503 504 504 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 move success, config: {Num:13 Shards:[503 503 503 503 503 504 504 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 move success, config: {Num:13 Shards:[503 503 503 503 503 504 504 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 query success, config: {Num:13 Shards:[503 503 503 503 503 504 504 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:13 Shards:[503 503 503 503 503 504 504 503 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Move Args:{Shard:7 GID:504 ClientId:4365120753513891995 Seq:14} ClientId:4365120753513891995 Seq:14}
+2021/03/27 08:50:20 move success, config: {Num:14 Shards:[503 503 503 503 503 504 504 504 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:14 Shards:[503 503 503 503 503 504 504 504 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 move success, config: {Num:14 Shards:[503 503 503 503 503 504 504 504 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 move success, config: {Num:14 Shards:[503 503 503 503 503 504 504 504 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:14 Shards:[503 503 503 503 503 504 504 504 503 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Move Args:{Shard:8 GID:504 ClientId:4365120753513891995 Seq:15} ClientId:4365120753513891995 Seq:15}
+2021/03/27 08:50:20 move success, config: {Num:15 Shards:[503 503 503 503 503 504 504 504 504 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 move success, config: {Num:15 Shards:[503 503 503 503 503 504 504 504 504 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 query success, config: {Num:15 Shards:[503 503 503 503 503 504 504 504 504 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 move success, config: {Num:15 Shards:[503 503 503 503 503 504 504 504 504 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:15 Shards:[503 503 503 503 503 504 504 504 504 503] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Move Args:{Shard:9 GID:504 ClientId:4365120753513891995 Seq:16} ClientId:4365120753513891995 Seq:16}
+2021/03/27 08:50:20 move success, config: {Num:16 Shards:[503 503 503 503 503 504 504 504 504 504] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 move success, config: {Num:16 Shards:[503 503 503 503 503 504 504 504 504 504] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 query success, config: {Num:16 Shards:[503 503 503 503 503 504 504 504 504 504] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 move success, config: {Num:16 Shards:[503 503 503 503 503 504 504 504 504 504] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:16 Shards:[503 503 503 503 503 504 504 504 504 504] Groups:map[503:[3a 3b 3c] 504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[503] ClientId:4365120753513891995 Seq:17} ClientId:4365120753513891995 Seq:17}
+2021/03/27 08:50:20 leave success, config: {Num:17 Shards:[504 504 504 504 504 504 504 504 504 504] Groups:map[504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[504] ClientId:4365120753513891995 Seq:18} ClientId:4365120753513891995 Seq:18}
+2021/03/27 08:50:20 leave success, config: {Num:17 Shards:[504 504 504 504 504 504 504 504 504 504] Groups:map[504:[4a 4b 4c]]}
+2021/03/27 08:50:20 leave success, config: {Num:18 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+  ... Passed
+Test: Concurrent leave/join ...
+2021/03/27 08:50:20 leave success, config: {Num:17 Shards:[504 504 504 504 504 504 504 504 504 504] Groups:map[504:[4a 4b 4c]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[1100:[s100a]] ClientId:3572346925840094327 Seq:1} ClientId:3572346925840094327 Seq:1}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[1120:[s120a]] ClientId:4446907718756099340 Seq:1} ClientId:4446907718756099340 Seq:1}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[1130:[s130a]] ClientId:1939819586130819438 Seq:1} ClientId:1939819586130819438 Seq:1}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[1110:[s110a]] ClientId:3242778184465469310 Seq:1} ClientId:3242778184465469310 Seq:1}
+2021/03/27 08:50:20 leave success, config: {Num:18 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[1150:[s150a]] ClientId:3638919016468937176 Seq:1} ClientId:3638919016468937176 Seq:1}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[1170:[s170a]] ClientId:2484738023581901776 Seq:1} ClientId:2484738023581901776 Seq:1}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[1160:[s160a]] ClientId:3982316926443127438 Seq:1} ClientId:3982316926443127438 Seq:1}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[1180:[s180a]] ClientId:3673259683493571726 Seq:1} ClientId:3673259683493571726 Seq:1}
+2021/03/27 08:50:20 leave success, config: {Num:18 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[1190:[s190a]] ClientId:2009252595466820322 Seq:1} ClientId:2009252595466820322 Seq:1}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[1140:[s140a]] ClientId:2192448401371884419 Seq:1} ClientId:2192448401371884419 Seq:1}
+2021/03/27 08:50:20 join success, config: {Num:19 Shards:[1100 1100 1100 1100 1100 1100 1100 1100 1100 1100] Groups:map[1100:[s100a]]}
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1100 1100 1100 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[1 2 3 4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1100 1100 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[2 3 4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1100 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[3 4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1120 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1120 1120 1100 1100 1100 1100 1100], gidShards: map[1100:[5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 join success, config: {Num:20 Shards:[1120 1120 1120 1120 1120 1100 1100 1100 1100 1100] Groups:map[1100:[s100a] 1120:[s120a]]}
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1120 1120 1130 1100 1100 1100 1100], gidShards: map[1100:[6 7 8 9] 1120:[0 1 2 3 4] 1130:[]]
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1130 1120 1120 1120 1120 1130 1100 1100 1100 1100], gidShards: map[1100:[6 7 8 9] 1120:[1 2 3 4] 1130:[]]
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1130 1130 1120 1120 1120 1130 1100 1100 1100 1100], gidShards: map[1100:[6 7 8 9] 1120:[2 3 4] 1130:[]]
+2021/03/27 08:50:20 join success, config: {Num:21 Shards:[1130 1130 1120 1120 1120 1130 1100 1100 1100 1100] Groups:map[1100:[s100a] 1120:[s120a] 1130:[s130a]]}
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1130 1130 1120 1120 1120 1130 1110 1100 1100 1100], gidShards: map[1100:[7 8 9] 1110:[] 1120:[2 3 4] 1130:[0 1 5]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1130 1130 1120 1120 1120 1130 1110 1110 1100 1100], gidShards: map[1100:[8 9] 1110:[] 1120:[2 3 4] 1130:[0 1 5]]
+2021/03/27 08:50:20 join success, config: {Num:22 Shards:[1130 1130 1120 1120 1120 1130 1110 1110 1100 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a]]}
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1130 1130 1150 1120 1120 1130 1110 1110 1100 1100], gidShards: map[1100:[8 9] 1110:[6 7] 1120:[3 4] 1130:[0 1 5] 1150:[]]
+2021/03/27 08:50:20 maxGid:1130, cfg.Shards: [1150 1130 1150 1120 1120 1130 1110 1110 1100 1100], gidShards: map[1100:[8 9] 1110:[6 7] 1120:[3 4] 1130:[1 5] 1150:[]]
+2021/03/27 08:50:20 join success, config: {Num:23 Shards:[1150 1130 1150 1120 1120 1130 1110 1110 1100 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a]]}
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1150 1130 1150 1120 1120 1130 1110 1110 1170 1100], gidShards: map[1100:[9] 1110:[6 7] 1120:[3 4] 1130:[1 5] 1150:[0 2] 1170:[]]
+2021/03/27 08:50:20 join success, config: {Num:24 Shards:[1150 1130 1150 1120 1120 1130 1110 1110 1170 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1170:[s170a]]}
+2021/03/27 08:50:20 maxGid:1150, cfg.Shards: [1160 1130 1150 1120 1120 1130 1110 1110 1170 1100], gidShards: map[1100:[9] 1110:[6 7] 1120:[3 4] 1130:[1 5] 1150:[2] 1160:[] 1170:[8]]
+2021/03/27 08:50:20 join success, config: {Num:25 Shards:[1160 1130 1150 1120 1120 1130 1110 1110 1170 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1160:[s160a] 1170:[s170a]]}
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1160 1130 1150 1180 1120 1130 1110 1110 1170 1100], gidShards: map[1100:[9] 1110:[6 7] 1120:[4] 1130:[1 5] 1150:[2] 1160:[0] 1170:[8] 1180:[]]
+2021/03/27 08:50:20 join success, config: {Num:26 Shards:[1160 1130 1150 1180 1120 1130 1110 1110 1170 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[110:[s110b]] ClientId:3242778184465469310 Seq:2} ClientId:3242778184465469310 Seq:2}
+2021/03/27 08:50:20 join success, config: {Num:19 Shards:[1100 1100 1100 1100 1100 1100 1100 1100 1100 1100] Groups:map[1100:[s100a]]}
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1100 1100 1100 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[1 2 3 4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1100 1100 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[2 3 4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1100 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[3 4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1120 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1120 1120 1100 1100 1100 1100 1100], gidShards: map[1100:[5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 join success, config: {Num:20 Shards:[1120 1120 1120 1120 1120 1100 1100 1100 1100 1100] Groups:map[1100:[s100a] 1120:[s120a]]}
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1120 1120 1130 1100 1100 1100 1100], gidShards: map[1100:[6 7 8 9] 1120:[0 1 2 3 4] 1130:[]]
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1130 1120 1120 1120 1120 1130 1100 1100 1100 1100], gidShards: map[1100:[6 7 8 9] 1120:[1 2 3 4] 1130:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1130 1120 1120 1120 1120 1130 1130 1100 1100 1100], gidShards: map[1100:[7 8 9] 1120:[1 2 3 4] 1130:[]]
+2021/03/27 08:50:20 join success, config: {Num:21 Shards:[1130 1120 1120 1120 1120 1130 1130 1100 1100 1100] Groups:map[1100:[s100a] 1120:[s120a] 1130:[s130a]]}
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1130 1110 1120 1120 1120 1130 1130 1100 1100 1100], gidShards: map[1100:[7 8 9] 1110:[] 1120:[2 3 4] 1130:[0 5 6]]
+2021/03/27 08:50:20 maxGid:1130, cfg.Shards: [1110 1110 1120 1120 1120 1130 1130 1100 1100 1100], gidShards: map[1100:[7 8 9] 1110:[] 1120:[2 3 4] 1130:[5 6]]
+2021/03/27 08:50:20 join success, config: {Num:22 Shards:[1110 1110 1120 1120 1120 1130 1130 1100 1100 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[100:[s100b]] ClientId:3572346925840094327 Seq:2} ClientId:3572346925840094327 Seq:2}
+2021/03/27 08:50:20 maxGid:1130, cfg.Shards: [1160 1190 1150 1180 1120 1130 1110 1110 1170 1100], gidShards: map[1100:[9] 1110:[6 7] 1120:[4] 1130:[5] 1150:[2] 1160:[0] 1170:[8] 1180:[3] 1190:[]]
+2021/03/27 08:50:20 join success, config: {Num:27 Shards:[1160 1190 1150 1180 1120 1130 1110 1110 1170 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 maxGid:1110, cfg.Shards: [1160 1190 1150 1180 1120 1130 1140 1110 1170 1100], gidShards: map[1100:[9] 1110:[7] 1120:[4] 1130:[5] 1140:[] 1150:[2] 1160:[0] 1170:[8] 1180:[3] 1190:[1]]
+2021/03/27 08:50:20 join success, config: {Num:28 Shards:[1160 1190 1150 1180 1120 1130 1140 1110 1170 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[150:[s150b]] ClientId:3638919016468937176 Seq:2} ClientId:3638919016468937176 Seq:2}
+2021/03/27 08:50:20 join success, config: {Num:19 Shards:[1100 1100 1100 1100 1100 1100 1100 1100 1100 1100] Groups:map[1100:[s100a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[180:[s180b]] ClientId:3673259683493571726 Seq:2} ClientId:3673259683493571726 Seq:2}
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1110 1110 1120 1120 1120 1130 1130 1150 1100 1100], gidShards: map[1100:[8 9] 1110:[0 1] 1120:[2 3 4] 1130:[5 6] 1150:[]]
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1110 1110 1150 1120 1120 1130 1130 1150 1100 1100], gidShards: map[1100:[8 9] 1110:[0 1] 1120:[3 4] 1130:[5 6] 1150:[]]
+2021/03/27 08:50:20 join success, config: {Num:23 Shards:[1110 1110 1150 1120 1120 1130 1130 1150 1100 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a]]}
+2021/03/27 08:50:20 maxGid:1110, cfg.Shards: [1170 1110 1150 1120 1120 1130 1130 1150 1100 1100], gidShards: map[1100:[8 9] 1110:[1] 1120:[3 4] 1130:[5 6] 1150:[2 7] 1170:[]]
+2021/03/27 08:50:20 join success, config: {Num:24 Shards:[1170 1110 1150 1120 1120 1130 1130 1150 1100 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1170:[s170a]]}
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1100 1100 1100 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[1 2 3 4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1100 1100 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[2 3 4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1100 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[3 4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1120 1100 1100 1100 1100 1100 1100], gidShards: map[1100:[4 5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1120 1120 1100 1100 1100 1100 1100], gidShards: map[1100:[5 6 7 8 9] 1120:[]]
+2021/03/27 08:50:20 join success, config: {Num:20 Shards:[1120 1120 1120 1120 1120 1100 1100 1100 1100 1100] Groups:map[1100:[s100a] 1120:[s120a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[140:[s140b]] ClientId:2192448401371884419 Seq:2} ClientId:2192448401371884419 Seq:2}
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1120 1120 1120 1120 1120 1130 1100 1100 1100 1100], gidShards: map[1100:[6 7 8 9] 1120:[0 1 2 3 4] 1130:[]]
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1130 1120 1120 1120 1120 1130 1100 1100 1100 1100], gidShards: map[1100:[6 7 8 9] 1120:[1 2 3 4] 1130:[]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1130 1120 1120 1120 1120 1130 1130 1100 1100 1100], gidShards: map[1100:[7 8 9] 1120:[1 2 3 4] 1130:[]]
+2021/03/27 08:50:20 join success, config: {Num:21 Shards:[1130 1120 1120 1120 1120 1130 1130 1100 1100 1100] Groups:map[1100:[s100a] 1120:[s120a] 1130:[s130a]]}
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1130 1110 1120 1120 1120 1130 1130 1100 1100 1100], gidShards: map[1100:[7 8 9] 1110:[] 1120:[2 3 4] 1130:[0 5 6]]
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1130 1110 1120 1120 1120 1130 1130 1110 1100 1100], gidShards: map[1100:[8 9] 1110:[] 1120:[2 3 4] 1130:[0 5 6]]
+2021/03/27 08:50:20 join success, config: {Num:22 Shards:[1130 1110 1120 1120 1120 1130 1130 1110 1100 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a]]}
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1130 1110 1150 1120 1120 1130 1130 1110 1100 1100], gidShards: map[1100:[8 9] 1110:[1 7] 1120:[3 4] 1130:[0 5 6] 1150:[]]
+2021/03/27 08:50:20 maxGid:1130, cfg.Shards: [1150 1110 1150 1120 1120 1130 1130 1110 1100 1100], gidShards: map[1100:[8 9] 1110:[1 7] 1120:[3 4] 1130:[5 6] 1150:[]]
+2021/03/27 08:50:20 join success, config: {Num:23 Shards:[1150 1110 1150 1120 1120 1130 1130 1110 1100 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a]]}
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1150 1110 1150 1170 1120 1130 1130 1110 1100 1100], gidShards: map[1100:[8 9] 1110:[1 7] 1120:[4] 1130:[5 6] 1150:[0 2] 1170:[]]
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[170:[s170b]] ClientId:2484738023581901776 Seq:2} ClientId:2484738023581901776 Seq:2}
+2021/03/27 08:50:20 join success, config: {Num:24 Shards:[1150 1110 1150 1170 1120 1130 1130 1110 1100 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1170:[s170a]]}
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1150 1110 1150 1170 1120 1130 1130 1110 1160 1100], gidShards: map[1100:[9] 1110:[1 7] 1120:[4] 1130:[5 6] 1150:[0 2] 1160:[] 1170:[3]]
+2021/03/27 08:50:20 join success, config: {Num:25 Shards:[1150 1110 1150 1170 1120 1130 1130 1110 1160 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1160:[s160a] 1170:[s170a]]}
+2021/03/27 08:50:20 maxGid:1130, cfg.Shards: [1150 1110 1150 1170 1120 1180 1130 1110 1160 1100], gidShards: map[1100:[9] 1110:[1 7] 1120:[4] 1130:[6] 1150:[0 2] 1160:[8] 1170:[3] 1180:[]]
+2021/03/27 08:50:20 join success, config: {Num:26 Shards:[1150 1110 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a]]}
+2021/03/27 08:50:20 maxGid:1110, cfg.Shards: [1150 1190 1150 1170 1120 1180 1130 1110 1160 1100], gidShards: map[1100:[9] 1110:[7] 1120:[4] 1130:[6] 1150:[0 2] 1160:[8] 1170:[3] 1180:[5] 1190:[]]
+2021/03/27 08:50:20 join success, config: {Num:27 Shards:[1150 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 maxGid:1150, cfg.Shards: [1140 1190 1150 1170 1120 1180 1130 1110 1160 1100], gidShards: map[1100:[9] 1110:[7] 1120:[4] 1130:[6] 1140:[] 1150:[2] 1160:[8] 1170:[3] 1180:[5] 1190:[1]]
+2021/03/27 08:50:20 join success, config: {Num:28 Shards:[1140 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 maxGid:1150, cfg.Shards: [1170 1110 1160 1120 1120 1130 1130 1150 1100 1100], gidShards: map[1100:[8 9] 1110:[1] 1120:[3 4] 1130:[5 6] 1150:[7] 1160:[] 1170:[0]]
+2021/03/27 08:50:20 join success, config: {Num:25 Shards:[1170 1110 1160 1120 1120 1130 1130 1150 1100 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1160:[s160a] 1170:[s170a]]}
+2021/03/27 08:50:20 maxGid:1130, cfg.Shards: [1170 1110 1160 1120 1120 1180 1130 1150 1100 1100], gidShards: map[1100:[8 9] 1110:[1] 1120:[3 4] 1130:[6] 1150:[7] 1160:[2] 1170:[0] 1180:[]]
+2021/03/27 08:50:20 join success, config: {Num:26 Shards:[1170 1110 1160 1120 1120 1180 1130 1150 1100 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[160:[s160b]] ClientId:3982316926443127438 Seq:2} ClientId:3982316926443127438 Seq:2}
+2021/03/27 08:50:20 join success, config: {Num:29 Shards:[1140 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[110:[s110b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:30 Shards:[1140 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[100:[s100b] 110:[s110b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:31 Shards:[1140 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[100:[s100b] 110:[s110b] 150:[s150b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[120:[s120b]] ClientId:4446907718756099340 Seq:2} ClientId:4446907718756099340 Seq:2}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[130:[s130b]] ClientId:1939819586130819438 Seq:2} ClientId:1939819586130819438 Seq:2}
+2021/03/27 08:50:20 join success, config: {Num:29 Shards:[1160 1190 1150 1180 1120 1130 1140 1110 1170 1100] Groups:map[110:[s110b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[190:[s190b]] ClientId:2009252595466820322 Seq:2} ClientId:2009252595466820322 Seq:2}
+2021/03/27 08:50:20 maxGid:1100, cfg.Shards: [1170 1110 1160 1120 1120 1180 1130 1150 1190 1100], gidShards: map[1100:[9] 1110:[1] 1120:[3 4] 1130:[6] 1150:[7] 1160:[2] 1170:[0] 1180:[5] 1190:[]]
+2021/03/27 08:50:20 join success, config: {Num:27 Shards:[1170 1110 1160 1120 1120 1180 1130 1150 1190 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 maxGid:1120, cfg.Shards: [1170 1110 1160 1140 1120 1180 1130 1150 1190 1100], gidShards: map[1100:[9] 1110:[1] 1120:[4] 1130:[6] 1140:[] 1150:[7] 1160:[2] 1170:[0] 1180:[5] 1190:[8]]
+2021/03/27 08:50:20 join success, config: {Num:28 Shards:[1170 1110 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:32 Shards:[1140 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[100:[s100b] 110:[s110b] 150:[s150b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:33 Shards:[1140 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[100:[s100b] 110:[s110b] 140:[s140b] 150:[s150b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:30 Shards:[1160 1190 1150 1180 1120 1130 1140 1110 1170 1100] Groups:map[100:[s100b] 110:[s110b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[1110] ClientId:3242778184465469310 Seq:3} ClientId:3242778184465469310 Seq:3}
+2021/03/27 08:50:20 join success, config: {Num:29 Shards:[1170 1110 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[110:[s110b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:30 Shards:[1170 1110 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[100:[s100b] 110:[s110b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:34 Shards:[1140 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[100:[s100b] 110:[s110b] 140:[s140b] 150:[s150b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:31 Shards:[1170 1110 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[100:[s100b] 110:[s110b] 150:[s150b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:32 Shards:[1170 1110 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[100:[s100b] 110:[s110b] 150:[s150b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:33 Shards:[1170 1110 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[100:[s100b] 110:[s110b] 140:[s140b] 150:[s150b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:34 Shards:[1170 1110 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[100:[s100b] 110:[s110b] 140:[s140b] 150:[s150b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:31 Shards:[1160 1190 1150 1180 1120 1130 1140 1110 1170 1100] Groups:map[100:[s100b] 110:[s110b] 150:[s150b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[1100] ClientId:3572346925840094327 Seq:3} ClientId:3572346925840094327 Seq:3}
+2021/03/27 08:50:20 join success, config: {Num:35 Shards:[1140 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[100:[s100b] 110:[s110b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:36 Shards:[1140 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:37 Shards:[1140 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[1150] ClientId:3638919016468937176 Seq:3} ClientId:3638919016468937176 Seq:3}
+2021/03/27 08:50:20 join success, config: {Num:32 Shards:[1160 1190 1150 1180 1120 1130 1140 1110 1170 1100] Groups:map[100:[s100b] 110:[s110b] 150:[s150b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:35 Shards:[1170 1110 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[100:[s100b] 110:[s110b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:33 Shards:[1160 1190 1150 1180 1120 1130 1140 1110 1170 1100] Groups:map[100:[s100b] 110:[s110b] 140:[s140b] 150:[s150b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:36 Shards:[1170 1110 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:34 Shards:[1160 1190 1150 1180 1120 1130 1140 1110 1170 1100] Groups:map[100:[s100b] 110:[s110b] 140:[s140b] 150:[s150b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:35 Shards:[1160 1190 1150 1180 1120 1130 1140 1110 1170 1100] Groups:map[100:[s100b] 110:[s110b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:36 Shards:[1160 1190 1150 1180 1120 1130 1140 1110 1170 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:37 Shards:[1160 1190 1150 1180 1120 1130 1140 1110 1170 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:38 Shards:[1140 1190 1150 1170 1120 1180 1130 1110 1160 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:37 Shards:[1170 1110 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:39 Shards:[1140 1190 1150 1170 1120 1180 1130 110 1160 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:38 Shards:[1160 1190 1150 1180 1120 1130 1140 1110 1170 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:39 Shards:[1160 1190 1150 1180 1120 1130 1140 170 1170 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 join success, config: {Num:38 Shards:[1170 1110 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:39 Shards:[1170 100 1160 1140 1120 1180 1130 1150 1190 1100] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[1180] ClientId:3673259683493571726 Seq:3} ClientId:3673259683493571726 Seq:3}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[1140] ClientId:2192448401371884419 Seq:3} ClientId:2192448401371884419 Seq:3}
+2021/03/27 08:50:20 leave success, config: {Num:40 Shards:[1160 1190 1150 1180 1120 1130 1140 170 1170 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:41 Shards:[1160 1190 110 1180 1120 1130 1140 170 1170 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[1170] ClientId:2484738023581901776 Seq:3} ClientId:2484738023581901776 Seq:3}
+2021/03/27 08:50:20 leave success, config: {Num:40 Shards:[1170 100 1160 1140 1120 1180 1130 1150 1190 110] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:41 Shards:[1170 100 1160 1140 1120 1180 1130 140 1190 110] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:40 Shards:[1140 1190 1150 1170 1120 1180 1130 110 1160 170] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:41 Shards:[1140 1190 130 1170 1120 1180 1130 110 1160 170] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[1130] ClientId:1939819586130819438 Seq:3} ClientId:1939819586130819438 Seq:3}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[1160] ClientId:3982316926443127438 Seq:3} ClientId:3982316926443127438 Seq:3}
+2021/03/27 08:50:20 leave success, config: {Num:42 Shards:[1160 1190 110 190 1120 1130 1140 170 1170 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:43 Shards:[1160 1190 110 190 1120 1130 180 170 1170 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[1120] ClientId:4446907718756099340 Seq:3} ClientId:4446907718756099340 Seq:3}
+2021/03/27 08:50:20 leave success, config: {Num:42 Shards:[1140 1190 130 1170 1120 190 1130 110 1160 170] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:43 Shards:[140 1190 130 1170 1120 190 1130 110 1160 170] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Leave Args:{GIDs:[1190] ClientId:2009252595466820322 Seq:3} ClientId:2009252595466820322 Seq:3}
+2021/03/27 08:50:20 leave success, config: {Num:44 Shards:[1160 1190 110 190 1120 1130 180 170 100 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1160:[s160a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:45 Shards:[1160 1190 110 190 1120 130 180 170 100 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1160:[s160a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:46 Shards:[140 1190 110 190 1120 130 180 170 100 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:47 Shards:[140 1190 110 190 150 130 180 170 100 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:42 Shards:[1170 100 1160 1140 1120 180 1130 140 1190 110] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:43 Shards:[1170 100 1160 130 1120 180 1130 140 1190 110] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:48 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 leave success, config: {Num:44 Shards:[140 1190 130 120 1120 190 1130 110 1160 170] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1160:[s160a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:45 Shards:[140 1190 130 120 1120 190 160 110 1160 170] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1160:[s160a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:44 Shards:[190 100 1160 130 1120 180 1130 140 1190 110] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1130:[s130a] 1160:[s160a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:46 Shards:[140 1190 130 120 1120 190 160 110 100 170] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:47 Shards:[140 1190 130 120 150 190 160 110 100 170] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:45 Shards:[190 100 1160 130 1120 180 160 140 1190 110] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1160:[s160a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:48 Shards:[140 180 130 120 150 190 160 110 100 170] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 leave success, config: {Num:46 Shards:[190 100 120 130 1120 180 160 140 1190 110] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1120:[s120a] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:47 Shards:[190 100 120 130 170 180 160 140 1190 110] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1190:[s190a]]}
+2021/03/27 08:50:20 leave success, config: {Num:48 Shards:[190 100 120 130 170 180 160 140 150 110] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 query success, config: {Num:48 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+  ... Passed
+Test: Minimal transfers after joins ...
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 query success, config: {Num:48 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[11:[11a 11b 11b]] ClientId:4365120753513891995 Seq:19} ClientId:4365120753513891995 Seq:19}
+2021/03/27 08:50:20 join success, config: {Num:49 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[11:[11a 11b 11b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[12:[12a 12b 12b]] ClientId:4365120753513891995 Seq:20} ClientId:4365120753513891995 Seq:20}
+2021/03/27 08:50:20 join success, config: {Num:49 Shards:[190 100 120 130 170 180 160 140 150 110] Groups:map[11:[11a 11b 11b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 join success, config: {Num:49 Shards:[140 180 130 120 150 190 160 110 100 170] Groups:map[11:[11a 11b 11b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 join success, config: {Num:50 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[13:[13a 13b 13b]] ClientId:4365120753513891995 Seq:21} ClientId:4365120753513891995 Seq:21}
+2021/03/27 08:50:20 join success, config: {Num:50 Shards:[190 100 120 130 170 180 160 140 150 110] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 join success, config: {Num:50 Shards:[140 180 130 120 150 190 160 110 100 170] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 join success, config: {Num:51 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[14:[14a 14b 14b]] ClientId:4365120753513891995 Seq:22} ClientId:4365120753513891995 Seq:22}
+2021/03/27 08:50:20 join success, config: {Num:51 Shards:[190 100 120 130 170 180 160 140 150 110] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 join success, config: {Num:51 Shards:[140 180 130 120 150 190 160 110 100 170] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 join success, config: {Num:52 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Join Args:{Servers:map[15:[15a 15b 15b]] ClientId:4365120753513891995 Seq:23} ClientId:4365120753513891995 Seq:23}
+2021/03/27 08:50:20 join success, config: {Num:52 Shards:[190 100 120 130 170 180 160 140 150 110] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 join success, config: {Num:52 Shards:[140 180 130 120 150 190 160 110 100 170] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 join success, config: {Num:53 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:20 join success, config: {Num:53 Shards:[190 100 120 130 170 180 160 140 150 110] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 join success, config: {Num:53 Shards:[140 180 130 120 150 190 160 110 100 170] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:20 query success, config: {Num:53 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+  ... Passed
+Test: Minimal transfers after leaves ...
+2021/03/27 08:50:21 sc 0, receive client op: {Name:Leave Args:{GIDs:[11] ClientId:4365120753513891995 Seq:24} ClientId:4365120753513891995 Seq:24}
+2021/03/27 08:50:21 leave success, config: {Num:54 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 sc 0, receive client op: {Name:Leave Args:{GIDs:[12] ClientId:4365120753513891995 Seq:25} ClientId:4365120753513891995 Seq:25}
+2021/03/27 08:50:21 leave success, config: {Num:54 Shards:[190 100 120 130 170 180 160 140 150 110] Groups:map[12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 leave success, config: {Num:54 Shards:[140 180 130 120 150 190 160 110 100 170] Groups:map[12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 leave success, config: {Num:55 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 sc 0, receive client op: {Name:Leave Args:{GIDs:[13] ClientId:4365120753513891995 Seq:26} ClientId:4365120753513891995 Seq:26}
+2021/03/27 08:50:21 leave success, config: {Num:55 Shards:[140 180 130 120 150 190 160 110 100 170] Groups:map[13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 leave success, config: {Num:56 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 leave success, config: {Num:55 Shards:[190 100 120 130 170 180 160 140 150 110] Groups:map[13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 sc 0, receive client op: {Name:Leave Args:{GIDs:[14] ClientId:4365120753513891995 Seq:27} ClientId:4365120753513891995 Seq:27}
+2021/03/27 08:50:21 leave success, config: {Num:56 Shards:[190 100 120 130 170 180 160 140 150 110] Groups:map[14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 leave success, config: {Num:56 Shards:[140 180 130 120 150 190 160 110 100 170] Groups:map[14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 leave success, config: {Num:57 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 sc 0, receive client op: {Name:Leave Args:{GIDs:[15] ClientId:4365120753513891995 Seq:28} ClientId:4365120753513891995 Seq:28}
+2021/03/27 08:50:21 leave success, config: {Num:57 Shards:[140 180 130 120 150 190 160 110 100 170] Groups:map[15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 leave success, config: {Num:57 Shards:[190 100 120 130 170 180 160 140 150 110] Groups:map[15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 leave success, config: {Num:58 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 sc 0, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 leave success, config: {Num:58 Shards:[190 100 120 130 170 180 160 140 150 110] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 leave success, config: {Num:58 Shards:[140 180 130 120 150 190 160 110 100 170] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+2021/03/27 08:50:21 query success, config: {Num:58 Shards:[140 160 110 190 150 130 180 170 100 120] Groups:map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]}
+  ... Passed
+Test: Multi-group join/leave ...
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 query success, config: {Num:0 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 query success, config: {Num:0 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[1:[x y z] 2:[a b c]] ClientId:2792554517681005200 Seq:1} ClientId:2792554517681005200 Seq:1}
+2021/03/27 08:50:21 maxGid:2, cfg.Shards: [1 2 2 2 2 2 2 2 2 2], gidShards: map[1:[] 2:[1 2 3 4 5 6 7 8 9]]
+2021/03/27 08:50:21 maxGid:2, cfg.Shards: [1 1 2 2 2 2 2 2 2 2], gidShards: map[1:[] 2:[2 3 4 5 6 7 8 9]]
+2021/03/27 08:50:21 maxGid:2, cfg.Shards: [1 1 1 2 2 2 2 2 2 2], gidShards: map[1:[] 2:[3 4 5 6 7 8 9]]
+2021/03/27 08:50:21 maxGid:2, cfg.Shards: [1 1 1 1 2 2 2 2 2 2], gidShards: map[1:[] 2:[4 5 6 7 8 9]]
+2021/03/27 08:50:21 maxGid:2, cfg.Shards: [1 1 1 1 1 2 2 2 2 2], gidShards: map[1:[] 2:[5 6 7 8 9]]
+2021/03/27 08:50:21 join success, config: {Num:1 Shards:[1 1 1 1 1 2 2 2 2 2] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 1 1 1 1 1 1 1 1 1], gidShards: map[1:[1 2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 2 1 1 1 1 1 1 1 1], gidShards: map[1:[2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 2 2 1 1 1 1 1 1 1], gidShards: map[1:[3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 2 2 2 1 1 1 1 1 1], gidShards: map[1:[4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 2 2 2 2 1 1 1 1 1], gidShards: map[1:[5 6 7 8 9] 2:[]]
+2021/03/27 08:50:21 join success, config: {Num:1 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:21 query success, config: {Num:1 Shards:[1 1 1 1 1 2 2 2 2 2] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 1 1 1 1 1 1 1 1 1], gidShards: map[1:[1 2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 2 1 1 1 1 1 1 1 1], gidShards: map[1:[2 3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 2 2 1 1 1 1 1 1 1], gidShards: map[1:[3 4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 2 2 2 1 1 1 1 1 1], gidShards: map[1:[4 5 6 7 8 9] 2:[]]
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 2 2 2 2 1 1 1 1 1], gidShards: map[1:[5 6 7 8 9] 2:[]]
+2021/03/27 08:50:21 join success, config: {Num:1 Shards:[2 2 2 2 2 1 1 1 1 1] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:21 query success, config: {Num:1 Shards:[1 1 1 1 1 2 2 2 2 2] Groups:map[1:[x y z] 2:[a b c]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[3:[j k l]] ClientId:2792554517681005200 Seq:2} ClientId:2792554517681005200 Seq:2}
+2021/03/27 08:50:21 maxGid:2, cfg.Shards: [1 1 1 1 1 3 2 2 2 2], gidShards: map[1:[0 1 2 3 4] 2:[6 7 8 9] 3:[]]
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [3 1 1 1 1 3 2 2 2 2], gidShards: map[1:[1 2 3 4] 2:[6 7 8 9] 3:[]]
+2021/03/27 08:50:21 maxGid:2, cfg.Shards: [3 1 1 1 1 3 3 2 2 2], gidShards: map[1:[1 2 3 4] 2:[7 8 9] 3:[]]
+2021/03/27 08:50:21 join success, config: {Num:2 Shards:[3 1 1 1 1 3 3 2 2 2] Groups:map[1:[x y z] 2:[a b c] 3:[j k l]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 2 2 2 2 3 1 1 1 1], gidShards: map[1:[6 7 8 9] 2:[0 1 2 3 4] 3:[]]
+2021/03/27 08:50:21 maxGid:2, cfg.Shards: [3 2 2 2 2 3 1 1 1 1], gidShards: map[1:[6 7 8 9] 2:[1 2 3 4] 3:[]]
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [3 2 2 2 2 3 3 1 1 1], gidShards: map[1:[7 8 9] 2:[1 2 3 4] 3:[]]
+2021/03/27 08:50:21 join success, config: {Num:2 Shards:[3 2 2 2 2 3 3 1 1 1] Groups:map[1:[x y z] 2:[a b c] 3:[j k l]]}
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [2 2 2 2 2 3 1 1 1 1], gidShards: map[1:[6 7 8 9] 2:[0 1 2 3 4] 3:[]]
+2021/03/27 08:50:21 maxGid:2, cfg.Shards: [3 2 2 2 2 3 1 1 1 1], gidShards: map[1:[6 7 8 9] 2:[1 2 3 4] 3:[]]
+2021/03/27 08:50:21 maxGid:1, cfg.Shards: [3 2 2 2 2 3 3 1 1 1], gidShards: map[1:[7 8 9] 2:[1 2 3 4] 3:[]]
+2021/03/27 08:50:21 join success, config: {Num:2 Shards:[3 2 2 2 2 3 3 1 1 1] Groups:map[1:[x y z] 2:[a b c] 3:[j k l]]}
+2021/03/27 08:50:21 query success, config: {Num:2 Shards:[3 1 1 1 1 3 3 2 2 2] Groups:map[1:[x y z] 2:[a b c] 3:[j k l]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 query success, config: {Num:2 Shards:[3 1 1 1 1 3 3 2 2 2] Groups:map[1:[x y z] 2:[a b c] 3:[j k l]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 query success, config: {Num:2 Shards:[3 1 1 1 1 3 3 2 2 2] Groups:map[1:[x y z] 2:[a b c] 3:[j k l]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[1 3] ClientId:2792554517681005200 Seq:3} ClientId:2792554517681005200 Seq:3}
+2021/03/27 08:50:21 leave success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 leave success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:21 leave success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:21 query success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 query success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 query success, config: {Num:3 Shards:[2 2 2 2 2 2 2 2 2 2] Groups:map[2:[a b c]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[2] ClientId:2792554517681005200 Seq:4} ClientId:2792554517681005200 Seq:4}
+2021/03/27 08:50:21 leave success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+  ... Passed
+Test: Concurrent multi leave/join ...
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[1000:[1000a 1000b 1000c] 2000:[2000a] 3000:[3000a]] ClientId:1281947034292270785 Seq:1} ClientId:1281947034292270785 Seq:1}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[1003:[1003a 1003b 1003c] 2003:[2003a] 3003:[3003a]] ClientId:4451600677256092139 Seq:1} ClientId:4451600677256092139 Seq:1}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[1006:[1006a 1006b 1006c] 2006:[2006a] 3006:[3006a]] ClientId:132763810436426984 Seq:1} ClientId:132763810436426984 Seq:1}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[1005:[1005a 1005b 1005c] 2005:[2005a] 3005:[3005a]] ClientId:2979963104891804891 Seq:1} ClientId:2979963104891804891 Seq:1}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[1008:[1008a 1008b 1008c] 2008:[2008a] 3008:[3008a]] ClientId:3385566133703069993 Seq:1} ClientId:3385566133703069993 Seq:1}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]] ClientId:3350947229630275474 Seq:1} ClientId:3350947229630275474 Seq:1}
+2021/03/27 08:50:21 leave success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[1002:[1002a 1002b 1002c] 2002:[2002a] 3002:[3002a]] ClientId:2678340036406425716 Seq:1} ClientId:2678340036406425716 Seq:1}
+2021/03/27 08:50:21 leave success, config: {Num:4 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[1007:[1007a 1007b 1007c] 2007:[2007a] 3007:[3007a]] ClientId:1692277350964411639 Seq:1} ClientId:1692277350964411639 Seq:1}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[1009:[1009a 1009b 1009c] 2009:[2009a] 3009:[3009a]] ClientId:3845364844489575548 Seq:1} ClientId:3845364844489575548 Seq:1}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[1004:[1004a 1004b 1004c] 2004:[2004a] 3004:[3004a]] ClientId:2449264698348581605 Seq:1} ClientId:2449264698348581605 Seq:1}
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 1000 1000 1000 1000 1000 1000 1000 1000 1000], gidShards: map[1000:[1 2 3 4 5 6 7 8 9] 2000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 2000 1000 1000 1000 1000 1000 1000 1000 1000], gidShards: map[1000:[2 3 4 5 6 7 8 9] 2000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 2000 2000 1000 1000 1000 1000 1000 1000 1000], gidShards: map[1000:[3 4 5 6 7 8 9] 2000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 2000 2000 2000 1000 1000 1000 1000 1000 1000], gidShards: map[1000:[4 5 6 7 8 9] 2000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 2000 2000 2000 2000 1000 1000 1000 1000 1000], gidShards: map[1000:[5 6 7 8 9] 2000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 2000 2000 2000 2000 3000 1000 1000 1000 1000], gidShards: map[1000:[6 7 8 9] 2000:[0 1 2 3 4] 3000:[]]
+2021/03/27 08:50:21 maxGid:2000, cfg.Shards: [3000 2000 2000 2000 2000 3000 1000 1000 1000 1000], gidShards: map[1000:[6 7 8 9] 2000:[1 2 3 4] 3000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [3000 2000 2000 2000 2000 3000 3000 1000 1000 1000], gidShards: map[1000:[7 8 9] 2000:[1 2 3 4] 3000:[]]
+2021/03/27 08:50:21 join success, config: {Num:5 Shards:[3000 2000 2000 2000 2000 3000 3000 1000 1000 1000] Groups:map[1000:[1000a 1000b 1000c] 2000:[2000a] 3000:[3000a]]}
+2021/03/27 08:50:21 maxGid:2000, cfg.Shards: [3000 1003 2000 2000 2000 3000 3000 1000 1000 1000], gidShards: map[1000:[7 8 9] 1003:[] 2000:[2 3 4] 3000:[0 5 6]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [3000 1003 2000 2000 2000 3000 3000 1003 1000 1000], gidShards: map[1000:[8 9] 1003:[] 2000:[2 3 4] 3000:[0 5 6]]
+2021/03/27 08:50:21 maxGid:2000, cfg.Shards: [3000 1003 2003 2000 2000 3000 3000 1003 1000 1000], gidShards: map[1000:[8 9] 1003:[1 7] 2000:[3 4] 2003:[] 3000:[0 5 6]]
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [2003 1003 2003 2000 2000 3000 3000 1003 1000 1000], gidShards: map[1000:[8 9] 1003:[1 7] 2000:[3 4] 2003:[] 3000:[5 6]]
+2021/03/27 08:50:21 maxGid:2000, cfg.Shards: [2003 1003 2003 3003 2000 3000 3000 1003 1000 1000], gidShards: map[1000:[8 9] 1003:[1 7] 2000:[4] 2003:[0 2] 3000:[5 6] 3003:[]]
+2021/03/27 08:50:21 join success, config: {Num:6 Shards:[2003 1003 2003 3003 2000 3000 3000 1003 1000 1000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 2000:[2000a] 2003:[2003a] 3000:[3000a] 3003:[3003a]]}
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [1000 3000 3000 3000 3000 3000 3000 3000 3000 3000], gidShards: map[1000:[] 3000:[1 2 3 4 5 6 7 8 9]]
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [1000 1000 3000 3000 3000 3000 3000 3000 3000 3000], gidShards: map[1000:[] 3000:[2 3 4 5 6 7 8 9]]
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [1000 1000 1000 3000 3000 3000 3000 3000 3000 3000], gidShards: map[1000:[] 3000:[3 4 5 6 7 8 9]]
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [1000 1000 1000 1000 3000 3000 3000 3000 3000 3000], gidShards: map[1000:[] 3000:[4 5 6 7 8 9]]
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [1000 1000 1000 1000 1000 3000 3000 3000 3000 3000], gidShards: map[1000:[] 3000:[5 6 7 8 9]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 1000 1000 1000 1000 3000 3000 3000 3000 3000], gidShards: map[1000:[1 2 3 4] 2000:[] 3000:[5 6 7 8 9]]
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [2000 1000 1000 1000 1000 2000 3000 3000 3000 3000], gidShards: map[1000:[1 2 3 4] 2000:[] 3000:[6 7 8 9]]
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [2000 1000 1000 1000 1000 2000 2000 3000 3000 3000], gidShards: map[1000:[1 2 3 4] 2000:[] 3000:[7 8 9]]
+2021/03/27 08:50:21 join success, config: {Num:5 Shards:[2000 1000 1000 1000 1000 2000 2000 3000 3000 3000] Groups:map[1000:[1000a 1000b 1000c] 2000:[2000a] 3000:[3000a]]}
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 1003 1000 1000 1000 2000 2000 3000 3000 3000], gidShards: map[1000:[2 3 4] 1003:[] 2000:[0 5 6] 3000:[7 8 9]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 1003 1003 1000 1000 2000 2000 3000 3000 3000], gidShards: map[1000:[3 4] 1003:[] 2000:[0 5 6] 3000:[7 8 9]]
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [2000 1003 1003 1000 1000 2000 2000 2003 3000 3000], gidShards: map[1000:[3 4] 1003:[1 2] 2000:[0 5 6] 2003:[] 3000:[8 9]]
+2021/03/27 08:50:21 maxGid:1003, cfg.Shards: [2003 1006 2003 3003 2000 3000 3000 1003 1000 1000], gidShards: map[1000:[8 9] 1003:[7] 1006:[] 2000:[4] 2003:[0 2] 3000:[5 6] 3003:[3]]
+2021/03/27 08:50:21 maxGid:2000, cfg.Shards: [2003 1003 1003 1000 1000 2000 2000 2003 3000 3000], gidShards: map[1000:[3 4] 1003:[1 2] 2000:[5 6] 2003:[] 3000:[8 9]]
+2021/03/27 08:50:21 maxGid:2003, cfg.Shards: [2006 1006 2003 3003 2000 3000 3000 1003 1000 1000], gidShards: map[1000:[8 9] 1003:[7] 1006:[1] 2000:[4] 2003:[2] 2006:[] 3000:[5 6] 3003:[3]]
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [2003 1003 1003 1000 1000 2000 2000 2003 3003 3000], gidShards: map[1000:[3 4] 1003:[1 2] 2000:[5 6] 2003:[0 7] 3000:[9] 3003:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2006 1006 2003 3003 2000 3000 3000 1003 3006 1000], gidShards: map[1000:[9] 1003:[7] 1006:[1] 2000:[4] 2003:[2] 2006:[0] 3000:[5 6] 3003:[3] 3006:[]]
+2021/03/27 08:50:21 join success, config: {Num:7 Shards:[2006 1006 2003 3003 2000 3000 3000 1003 3006 1000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 1006:[1006a 1006b 1006c] 2000:[2000a] 2003:[2003a] 2006:[2006a] 3000:[3000a] 3003:[3003a] 3006:[3006a]]}
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [2006 1006 2003 3003 2000 2005 3000 1003 3006 1000], gidShards: map[1000:[9] 1003:[7] 1006:[1] 2000:[4] 2003:[2] 2005:[] 2006:[0] 3000:[6] 3003:[3] 3006:[8]]
+2021/03/27 08:50:21 join success, config: {Num:8 Shards:[2006 1006 2003 3003 2000 2005 3000 1003 3006 1000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 2000:[2000a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 3000:[3000a] 3003:[3003a] 3005:[3005a] 3006:[3006a]]}
+2021/03/27 08:50:21 join success, config: {Num:6 Shards:[2003 1003 1003 1000 1000 2000 2000 2003 3003 3000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 2000:[2000a] 2003:[2003a] 3000:[3000a] 3003:[3003a]]}
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2003 1003 1003 1006 1000 2000 2000 2003 3003 3000], gidShards: map[1000:[4] 1003:[1 2] 1006:[] 2000:[5 6] 2003:[0 7] 3000:[9] 3003:[8]]
+2021/03/27 08:50:21 maxGid:1003, cfg.Shards: [2003 2006 1003 1006 1000 2000 2000 2003 3003 3000], gidShards: map[1000:[4] 1003:[2] 1006:[3] 2000:[5 6] 2003:[0 7] 2006:[] 3000:[9] 3003:[8]]
+2021/03/27 08:50:21 maxGid:2003, cfg.Shards: [3006 2006 1003 1006 1000 2000 2000 2003 3003 3000], gidShards: map[1000:[4] 1003:[2] 1006:[3] 2000:[5 6] 2003:[7] 2006:[1] 3000:[9] 3003:[8] 3006:[]]
+2021/03/27 08:50:21 join success, config: {Num:7 Shards:[3006 2006 1003 1006 1000 2000 2000 2003 3003 3000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 1006:[1006a 1006b 1006c] 2000:[2000a] 2003:[2003a] 2006:[2006a] 3000:[3000a] 3003:[3003a] 3006:[3006a]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[2003 3003] ClientId:4451600677256092139 Seq:2} ClientId:4451600677256092139 Seq:2}
+2021/03/27 08:50:21 maxGid:2000, cfg.Shards: [3006 2006 1003 1006 1000 3005 2000 2003 3003 3000], gidShards: map[1000:[4] 1003:[2] 1006:[3] 2000:[6] 2003:[7] 2006:[1] 3000:[9] 3003:[8] 3005:[] 3006:[0]]
+2021/03/27 08:50:21 join success, config: {Num:8 Shards:[3006 2006 1003 1006 1000 3005 2000 2003 3003 3000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 2000:[2000a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 3000:[3000a] 3003:[3003a] 3005:[3005a] 3006:[3006a]]}
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 1000 1000 1000 1000 1000 1000 1000 1000 1000], gidShards: map[1000:[1 2 3 4 5 6 7 8 9] 2000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 2000 1000 1000 1000 1000 1000 1000 1000 1000], gidShards: map[1000:[2 3 4 5 6 7 8 9] 2000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 2000 2000 1000 1000 1000 1000 1000 1000 1000], gidShards: map[1000:[3 4 5 6 7 8 9] 2000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 2000 2000 2000 1000 1000 1000 1000 1000 1000], gidShards: map[1000:[4 5 6 7 8 9] 2000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 2000 2000 2000 2000 1000 1000 1000 1000 1000], gidShards: map[1000:[5 6 7 8 9] 2000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2000 2000 2000 2000 2000 3000 1000 1000 1000 1000], gidShards: map[1000:[6 7 8 9] 2000:[0 1 2 3 4] 3000:[]]
+2021/03/27 08:50:21 maxGid:2000, cfg.Shards: [3000 2000 2000 2000 2000 3000 1000 1000 1000 1000], gidShards: map[1000:[6 7 8 9] 2000:[1 2 3 4] 3000:[]]
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [3000 2000 2000 2000 2000 3000 3000 1000 1000 1000], gidShards: map[1000:[7 8 9] 2000:[1 2 3 4] 3000:[]]
+2021/03/27 08:50:21 join success, config: {Num:5 Shards:[3000 2000 2000 2000 2000 3000 3000 1000 1000 1000] Groups:map[1000:[1000a 1000b 1000c] 2000:[2000a] 3000:[3000a]]}
+2021/03/27 08:50:21 maxGid:2000, cfg.Shards: [3000 2003 2000 2000 2000 3000 3000 1000 1000 1000], gidShards: map[1000:[7 8 9] 2000:[2 3 4] 2003:[] 3000:[0 5 6]]
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [2003 2003 2000 2000 2000 3000 3000 1000 1000 1000], gidShards: map[1000:[7 8 9] 2000:[2 3 4] 2003:[] 3000:[5 6]]
+2021/03/27 08:50:21 join success, config: {Num:9 Shards:[3006 2006 1003 1006 1000 3005 2000 2003 3003 3000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 3000:[3000a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3008:[3008a]]}
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2003 2003 2000 2000 2000 3000 3000 3003 1000 1000], gidShards: map[1000:[8 9] 2000:[2 3 4] 2003:[0 1] 3000:[5 6] 3003:[]]
+2021/03/27 08:50:21 maxGid:2000, cfg.Shards: [2003 2003 3003 2000 2000 3000 3000 3003 1000 1000], gidShards: map[1000:[8 9] 2000:[3 4] 2003:[0 1] 3000:[5 6] 3003:[]]
+2021/03/27 08:50:21 maxGid:2000, cfg.Shards: [2003 2003 3003 1003 2000 3000 3000 3003 1000 1000], gidShards: map[1000:[8 9] 1003:[] 2000:[4] 2003:[0 1] 3000:[5 6] 3003:[2 7]]
+2021/03/27 08:50:21 join success, config: {Num:6 Shards:[2003 2003 3003 1003 2000 3000 3000 3003 1000 1000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 2000:[2000a] 2003:[2003a] 3000:[3000a] 3003:[3003a]]}
+2021/03/27 08:50:21 maxGid:1000, cfg.Shards: [2003 2003 3003 1003 2000 3000 3000 3003 2006 1000], gidShards: map[1000:[9] 1003:[3] 2000:[4] 2003:[0 1] 2006:[] 3000:[5 6] 3003:[2 7]]
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[2005 3005] ClientId:2979963104891804891 Seq:2} ClientId:2979963104891804891 Seq:2}
+2021/03/27 08:50:21 maxGid:2003, cfg.Shards: [3006 2003 3003 1003 2000 3000 3000 3003 2006 1000], gidShards: map[1000:[9] 1003:[3] 2000:[4] 2003:[1] 2006:[8] 3000:[5 6] 3003:[2 7] 3006:[]]
+2021/03/27 08:50:21 maxGid:3000, cfg.Shards: [3006 2003 3003 1003 2000 1006 3000 3003 2006 1000], gidShards: map[1000:[9] 1003:[3] 1006:[] 2000:[4] 2003:[1] 2006:[8] 3000:[6] 3003:[2 7] 3006:[0]]
+2021/03/27 08:50:21 join success, config: {Num:7 Shards:[3006 2003 3003 1003 2000 1006 3000 3003 2006 1000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 1006:[1006a 1006b 1006c] 2000:[2000a] 2003:[2003a] 2006:[2006a] 3000:[3000a] 3003:[3003a] 3006:[3006a]]}
+2021/03/27 08:50:21 join success, config: {Num:10 Shards:[3006 2006 1003 1006 1000 3005 2000 2003 3003 3000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2001:[2001a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 3000:[3000a] 3001:[3001a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3008:[3008a]]}
+2021/03/27 08:50:21 maxGid:3003, cfg.Shards: [3006 2003 2005 1003 2000 1006 3000 3003 2006 1000], gidShards: map[1000:[9] 1003:[3] 1006:[5] 2000:[4] 2003:[1] 2005:[] 2006:[8] 3000:[6] 3003:[7] 3006:[0]]
+2021/03/27 08:50:21 join success, config: {Num:8 Shards:[3006 2003 2005 1003 2000 1006 3000 3003 2006 1000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 2000:[2000a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 3000:[3000a] 3003:[3003a] 3005:[3005a] 3006:[3006a]]}
+2021/03/27 08:50:21 join success, config: {Num:9 Shards:[3006 2003 2005 1003 2000 1006 3000 3003 2006 1000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 3000:[3000a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3008:[3008a]]}
+2021/03/27 08:50:21 join success, config: {Num:10 Shards:[3006 2003 2005 1003 2000 1006 3000 3003 2006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2001:[2001a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 3000:[3000a] 3001:[3001a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3008:[3008a]]}
+2021/03/27 08:50:21 join success, config: {Num:11 Shards:[3006 2003 2005 1003 2000 1006 3000 3003 2006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3008:[3008a]]}
+2021/03/27 08:50:21 join success, config: {Num:12 Shards:[3006 2003 2005 1003 2000 1006 3000 3003 2006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a]]}
+2021/03/27 08:50:21 join success, config: {Num:13 Shards:[3006 2003 2005 1003 2000 1006 3000 3003 2006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 join success, config: {Num:9 Shards:[2006 1006 2003 3003 2000 2005 3000 1003 3006 1000] Groups:map[1000:[1000a 1000b 1000c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 3000:[3000a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3008:[3008a]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[2000 3000] ClientId:1281947034292270785 Seq:2} ClientId:1281947034292270785 Seq:2}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[2006 3006] ClientId:132763810436426984 Seq:2} ClientId:132763810436426984 Seq:2}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[2008 3008] ClientId:3385566133703069993 Seq:2} ClientId:3385566133703069993 Seq:2}
+2021/03/27 08:50:21 join success, config: {Num:11 Shards:[3006 2006 1003 1006 1000 3005 2000 2003 3003 3000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3008:[3008a]]}
+2021/03/27 08:50:21 join success, config: {Num:12 Shards:[3006 2006 1003 1006 1000 3005 2000 2003 3003 3000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a]]}
+2021/03/27 08:50:21 join success, config: {Num:13 Shards:[3006 2006 1003 1006 1000 3005 2000 2003 3003 3000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 join success, config: {Num:14 Shards:[3006 2006 1003 1006 1000 3005 2000 2003 3003 3000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 join success, config: {Num:10 Shards:[2006 1006 2003 3003 2000 2005 3000 1003 3006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2001:[2001a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 3000:[3000a] 3001:[3001a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3008:[3008a]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[2001 3001] ClientId:3350947229630275474 Seq:2} ClientId:3350947229630275474 Seq:2}
+2021/03/27 08:50:21 join success, config: {Num:11 Shards:[2006 1006 2003 3003 2000 2005 3000 1003 3006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3008:[3008a]]}
+2021/03/27 08:50:21 join success, config: {Num:14 Shards:[3006 2003 2005 1003 2000 1006 3000 3003 2006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 join success, config: {Num:12 Shards:[2006 1006 2003 3003 2000 2005 3000 1003 3006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a]]}
+2021/03/27 08:50:21 leave success, config: {Num:15 Shards:[3006 1008 2005 1003 2000 1006 3000 3009 2006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 join success, config: {Num:13 Shards:[2006 1006 2003 3003 2000 2005 3000 1003 3006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 join success, config: {Num:14 Shards:[2006 1006 2003 3003 2000 2005 3000 1003 3006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:15 Shards:[2006 1006 1002 1001 2000 2005 3000 1003 3006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:16 Shards:[2006 1006 1002 1001 2000 3001 3000 1003 3006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:15 Shards:[3006 2006 1003 1006 1000 3005 2000 2001 3009 3000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:16 Shards:[3006 2006 1003 1006 1000 2002 2000 2001 3009 3000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:17 Shards:[3006 2006 1003 1006 1000 2002 2009 2001 3009 3001] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:18 Shards:[3004 1008 1003 1006 1000 2002 2009 2001 3009 3001] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:19 Shards:[3004 1008 1003 1006 1000 2002 2009 2001 3009 3001] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2007:[2007a] 2009:[2009a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3007:[3007a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:17 Shards:[2006 1006 1002 1001 2008 3001 1008 1003 3006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:18 Shards:[2001 1006 1002 1001 2008 3001 1008 1003 2009 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:19 Shards:[2001 1006 1002 1001 3007 3001 1008 1003 2009 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2007:[2007a] 2009:[2009a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3007:[3007a] 3009:[3009a]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[2007 3007] ClientId:1692277350964411639 Seq:2} ClientId:1692277350964411639 Seq:2}
+2021/03/27 08:50:21 leave success, config: {Num:16 Shards:[3006 1008 1004 1003 2000 1006 3000 3009 2006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[2004 3004] ClientId:2449264698348581605 Seq:2} ClientId:2449264698348581605 Seq:2}
+2021/03/27 08:50:21 leave success, config: {Num:17 Shards:[3006 1008 1004 1003 2002 1006 2009 3009 2006 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:18 Shards:[1007 1008 1004 1003 2002 1006 2009 3009 3007 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:19 Shards:[1007 1008 1004 1003 2002 1006 2009 3009 3007 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2001:[2001a] 2002:[2002a] 2004:[2004a] 2007:[2007a] 2009:[2009a] 3001:[3001a] 3002:[3002a] 3004:[3004a] 3007:[3007a] 3009:[3009a]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[2009 3009] ClientId:3845364844489575548 Seq:2} ClientId:3845364844489575548 Seq:2}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[2002 3002] ClientId:2678340036406425716 Seq:2} ClientId:2678340036406425716 Seq:2}
+2021/03/27 08:50:21 leave success, config: {Num:20 Shards:[2007 1006 1002 1001 3007 1009 1008 1003 2009 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2004:[2004a] 2007:[2007a] 2009:[2009a] 3002:[3002a] 3004:[3004a] 3007:[3007a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:21 Shards:[3009 1006 1002 1001 1005 1009 1008 1003 2009 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2004:[2004a] 2009:[2009a] 3002:[3002a] 3004:[3004a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:22 Shards:[3009 1006 1002 1001 1005 1009 1008 1003 2009 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2009:[2009a] 3002:[3002a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:23 Shards:[2002 1006 1002 1001 1005 1009 1008 1003 1004 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 3002:[3002a]]}
+2021/03/27 08:50:21 leave success, config: {Num:20 Shards:[3004 1008 1003 1006 1000 2002 2009 1002 3009 1009] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2004:[2004a] 2007:[2007a] 2009:[2009a] 3002:[3002a] 3004:[3004a] 3007:[3007a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:21 Shards:[3004 1008 1003 1006 1000 2002 2009 1002 3009 1009] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2004:[2004a] 2009:[2009a] 3002:[3002a] 3004:[3004a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:22 Shards:[1001 1008 1003 1006 1000 2002 2009 1002 3009 1009] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2009:[2009a] 3002:[3002a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:20 Shards:[1007 1008 1004 1003 2002 1006 2009 3009 3007 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2004:[2004a] 2007:[2007a] 2009:[2009a] 3002:[3002a] 3004:[3004a] 3007:[3007a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:24 Shards:[1007 1006 1002 1001 1005 1009 1008 1003 1004 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 leave success, config: {Num:21 Shards:[1007 1008 1004 1003 2002 1006 2009 3009 1005 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2004:[2004a] 2009:[2009a] 3002:[3002a] 3004:[3004a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:22 Shards:[1007 1008 1004 1003 2002 1006 2009 3009 1005 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2009:[2009a] 3002:[3002a] 3009:[3009a]]}
+2021/03/27 08:50:21 leave success, config: {Num:23 Shards:[1007 1008 1004 1003 2002 1006 3002 1009 1005 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 3002:[3002a]]}
+2021/03/27 08:50:21 leave success, config: {Num:24 Shards:[1007 1008 1004 1003 1002 1006 1001 1009 1005 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+2021/03/27 08:50:21 query success, config: {Num:24 Shards:[1007 1006 1002 1001 1005 1009 1008 1003 1004 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+  ... Passed
+Test: Minimal transfers after multijoins ...
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 leave success, config: {Num:23 Shards:[1001 1008 1003 1006 1000 2002 1004 1002 3002 1009] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 3002:[3002a]]}
+2021/03/27 08:50:21 leave success, config: {Num:24 Shards:[1001 1008 1003 1006 1000 1007 1004 1002 1005 1009] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+2021/03/27 08:50:21 query success, config: {Num:24 Shards:[1007 1006 1002 1001 1005 1009 1008 1003 1004 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Join Args:{Servers:map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b]] ClientId:2792554517681005200 Seq:5} ClientId:2792554517681005200 Seq:5}
+2021/03/27 08:50:21 join success, config: {Num:25 Shards:[1007 1006 1002 1001 1005 1009 1008 1003 1004 1000] Groups:map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b] 1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 join success, config: {Num:25 Shards:[1001 1008 1003 1006 1000 1007 1004 1002 1005 1009] Groups:map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b] 1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+2021/03/27 08:50:21 query success, config: {Num:25 Shards:[1007 1006 1002 1001 1005 1009 1008 1003 1004 1000] Groups:map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b] 1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+2021/03/27 08:50:21 join success, config: {Num:25 Shards:[1007 1008 1004 1003 1002 1006 1001 1009 1005 1000] Groups:map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b] 1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+  ... Passed
+Test: Minimal transfers after multileaves ...
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Leave Args:{GIDs:[11 12 13 14 15] ClientId:2792554517681005200 Seq:6} ClientId:2792554517681005200 Seq:6}
+2021/03/27 08:50:21 leave success, config: {Num:26 Shards:[1007 1006 1002 1001 1005 1009 1008 1003 1004 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+2021/03/27 08:50:21 sc 2, receive client op: {Name:Query Args:{Num:-1} ClientId:0 Seq:-1}
+2021/03/27 08:50:21 leave success, config: {Num:26 Shards:[1007 1008 1004 1003 1002 1006 1001 1009 1005 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+2021/03/27 08:50:21 leave success, config: {Num:26 Shards:[1001 1008 1003 1006 1000 1007 1004 1002 1005 1009] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+2021/03/27 08:50:21 query success, config: {Num:26 Shards:[1007 1006 1002 1001 1005 1009 1008 1003 1004 1000] Groups:map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]}
+  ... Passed
+PASS
+ok  	6.824/shardctrler	4.311s

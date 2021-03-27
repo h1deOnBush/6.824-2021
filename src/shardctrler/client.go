@@ -12,6 +12,9 @@ import "math/big"
 type Clerk struct {
 	servers []*labrpc.ClientEnd
 	// Your data here.
+	id int64
+	seq int
+	leaderId int
 }
 
 func nrand() int64 {
@@ -25,6 +28,9 @@ func MakeClerk(servers []*labrpc.ClientEnd) *Clerk {
 	ck := new(Clerk)
 	ck.servers = servers
 	// Your code here.
+	ck.seq = 0
+	ck.id = nrand()
+	ck.leaderId = 0
 	return ck
 }
 
@@ -36,6 +42,7 @@ func (ck *Clerk) Query(num int) Config {
 		// try each known server.
 		for _, srv := range ck.servers {
 			var reply QueryReply
+			// DPrintf("client %v -> sc %v, Query:%v", ck.id, index, args)
 			ok := srv.Call("ShardCtrler.Query", args, &reply)
 			if ok && reply.WrongLeader == false {
 				return reply.Config
@@ -48,8 +55,10 @@ func (ck *Clerk) Query(num int) Config {
 func (ck *Clerk) Join(servers map[int][]string) {
 	args := &JoinArgs{}
 	// Your code here.
+	ck.seq++
 	args.Servers = servers
-
+	args.Seq = ck.seq
+	args.ClientId = ck.id
 	for {
 		// try each known server.
 		for _, srv := range ck.servers {
@@ -67,6 +76,9 @@ func (ck *Clerk) Leave(gids []int) {
 	args := &LeaveArgs{}
 	// Your code here.
 	args.GIDs = gids
+	ck.seq++
+	args.Seq = ck.seq
+	args.ClientId = ck.id
 
 	for {
 		// try each known server.
@@ -86,6 +98,9 @@ func (ck *Clerk) Move(shard int, gid int) {
 	// Your code here.
 	args.Shard = shard
 	args.GID = gid
+	ck.seq++
+	args.Seq = ck.seq
+	args.ClientId = ck.id
 
 	for {
 		// try each known server.
