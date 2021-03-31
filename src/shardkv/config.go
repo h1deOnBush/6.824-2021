@@ -316,6 +316,7 @@ func (cfg *config) joinm(gis []int) {
 			servernames[i] = cfg.servername(gid, i)
 		}
 		m[gid] = servernames
+		DPrintf("servernames: %v", servernames)
 	}
 	cfg.mck.Join(m)
 }

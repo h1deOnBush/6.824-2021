@@ -40,8 +40,10 @@ func TestStaticShards(t *testing.T) {
 	for i := 0; i < n; i++ {
 		ka[i] = strconv.Itoa(i) // ensure multiple shards
 		va[i] = randstring(20)
+		// DPrintf("[test] ready to send put")
 		ck.Put(ka[i], va[i])
 	}
+	DPrintf("[test] begin to check")
 	for i := 0; i < n; i++ {
 		check(t, ck, ka[i], va[i])
 	}
@@ -50,6 +52,7 @@ func TestStaticShards(t *testing.T) {
 	// shutting down one shard and checking that some
 	// Get()s don't succeed.
 	cfg.ShutdownGroup(1)
+	DPrintf("shutdown group 101")
 	cfg.checklogs() // forbid snapshots
 
 	ch := make(chan string)
@@ -87,6 +90,7 @@ func TestStaticShards(t *testing.T) {
 
 	// bring the crashed shard/group back to life.
 	cfg.StartGroup(1)
+	DPrintf("restart group 101")
 	for i := 0; i < n; i++ {
 		check(t, ck, ka[i], va[i])
 	}
@@ -126,7 +130,7 @@ func TestJoinLeave(t *testing.T) {
 	}
 
 	cfg.leave(0)
-
+	DPrintf("group 100 leave")
 	for i := 0; i < n; i++ {
 		check(t, ck, ka[i], va[i])
 		x := randstring(5)
@@ -139,7 +143,7 @@ func TestJoinLeave(t *testing.T) {
 
 	cfg.checklogs()
 	cfg.ShutdownGroup(0)
-
+	DPrintf("shutdown group 100")
 	for i := 0; i < n; i++ {
 		check(t, ck, ka[i], va[i])
 	}
@@ -200,12 +204,18 @@ func TestSnapshot(t *testing.T) {
 
 	cfg.checklogs()
 
+	DPrintf("[test] shutdown group 100")
 	cfg.ShutdownGroup(0)
+	DPrintf("[test] shutdown group 101")
 	cfg.ShutdownGroup(1)
+	DPrintf("[test] shutdown group 102")
 	cfg.ShutdownGroup(2)
 
+	DPrintf("[test] restart group 100")
 	cfg.StartGroup(0)
+	DPrintf("[test] restart group 101")
 	cfg.StartGroup(1)
+	DPrintf("[test] restart group 102")
 	cfg.StartGroup(2)
 
 	for i := 0; i < n; i++ {
@@ -434,10 +444,14 @@ func TestConcurrent2(t *testing.T) {
 	time.Sleep(3000 * time.Millisecond)
 
 	cfg.ShutdownGroup(1)
+	DPrintf("[test] shutdown group 101")
 	cfg.ShutdownGroup(2)
+	DPrintf("[test] shutdown group 102")
 	time.Sleep(1000 * time.Millisecond)
 	cfg.StartGroup(1)
+	DPrintf("[test] restart group 101")
 	cfg.StartGroup(2)
+	DPrintf("[test] restart group 102")
 
 	time.Sleep(2 * time.Second)
 

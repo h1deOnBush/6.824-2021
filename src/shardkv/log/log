@@ -1,0 +1,9 @@
+Test: more concurrent puts and configuration changes...
+--- FAIL: TestConcurrent2 (13.72s)
+    test_test.go:19: Get(0): expected:
+        k4cO0FVM2iqV5P6j0a-bi4AKGysRCqffAVuRz_zhmZrRLGIhZK7wLICYUrcyreJW_RW2mHxQY
+        received:
+        k4cO0FVM2iqV5P6j0a-bi4AKGysRCqffAVuRz_zhmZrRLGIhZK7wLICYUrcyreJW
+FAIL
+exit status 1
+FAIL	6.824/shardkv	13.740s
