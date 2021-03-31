@@ -426,6 +426,7 @@ func TestConcurrent2(t *testing.T) {
 		}
 	}
 
+	// 10 clients append value concurrently
 	for i := 0; i < n; i++ {
 		ck1 := cfg.makeClient()
 		go ff(i, ck1)
@@ -456,10 +457,12 @@ func TestConcurrent2(t *testing.T) {
 	time.Sleep(2 * time.Second)
 
 	atomic.StoreInt32(&done, 1)
+	DPrintf("wait for all clients end append")
 	for i := 0; i < n; i++ {
 		<-ch
 	}
 
+	DPrintf("all clients has end append")
 	for i := 0; i < n; i++ {
 		check(t, ck, ka[i], va[i])
 	}

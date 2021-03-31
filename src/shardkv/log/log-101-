@@ -1,0 +1,546 @@
+2021/03/31 18:24:43 101-1 ready to sync new config({Num:1 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]})
+2021/03/31 18:24:43 101-1, shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true]
+2021/03/31 18:24:44 101-1 find new config, shardsIn[1]:map[], shardsOut[1]:map[]
+2021/03/31 18:24:44 101-1, config:{Num:0 Shards:[0 0 0 0 0 0 0 0 0 0] Groups:map[]}, nextConfig:{Num:1 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:44 101-1, update nextConfig:{Num:1 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:44 101-1 update config from 0-1, {Num:1 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]}, kv.db:map[]
+2021/03/31 18:24:44 101-1 find new config, shardsIn[2]:map[], shardsOut[2]:map[0:map[] 1:map[] 2:map[] 3:map[] 4:map[]]
+2021/03/31 18:24:44 101-1, config:{Num:1 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]}, nextConfig:{Num:2 Shards:[100 100 100 100 100 101 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:44 101-1, update nextConfig:{Num:2 Shards:[100 100 100 100 100 101 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:44 101-1 update config from 1-2, {Num:2 Shards:[100 100 100 100 100 101 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2]]}, kv.db:map[]
+2021/03/31 18:24:44 101-1 find new config, shardsIn[3]:map[], shardsOut[3]:map[5:map[] 6:map[]]
+2021/03/31 18:24:44 101-1, config:{Num:2 Shards:[100 100 100 100 100 101 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2]]}, nextConfig:{Num:3 Shards:[102 100 100 100 100 102 102 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1, update nextConfig:{Num:3 Shards:[102 100 100 100 100 102 102 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 update config from 2-3, {Num:3 Shards:[102 100 100 100 100 102 102 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, kv.db:map[]
+2021/03/31 18:24:44 101-1, Put ({Key:0 Value:- Name:Put ClientId:61348641601876453 Seq:1 ConfigNum:3}) success
+2021/03/31 18:24:44 101-1, Put ({Key:1 Value:i Name:Put ClientId:61348641601876453 Seq:2 ConfigNum:3}) success
+2021/03/31 18:24:44 101-1, Put ({Key:9 Value:L Name:Put ClientId:61348641601876453 Seq:10 ConfigNum:3}) success
+2021/03/31 18:24:44 101-1 find new config, shardsIn[4]:map[1:100 3:100], shardsOut[4]:map[]
+2021/03/31 18:24:44 101-1, config:{Num:3 Shards:[102 100 100 100 100 102 102 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, nextConfig:{Num:4 Shards:[102 101 102 101 102 102 102 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1, update nextConfig:{Num:4 Shards:[102 101 102 101 102 102 102 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 install shard 1, data:map[3:4], shard configNum:4, current config num:3
+2021/03/31 18:24:44 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{3 [102 100 100 100 100 102 102 101 101 101] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 install shard 3, data:map[5:_], shard configNum:4, current config num:3
+2021/03/31 18:24:44 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{3 [102 100 100 100 100 102 102 101 101 101] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 update config from 3-4, {Num:4 Shards:[102 101 102 101 102 102 102 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, kv.db:map[0:- 1:i 3:4 5:_ 9:L]
+2021/03/31 18:24:44 101-1 find new config, shardsIn[5]:map[0:102 2:102 4:102 5:102 6:102], shardsOut[5]:map[]
+2021/03/31 18:24:44 101-1, config:{Num:4 Shards:[102 101 102 101 102 102 102 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, nextConfig:{Num:5 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:44 101-1, update nextConfig:{Num:5 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:44 101-1 install shard 6, data:map[8:Z], shard configNum:5, current config num:4
+2021/03/31 18:24:44 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{4 [102 101 102 101 102 102 102 101 101 101] map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 install shard 5, data:map[7:j], shard configNum:5, current config num:4
+2021/03/31 18:24:44 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{4 [102 101 102 101 102 102 102 101 101 101] map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 install shard 4, data:map[6:I], shard configNum:5, current config num:4
+2021/03/31 18:24:44 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{4 [102 101 102 101 102 102 102 101 101 101] map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 install shard 2, data:map[4:q], shard configNum:5, current config num:4
+2021/03/31 18:24:44 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{4 [102 101 102 101 102 102 102 101 101 101] map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 install shard 0, data:map[2:6], shard configNum:5, current config num:4
+2021/03/31 18:24:44 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{4 [102 101 102 101 102 102 102 101 101 101] map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 update config from 4-5, {Num:5 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]}, kv.db:map[0:- 1:i 2:6 3:4 4:q 5:_ 6:I 7:j 8:Z 9:L]
+2021/03/31 18:24:44 101-1 ready to sync MDreply:{Success:true Err: Shard:4 ConfigNum:5 Data:map[6:I] LatestCommand:map[61348641601876453:10 231378242654353357:27 358128053367283008:29 469729123243260633:29 480700799779009383:30 2535904110889505259:32 2831526293306497737:27 2883292434894009259:27 2898128224427394007:27 3402076620436836187:31 3844510410101999927:30]}
+2021/03/31 18:24:44 101-1 ready to sync MDreply:{Success:true Err: Shard:0 ConfigNum:5 Data:map[2:6] LatestCommand:map[61348641601876453:10 231378242654353357:27 358128053367283008:29 469729123243260633:29 480700799779009383:30 2535904110889505259:32 2831526293306497737:27 2883292434894009259:27 2898128224427394007:27 3402076620436836187:31 3844510410101999927:30]}
+2021/03/31 18:24:44 101-1 ready to sync MDreply:{Success:true Err: Shard:2 ConfigNum:5 Data:map[4:q] LatestCommand:map[61348641601876453:10 231378242654353357:27 358128053367283008:29 469729123243260633:29 480700799779009383:30 2535904110889505259:32 2831526293306497737:27 2883292434894009259:27 2898128224427394007:27 3402076620436836187:31 3844510410101999927:30]}
+2021/03/31 18:24:44 101-1 ready to sync MDreply:{Success:true Err: Shard:6 ConfigNum:5 Data:map[8:Z] LatestCommand:map[61348641601876453:10 231378242654353357:27 358128053367283008:29 469729123243260633:29 480700799779009383:30 2535904110889505259:32 2831526293306497737:27 2883292434894009259:27 2898128224427394007:27 3402076620436836187:31 3844510410101999927:30]}
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:u Name:Append ClientId:2535904110889505259 Seq:1 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1 ready to sync MDreply:{Success:true Err: Shard:5 ConfigNum:5 Data:map[7:j] LatestCommand:map[61348641601876453:10 231378242654353357:27 358128053367283008:29 469729123243260633:29 480700799779009383:30 2535904110889505259:32 2831526293306497737:27 2883292434894009259:27 2898128224427394007:27 3402076620436836187:31 3844510410101999927:30]}
+2021/03/31 18:24:44 101-1 ready to sync MDreply:{Success:true Err: Shard:1 ConfigNum:4 Data:map[3:4] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:28 469729123243260633:60 480700799779009383:62 2535904110889505259:32 2831526293306497737:56 2883292434894009259:27 2898128224427394007:59 3402076620436836187:30 3844510410101999927:29]}
+2021/03/31 18:24:44 101-1 ready to sync MDreply:{Success:true Err: Shard:3 ConfigNum:4 Data:map[5:_] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:28 469729123243260633:60 480700799779009383:62 2535904110889505259:32 2831526293306497737:56 2883292434894009259:27 2898128224427394007:59 3402076620436836187:30 3844510410101999927:29]}
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:s Name:Append ClientId:469729123243260633 Seq:1 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:I Name:Append ClientId:2883292434894009259 Seq:1 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:3 Name:Append ClientId:3402076620436836187 Seq:1 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:K Name:Append ClientId:3844510410101999927 Seq:1 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:O Name:Append ClientId:2535904110889505259 Seq:2 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:K Name:Append ClientId:469729123243260633 Seq:2 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:a Name:Append ClientId:2883292434894009259 Seq:2 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:x Name:Append ClientId:231378242654353357 Seq:1 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:w Name:Append ClientId:480700799779009383 Seq:1 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:p Name:Append ClientId:3402076620436836187 Seq:2 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:9 Name:Append ClientId:358128053367283008 Seq:1 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:x Name:Append ClientId:2831526293306497737 Seq:1 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:9 Name:Append ClientId:2898128224427394007 Seq:1 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:2 Name:Append ClientId:3844510410101999927 Seq:2 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:Z Name:Append ClientId:2535904110889505259 Seq:3 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:a Name:Append ClientId:231378242654353357 Seq:2 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:e Name:Append ClientId:469729123243260633 Seq:3 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:c Name:Append ClientId:2883292434894009259 Seq:3 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:V Name:Append ClientId:3402076620436836187 Seq:3 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:X Name:Append ClientId:480700799779009383 Seq:2 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:K Name:Append ClientId:358128053367283008 Seq:2 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:n Name:Append ClientId:2831526293306497737 Seq:2 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:7 Name:Append ClientId:2898128224427394007 Seq:2 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:- Name:Append ClientId:3844510410101999927 Seq:3 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:J Name:Append ClientId:2535904110889505259 Seq:4 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:F Name:Append ClientId:469729123243260633 Seq:4 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:6 Name:Append ClientId:231378242654353357 Seq:3 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:Y Name:Append ClientId:358128053367283008 Seq:3 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:9 Name:Append ClientId:2883292434894009259 Seq:4 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:u Name:Append ClientId:2898128224427394007 Seq:3 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:D Name:Append ClientId:3402076620436836187 Seq:4 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:X Name:Append ClientId:480700799779009383 Seq:3 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:s Name:Append ClientId:3844510410101999927 Seq:4 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:K Name:Append ClientId:2831526293306497737 Seq:3 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:A Name:Append ClientId:2535904110889505259 Seq:5 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:3 Name:Append ClientId:231378242654353357 Seq:4 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:h Name:Append ClientId:2898128224427394007 Seq:4 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:6 Name:Append ClientId:469729123243260633 Seq:5 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:H Name:Append ClientId:3402076620436836187 Seq:5 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:b Name:Append ClientId:2883292434894009259 Seq:5 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:q Name:Append ClientId:358128053367283008 Seq:4 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:n Name:Append ClientId:480700799779009383 Seq:4 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:K Name:Append ClientId:2831526293306497737 Seq:4 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:d Name:Append ClientId:3844510410101999927 Seq:5 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:2 Name:Append ClientId:231378242654353357 Seq:5 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:m Name:Append ClientId:2535904110889505259 Seq:6 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:r Name:Append ClientId:2898128224427394007 Seq:5 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:D Name:Append ClientId:480700799779009383 Seq:5 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:z Name:Append ClientId:469729123243260633 Seq:6 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:d Name:Append ClientId:3844510410101999927 Seq:6 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:R Name:Append ClientId:3402076620436836187 Seq:6 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:a Name:Append ClientId:2831526293306497737 Seq:5 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:G Name:Append ClientId:2883292434894009259 Seq:6 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:3 Name:Append ClientId:358128053367283008 Seq:5 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:F Name:Append ClientId:231378242654353357 Seq:6 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:5 Name:Append ClientId:2535904110889505259 Seq:7 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:W Name:Append ClientId:2898128224427394007 Seq:6 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:x Name:Append ClientId:480700799779009383 Seq:6 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:8 Name:Append ClientId:358128053367283008 Seq:6 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:F Name:Append ClientId:3402076620436836187 Seq:7 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:L Name:Append ClientId:469729123243260633 Seq:7 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:B Name:Append ClientId:2831526293306497737 Seq:6 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:2 Name:Append ClientId:2883292434894009259 Seq:7 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:w Name:Append ClientId:3844510410101999927 Seq:7 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:Z Name:Append ClientId:231378242654353357 Seq:7 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:z Name:Append ClientId:2535904110889505259 Seq:8 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:U Name:Append ClientId:2898128224427394007 Seq:7 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:C Name:Append ClientId:358128053367283008 Seq:7 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:6 Name:Append ClientId:480700799779009383 Seq:7 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:6 Name:Append ClientId:2831526293306497737 Seq:7 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:o Name:Append ClientId:3402076620436836187 Seq:8 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:h Name:Append ClientId:2883292434894009259 Seq:8 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:m Name:Append ClientId:3844510410101999927 Seq:8 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:z Name:Append ClientId:469729123243260633 Seq:8 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:R Name:Append ClientId:231378242654353357 Seq:8 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:Z Name:Append ClientId:2535904110889505259 Seq:9 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:0 Name:Append ClientId:2898128224427394007 Seq:8 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:d Name:Append ClientId:358128053367283008 Seq:8 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:u Name:Append ClientId:2831526293306497737 Seq:8 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:g Name:Append ClientId:3402076620436836187 Seq:9 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:o Name:Append ClientId:480700799779009383 Seq:8 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:D Name:Append ClientId:2883292434894009259 Seq:9 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:J Name:Append ClientId:3844510410101999927 Seq:9 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:Z Name:Append ClientId:469729123243260633 Seq:9 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:5 Name:Append ClientId:231378242654353357 Seq:9 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:Z Name:Append ClientId:2535904110889505259 Seq:10 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:G Name:Append ClientId:2898128224427394007 Seq:9 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:H Name:Append ClientId:480700799779009383 Seq:9 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:n Name:Append ClientId:2831526293306497737 Seq:9 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:Z Name:Append ClientId:358128053367283008 Seq:9 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:J Name:Append ClientId:3844510410101999927 Seq:10 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:A Name:Append ClientId:3402076620436836187 Seq:10 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:d Name:Append ClientId:2883292434894009259 Seq:10 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:f Name:Append ClientId:469729123243260633 Seq:10 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:s Name:Append ClientId:231378242654353357 Seq:10 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:0 Name:Append ClientId:2535904110889505259 Seq:11 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:p Name:Append ClientId:2898128224427394007 Seq:10 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:m Name:Append ClientId:358128053367283008 Seq:10 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:o Name:Append ClientId:480700799779009383 Seq:10 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:s Name:Append ClientId:2831526293306497737 Seq:10 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:q Name:Append ClientId:3844510410101999927 Seq:11 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:x Name:Append ClientId:3402076620436836187 Seq:11 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:z Name:Append ClientId:2883292434894009259 Seq:11 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:u Name:Append ClientId:469729123243260633 Seq:11 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:W Name:Append ClientId:231378242654353357 Seq:11 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:v Name:Append ClientId:2535904110889505259 Seq:12 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:L Name:Append ClientId:2898128224427394007 Seq:11 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:u Name:Append ClientId:480700799779009383 Seq:11 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:q Name:Append ClientId:358128053367283008 Seq:11 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:C Name:Append ClientId:3844510410101999927 Seq:12 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:X Name:Append ClientId:2831526293306497737 Seq:11 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:0 Name:Append ClientId:3402076620436836187 Seq:12 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:J Name:Append ClientId:2883292434894009259 Seq:12 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:g Name:Append ClientId:469729123243260633 Seq:12 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:9 Name:Append ClientId:2898128224427394007 Seq:12 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:y Name:Append ClientId:2535904110889505259 Seq:13 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:n Name:Append ClientId:231378242654353357 Seq:12 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:m Name:Append ClientId:480700799779009383 Seq:12 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:e Name:Append ClientId:358128053367283008 Seq:12 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:p Name:Append ClientId:3844510410101999927 Seq:13 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:r Name:Append ClientId:3402076620436836187 Seq:13 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:Q Name:Append ClientId:2831526293306497737 Seq:12 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:U Name:Append ClientId:2535904110889505259 Seq:14 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:H Name:Append ClientId:231378242654353357 Seq:13 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:e Name:Append ClientId:2883292434894009259 Seq:13 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:H Name:Append ClientId:469729123243260633 Seq:13 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:F Name:Append ClientId:2898128224427394007 Seq:13 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:l Name:Append ClientId:358128053367283008 Seq:13 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:T Name:Append ClientId:480700799779009383 Seq:13 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:B Name:Append ClientId:3844510410101999927 Seq:14 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:N Name:Append ClientId:3402076620436836187 Seq:14 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:a Name:Append ClientId:2831526293306497737 Seq:13 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:x Name:Append ClientId:231378242654353357 Seq:14 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:W Name:Append ClientId:358128053367283008 Seq:14 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:F Name:Append ClientId:2535904110889505259 Seq:15 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:V Name:Append ClientId:2883292434894009259 Seq:14 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:S Name:Append ClientId:2898128224427394007 Seq:14 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:_ Name:Append ClientId:469729123243260633 Seq:14 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:O Name:Append ClientId:480700799779009383 Seq:14 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:a Name:Append ClientId:3844510410101999927 Seq:15 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:M Name:Append ClientId:2831526293306497737 Seq:14 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:P Name:Append ClientId:3402076620436836187 Seq:15 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:y Name:Append ClientId:358128053367283008 Seq:15 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:W Name:Append ClientId:2535904110889505259 Seq:16 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:x Name:Append ClientId:231378242654353357 Seq:15 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:D Name:Append ClientId:480700799779009383 Seq:15 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:w Name:Append ClientId:469729123243260633 Seq:15 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:5 Name:Append ClientId:2883292434894009259 Seq:15 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:R Name:Append ClientId:2898128224427394007 Seq:15 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:q Name:Append ClientId:3844510410101999927 Seq:16 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:a Name:Append ClientId:2831526293306497737 Seq:15 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:R Name:Append ClientId:3402076620436836187 Seq:16 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:z Name:Append ClientId:2535904110889505259 Seq:17 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:_ Name:Append ClientId:358128053367283008 Seq:16 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:z Name:Append ClientId:480700799779009383 Seq:16 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:F Name:Append ClientId:231378242654353357 Seq:16 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:O Name:Append ClientId:469729123243260633 Seq:16 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:i Name:Append ClientId:3844510410101999927 Seq:17 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:a Name:Append ClientId:2883292434894009259 Seq:16 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:Y Name:Append ClientId:2831526293306497737 Seq:16 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:- Name:Append ClientId:2898128224427394007 Seq:16 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:B Name:Append ClientId:3402076620436836187 Seq:17 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:6 Name:Append ClientId:2535904110889505259 Seq:18 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:Y Name:Append ClientId:358128053367283008 Seq:17 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:3 Name:Append ClientId:480700799779009383 Seq:17 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:e Name:Append ClientId:231378242654353357 Seq:17 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:d Name:Append ClientId:469729123243260633 Seq:17 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:E Name:Append ClientId:2883292434894009259 Seq:17 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:v Name:Append ClientId:2831526293306497737 Seq:17 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:u Name:Append ClientId:3844510410101999927 Seq:18 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:B Name:Append ClientId:2898128224427394007 Seq:17 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:j Name:Append ClientId:3402076620436836187 Seq:18 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:z Name:Append ClientId:2535904110889505259 Seq:19 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:a Name:Append ClientId:358128053367283008 Seq:18 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:G Name:Append ClientId:231378242654353357 Seq:18 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:s Name:Append ClientId:480700799779009383 Seq:18 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:i Name:Append ClientId:469729123243260633 Seq:18 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:E Name:Append ClientId:2883292434894009259 Seq:18 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:7 Name:Append ClientId:2831526293306497737 Seq:18 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:o Name:Append ClientId:3844510410101999927 Seq:19 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:a Name:Append ClientId:3402076620436836187 Seq:19 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:C Name:Append ClientId:2898128224427394007 Seq:18 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:F Name:Append ClientId:358128053367283008 Seq:19 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:s Name:Append ClientId:2535904110889505259 Seq:20 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:A Name:Append ClientId:480700799779009383 Seq:19 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:i Name:Append ClientId:231378242654353357 Seq:19 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:L Name:Append ClientId:469729123243260633 Seq:19 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:n Name:Append ClientId:2883292434894009259 Seq:19 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:S Name:Append ClientId:2831526293306497737 Seq:19 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:h Name:Append ClientId:2898128224427394007 Seq:19 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:f Name:Append ClientId:3402076620436836187 Seq:20 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:W Name:Append ClientId:3844510410101999927 Seq:20 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:s Name:Append ClientId:2535904110889505259 Seq:21 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:Q Name:Append ClientId:358128053367283008 Seq:20 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:n Name:Append ClientId:480700799779009383 Seq:20 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:S Name:Append ClientId:231378242654353357 Seq:20 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:1 Name:Append ClientId:469729123243260633 Seq:20 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:I Name:Append ClientId:2883292434894009259 Seq:20 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:Y Name:Append ClientId:2898128224427394007 Seq:20 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:P Name:Append ClientId:3402076620436836187 Seq:21 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:c Name:Append ClientId:2831526293306497737 Seq:20 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:- Name:Append ClientId:3844510410101999927 Seq:21 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:u Name:Append ClientId:2535904110889505259 Seq:22 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:3 Name:Append ClientId:358128053367283008 Seq:21 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:m Name:Append ClientId:480700799779009383 Seq:21 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:V Name:Append ClientId:231378242654353357 Seq:21 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:t Name:Append ClientId:469729123243260633 Seq:21 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:f Name:Append ClientId:2883292434894009259 Seq:21 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:i Name:Append ClientId:2898128224427394007 Seq:21 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:J Name:Append ClientId:3402076620436836187 Seq:22 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:1 Name:Append ClientId:2831526293306497737 Seq:21 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:T Name:Append ClientId:3844510410101999927 Seq:22 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:B Name:Append ClientId:358128053367283008 Seq:22 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:N Name:Append ClientId:2535904110889505259 Seq:23 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:s Name:Append ClientId:480700799779009383 Seq:22 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:K Name:Append ClientId:469729123243260633 Seq:22 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:r Name:Append ClientId:231378242654353357 Seq:22 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:P Name:Append ClientId:3402076620436836187 Seq:23 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:r Name:Append ClientId:2883292434894009259 Seq:22 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:1 Name:Append ClientId:2898128224427394007 Seq:22 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:F Name:Append ClientId:3844510410101999927 Seq:23 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:_ Name:Append ClientId:2831526293306497737 Seq:22 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:Q Name:Append ClientId:2535904110889505259 Seq:24 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:8 Name:Append ClientId:480700799779009383 Seq:23 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:V Name:Append ClientId:358128053367283008 Seq:23 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:0 Name:Append ClientId:469729123243260633 Seq:23 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:w Name:Append ClientId:3402076620436836187 Seq:24 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:J Name:Append ClientId:231378242654353357 Seq:23 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:O Name:Append ClientId:2883292434894009259 Seq:23 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:0 Name:Append ClientId:2898128224427394007 Seq:23 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:w Name:Append ClientId:3844510410101999927 Seq:24 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:g Name:Append ClientId:2831526293306497737 Seq:23 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:1 Name:Append ClientId:2535904110889505259 Seq:25 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:r Name:Append ClientId:358128053367283008 Seq:24 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:Y Name:Append ClientId:3402076620436836187 Seq:25 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:p Name:Append ClientId:480700799779009383 Seq:24 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:o Name:Append ClientId:469729123243260633 Seq:24 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:b Name:Append ClientId:2883292434894009259 Seq:24 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:r Name:Append ClientId:231378242654353357 Seq:24 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:3 Name:Append ClientId:2898128224427394007 Seq:24 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:y Name:Append ClientId:3844510410101999927 Seq:25 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:P Name:Append ClientId:2831526293306497737 Seq:24 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:M Name:Append ClientId:2535904110889505259 Seq:26 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:N Name:Append ClientId:358128053367283008 Seq:25 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:i Name:Append ClientId:3402076620436836187 Seq:26 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:0 Name:Append ClientId:469729123243260633 Seq:25 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:U Name:Append ClientId:231378242654353357 Seq:25 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:J Name:Append ClientId:480700799779009383 Seq:25 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:F Name:Append ClientId:2898128224427394007 Seq:25 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:N Name:Append ClientId:2883292434894009259 Seq:25 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:L Name:Append ClientId:2831526293306497737 Seq:25 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:S Name:Append ClientId:3844510410101999927 Seq:26 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:t Name:Append ClientId:2535904110889505259 Seq:27 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:6 Name:Append ClientId:358128053367283008 Seq:26 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:m Name:Append ClientId:3402076620436836187 Seq:27 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:X Name:Append ClientId:469729123243260633 Seq:26 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:a Name:Append ClientId:2883292434894009259 Seq:26 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:M Name:Append ClientId:231378242654353357 Seq:26 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:g Name:Append ClientId:480700799779009383 Seq:26 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:2 Name:Append ClientId:2898128224427394007 Seq:26 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:U Name:Append ClientId:2831526293306497737 Seq:26 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:i Name:Append ClientId:3844510410101999927 Seq:27 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:t Name:Append ClientId:358128053367283008 Seq:27 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:Z Name:Append ClientId:2535904110889505259 Seq:28 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:2 Name:Append ClientId:480700799779009383 Seq:27 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:6 Value:s Name:Append ClientId:231378242654353357 Seq:27 ConfigNum:5}) success, key2shard(4)
+2021/03/31 18:24:44 101-1, Append ({Key:5 Value:n Name:Append ClientId:2898128224427394007 Seq:27 ConfigNum:5}) success, key2shard(3)
+2021/03/31 18:24:44 101-1, Append ({Key:2 Value:2 Name:Append ClientId:2883292434894009259 Seq:27 ConfigNum:5}) success, key2shard(0)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:8 Name:Append ClientId:2535904110889505259 Seq:29 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:t Name:Append ClientId:469729123243260633 Seq:27 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:x Name:Append ClientId:3402076620436836187 Seq:28 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:K Name:Append ClientId:3844510410101999927 Seq:28 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:4 Value:N Name:Append ClientId:2831526293306497737 Seq:27 ConfigNum:5}) success, key2shard(2)
+2021/03/31 18:24:44 101-1, Append ({Key:3 Value:I Name:Append ClientId:358128053367283008 Seq:28 ConfigNum:5}) success, key2shard(1)
+2021/03/31 18:24:44 101-1 find new config, shardsIn[6]:map[], shardsOut[6]:map[0:map[2:6Iac9bG2hDdzJeV5aEEnIfrObNa2] 1:map[3:49KYq38CdZmqelWy_YaFQ3BVrN6tI] 2:map[4:qxnKKaB6unsXQaMaYv7Sc1_gPLUN] 3:map[5:_97uhrWU0GpL9FSR-BChYi103F2n] 4:map[6:Ixa632FZR5sWnHxxFeGiSVrJrUMs]]
+2021/03/31 18:24:44 101-1, config:{Num:5 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]}, nextConfig:{Num:6 Shards:[100 100 100 100 100 101 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:44 101-1, update nextConfig:{Num:6 Shards:[100 100 100 100 100 101 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:44 101-1 update config from 5-6, {Num:6 Shards:[100 100 100 100 100 101 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2]]}, kv.db:map[0:-sKeF6zLzZfugH_wOdiL1tK0o0Xt 1:i3pVDHRFogAx0rNPRBjafPJPwYimx 2:6Iac9bG2hDdzJeV5aEEnIfrObNa2 3:49KYq38CdZmqelWy_YaFQ3BVrN6tI 4:qxnKKaB6unsXQaMaYv7Sc1_gPLUN 5:_97uhrWU0GpL9FSR-BChYi103F2n 6:Ixa632FZR5sWnHxxFeGiSVrJrUMs 7:jK2-sddwmJJqCpBaqiuoW-TFwySiK 8:ZwXXnDx6oHoumTODz3sAnms8pJg2 9:LuOZJAm5zZZ0vyUFWz6zssuNQ1MtZ8]
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:0 Name:Append ClientId:480700799779009383 Seq:28 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:C Name:Append ClientId:2535904110889505259 Seq:30 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:7 Value:F Name:Append ClientId:3844510410101999927 Seq:29 ConfigNum:5}) success, key2shard(5)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:y Name:Append ClientId:469729123243260633 Seq:28 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:b Name:Append ClientId:3402076620436836187 Seq:29 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:9 Name:Append ClientId:480700799779009383 Seq:29 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1 find new config, shardsIn[7]:map[], shardsOut[7]:map[5:map[7:jK2-sddwmJJqCpBaqiuoW-TFwySiKF]]
+2021/03/31 18:24:44 101-1, config:{Num:6 Shards:[100 100 100 100 100 101 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2]]}, nextConfig:{Num:7 Shards:[102 102 100 100 100 102 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1, update nextConfig:{Num:7 Shards:[102 102 100 100 100 102 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 update config from 6-7, {Num:7 Shards:[102 102 100 100 100 102 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, kv.db:map[0:-sKeF6zLzZfugH_wOdiL1tK0o0Xty 1:i3pVDHRFogAx0rNPRBjafPJPwYimxb 2:6Iac9bG2hDdzJeV5aEEnIfrObNa2 3:49KYq38CdZmqelWy_YaFQ3BVrN6tI 4:qxnKKaB6unsXQaMaYv7Sc1_gPLUN 5:_97uhrWU0GpL9FSR-BChYi103F2n 6:Ixa632FZR5sWnHxxFeGiSVrJrUMs 7:jK2-sddwmJJqCpBaqiuoW-TFwySiKF 8:ZwXXnDx6oHoumTODz3sAnms8pJg209 9:LuOZJAm5zZZ0vyUFWz6zssuNQ1MtZ8C]
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:V Name:Append ClientId:2535904110889505259 Seq:31 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1, Append ({Key:0 Value:p Name:Append ClientId:469729123243260633 Seq:29 ConfigNum:5}) success, key2shard(8)
+2021/03/31 18:24:44 101-1, Append ({Key:1 Value:y Name:Append ClientId:3402076620436836187 Seq:30 ConfigNum:5}) success, key2shard(9)
+2021/03/31 18:24:44 101-1, Append ({Key:8 Value:o Name:Append ClientId:480700799779009383 Seq:30 ConfigNum:5}) success, key2shard(6)
+2021/03/31 18:24:44 101-1, Append ({Key:9 Value:k Name:Append ClientId:2535904110889505259 Seq:32 ConfigNum:5}) success, key2shard(7)
+2021/03/31 18:24:44 101-1 find new config, shardsIn[8]:map[], shardsOut[8]:map[6:map[8:ZwXXnDx6oHoumTODz3sAnms8pJg209o] 7:map[9:LuOZJAm5zZZ0vyUFWz6zssuNQ1MtZ8CVk] 8:map[0:-sKeF6zLzZfugH_wOdiL1tK0o0Xtyp] 9:map[1:i3pVDHRFogAx0rNPRBjafPJPwYimxby]]
+2021/03/31 18:24:44 101-1, config:{Num:7 Shards:[102 102 100 100 100 102 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, nextConfig:{Num:8 Shards:[102 102 100 100 100 102 100 102 100 102] Groups:map[100:[server-100-0 server-100-1 server-100-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1, update nextConfig:{Num:8 Shards:[102 102 100 100 100 102 100 102 100 102] Groups:map[100:[server-100-0 server-100-1 server-100-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 update config from 7-8, {Num:8 Shards:[102 102 100 100 100 102 100 102 100 102] Groups:map[100:[server-100-0 server-100-1 server-100-2] 102:[server-102-0 server-102-1 server-102-2]]}, kv.db:map[0:-sKeF6zLzZfugH_wOdiL1tK0o0Xtyp 1:i3pVDHRFogAx0rNPRBjafPJPwYimxby 2:6Iac9bG2hDdzJeV5aEEnIfrObNa2 3:49KYq38CdZmqelWy_YaFQ3BVrN6tI 4:qxnKKaB6unsXQaMaYv7Sc1_gPLUN 5:_97uhrWU0GpL9FSR-BChYi103F2n 6:Ixa632FZR5sWnHxxFeGiSVrJrUMs 7:jK2-sddwmJJqCpBaqiuoW-TFwySiKF 8:ZwXXnDx6oHoumTODz3sAnms8pJg209o 9:LuOZJAm5zZZ0vyUFWz6zssuNQ1MtZ8CVk]
+2021/03/31 18:24:44 101-1 find new config, shardsIn[9]:map[0:102 1:102 2:100], shardsOut[9]:map[]
+2021/03/31 18:24:44 101-1, config:{Num:8 Shards:[102 102 100 100 100 102 100 102 100 102] Groups:map[100:[server-100-0 server-100-1 server-100-2] 102:[server-102-0 server-102-1 server-102-2]]}, nextConfig:{Num:9 Shards:[101 101 101 100 100 102 100 102 100 102] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1, update nextConfig:{Num:9 Shards:[101 101 101 100 100 102 100 102 100 102] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 install shard 0, data:map[2:6Iac9bG2hDdzJeV5aEEnIfrObNa2VMAROD1BmLrH9XXsBrzXbvb8sSye0af], shard configNum:9, current config num:8
+2021/03/31 18:24:44 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{8 [102 102 100 100 100 102 100 102 100 102] map[100:[server-100-0 server-100-1 server-100-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 install shard 1, data:map[3:49KYq38CdZmqelWy_YaFQ3BVrN6tIjKwDMbSWbD5iABEP6oD5z-kVIX65O2], shard configNum:9, current config num:8
+2021/03/31 18:24:44 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{8 [102 102 100 100 100 102 100 102 100 102] map[100:[server-100-0 server-100-1 server-100-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 install shard 2, data:map[4:qxnKKaB6unsXQaMaYv7Sc1_gPLUN4flLa4ZDhiq-R6buuul7VNUM6MuX0], shard configNum:9, current config num:8
+2021/03/31 18:24:44 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{8 [102 102 100 100 100 102 100 102 100 102] map[100:[server-100-0 server-100-1 server-100-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:44 101-1 update config from 8-9, {Num:9 Shards:[101 101 101 100 100 102 100 102 100 102] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, kv.db:map[0:-sKeF6zLzZfugH_wOdiL1tK0o0Xtyp 1:i3pVDHRFogAx0rNPRBjafPJPwYimxby 2:6Iac9bG2hDdzJeV5aEEnIfrObNa2VMAROD1BmLrH9XXsBrzXbvb8sSye0af 3:49KYq38CdZmqelWy_YaFQ3BVrN6tIjKwDMbSWbD5iABEP6oD5z-kVIX65O2 4:qxnKKaB6unsXQaMaYv7Sc1_gPLUN4flLa4ZDhiq-R6buuul7VNUM6MuX0 5:_97uhrWU0GpL9FSR-BChYi103F2n 6:Ixa632FZR5sWnHxxFeGiSVrJrUMs 7:jK2-sddwmJJqCpBaqiuoW-TFwySiKF 8:ZwXXnDx6oHoumTODz3sAnms8pJg209o 9:LuOZJAm5zZZ0vyUFWz6zssuNQ1MtZ8CVk]
+2021/03/31 18:24:44 101-1 ready to sync MDreply:{Success:true Err: Shard:0 ConfigNum:9 Data:map[2:6Iac9bG2hDdzJeV5aEEnIfrObNa2VMAROD1BmLrH9XXsBrzXbvb8sSye0af] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:58 469729123243260633:60 480700799779009383:62 2535904110889505259:67 2831526293306497737:56 2883292434894009259:58 2898128224427394007:59 3402076620436836187:67 3844510410101999927:66]}
+2021/03/31 18:24:44 101-1 ready to sync MDreply:{Success:true Err: Shard:1 ConfigNum:9 Data:map[3:49KYq38CdZmqelWy_YaFQ3BVrN6tIjKwDMbSWbD5iABEP6oD5z-kVIX65O2] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:58 469729123243260633:60 480700799779009383:62 2535904110889505259:67 2831526293306497737:56 2883292434894009259:58 2898128224427394007:59 3402076620436836187:67 3844510410101999927:66]}
+2021/03/31 18:24:45 101-1 find new config, shardsIn[10]:map[4:100 8:100], shardsOut[10]:map[]
+2021/03/31 18:24:45 101-1, config:{Num:9 Shards:[101 101 101 100 100 102 100 102 100 102] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, nextConfig:{Num:10 Shards:[101 101 101 102 101 102 102 102 101 102] Groups:map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:45 101-1, update nextConfig:{Num:10 Shards:[101 101 101 102 101 102 102 102 101 102] Groups:map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:45 101-1 install shard 8, data:map[0:-sKeF6zLzZfugH_wOdiL1tK0o0Xtypq_GkQ6l85z3sTQPxmeICaoLxPMQ-4fs], shard configNum:10, current config num:9
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{9 [101 101 101 100 100 102 100 102 100 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:45 101-1 install shard 4, data:map[6:Ixa632FZR5sWnHxxFeGiSVrJrUMsjBkZ3oDzQeDJ2GK2S01KrGwqRv69eM], shard configNum:10, current config num:9
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{9 [101 101 101 100 100 102 100 102 100 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:45 101-1 update config from 9-10, {Num:10 Shards:[101 101 101 102 101 102 102 102 101 102] Groups:map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, kv.db:map[0:-sKeF6zLzZfugH_wOdiL1tK0o0Xtypq_GkQ6l85z3sTQPxmeICaoLxPMQ-4fs 1:i3pVDHRFogAx0rNPRBjafPJPwYimxby 2:6Iac9bG2hDdzJeV5aEEnIfrObNa2VMAROD1BmLrH9XXsBrzXbvb8sSye0af 3:49KYq38CdZmqelWy_YaFQ3BVrN6tIjKwDMbSWbD5iABEP6oD5z-kVIX65O2 4:qxnKKaB6unsXQaMaYv7Sc1_gPLUN4flLa4ZDhiq-R6buuul7VNUM6MuX0 5:_97uhrWU0GpL9FSR-BChYi103F2n 6:Ixa632FZR5sWnHxxFeGiSVrJrUMsjBkZ3oDzQeDJ2GK2S01KrGwqRv69eM 7:jK2-sddwmJJqCpBaqiuoW-TFwySiKF 8:ZwXXnDx6oHoumTODz3sAnms8pJg209o 9:LuOZJAm5zZZ0vyUFWz6zssuNQ1MtZ8CVk]
+2021/03/31 18:24:45 101-1 find new config, shardsIn[11]:map[3:102 5:102 6:102 7:102 9:102], shardsOut[11]:map[]
+2021/03/31 18:24:45 101-1, config:{Num:10 Shards:[101 101 101 102 101 102 102 102 101 102] Groups:map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, nextConfig:{Num:11 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1, update nextConfig:{Num:11 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 3, data:map[5:_97uhrWU0GpL9FSR-BChYi103F2n1NTvT0ZnCKNmWo-u-NeEObpf0veO7TgB], shard configNum:11, current config num:10
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{10 [101 101 101 102 101 102 102 102 101 102] map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:45 101-1 ready to sync MDreply:{Success:true Err: Shard:3 ConfigNum:11 Data:map[5:_97uhrWU0GpL9FSR-BChYi103F2n1NTvT0ZnCKNmWo-u-NeEObpf0veO7TgB] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:58 469729123243260633:60 480700799779009383:62 2535904110889505259:67 2831526293306497737:56 2883292434894009259:58 2898128224427394007:59 3402076620436836187:67 3844510410101999927:66]}
+2021/03/31 18:24:45 101-1 ready to sync MDreply:{Success:true Err: Shard:6 ConfigNum:11 Data:map[8:ZwXXnDx6oHoumTODz3sAnms8pJg209oCQ7NR7KXCh5LWaL3L6hOZrvjuddOw_rD] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:58 469729123243260633:60 480700799779009383:62 2535904110889505259:67 2831526293306497737:56 2883292434894009259:58 2898128224427394007:59 3402076620436836187:67 3844510410101999927:66]}
+2021/03/31 18:24:45 101-1 ready to sync MDreply:{Success:true Err: Shard:5 ConfigNum:11 Data:map[7:jK2-sddwmJJqCpBaqiuoW-TFwySiKFRY4b5csbseZ0irLgva9pDh9AuDaLxijclSU5h] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:58 469729123243260633:60 480700799779009383:62 2535904110889505259:67 2831526293306497737:56 2883292434894009259:58 2898128224427394007:59 3402076620436836187:67 3844510410101999927:66]}
+2021/03/31 18:24:45 101-1 ready to sync MDreply:{Success:true Err: Shard:9 ConfigNum:11 Data:map[1:i3pVDHRFogAx0rNPRBjafPJPwYimxbyMkR52CFwebGvKW7PJNMvu_YDTiixBYWCppMMu] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:58 469729123243260633:60 480700799779009383:62 2535904110889505259:67 2831526293306497737:56 2883292434894009259:58 2898128224427394007:59 3402076620436836187:67 3844510410101999927:66]}
+2021/03/31 18:24:45 101-1 ready to sync MDreply:{Success:true Err: Shard:2 ConfigNum:9 Data:map[4:qxnKKaB6unsXQaMaYv7Sc1_gPLUN4flLa4ZDhiq-R6buuul7VNUM6MuX0] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:28 469729123243260633:60 480700799779009383:62 2535904110889505259:32 2831526293306497737:56 2883292434894009259:27 2898128224427394007:59 3402076620436836187:30 3844510410101999927:29]}
+2021/03/31 18:24:45 101-1 ready to sync MDreply:{Success:true Err: Shard:7 ConfigNum:11 Data:map[9:LuOZJAm5zZZ0vyUFWz6zssuNQ1MtZ8CVk860VM4b_o4O_LYMjM4JSPeuwFrPg2xgc-CN] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:58 469729123243260633:60 480700799779009383:62 2535904110889505259:67 2831526293306497737:56 2883292434894009259:58 2898128224427394007:59 3402076620436836187:67 3844510410101999927:66]}
+2021/03/31 18:24:45 101-1 ready to sync MDreply:{Success:true Err: Shard:4 ConfigNum:10 Data:map[6:Ixa632FZR5sWnHxxFeGiSVrJrUMsjBkZ3oDzQeDJ2GK2S01KrGwqRv69eM] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:28 469729123243260633:60 480700799779009383:62 2535904110889505259:32 2831526293306497737:56 2883292434894009259:27 2898128224427394007:59 3402076620436836187:30 3844510410101999927:29]}
+2021/03/31 18:24:45 101-1 ready to sync MDreply:{Success:true Err: Shard:8 ConfigNum:10 Data:map[0:-sKeF6zLzZfugH_wOdiL1tK0o0Xtypq_GkQ6l85z3sTQPxmeICaoLxPMQ-4fs] LatestCommand:map[61348641601876453:10 231378242654353357:57 358128053367283008:28 469729123243260633:60 480700799779009383:62 2535904110889505259:32 2831526293306497737:56 2883292434894009259:27 2898128224427394007:59 3402076620436836187:30 3844510410101999927:29]}
+2021/03/31 18:24:45 101-1 install shard 6, data:map[8:ZwXXnDx6oHoumTODz3sAnms8pJg209oCQ7NR7KXCh5LWaL3L6hOZrvjuddOw_rD], shard configNum:11, current config num:10
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{10 [101 101 101 102 101 102 102 102 101 102] map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:45 101-1 install shard 7, data:map[9:LuOZJAm5zZZ0vyUFWz6zssuNQ1MtZ8CVk860VM4b_o4O_LYMjM4JSPeuwFrPg2xgc-CN], shard configNum:11, current config num:10
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{10 [101 101 101 102 101 102 102 102 101 102] map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:45 101-1 install shard 5, data:map[7:jK2-sddwmJJqCpBaqiuoW-TFwySiKFRY4b5csbseZ0irLgva9pDh9AuDaLxijclSU5h], shard configNum:11, current config num:10
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{10 [101 101 101 102 101 102 102 102 101 102] map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:45 101-1 install shard 9, data:map[1:i3pVDHRFogAx0rNPRBjafPJPwYimxbyMkR52CFwebGvKW7PJNMvu_YDTiixBYWCppMMu], shard configNum:11, current config num:10
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{10 [101 101 101 102 101 102 102 102 101 102] map[101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}
+2021/03/31 18:24:45 101-1 update config from 10-11, {Num:11 Shards:[101 101 101 101 101 101 101 101 101 101] Groups:map[101:[server-101-0 server-101-1 server-101-2]]}, kv.db:map[0:-sKeF6zLzZfugH_wOdiL1tK0o0Xtypq_GkQ6l85z3sTQPxmeICaoLxPMQ-4fs 1:i3pVDHRFogAx0rNPRBjafPJPwYimxbyMkR52CFwebGvKW7PJNMvu_YDTiixBYWCppMMu 2:6Iac9bG2hDdzJeV5aEEnIfrObNa2VMAROD1BmLrH9XXsBrzXbvb8sSye0af 3:49KYq38CdZmqelWy_YaFQ3BVrN6tIjKwDMbSWbD5iABEP6oD5z-kVIX65O2 4:qxnKKaB6unsXQaMaYv7Sc1_gPLUN4flLa4ZDhiq-R6buuul7VNUM6MuX0 5:_97uhrWU0GpL9FSR-BChYi103F2n1NTvT0ZnCKNmWo-u-NeEObpf0veO7TgB 6:Ixa632FZR5sWnHxxFeGiSVrJrUMsjBkZ3oDzQeDJ2GK2S01KrGwqRv69eM 7:jK2-sddwmJJqCpBaqiuoW-TFwySiKFRY4b5csbseZ0irLgva9pDh9AuDaLxijclSU5h 8:ZwXXnDx6oHoumTODz3sAnms8pJg209oCQ7NR7KXCh5LWaL3L6hOZrvjuddOw_rD 9:LuOZJAm5zZZ0vyUFWz6zssuNQ1MtZ8CVk860VM4b_o4O_LYMjM4JSPeuwFrPg2xgc-CN]
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:T Name:Append ClientId:2898128224427394007 Seq:60 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:2 Value:d Name:Append ClientId:2883292434894009259 Seq:59 ConfigNum:11}) success, key2shard(0)
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:f Name:Append ClientId:480700799779009383 Seq:63 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, receive command({Key:7 Value:g Name:Append ClientId:3844510410101999927 Seq:76 ConfigNum:11}), key2shard:5, configNum:11
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:Q Name:Append ClientId:358128053367283008 Seq:59 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, Append ({Key:0 Value:g Name:Append ClientId:469729123243260633 Seq:61 ConfigNum:11}) success, key2shard(8)
+2021/03/31 18:24:45 101-1, Append ({Key:4 Value:2 Name:Append ClientId:2831526293306497737 Seq:57 ConfigNum:11}) success, key2shard(2)
+2021/03/31 18:24:45 101-1, Append ({Key:1 Value:i Name:Append ClientId:3402076620436836187 Seq:68 ConfigNum:11}) success, key2shard(9)
+2021/03/31 18:24:45 101-1, Append ({Key:6 Value:T Name:Append ClientId:231378242654353357 Seq:58 ConfigNum:11}) success, key2shard(4)
+2021/03/31 18:24:45 101-1, Append ({Key:9 Value:C Name:Append ClientId:2535904110889505259 Seq:68 ConfigNum:11}) success, key2shard(7)
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:l Name:Append ClientId:2898128224427394007 Seq:61 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:7 Value:p Name:Append ClientId:3844510410101999927 Seq:67 ConfigNum:11}) success, key2shard(5)
+2021/03/31 18:24:45 101-1, Append ({Key:2 Value:Y Name:Append ClientId:2883292434894009259 Seq:60 ConfigNum:11}) success, key2shard(0)
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:z Name:Append ClientId:480700799779009383 Seq:64 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, Append ({Key:0 Value:z Name:Append ClientId:469729123243260633 Seq:62 ConfigNum:11}) success, key2shard(8)
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:r Name:Append ClientId:358128053367283008 Seq:60 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, Append ({Key:9 Value:2 Name:Append ClientId:2535904110889505259 Seq:69 ConfigNum:11}) success, key2shard(7)
+2021/03/31 18:24:45 101-1, Append ({Key:7 Value:U Name:Append ClientId:3844510410101999927 Seq:68 ConfigNum:11}) success, key2shard(5)
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:9 Name:Append ClientId:2898128224427394007 Seq:62 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:6 Value:Q Name:Append ClientId:231378242654353357 Seq:59 ConfigNum:11}) success, key2shard(4)
+2021/03/31 18:24:45 101-1, Append ({Key:4 Value:w Name:Append ClientId:2831526293306497737 Seq:58 ConfigNum:11}) success, key2shard(2)
+2021/03/31 18:24:45 101-1, Append ({Key:1 Value:e Name:Append ClientId:3402076620436836187 Seq:69 ConfigNum:11}) success, key2shard(9)
+2021/03/31 18:24:45 101-1, Append ({Key:2 Value:e Name:Append ClientId:2883292434894009259 Seq:61 ConfigNum:11}) success, key2shard(0)
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:9 Name:Append ClientId:480700799779009383 Seq:65 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, Append ({Key:0 Value:z Name:Append ClientId:469729123243260633 Seq:63 ConfigNum:11}) success, key2shard(8)
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:L Name:Append ClientId:358128053367283008 Seq:61 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:c Name:Append ClientId:2898128224427394007 Seq:63 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:6 Value:D Name:Append ClientId:231378242654353357 Seq:60 ConfigNum:11}) success, key2shard(4)
+2021/03/31 18:24:45 101-1, Append ({Key:9 Value:O Name:Append ClientId:2535904110889505259 Seq:70 ConfigNum:11}) success, key2shard(7)
+2021/03/31 18:24:45 101-1, Append ({Key:4 Value:m Name:Append ClientId:2831526293306497737 Seq:59 ConfigNum:11}) success, key2shard(2)
+2021/03/31 18:24:45 101-1, Append ({Key:7 Value:D Name:Append ClientId:3844510410101999927 Seq:69 ConfigNum:11}) success, key2shard(5)
+2021/03/31 18:24:45 101-1, Append ({Key:1 Value:4 Name:Append ClientId:3402076620436836187 Seq:70 ConfigNum:11}) success, key2shard(9)
+2021/03/31 18:24:45 101-1, Append ({Key:2 Value:8 Name:Append ClientId:2883292434894009259 Seq:62 ConfigNum:11}) success, key2shard(0)
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:c Name:Append ClientId:480700799779009383 Seq:66 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, Append ({Key:0 Value:D Name:Append ClientId:469729123243260633 Seq:64 ConfigNum:11}) success, key2shard(8)
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:k Name:Append ClientId:358128053367283008 Seq:62 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:y Name:Append ClientId:2898128224427394007 Seq:64 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:4 Value:m Name:Append ClientId:2831526293306497737 Seq:60 ConfigNum:11}) success, key2shard(2)
+2021/03/31 18:24:45 101-1, Append ({Key:1 Value:B Name:Append ClientId:3402076620436836187 Seq:71 ConfigNum:11}) success, key2shard(9)
+2021/03/31 18:24:45 101-1, Append ({Key:6 Value:Q Name:Append ClientId:231378242654353357 Seq:61 ConfigNum:11}) success, key2shard(4)
+2021/03/31 18:24:45 101-1, Append ({Key:7 Value:h Name:Append ClientId:3844510410101999927 Seq:70 ConfigNum:11}) success, key2shard(5)
+2021/03/31 18:24:45 101-1, Append ({Key:9 Value:j Name:Append ClientId:2535904110889505259 Seq:71 ConfigNum:11}) success, key2shard(7)
+2021/03/31 18:24:45 101-1, Append ({Key:2 Value:c Name:Append ClientId:2883292434894009259 Seq:63 ConfigNum:11}) success, key2shard(0)
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:A Name:Append ClientId:480700799779009383 Seq:67 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, Append ({Key:0 Value:e Name:Append ClientId:469729123243260633 Seq:65 ConfigNum:11}) success, key2shard(8)
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:l Name:Append ClientId:2898128224427394007 Seq:65 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:b Name:Append ClientId:358128053367283008 Seq:63 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, Append ({Key:9 Value:Y Name:Append ClientId:2535904110889505259 Seq:72 ConfigNum:11}) success, key2shard(7)
+2021/03/31 18:24:45 101-1, Append ({Key:6 Value:S Name:Append ClientId:231378242654353357 Seq:62 ConfigNum:11}) success, key2shard(4)
+2021/03/31 18:24:45 101-1, Append ({Key:0 Value:X Name:Append ClientId:469729123243260633 Seq:66 ConfigNum:11}) success, key2shard(8)
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:x Name:Append ClientId:480700799779009383 Seq:68 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, Append ({Key:1 Value:A Name:Append ClientId:3402076620436836187 Seq:72 ConfigNum:11}) success, key2shard(9)
+2021/03/31 18:24:45 101-1, Append ({Key:4 Value:G Name:Append ClientId:2831526293306497737 Seq:61 ConfigNum:11}) success, key2shard(2)
+2021/03/31 18:24:45 101-1, Append ({Key:2 Value:T Name:Append ClientId:2883292434894009259 Seq:64 ConfigNum:11}) success, key2shard(0)
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:w Name:Append ClientId:2898128224427394007 Seq:66 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:7 Value:7 Name:Append ClientId:3844510410101999927 Seq:71 ConfigNum:11}) success, key2shard(5)
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:R Name:Append ClientId:358128053367283008 Seq:64 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, receive command({Key:6 Value:5 Name:Append ClientId:231378242654353357 Seq:68 ConfigNum:11}), key2shard:4, configNum:11
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:5 Name:Append ClientId:480700799779009383 Seq:69 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, Append ({Key:6 Value:h Name:Append ClientId:231378242654353357 Seq:63 ConfigNum:11}) success, key2shard(4)
+2021/03/31 18:24:45 101-1, Append ({Key:1 Value:i Name:Append ClientId:3402076620436836187 Seq:73 ConfigNum:11}) success, key2shard(9)
+2021/03/31 18:24:45 101-1, Append ({Key:0 Value:J Name:Append ClientId:469729123243260633 Seq:67 ConfigNum:11}) success, key2shard(8)
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:H Name:Append ClientId:358128053367283008 Seq:65 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:N Name:Append ClientId:2898128224427394007 Seq:67 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:9 Value:Q Name:Append ClientId:2535904110889505259 Seq:73 ConfigNum:11}) success, key2shard(7)
+2021/03/31 18:24:45 101-1, Append ({Key:2 Value:X Name:Append ClientId:2883292434894009259 Seq:65 ConfigNum:11}) success, key2shard(0)
+2021/03/31 18:24:45 101-1, Append ({Key:7 Value:K Name:Append ClientId:3844510410101999927 Seq:72 ConfigNum:11}) success, key2shard(5)
+2021/03/31 18:24:45 101-1, Append ({Key:4 Value:9 Name:Append ClientId:2831526293306497737 Seq:62 ConfigNum:11}) success, key2shard(2)
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:E Name:Append ClientId:480700799779009383 Seq:70 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, Append ({Key:6 Value:P Name:Append ClientId:231378242654353357 Seq:64 ConfigNum:11}) success, key2shard(4)
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:B Name:Append ClientId:358128053367283008 Seq:66 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:u Name:Append ClientId:2898128224427394007 Seq:68 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:7 Value:M Name:Append ClientId:3844510410101999927 Seq:73 ConfigNum:11}) success, key2shard(5)
+2021/03/31 18:24:45 101-1, Append ({Key:1 Value:8 Name:Append ClientId:3402076620436836187 Seq:74 ConfigNum:11}) success, key2shard(9)
+2021/03/31 18:24:45 101-1, Append ({Key:0 Value:v Name:Append ClientId:469729123243260633 Seq:68 ConfigNum:11}) success, key2shard(8)
+2021/03/31 18:24:45 101-1, Append ({Key:9 Value:T Name:Append ClientId:2535904110889505259 Seq:74 ConfigNum:11}) success, key2shard(7)
+2021/03/31 18:24:45 101-1, Append ({Key:2 Value:L Name:Append ClientId:2883292434894009259 Seq:66 ConfigNum:11}) success, key2shard(0)
+2021/03/31 18:24:45 101-1, Append ({Key:4 Value:v Name:Append ClientId:2831526293306497737 Seq:63 ConfigNum:11}) success, key2shard(2)
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:N Name:Append ClientId:480700799779009383 Seq:71 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, Append ({Key:6 Value:g Name:Append ClientId:231378242654353357 Seq:65 ConfigNum:11}) success, key2shard(4)
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:y Name:Append ClientId:2898128224427394007 Seq:69 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:_ Name:Append ClientId:358128053367283008 Seq:67 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, Append ({Key:1 Value:E Name:Append ClientId:3402076620436836187 Seq:75 ConfigNum:11}) success, key2shard(9)
+2021/03/31 18:24:45 101-1, Append ({Key:7 Value:e Name:Append ClientId:3844510410101999927 Seq:74 ConfigNum:11}) success, key2shard(5)
+2021/03/31 18:24:45 101-1, Append ({Key:4 Value:N Name:Append ClientId:2831526293306497737 Seq:64 ConfigNum:11}) success, key2shard(2)
+2021/03/31 18:24:45 101-1, Append ({Key:2 Value:p Name:Append ClientId:2883292434894009259 Seq:67 ConfigNum:11}) success, key2shard(0)
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:P Name:Append ClientId:480700799779009383 Seq:72 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, Append ({Key:6 Value:4 Name:Append ClientId:231378242654353357 Seq:66 ConfigNum:11}) success, key2shard(4)
+2021/03/31 18:24:45 101-1, Append ({Key:9 Value:d Name:Append ClientId:2535904110889505259 Seq:75 ConfigNum:11}) success, key2shard(7)
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:N Name:Append ClientId:2898128224427394007 Seq:70 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:0 Value:x Name:Append ClientId:469729123243260633 Seq:69 ConfigNum:11}) success, key2shard(8)
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:S Name:Append ClientId:358128053367283008 Seq:68 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, Append ({Key:1 Value:X Name:Append ClientId:3402076620436836187 Seq:76 ConfigNum:11}) success, key2shard(9)
+2021/03/31 18:24:45 101-1, Append ({Key:7 Value:g Name:Append ClientId:3844510410101999927 Seq:75 ConfigNum:11}) success, key2shard(5)
+2021/03/31 18:24:45 101-1, Append ({Key:4 Value:g Name:Append ClientId:2831526293306497737 Seq:65 ConfigNum:11}) success, key2shard(2)
+2021/03/31 18:24:45 101-1, Append ({Key:2 Value:r Name:Append ClientId:2883292434894009259 Seq:68 ConfigNum:11}) success, key2shard(0)
+2021/03/31 18:24:45 101-1, Append ({Key:6 Value:- Name:Append ClientId:231378242654353357 Seq:67 ConfigNum:11}) success, key2shard(4)
+2021/03/31 18:24:45 101-1, Append ({Key:0 Value:v Name:Append ClientId:469729123243260633 Seq:70 ConfigNum:11}) success, key2shard(8)
+2021/03/31 18:24:45 101-1, Append ({Key:9 Value:W Name:Append ClientId:2535904110889505259 Seq:76 ConfigNum:11}) success, key2shard(7)
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:3 Name:Append ClientId:358128053367283008 Seq:69 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:f Name:Append ClientId:480700799779009383 Seq:73 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:w Name:Append ClientId:2898128224427394007 Seq:71 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:1 Value:k Name:Append ClientId:3402076620436836187 Seq:77 ConfigNum:11}) success, key2shard(9)
+2021/03/31 18:24:45 101-1, Append ({Key:7 Value:g Name:Append ClientId:3844510410101999927 Seq:76 ConfigNum:11}) success, key2shard(5)
+2021/03/31 18:24:45 101-1, receive command({Key:1 Value:k Name:Append ClientId:3402076620436836187 Seq:77 ConfigNum:11}), key2shard:9, configNum:11
+2021/03/31 18:24:45 101-1, receive command({Key:5 Value:r Name:Append ClientId:2898128224427394007 Seq:72 ConfigNum:11}), key2shard:3, configNum:11
+2021/03/31 18:24:45 101-1 install shard 4, data:map[6:I], shard configNum:5, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1, receive command({Key:0 Value:O Name:Append ClientId:469729123243260633 Seq:71 ConfigNum:11}), key2shard:8, configNum:11
+2021/03/31 18:24:45 101-1, receive command({Key:9 Value:C Name:Append ClientId:2535904110889505259 Seq:77 ConfigNum:11}), key2shard:7, configNum:11
+2021/03/31 18:24:45 101-1 install shard 0, data:map[2:6], shard configNum:5, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 2, data:map[4:q], shard configNum:5, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1, receive command({Key:4 Value:j Name:Append ClientId:2831526293306497737 Seq:66 ConfigNum:11}), key2shard:2, configNum:11
+2021/03/31 18:24:45 101-1 ready to sync new config({Num:6 Shards:[100 100 100 100 100 101 101 101 101 101] Groups:map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2]]})
+2021/03/31 18:24:45 101-1, shardsOwn:map[0:false 1:false 2:false 3:false 4:false 5:true 6:true 7:true 8:true 9:true]
+2021/03/31 18:24:45 101-1, receive command({Key:8 Value:- Name:Append ClientId:480700799779009383 Seq:74 ConfigNum:11}), key2shard:6, configNum:11
+2021/03/31 18:24:45 101-1 install shard 6, data:map[8:Z], shard configNum:5, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:false 1:false 2:false 3:false 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 5, data:map[7:j], shard configNum:5, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:false 1:false 2:false 3:false 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 1, data:map[3:4], shard configNum:4, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:false 1:true 2:false 3:false 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 3, data:map[5:_], shard configNum:4, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:false 1:true 2:false 3:true 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 0, data:map[2:6Iac9bG2hDdzJeV5aEEnIfrObNa2VMAROD1BmLrH9XXsBrzXbvb8sSye0af], shard configNum:9, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:false 3:true 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 1, data:map[3:49KYq38CdZmqelWy_YaFQ3BVrN6tIjKwDMbSWbD5iABEP6oD5z-kVIX65O2], shard configNum:9, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:false 3:true 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 6, data:map[8:ZwXXnDx6oHoumTODz3sAnms8pJg209oCQ7NR7KXCh5LWaL3L6hOZrvjuddOw_rD], shard configNum:11, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:false 3:true 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 5, data:map[7:jK2-sddwmJJqCpBaqiuoW-TFwySiKFRY4b5csbseZ0irLgva9pDh9AuDaLxijclSU5h], shard configNum:11, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:false 3:true 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 3, data:map[5:_97uhrWU0GpL9FSR-BChYi103F2n1NTvT0ZnCKNmWo-u-NeEObpf0veO7TgB], shard configNum:11, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:false 3:true 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 9, data:map[1:i3pVDHRFogAx0rNPRBjafPJPwYimxbyMkR52CFwebGvKW7PJNMvu_YDTiixBYWCppMMu], shard configNum:11, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:false 3:true 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 2, data:map[4:qxnKKaB6unsXQaMaYv7Sc1_gPLUN4flLa4ZDhiq-R6buuul7VNUM6MuX0], shard configNum:9, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 7, data:map[9:LuOZJAm5zZZ0vyUFWz6zssuNQ1MtZ8CVk860VM4b_o4O_LYMjM4JSPeuwFrPg2xgc-CN], shard configNum:11, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:false 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 4, data:map[6:Ixa632FZR5sWnHxxFeGiSVrJrUMsjBkZ3oDzQeDJ2GK2S01KrGwqRv69eM], shard configNum:10, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 install shard 8, data:map[0:-sKeF6zLzZfugH_wOdiL1tK0o0Xtypq_GkQ6l85z3sTQPxmeICaoLxPMQ-4fs], shard configNum:10, current config num:11
+2021/03/31 18:24:45 101-1 shardsOwn:map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], kv.config:{11 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}
+2021/03/31 18:24:45 101-1 command({7 g Append 3844510410101999927 76 11}) has been executed
+2021/03/31 18:24:45 101-1, Append ({Key:6 Value:5 Name:Append ClientId:231378242654353357 Seq:68 ConfigNum:11}) success, key2shard(4)
+2021/03/31 18:24:45 101-1 command({1 k Append 3402076620436836187 77 11}) has been executed
+2021/03/31 18:24:45 101-1, Append ({Key:5 Value:r Name:Append ClientId:2898128224427394007 Seq:72 ConfigNum:11}) success, key2shard(3)
+2021/03/31 18:24:45 101-1, Append ({Key:0 Value:O Name:Append ClientId:469729123243260633 Seq:71 ConfigNum:11}) success, key2shard(8)
+2021/03/31 18:24:45 101-1, Append ({Key:9 Value:C Name:Append ClientId:2535904110889505259 Seq:77 ConfigNum:11}) success, key2shard(7)
+2021/03/31 18:24:45 101-1, Append ({Key:4 Value:j Name:Append ClientId:2831526293306497737 Seq:66 ConfigNum:11}) success, key2shard(2)
+2021/03/31 18:24:45 101-1, Append ({Key:8 Value:- Name:Append ClientId:480700799779009383 Seq:74 ConfigNum:11}) success, key2shard(6)
+2021/03/31 18:24:45 101-1, receive command({Key:3 Value:q Name:Append ClientId:358128053367283008 Seq:70 ConfigNum:11}), key2shard:1, configNum:11
+2021/03/31 18:24:45 101-1, receive command({Key:2 Value:O Name:Append ClientId:2883292434894009259 Seq:69 ConfigNum:11}), key2shard:0, configNum:11
+2021/03/31 18:24:45 101-1, Append ({Key:3 Value:q Name:Append ClientId:358128053367283008 Seq:70 ConfigNum:11}) success, key2shard(1)
+2021/03/31 18:24:45 101-1, Append ({Key:2 Value:O Name:Append ClientId:2883292434894009259 Seq:69 ConfigNum:11}) success, key2shard(0)
+2021/03/31 18:24:45 101-1, receive command({Key:0 Value: Name:Get ClientId:0 Seq:-1 ConfigNum:3}), key2shard:8, configNum:3
+2021/03/31 18:24:45 101-1 get success,key:0,value:-sKeF6zLzZfugH_wOdiL1tK0o0Xtypq_GkQ6l85z3sTQPxmeICaoLxPMQ-4fsO, configNum:3

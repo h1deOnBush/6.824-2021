@@ -1,15 +1,6 @@
-with open('log-102-0', 'w') as f1:
+a = ' 102-2'
+with open(a, 'w') as f1:
     with open('log') as f:
          for text in f.readlines():
-             if ' 102-0' in text or '[test]' in text:
-                f1.write(text)
-with open('log-102-1', 'w') as f1:
-    with open('log') as f:
-         for text in f.readlines():
-             if ' 102-1' in text or '[test]' in text:
-                f1.write(text)
-with open('log-102-2', 'w') as f1:
-    with open('log') as f:
-         for text in f.readlines():
-             if ' 102-2' in text or '[test]' in text:
+             if a in text or '[test]' in text:
                 f1.write(text)
