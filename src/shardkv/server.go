@@ -277,8 +277,9 @@ func (kv *ShardKV) installConfig(config shardctrler.Config) {
 
 	// update config when there is no need to pull data
 	if kv.config.Num+1 == kv.nextConfig.Num && len(kv.shardsIn[config.Num]) == 0 {
-		kv.config = kv.nextConfig
 		DPrintf("%v-%v update config from %v-%v, %+v, kv.db:%v", kv.gid, kv.me, kv.config.Num, kv.nextConfig.Num, kv.nextConfig, kv.db)
+
+		kv.config = kv.nextConfig
 	}
 
 	// to pull data from shardsIn
