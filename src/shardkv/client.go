@@ -74,6 +74,7 @@ func (ck *Clerk) Get(key string) string {
 	args := GetArgs{}
 	args.Key = key
 	ck.Seq++
+	// ck.config = ck.sm.Query(-1)
 	for {
 		shard := key2shard(key)
 		gid := ck.config.Shards[shard]
@@ -113,6 +114,7 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
 	ck.Seq++
 	args.ClientId = ck.Id
 	args.Seq = ck.Seq
+	// ck.config = ck.sm.Query(-1)
 	for {
 		shard := key2shard(key)
 		gid := ck.config.Shards[shard]

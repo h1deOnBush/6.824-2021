@@ -1,4 +1,4 @@
-a = ' 102-2'
+a = ' 102-0'
 with open(a, 'w') as f1:
     with open('log') as f:
          for text in f.readlines():

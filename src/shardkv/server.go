@@ -203,10 +203,10 @@ func (kv *ShardKV) run() {
 func (kv *ShardKV) installShard(reply MigrateDataReply) {
 	kv.lock("installShard")
 
-	if reply.ConfigNum != kv.config.Num+1 {
-		kv.unlock("installShard")
-		return
-	}
+	//if reply.ConfigNum != kv.config.Num+1 {
+	//	kv.unlock("installShard")
+	//	return
+	//}
 	// G1 hold shard1 in Config1, while G2 hold shard1 in Config2, and in Config2 shard1 become "",
 	// G1 rehold shard1 in Config3, we need to update shard1 in G1 in Config3 because G1 won't delete
 	// real data belong to shard1
@@ -424,7 +424,7 @@ func StartServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persister,
 	// Go's RPC library to marshall/unmarshall.
 	labgob.Register(Op{})
 	labgob.Register(MigrateDataReply{})
-
+	labgob.Register(shardctrler.Config{})
 
 	kv := new(ShardKV)
 	kv.me = me

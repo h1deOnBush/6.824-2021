@@ -463,6 +463,7 @@ func TestConcurrent2(t *testing.T) {
 	}
 
 	DPrintf("all clients has end append")
+
 	for i := 0; i < n; i++ {
 		check(t, ck, ka[i], va[i])
 	}
