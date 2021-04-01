@@ -47,8 +47,8 @@ type ShardKV struct {
 	nextConfig 	shardctrler.Config
 	// cfg num -> (shard -> db)
 	shardsOut 	map[int]map[int]map[string]string
-	// cfg num->(shard -> gid)
-	shardsIn	map[int]map[int]int
+	// shard -> gid
+	shardsIn	map[int]int
 	shardsOwn 	map[int]bool
 	// cfg num ->.(shard -> db)
 	shardsInData map[int]map[int]map[string]string
@@ -166,7 +166,7 @@ func (kv *ShardKV) run() {
 			switch op.Name {
 			case "Put":
 				if kv.isDuplicate(op.ClientId, op.Seq) {
-					DPrintf("%v-%v,command(%v) has been executed\n", kv.gid, kv.me, op)
+					DPrintf("%v-%v,command(%+v) has been executed\n", kv.gid, kv.me, op)
 					kv.unlock("")
 					continue
 				}
@@ -178,7 +178,7 @@ func (kv *ShardKV) run() {
 				kv.latestCommand[op.ClientId] = op.Seq
 			case "Append":
 				if kv.isDuplicate(op.ClientId, op.Seq) {
-					DPrintf("%v-%v command(%v) has been executed\n", kv.gid, kv.me, op)
+					DPrintf("%v-%v command(%+v) has been executed\n", kv.gid, kv.me, op)
 					kv.unlock("")
 					continue
 				}
@@ -203,10 +203,11 @@ func (kv *ShardKV) run() {
 func (kv *ShardKV) installShard(reply MigrateDataReply) {
 	kv.lock("installShard")
 
-	//if reply.ConfigNum != kv.config.Num+1 {
-	//	kv.unlock("installShard")
-	//	return
-	//}
+	if reply.ConfigNum != kv.config.Num+1 {
+		DPrintf("%v-%v invalid installShard:%v, configNum:%v, currentConfigNum:%v", kv.gid, kv.me, reply.Shard, reply.ConfigNum, kv.config.Num)
+		kv.unlock("installShard")
+		return
+	}
 	// G1 hold shard1 in Config1, while G2 hold shard1 in Config2, and in Config2 shard1 become "",
 	// G1 rehold shard1 in Config3, we need to update shard1 in G1 in Config3 because G1 won't delete
 	// real data belong to shard1
@@ -222,13 +223,15 @@ func (kv *ShardKV) installShard(reply MigrateDataReply) {
 			kv.latestCommand[k] = v
 		}
 	}
-	delete(kv.shardsIn[kv.config.Num+1], reply.Shard)
+	delete(kv.shardsIn, reply.Shard)
 	kv.shardsOwn[reply.Shard] = true
 	DPrintf("%v-%v install shard %v, data:%v, shard configNum:%v, current config num:%v", kv.gid, kv.me, reply.Shard, reply.Data, reply.ConfigNum, kv.config.Num)
 	DPrintf("%v-%v shardsOwn:%v, kv.config:%v", kv.gid, kv.me, kv.shardsOwn, kv.config)
-	if kv.nextConfig.Num == kv.config.Num+1 && len(kv.shardsIn[kv.config.Num+1]) == 0 {
+	if kv.nextConfig.Num == kv.config.Num+1 && len(kv.shardsIn) == 0 {
 		DPrintf("%v-%v update config from %v-%v, %+v, kv.db:%v", kv.gid, kv.me, kv.config.Num, kv.nextConfig.Num, kv.nextConfig, kv.db)
 		kv.config = kv.nextConfig
+		// TODO here to delete data
+		DPrintf("%v-%v shardsOwn:%v", kv.gid, kv.me, kv.shardsOwn)
 	} else {
 
 	}
@@ -263,13 +266,15 @@ func (kv *ShardKV) takeSnapshot(index int) {
 // pull data may fail for the server which need to fetch data from hasn't update its shardsOut, so may install config many times
 func (kv *ShardKV) installConfig(config shardctrler.Config) {
 	kv.lock("installConfig")
-	// if it's first config
 	currentConfig := kv.config
 	if config.Num == kv.config.Num+1 {
 		// ensure one config just update shardsOut and shardsIn once
 		if config.Num != kv.nextConfig.Num {
 			kv.updateShardsInAndOut(kv.config, config)
-			DPrintf("%v-%v find new config, shardsIn[%v]:%+v, shardsOut[%v]:%+v", kv.gid, kv.me, config.Num, kv.shardsIn[config.Num], config.Num, kv.shardsOut[config.Num])
+
+
+
+			DPrintf("%v-%v find new config, shardsIn:%+v, shardsOut[%v]:%+v", kv.gid, kv.me,  kv.shardsIn, config.Num, kv.shardsOut[config.Num])
 			DPrintf("%v-%v, config:%+v, nextConfig:%+v", kv.gid, kv.me, kv.config, config)
 			kv.nextConfig = config
 			DPrintf("%v-%v, update nextConfig:%+v", kv.gid, kv.me, kv.nextConfig)
@@ -280,18 +285,30 @@ func (kv *ShardKV) installConfig(config shardctrler.Config) {
 	}
 
 	// update config when there is no need to pull data
-	if kv.config.Num+1 == kv.nextConfig.Num && len(kv.shardsIn[config.Num]) == 0 {
+	if kv.config.Num+1 == kv.nextConfig.Num && len(kv.shardsIn) == 0 {
+		// when there is no need to pull data, after update config must update shardsOwn at same time
+		for shard, gid := range kv.nextConfig.Shards {
+			if gid == kv.gid {
+				kv.shardsOwn[shard] = true
+			} else {
+				kv.shardsOwn[shard] = false
+			}
+		}
 		DPrintf("%v-%v update config from %v-%v, %+v, kv.db:%v", kv.gid, kv.me, kv.config.Num, kv.nextConfig.Num, kv.nextConfig, kv.db)
-		kv.config = kv.nextConfig
-	}
-	kv.unlock("installConfig")
+		// TODO here to delete data
 
-	// to pull data from shardsIn, here won't raise race even if dong't lock, i don't know why
+		kv.config = kv.nextConfig
+		DPrintf("%v-%v shardsOwn:%v", kv.gid, kv.me, kv.shardsOwn)
+
+
+	}
+	// to pull data from shardsIn
 	if _, isLeader := kv.rf.GetState(); isLeader {
-		for shard, gid := range kv.shardsIn[config.Num] {
+		for shard, gid := range kv.shardsIn {
 			go kv.pullData(shard, gid, currentConfig)
 		}
 	}
+	kv.unlock("installConfig")
 }
 
 func (kv *ShardKV) pullData(shard int, gid int, config shardctrler.Config) {
@@ -343,10 +360,7 @@ func (kv *ShardKV) updateShardsIn (old, new shardctrler.Config) {
 	}
 	for shard, gid := range new.Shards {
 		if gid == kv.gid && old.Shards[shard] != kv.gid {
-			if len(kv.shardsIn[new.Num]) == 0 {
-				kv.shardsIn[new.Num] = make(map[int]int)
-			}
-			kv.shardsIn[new.Num][shard] = old.Shards[shard]
+			kv.shardsIn[shard] = old.Shards[shard]
 		}
 	}
 }
@@ -446,7 +460,7 @@ func StartServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persister,
 	kv.db = make(map[string]string)
 	kv.clerk = shardctrler.MakeClerk(ctrlers)
 	kv.shardsOwn = make(map[int]bool)
-	kv.shardsIn = make(map[int]map[int]int)
+	kv.shardsIn = make(map[int]int)
 	kv.shardsOut = make(map[int]map[int]map[string]string)
 	kv.config = shardctrler.Config {
 		Num:    0,
@@ -534,17 +548,12 @@ func (kv *ShardKV) fetchConfig() {
 			if isLeader {
 				kv.lock("fetchConfigNum")
 				currentConfigNum := kv.config.Num
-				if len(kv.shardsIn[currentConfigNum])!=0 {
-					kv.unlock("fetchConfigNum")
-					time.Sleep(FetchConfigInterval * time.Millisecond)
-					continue
-				}
 				kv.unlock("fetchConfigNum")
 				nextConfig := kv.clerk.Query(currentConfigNum+1)
-				// DPrintf("config : %+v", config)
+
 				// to ensure install config in order
-				if nextConfig.Num == currentConfigNum+1 {
-					kv.lock("fetchConfig")
+				kv.lock("fetchConfig")
+				if nextConfig.Num == kv.config.Num+1 {
 					DPrintf("%v-%v ready to sync new config(%+v)", kv.gid, kv.me, nextConfig)
 					// not responsible for shardsOut
 					if kv.config.Num != 0 {
@@ -565,6 +574,8 @@ func (kv *ShardKV) fetchConfig() {
 					DPrintf("%v-%v, shardsOwn:%v", kv.gid, kv.me, kv.shardsOwn)
 					kv.unlock("fetchConfig")
 					kv.rf.Start(nextConfig)
+				} else {
+					kv.unlock("fetchConfig")
 				}
 			}
 			time.Sleep(FetchConfigInterval * time.Millisecond)

@@ -420,6 +420,7 @@ func TestConcurrent2(t *testing.T) {
 		defer func() { ch <- true }()
 		for atomic.LoadInt32(&done) == 0 {
 			x := randstring(1)
+			DPrintf("client %v append key:%v, value:%v", i, ka[i], x)
 			ck1.Append(ka[i], x)
 			va[i] += x
 			time.Sleep(50 * time.Millisecond)

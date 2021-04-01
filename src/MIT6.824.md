@@ -204,3 +204,53 @@ Raft的follower节点在收到leader节点发来的snapshot后，通知上层ser
 问题：
 
 leader向follower发送快照，follower的snapshotindex小于leader的snapshotindex，但是follower的lastappied比leader的snapshotindex大，因此在安装快照时follower通知上层服务安装快照，从而上层服务的db丢失数据
+
+## Sharded KV service
+
+### 介绍
+
+**shard:**全部kv pair的一个子集，如key以a开头的kv pair, shard的目的是为了提高性能.
+
+**replica group:**一组基于raft的kv server
+
+**configuration:**client向shardmaster查询一个key对应的replica group，replica group向shardmaster查询自己要服务哪些shards
+
+一个replica group负责服务若干个shard的更新查询。
+
+sharded storage system必须能够更改配置，即能够更换服务shards的replica group，一方面是为了replica group的负载均衡，另一方面是replica group可能会加入或退出系统。
+
+将reconfiguration作为一个log entry进行同步是进行配置shift的一个办法。对每个shard最多只有一个replica group在处理client的请求。
+
+reconfiguration需要replica groups之间进行交互，如进行shard内容的迁移。
+
+
+
+### lab4A总结
+
+一个shardcontroller中存储着分片的历史配置列表，一个shardcontroller与一个raft peer关联，配置中存着当前每个shard由哪个group负责，每个group中含有哪些server。shardcontroller支持4种操作，客户端可以通过Query指令查询指定的配置信息，管理员可以通过Join和Leave指令添加和删除groups，在执行完Join和Leave指令后，shardcontroller会对shard进行平衡，保证不同group负责的shard数绝对值不超过1来保证平衡，还可以通过Move指令将一个group负责的shard转移给另一个group负责。配置信息的更改会被当做一条command entry先同步到raft节点的日志中，在raft节点同步成功后，进行真正的配置修改操作
+
+
+
+
+
+### lab4B总结
+
+问题：
+
+1.group中的非leader节点不更新配置，主要是从0到1的配置无法进行更新成功，将shardsOut和shardsIn的更新放在了leader节点中(solved，将shardsOut和shardsIn的更新放在处理applyMsg时)
+
+2.leader更新太快，由配置3->4，而follower更新速度不够快，跟不上配置由2->4，无法更新(solved)
+
+3.不需要从其他服务器pull data的server能够立马完成配置的更新并且放弃对某shard的访问请求的处理，而需要从该服务器pull该shard对应的data的服务要等到pull data成功后才能完成对配置的变更并负责处理该shard的访问请求，因此在此期间无法对该shard进行访问
+
+4.G1在Config1的时候拥有Shard1，在收到append shard1的请求后，收到配置变更的消息，在下个配置中shard1不再属于G1，于是立马更新shardout和shardsIn保存当前的shard1，而在append成功后shard1发生了变化，G2从G1处拉取Shard1的时候得到的是未append前的shard1，从而丢失了append的信息（通过在apply之后再进行check是否应该对其负责引出问题6）(solved, 更换机制，leader在发现有新的config时，根据新的config更新可以提供服务的shards列表，在apply config成功后，更新shardsOut和shardsIn，开始从别的group拉取数据，在拉取到数据时更新可以提供服务的shards列表，拉取完所有数据后进行配置的迁移)
+
+5.server重启之后配置消失，要从0开始更新配置，并且数据清零，因此需要进行persist一些状态。(solved)
+
+6.leader更新到Config2之后开始负责Shard1数据的更新并将其apply给follower，然而follower还未更新Config从而拒绝Shard1的更新。(solved)
+
+7.客户端能拉取到最新配置，所以客户端会正确将数据更新到对应的gid服务器上，如果G1在Config1持有shard1，G2在Config2持有shard1并做出修改，G1在Config3重新持有shard1，则在unreliable情况下get(shard1)在Config1的结果和get(shard1)在Config3的结果不同，若G1卡在Config1，则get到的结果就不正确。(未验证正确性)
+
+8.G1在Config1时持有Shard1，G2-leader从G1拉取Shard1后更新到Config2，G2-leader对Shard1进行更新，G2-follower1仍处于Config1，但是收到G2-leader拉取并更新的Shard1，于是对Shard1进行存储。服务器进行重启，G2-follower1成功当选leader，存储的状态仍然处于Config1，并且在Config1就拥有了更新过的Shard1，之后G2-follower1发现Config2于是G1拉取未更新的Shard1覆盖了之前的更新。(solved，配置变更时保证了配置变更和更新shard的因果性)
+
+9.leader发给follower的Config只发送一次，不管follower是否跟的上leader的Config变更速度，当leader发现Config3的时候通过raft进行同步Config3,而此时follower还处在Config1，此时收到的Config3无法进行更新，于是follower永远卡在Config1。(solved，将判断配置变更的逻辑移到拉取shard成功时，每次拉取shard成功时检测是否还有需要拉取的shard，若没有则进行shard变更)

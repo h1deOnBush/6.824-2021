@@ -98,7 +98,6 @@ func (ck *Clerk) Get(key string) string {
 		// ask controller for the latest configuration.
 		ck.config = ck.sm.Query(-1)
 	}
-
 	return ""
 }
 
